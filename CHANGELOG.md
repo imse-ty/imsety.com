@@ -2,4 +2,4 @@
 
 ## [Unreleased]
 
-[unreleased]: https://github.com/akrade/dantetaylor.com/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v0.1.0...HEAD
