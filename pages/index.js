@@ -11,7 +11,7 @@ import {
 
 function SocialMediaIcons() {
   return (
-    <div className="flex text-3xl justify-between">
+    <div className="flex text-3xl justify-between max-w-sm">
       <a href="#">
         <FaTwitter />
       </a>
