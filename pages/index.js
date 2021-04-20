@@ -74,7 +74,12 @@ export default function Home() {
               </p>
             </footer>
           </div>
-          <div className="bg-imsetyWhite flex-1" />
+          <div className="flex-1">
+            <video autoPlay loop muted>
+              <source src="/setymedia-2020-reel-loop.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </main>
     </div>
