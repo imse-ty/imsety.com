@@ -11,14 +11,28 @@ import {
 
 function SocialMediaIcons() {
   return (
-    <div className="flex">
-      <FaTwitter />
-      <FaInstagram />
-      <FaBehance />
-      <FaLinkedin />
-      <FaDribbble />
-      <FaVimeo />
-      <FaYoutube />
+    <div className="flex text-3xl justify-between">
+      <a href="#">
+        <FaTwitter />
+      </a>
+      <a href="#">
+        <FaInstagram />
+      </a>
+      <a href="#">
+        <FaBehance />
+      </a>
+      <a href="#">
+        <FaLinkedin />
+      </a>
+      <a href="#">
+        <FaDribbble />
+      </a>
+      <a href="#">
+        <FaVimeo />
+      </a>
+      <a href="#">
+        <FaYoutube />
+      </a>
     </div>
   );
 }
@@ -42,10 +56,12 @@ export default function Home() {
               <div className="font-bold text-4xl">Imsety</div>
             </header>
             <div>
-              <h1 className="font-bold text-3xl">
+              <h1 className="font-bold text-3xl mb-3">
                 Hey, my name is Imsety Taylor
               </h1>
-              <p>I’m a Motion Designer based in Atlanta, GA.</p>
+              <p className="mb-6">
+                I’m a Motion Designer based in Atlanta, GA.
+              </p>
               <SocialMediaIcons />
             </div>
             <footer>
