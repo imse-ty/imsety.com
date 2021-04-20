@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div>
+    <div className="text-imsetyBlack">
       <Head>
         <title>Imsety Taylor - Motion Designer</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,7 +13,7 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div>
+        <div className="bg-imsetyBlack text-imsetyWhite">
           <div>Imsety</div>
           <h1>Hey, my name is Imsety Taylor</h1>
           <p>I’m a Motion Designer based in Atlanta, GA.</p>
