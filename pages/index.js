@@ -13,25 +13,25 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div className="bg-imsetyBlack text-imsetyWhite p-8">
-          <header>
-            <div className="font-bold text-4xl">Imsety</div>
-          </header>
-          <div>
-            <h1 className="font-bold text-4xl">
-              Hey, my name is Imsety Taylor
-            </h1>
-            <p className="text-lg">
-              I’m a Motion Designer based in Atlanta, GA.
-            </p>
+        <div className="flex flex-col h-screen">
+          <div className="bg-imsetyBlack text-imsetyWhite p-8 flex-1 flex flex-col justify-between">
+            <header>
+              <div className="font-bold text-4xl">Imsety</div>
+            </header>
+            <div>
+              <h1 className="font-bold text-3xl">
+                Hey, my name is Imsety Taylor
+              </h1>
+              <p>I’m a Motion Designer based in Atlanta, GA.</p>
+            </div>
+            <footer>
+              <p className="text-sm">
+                © 2021 Imsety Taylor. All rights reserved.
+              </p>
+            </footer>
           </div>
-          <footer>
-            <p className="text-sm">
-              © 2021 Imsety Taylor. All rights reserved.
-            </p>
-          </footer>
+          <div className="bg-imsetyWhite flex-1" />
         </div>
-        <div />
       </main>
     </div>
   );
