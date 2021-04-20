@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <div className="bg-imsetyBlack text-imsetyWhite">
           <div className="font-bold text-4xl">Imsety</div>
-          <h1>Hey, my name is Imsety Taylor</h1>
+          <h1 className="font-bold text-4xl">Hey, my name is Imsety Taylor</h1>
           <p>I’m a Motion Designer based in Atlanta, GA.</p>
         </div>
         <div />
