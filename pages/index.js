@@ -50,8 +50,8 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div className="flex flex-col h-screen">
-          <div className="bg-imsetyBlack text-imsetyWhite p-8 flex-1 flex flex-col justify-between">
+        <div className="flex flex-col lg:flex-row h-screen">
+          <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex-1 flex flex-col justify-between">
             <header>
               <img
                 src="/imsety-wordmark-white.svg"
@@ -60,10 +60,10 @@ export default function Home() {
               />
             </header>
             <div>
-              <h1 className="font-bold text-3xl mb-3">
+              <h1 className="font-bold text-3xl md:text-4xl mb-3">
                 Hey, my name is Imsety Taylor
               </h1>
-              <p className="mb-6">
+              <p className="mb-6 md:text-lg">
                 I’m a Motion Designer based in Atlanta, GA.
               </p>
               <SocialMediaIcons />
