@@ -9,30 +9,38 @@ import {
   FaYoutube
 } from 'react-icons/fa';
 
+function SocialMediaLink(props) {
+  return (
+    <a {...props} className="hover:text-gray-400 transition">
+      {props.children}
+    </a>
+  );
+}
+
 function SocialMediaIcons() {
   return (
     <div className="flex text-3xl justify-between max-w-sm">
-      <a href="#">
+      <SocialMediaLink href="#">
         <FaTwitter />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaInstagram />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaBehance />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaLinkedin />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaDribbble />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaVimeo />
-      </a>
-      <a href="#">
+      </SocialMediaLink>
+      <SocialMediaLink href="#">
         <FaYoutube />
-      </a>
+      </SocialMediaLink>
     </div>
   );
 }
