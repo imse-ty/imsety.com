@@ -53,7 +53,11 @@ export default function Home() {
         <div className="flex flex-col h-screen">
           <div className="bg-imsetyBlack text-imsetyWhite p-8 flex-1 flex flex-col justify-between">
             <header>
-              <div className="font-bold text-4xl">Imsety</div>
+              <img
+                src="/imsety-wordmark-white.svg"
+                alt="Imsety"
+                className="w-36"
+              />
             </header>
             <div>
               <h1 className="font-bold text-3xl mb-3">
