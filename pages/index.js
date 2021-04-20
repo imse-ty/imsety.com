@@ -1,5 +1,26 @@
 import Head from 'next/head';
-import { FaTwitter } from 'react-icons/fa';
+import {
+  FaBehance,
+  FaDribbble,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube
+} from 'react-icons/fa';
+
+function SocialMediaIcons() {
+  return (
+    <div>
+      <FaTwitter />
+      <FaInstagram />
+      <FaBehance />
+      <FaLinkedin />
+      <FaDribbble />
+      <FaVimeo />
+      <FaYoutube />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
