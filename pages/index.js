@@ -25,6 +25,11 @@ export default function Home() {
               I’m a Motion Designer based in Atlanta, GA.
             </p>
           </div>
+          <footer>
+            <p className="text-sm">
+              © 2021 Imsety Taylor. All rights reserved.
+            </p>
+          </footer>
         </div>
         <div />
       </main>
