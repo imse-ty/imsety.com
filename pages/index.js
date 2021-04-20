@@ -74,8 +74,14 @@ export default function Home() {
               </p>
             </footer>
           </div>
-          <div className="flex-1">
-            <video autoPlay loop muted>
+          <div className="flex-1 relative">
+            <div className="absolute z-20 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full" />
+            <video
+              autoPlay
+              loop
+              muted
+              className="absolute z-10 object-cover w-auto min-w-full min-h-full"
+            >
               <source src="/setymedia-2020-reel-loop.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
