@@ -11,7 +11,10 @@ import {
 
 function SocialMediaLink(props) {
   return (
-    <a {...props} className="hover:text-gray-400 transition">
+    <a
+      {...props}
+      className="hover:text-gray-300 hover:scale-125 transform transition duration-300"
+    >
       {props.children}
     </a>
   );
