@@ -5,12 +5,13 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTwitter,
+  FaVimeo,
   FaYoutube
 } from 'react-icons/fa';
 
 function SocialMediaIcons() {
   return (
-    <div>
+    <div className="flex">
       <FaTwitter />
       <FaInstagram />
       <FaBehance />
@@ -45,6 +46,7 @@ export default function Home() {
                 Hey, my name is Imsety Taylor
               </h1>
               <p>I’m a Motion Designer based in Atlanta, GA.</p>
+              <SocialMediaIcons />
             </div>
             <footer>
               <p className="text-sm">
