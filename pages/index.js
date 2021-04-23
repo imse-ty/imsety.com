@@ -24,25 +24,25 @@ function SocialMediaLink(props) {
 function SocialMediaIcons() {
   return (
     <div className="flex text-3xl justify-between max-w-sm">
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://twitter.com/imse_ty">
         <FaTwitter />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://www.instagram.com/imse.ty">
         <FaInstagram />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://www.behance.net/imsety">
         <FaBehance />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://www.linkedin.com/in/imsety">
         <FaLinkedin />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://dribbble.com/Imsety">
         <FaDribbble />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://vimeo.com/imsety">
         <FaVimeo />
       </SocialMediaLink>
-      <SocialMediaLink href="#">
+      <SocialMediaLink href="https://www.youtube.com/channel/UCVptL5EXU-Rd8lvuQvzDK3A">
         <FaYoutube />
       </SocialMediaLink>
     </div>
