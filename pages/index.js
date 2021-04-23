@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '../components/footer';
 import Header from '../components/Header';
 import Hero from '../components/hero';
 
@@ -19,11 +20,7 @@ export default function Home() {
           <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
             <Header />
             <Hero />
-            <footer>
-              <p className="text-sm">
-                © 2021 Imsety Taylor. All rights reserved.
-              </p>
-            </footer>
+            <Footer />
           </div>
           <div className="relative h-1/2 lg:w-1/2 lg:h-full">
             <div className="absolute z-20 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full" />
