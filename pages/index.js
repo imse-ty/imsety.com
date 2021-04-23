@@ -61,8 +61,8 @@ export default function Home() {
         />
       </Head>
       <main>
-        <div className="flex flex-col lg:flex-row h-screen">
-          <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex-1 flex flex-col justify-between">
+        <div className="flex flex-col w-screen h-screen lg:flex-row">
+          <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
             <header>
               <img
                 src="/imsety-wordmark-white.svg"
@@ -85,7 +85,7 @@ export default function Home() {
               </p>
             </footer>
           </div>
-          <div className="flex-1 relative">
+          <div className="relative h-1/2 lg:w-1/2 lg:h-full">
             <div className="absolute z-20 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full" />
             <video
               autoPlay
