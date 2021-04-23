@@ -1,7 +1,6 @@
 export default function VideoReelLoop() {
   return (
     <>
-      {' '}
       <div className="absolute z-20 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full" />
       <video
         autoPlay
