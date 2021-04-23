@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Footer from '../components/footer';
 import Header from '../components/Header';
 import Hero from '../components/hero';
+import VideoReelLoop from '../components/video-reel-loop';
 
 export default function Home() {
   return (
@@ -23,16 +24,7 @@ export default function Home() {
             <Footer />
           </div>
           <div className="relative h-1/2 lg:w-1/2 lg:h-full">
-            <div className="absolute z-20 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full" />
-            <video
-              autoPlay
-              loop
-              muted
-              className="absolute z-10 object-cover w-auto min-w-full min-h-full"
-            >
-              <source src="/setymedia-2020-reel-loop.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <VideoReelLoop />
           </div>
         </div>
       </main>
