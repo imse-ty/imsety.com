@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '../components/Header';
 import Hero from '../components/hero';
 
 export default function Home() {
@@ -16,13 +17,7 @@ export default function Home() {
       <main>
         <div className="flex flex-col w-screen h-screen lg:flex-row">
           <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
-            <header>
-              <img
-                src="/imsety-wordmark-white.svg"
-                alt="Imsety"
-                className="w-36"
-              />
-            </header>
+            <Header />
             <Hero />
             <footer>
               <p className="text-sm">
