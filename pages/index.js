@@ -18,12 +18,12 @@ export default function Home() {
       </Head>
       <main>
         <div className="flex flex-col w-screen h-screen lg:flex-row">
-          <div className="bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
+          <div className=" relative z-10 bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
             <Header />
             <Hero />
             <Footer />
           </div>
-          <div className="relative h-1/2 lg:w-1/2 lg:h-full">
+          <div className="relative z-0 h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
             <VideoReelLoop />
           </div>
         </div>
