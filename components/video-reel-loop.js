@@ -2,7 +2,7 @@ export default function VideoReelLoop() {
   return (
     <>
       <a href="https://vimeo.com/496109106" target="_blank">
-        <div className="absolute z-10 bg-imsetyWhite bg-opacity-25 min-w-full min-h-full transition-colors duration-300 hover:bg-opacity-0" />
+        <div className="absolute z-10 bg-imsetyBlack dark:bg-imsetyWhite bg-opacity-25 min-w-full min-h-full transition-colors duration-300 hover:bg-opacity-0" />
         <video
           autoPlay
           loop

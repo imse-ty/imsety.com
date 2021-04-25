@@ -13,7 +13,7 @@ function SocialMediaLink(props) {
     <a
       {...props}
       target="_blank"
-      className="hover:text-gray-300 hover:scale-125 transform transition duration-300"
+      className="hover:text-gray-700 dark:hover:text-gray-300 hover:scale-125 transform transition duration-300"
     >
       {props.children}
     </a>

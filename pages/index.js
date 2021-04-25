@@ -6,7 +6,7 @@ import VideoReelLoop from '../components/video-reel-loop';
 
 export default function Home() {
   return (
-    <div className="text-imsetyBlack">
+    <div className="text-imsetyBlack dark:text-imsetyWhite">
       <Head>
         <title>Imsety Taylor - Motion Designer</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main>
         <div className="flex flex-col w-screen h-screen lg:flex-row">
-          <div className=" relative bg-imsetyBlack text-imsetyWhite p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
+          <div className=" relative bg-imsetyWhite dark:bg-imsetyBlack p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
             <Header />
             <Hero />
             <Footer />
