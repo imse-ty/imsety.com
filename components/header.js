@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <ImsetyWordmark
         width="132px"
-        height="auto"
+        height="33px"
         viewBox="0 0 933.86 231"
         className="fill-current"
       />
