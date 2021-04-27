@@ -1,4 +1,4 @@
-import { ImsetyWordmark } from '../public/imsety-wordmark-white.svg';
+import ImsetyWordmark from '../public/imsety-wordmark-white.svg';
 
 export default function Header() {
   return (
