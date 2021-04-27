@@ -1,10 +1,14 @@
-import ImsetyWordmark from '../public/imsety-wordmark-black.svg';
+import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 export default function Header() {
   return (
     <header>
-      <ImsetyWordmark />
-      {/* <img src="/imsety-wordmark-white.svg" alt="Imsety" className="w-36" /> */}
+      <ImsetyWordmark
+        width="132px"
+        height="auto"
+        viewBox="0 0 933.86 231"
+        className="fill-current"
+      />
     </header>
   );
 }
