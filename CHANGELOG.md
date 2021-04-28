@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Incorrect casing in `index.js` for `Header`.
+
 ## [0.1.0]
 
 Initial development.
