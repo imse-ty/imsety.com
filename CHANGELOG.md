@@ -4,7 +4,8 @@
 
 ### Fixed
 
-- Incorrect casing in `index.js` for `Header`.
+- Incorrect casing in `index.js` for `Header`. (#5)
+- Incorrect syntax in `tailwind.config.js`. (#7)
 
 ## [0.1.0]
 
