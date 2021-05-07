@@ -1,6 +1,7 @@
 import {
   FaBehance,
   FaDribbble,
+  FaEnvelope,
   FaInstagram,
   FaLinkedin,
   FaTwitter,
@@ -47,6 +48,9 @@ export default function SocialMediaIcons() {
         alt="YouTube"
       >
         <FaYoutube />
+      </SocialMediaLink>
+      <SocialMediaLink href="mailto:hello@imsety.com" alt="Email">
+        <FaEnvelope />
       </SocialMediaLink>
     </div>
   );
