@@ -20,7 +20,13 @@ function Navigation() {
 
   return (
     <nav>
-      <FaBars className="md:hidden text-2xl" />
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden p-3"
+      >
+        <FaBars className=" text-2xl" />
+      </button>
       <ul className="hidden md:flex">
         <MenuItem href="/">Work</MenuItem>
         <MenuItem href="/info">Info</MenuItem>
