@@ -3,9 +3,9 @@ import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
   return (
-    <li>
+    <li className="mr-4 font-medium uppercase">
       <Link href={href} {...props}>
-        <a>{children}</a>
+        <a className="p-3">{children}</a>
       </Link>
     </li>
   );
@@ -14,7 +14,7 @@ function MenuItem({ children, href, ...props }) {
 function Navigation() {
   return (
     <nav>
-      <ul>
+      <ul className="flex">
         <MenuItem href="/">Work</MenuItem>
         <MenuItem href="/info">Info</MenuItem>
         <MenuItem href="/blog">Blog</MenuItem>
