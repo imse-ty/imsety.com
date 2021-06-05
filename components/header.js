@@ -6,7 +6,7 @@ import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
   return (
-    <li className="my-6 font-medium text-3xl md:ml-3 md:text-base uppercase">
+    <li className="my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase">
       <Link href={href} {...props}>
         <a className="p-3">{children}</a>
       </Link>
@@ -16,11 +16,11 @@ function MenuItem({ children, href, ...props }) {
 
 function MenuItems() {
   return (
-    <>
+    <ul className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
       <MenuItem href="/info">Info</MenuItem>
       <MenuItem href="/blog">Blog</MenuItem>
-    </>
+    </ul>
   );
 }
 
@@ -50,7 +50,7 @@ function Navigation() {
         <motion.div
           animate={!isOpen ? 'closed' : 'open'}
           variants={menuVariants}
-          className={`flex list-none fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 flex-col md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
+          className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8"
         >
           <MenuItems />
         </motion.div>
@@ -63,7 +63,7 @@ function Navigation() {
         className="fixed top-0 left-0 min-w-full min-h-full bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur md:hidden"
       />
 
-      <div className="list-none hidden md:flex md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0">
+      <div className="hidden md:block">
         <MenuItems />
       </div>
     </nav>
