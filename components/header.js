@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
@@ -14,7 +15,8 @@ function MenuItem({ children, href, ...props }) {
 function Navigation() {
   return (
     <nav>
-      <ul className="flex">
+      <FaBars className="md:hidden text-2xl" />
+      <ul className="hidden md:flex">
         <MenuItem href="/">Work</MenuItem>
         <MenuItem href="/info">Info</MenuItem>
         <MenuItem href="/blog">Blog</MenuItem>
