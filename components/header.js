@@ -50,18 +50,11 @@ function Navigation() {
         <motion.div
           animate={!isOpen ? 'closed' : 'open'}
           variants={menuVariants}
-          className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8"
+          className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
         >
           <MenuItems />
         </motion.div>
       </div>
-
-      <motion.div
-        animate={!isOpen ? 'closed' : 'open'}
-        initial={false}
-        variants={backdropVariants}
-        className="fixed top-0 left-0 min-w-full min-h-full bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur md:hidden"
-      />
 
       <div className="hidden md:block">
         <MenuItems />
