@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
@@ -5,7 +6,7 @@ import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
   return (
-    <li className="ml-4 font-medium uppercase">
+    <li className="my-6 font-medium text-3xl md:ml-3 md:text-base uppercase">
       <Link href={href} {...props}>
         <a className="p-3">{children}</a>
       </Link>
@@ -15,23 +16,31 @@ function MenuItem({ children, href, ...props }) {
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuVariants = {
+    opened: { left: 0, opacity: 1 },
+    closed: { left: '-100vw', opacity: 0 }
+  };
 
   console.log(isOpen);
 
   return (
-    <nav>
+    <nav className="relative">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden p-3"
+        className="md:hidden relative p-3 z-10"
       >
         <FaBars className=" text-2xl" />
       </button>
-      <ul className="hidden md:flex">
+      <motion.div
+        animate={!isOpen ? 'closed' : 'open'}
+        variants={menuVariants}
+        className={`flex list-none fixed top-0 left-0 min-w-full min-h-full pt-40 px-8 flex-col bg-imsetyWhite md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
+      >
         <MenuItem href="/">Work</MenuItem>
         <MenuItem href="/info">Info</MenuItem>
         <MenuItem href="/blog">Blog</MenuItem>
-      </ul>
+      </motion.div>
     </nav>
   );
 }
