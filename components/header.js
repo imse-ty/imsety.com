@@ -1,5 +1,17 @@
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
+function Navigation() {
+  return (
+    <nav>
+      <ul>
+        <li>Work</li>
+        <li>Info</li>
+        <li>Blog</li>
+      </ul>
+    </nav>
+  );
+}
+
 export default function Header() {
   return (
     <header>
@@ -9,6 +21,7 @@ export default function Header() {
         viewBox="0 0 933.86 231"
         className="fill-current"
       />
+      <Navigation />
     </header>
   );
 }
