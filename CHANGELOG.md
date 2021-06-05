@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added
+
+- `Header` component. (#12)
+- `Footer` component. (#12)
+- Default [container padding](https://tailwindcss.com/docs/container).
+
 ## [0.1.1]
 
 ### Fixed
