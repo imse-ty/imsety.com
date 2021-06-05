@@ -66,7 +66,7 @@ function Navigation() {
           initial={false}
           animate={!isOpen ? 'closed' : 'opened'}
           variants={variants}
-          className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
+          className="container fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
         >
           <Menu />
         </motion.div>
