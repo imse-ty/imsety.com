@@ -26,7 +26,7 @@ function Navigation() {
 export default function Header() {
   return (
     <header>
-      <div className="flex justify-between container mx-auto ">
+      <div className="flex justify-between container mx-auto">
         <ImsetyWordmark
           width="132px"
           height="33px"
