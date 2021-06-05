@@ -14,7 +14,7 @@ function MenuItem({ children, href, ...props }) {
   );
 }
 
-function MenuItems() {
+function Menu() {
   return (
     <ul className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
@@ -52,12 +52,12 @@ function Navigation() {
           variants={menuVariants}
           className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
         >
-          <MenuItems />
+          <Menu />
         </motion.div>
       </div>
 
       <div className="hidden md:block">
-        <MenuItems />
+        <Menu />
       </div>
     </nav>
   );
