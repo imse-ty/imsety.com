@@ -26,13 +26,15 @@ function Navigation() {
 export default function Header() {
   return (
     <header>
-      <ImsetyWordmark
-        width="132px"
-        height="33px"
-        viewBox="0 0 933.86 231"
-        className="fill-current"
-      />
-      <Navigation />
+      <div className="flex justify-between container mx-auto ">
+        <ImsetyWordmark
+          width="132px"
+          height="33px"
+          viewBox="0 0 933.86 231"
+          className="fill-current"
+        />
+        <Navigation />
+      </div>
     </header>
   );
 }
