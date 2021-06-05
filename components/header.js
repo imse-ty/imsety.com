@@ -5,32 +5,49 @@ import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
+  const variants = {
+    opened: { x: 0 },
+    closed: { x: '-100%' }
+  };
+
   return (
-    <li className="my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase">
+    <motion.li
+      variants={variants}
+      transition={{ type: 'spring', duration: 0.8 }}
+      className="my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase"
+    >
       <Link href={href} {...props}>
         <a className="p-3">{children}</a>
       </Link>
-    </li>
+    </motion.li>
   );
 }
 
 function Menu() {
+  const variants = {
+    opened: {
+      transition: {
+        staggerChildren: 0.07,
+        delayChildren: 0.2
+      }
+    },
+    closed: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+  };
+
   return (
-    <ul className={`flex flex-col md:flex-row`}>
+    <motion.ul variants={variants} className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
       <MenuItem href="/info">Info</MenuItem>
       <MenuItem href="/blog">Blog</MenuItem>
-    </ul>
+    </motion.ul>
   );
 }
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuVariants = {
-    opened: { left: 0, opacity: 1 },
-    closed: { left: '-100vw', opacity: 0 }
-  };
-  const backdropVariants = {
+  const variants = {
     opened: { opacity: 1 },
     closed: { opacity: 0 }
   };
@@ -46,8 +63,9 @@ function Navigation() {
           <FaBars className=" text-2xl" />
         </button>
         <motion.div
-          animate={!isOpen ? 'closed' : 'open'}
-          variants={menuVariants}
+          initial={false}
+          animate={!isOpen ? 'closed' : 'opened'}
+          variants={variants}
           className="fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
         >
           <Menu />
