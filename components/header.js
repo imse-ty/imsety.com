@@ -35,8 +35,6 @@ function Navigation() {
     closed: { opacity: 0 }
   };
 
-  console.log(isOpen);
-
   return (
     <nav>
       <div className="md:hidden">
