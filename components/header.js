@@ -3,7 +3,7 @@ import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
 function MenuItem({ children, href, ...props }) {
   return (
-    <li className="mr-4 font-medium uppercase">
+    <li className="ml-4 font-medium uppercase">
       <Link href={href} {...props}>
         <a className="p-3">{children}</a>
       </Link>
