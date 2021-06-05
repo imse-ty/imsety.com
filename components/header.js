@@ -20,6 +20,10 @@ function Navigation() {
     opened: { left: 0, opacity: 1 },
     closed: { left: '-100vw', opacity: 0 }
   };
+  const backdropVariants = {
+    opened: { opacity: 1 },
+    closed: { opacity: 0 }
+  };
 
   console.log(isOpen);
 
@@ -28,19 +32,25 @@ function Navigation() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative p-3 z-10"
+        className="md:hidden relative p-3 z-20"
       >
         <FaBars className=" text-2xl" />
       </button>
       <motion.div
         animate={!isOpen ? 'closed' : 'open'}
         variants={menuVariants}
-        className={`flex list-none fixed top-0 left-0 min-w-full min-h-full pt-40 px-8 flex-col bg-imsetyWhite md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
+        className={`flex list-none fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 flex-col md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
       >
         <MenuItem href="/">Work</MenuItem>
         <MenuItem href="/info">Info</MenuItem>
         <MenuItem href="/blog">Blog</MenuItem>
       </motion.div>
+      <motion.div
+        animate={!isOpen ? 'closed' : 'open'}
+        initial={false}
+        variants={backdropVariants}
+        className="fixed top-0 left-0 min-w-full min-h-full bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur md:hidden"
+      />
     </nav>
   );
 }
