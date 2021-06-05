@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
@@ -13,6 +14,10 @@ function MenuItem({ children, href, ...props }) {
 }
 
 function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  console.log(isOpen);
+
   return (
     <nav>
       <FaBars className="md:hidden text-2xl" />
