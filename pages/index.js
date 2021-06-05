@@ -22,18 +22,18 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <Header />
       <main>
         <div className="flex flex-col w-screen h-screen lg:flex-row">
           <div className=" relative bg-imsetyWhite dark:bg-imsetyBlack p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
-            <Header />
             <Hero />
-            <Footer />
           </div>
           <div className="relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
             <VideoReelLoop />
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
