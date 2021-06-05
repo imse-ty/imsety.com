@@ -87,7 +87,7 @@ export default function Header() {
           width="132px"
           height="33px"
           viewBox="0 0 933.86 231"
-          className="fill-current"
+          className="fill-current w-24 md:w-auto"
         />
         <Navigation />
       </div>
