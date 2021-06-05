@@ -14,6 +14,16 @@ function MenuItem({ children, href, ...props }) {
   );
 }
 
+function MenuItems() {
+  return (
+    <>
+      <MenuItem href="/">Work</MenuItem>
+      <MenuItem href="/info">Info</MenuItem>
+      <MenuItem href="/blog">Blog</MenuItem>
+    </>
+  );
+}
+
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const menuVariants = {
@@ -28,29 +38,34 @@ function Navigation() {
   console.log(isOpen);
 
   return (
-    <nav className="relative">
-      <button
-        type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden relative p-3 z-20"
-      >
-        <FaBars className=" text-2xl" />
-      </button>
-      <motion.div
-        animate={!isOpen ? 'closed' : 'open'}
-        variants={menuVariants}
-        className={`flex list-none fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 flex-col md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
-      >
-        <MenuItem href="/">Work</MenuItem>
-        <MenuItem href="/info">Info</MenuItem>
-        <MenuItem href="/blog">Blog</MenuItem>
-      </motion.div>
+    <nav>
+      <div className="md:hidden">
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="relative p-3 z-20"
+        >
+          <FaBars className=" text-2xl" />
+        </button>
+        <motion.div
+          animate={!isOpen ? 'closed' : 'open'}
+          variants={menuVariants}
+          className={`flex list-none fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 px-8 flex-col md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0`}
+        >
+          <MenuItems />
+        </motion.div>
+      </div>
+
       <motion.div
         animate={!isOpen ? 'closed' : 'open'}
         initial={false}
         variants={backdropVariants}
         className="fixed top-0 left-0 min-w-full min-h-full bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur md:hidden"
       />
+
+      <div className="list-none hidden md:flex md:static md:flex-row md:min-w-0 md:min-h-0 md:p-0">
+        <MenuItems />
+      </div>
     </nav>
   );
 }
