@@ -1,12 +1,16 @@
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
+function MenuItem({ children }) {
+  return <li>{children}</li>;
+}
+
 function Navigation() {
   return (
     <nav>
       <ul>
-        <li>Work</li>
-        <li>Info</li>
-        <li>Blog</li>
+        <MenuItem>Work</MenuItem>
+        <MenuItem>Info</MenuItem>
+        <MenuItem>Blog</MenuItem>
       </ul>
     </nav>
   );
