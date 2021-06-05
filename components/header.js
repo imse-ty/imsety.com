@@ -25,7 +25,7 @@ function Navigation() {
 
 export default function Header() {
   return (
-    <header>
+    <header className="sticky z-50 top-0 py-10 bg-imsetyWhite shadow-xl">
       <div className="flex justify-between container mx-auto">
         <ImsetyWordmark
           width="132px"
