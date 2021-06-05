@@ -1,16 +1,23 @@
+import Link from 'next/link';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
-function MenuItem({ children }) {
-  return <li>{children}</li>;
+function MenuItem({ children, href, ...props }) {
+  return (
+    <li>
+      <Link href={href} {...props}>
+        <a>{children}</a>
+      </Link>
+    </li>
+  );
 }
 
 function Navigation() {
   return (
     <nav>
       <ul>
-        <MenuItem>Work</MenuItem>
-        <MenuItem>Info</MenuItem>
-        <MenuItem>Blog</MenuItem>
+        <MenuItem href="/">Work</MenuItem>
+        <MenuItem href="/info">Info</MenuItem>
+        <MenuItem href="/blog">Blog</MenuItem>
       </ul>
     </nav>
   );
