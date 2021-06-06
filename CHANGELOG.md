@@ -8,6 +8,16 @@
 - `Footer` component. (#12)
 - Default [container padding](https://tailwindcss.com/docs/container).
 
+## [0.1.2]
+
+### Added
+
+- Link to my email. (#9)
+
+### Changed
+
+- Adjusted margin in the hero section.
+
 ## [0.1.1]
 
 ### Fixed
@@ -19,6 +29,7 @@
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/imse-ty/imsety.com/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/imse-ty/imsety.com/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/imse-ty/imsety.com/releases/tag/v0.1.0
