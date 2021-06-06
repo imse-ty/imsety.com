@@ -24,7 +24,7 @@ function SocialMediaLink(props) {
 
 export default function SocialMediaIcons() {
   return (
-    <div className="flex text-3xl justify-between max-w-sm">
+    <div className="flex text-2xl md:text-3xl justify-between max-w-sm">
       <SocialMediaLink href="https://twitter.com/imse_ty" alt="Twitter">
         <FaTwitter />
       </SocialMediaLink>
