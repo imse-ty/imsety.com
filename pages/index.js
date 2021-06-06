@@ -25,7 +25,7 @@ export default function Home() {
       <Header />
       <main>
         <div className="flex flex-col w-screen h-screen lg:flex-row">
-          <div className="relative p-8 md:p-20 flex flex-col justify-between h-1/2 lg:w-1/2 lg:h-full">
+          <div className="relative p-8 md:p-20 flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
           </div>
           <div className="relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
