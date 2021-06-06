@@ -66,7 +66,7 @@ function Navigation() {
           initial={false}
           animate={!isOpen ? 'closed' : 'opened'}
           variants={variants}
-          className="container fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 bg-imsetyWhite bg-opacity-75 backdrop-filter backdrop-blur"
+          className="container fixed top-0 left-0 z-10 min-w-full min-h-full pt-40 bg-imsetyWhite dark:bg-imsetyBlack bg-opacity-75 backdrop-filter backdrop-blur"
         >
           <Menu />
         </motion.div>
@@ -81,7 +81,7 @@ function Navigation() {
 
 export default function Header() {
   return (
-    <header className="sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite shadow-xl">
+    <header className="sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite dark:bg-imsetyBlack shadow-xl dark:shadow-white">
       <div className="flex items-center justify-between container mx-auto">
         <ImsetyWordmark
           width="132px"
