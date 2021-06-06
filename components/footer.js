@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SocialMediaIcons from './social-media-icons';
 
 export default function Footer() {
@@ -8,7 +9,20 @@ export default function Footer() {
           <SocialMediaIcons />
         </div>
         <p className="mb-2 text-sm font-medium">
-          Site designed and developed my me 🙂
+          <a
+            href="https://github.com/imse-ty/imsety.com"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-500 dark:hover:text-gray-300 transition duration-300"
+          >
+            Site designed and developed my me
+          </a>{' '}
+          🙂 —{' '}
+          <Link href="/changelog">
+            <a className="hover:text-gray-500 dark:hover:text-gray-300 transition duration-300">
+              Read site changelog
+            </a>
+          </Link>
         </p>
         <p className="text-sm">© 2021 Imsety Taylor. All rights reserved.</p>
       </div>
