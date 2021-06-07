@@ -23,9 +23,9 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main>
-        <div className="lg:container lg:mx-auto flex flex-col w-screen h-screen lg:flex-row">
-          <div className="lg:p-0 container mx-auto relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
+      <main className="h-screen">
+        <div className="flex flex-col w-screen h-5/6  lg:flex-row">
+          <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
           </div>
           <div className="relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
