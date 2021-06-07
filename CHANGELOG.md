@@ -10,7 +10,7 @@
 
 ### Changed
 
-- Made the default site wide language to English. (#14)
+- Made the site wide page language English. (#14)
 
 ## [0.1.2]
 
