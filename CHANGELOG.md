@@ -5,7 +5,7 @@
 ### Added
 
 - `Header` component with mobile navigation. (#12)
-- `Footer` component with links to the GitHub repo and the changelog page. (#12)
+- `Footer` component with a link to the [GitHub repo](https://github.com/imse-ty/imsety.com). (#12)
 - Default [container padding](https://tailwindcss.com/docs/container).
 
 ## [0.1.2]
