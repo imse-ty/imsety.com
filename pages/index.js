@@ -3,6 +3,7 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Hero from '../components/hero';
 import VideoReelLoop from '../components/video-reel-loop';
+import ProjectsSection from '../components/work/projects-section';
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main className="h-screen">
+      <div className="h-screen">
         <div className="flex flex-col w-screen h-5/6  lg:flex-row">
           <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
@@ -32,6 +33,9 @@ export default function Home() {
             <VideoReelLoop />
           </div>
         </div>
+      </div>
+      <main>
+        <ProjectsSection />
       </main>
       <Footer />
     </div>
