@@ -63,6 +63,9 @@ function Navigation() {
           <FaBars className=" text-2xl" />
         </button>
         <motion.div
+          onTap={() => {
+            setIsOpen(false);
+          }}
           initial={false}
           animate={!isOpen ? 'closed' : 'opened'}
           variants={variants}
