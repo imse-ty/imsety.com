@@ -1,6 +1,9 @@
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
+  corePlugins: {
+    container: false
+  },
   theme: {
     container: {
       padding: {
@@ -24,5 +27,17 @@ module.exports = {
       backdropFilter: ['dark']
     }
   },
-  plugins: []
+  plugins: [
+    ({ addComponents }) => {
+      addComponents({
+        '.container': {
+          paddingInline: '2rem',
+
+          '@screen md': {
+            paddingInline: '5rem'
+          }
+        }
+      });
+    }
+  ]
 };
