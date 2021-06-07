@@ -99,7 +99,6 @@ export default function Header() {
           viewBox="0 0 933.86 231"
           className="fill-current w-24 md:w-auto"
         />
-        <Navigation />
       </div>
     </header>
   );
