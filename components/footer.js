@@ -15,14 +15,8 @@ export default function Footer() {
             rel="noopener"
             className="hover:text-gray-500 dark:hover:text-gray-300 transition duration-300"
           >
-            Site designed and developed my me
-          </a>{' '}
-          🙂 —{' '}
-          <Link href="/changelog">
-            <a className="hover:text-gray-500 dark:hover:text-gray-300 transition duration-300">
-              Read site changelog
-            </a>
-          </Link>
+            Site designed and developed my me 🙂
+          </a>
         </p>
         <p className="text-sm">© 2021 Imsety Taylor. All rights reserved.</p>
       </div>
