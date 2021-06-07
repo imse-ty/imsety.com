@@ -8,6 +8,10 @@
 - `Footer` component with a link to the [GitHub repo](https://github.com/imse-ty/imsety.com). (#12)
 - Default [container padding](https://tailwindcss.com/docs/container).
 
+### Changed
+
+- Made the site wide page language English. (#14)
+
 ## [0.1.2]
 
 ### Added
