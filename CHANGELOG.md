@@ -12,7 +12,7 @@
 
 - Made the site wide page language English. (#14)
 
-## [0.1.2]
+## [0.1.2] - 2021-05-06
 
 ### Added
 
@@ -22,14 +22,14 @@
 
 - Adjusted margin in the hero section.
 
-## [0.1.1]
+## [0.1.1] - 2021-04-28
 
 ### Fixed
 
 - Incorrect casing in `index.js` for `Header`. (#5)
 - Incorrect syntax in `tailwind.config.js`. (#7)
 
-## [0.1.0]
+## [0.1.0] - 2021-04-28
 
 Initial development.
 
