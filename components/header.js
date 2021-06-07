@@ -1,10 +1,13 @@
+import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
-function MenuItem({ children, href, ...props }) {
+function MenuItem({ children, ...props }) {
+  const { asPath } = useRouter();
+  const isCurrentPath = asPath === props.href || asPath === props.as;
   const variants = {
     opened: { x: 0 },
     closed: { x: '-100%' }
@@ -14,9 +17,13 @@ function MenuItem({ children, href, ...props }) {
     <motion.li
       variants={variants}
       transition={{ type: 'spring', duration: 0.8 }}
-      className="my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase"
+      className={`
+        my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase
+
+        ${isCurrentPath ? 'font-bold' : ''}
+      `}
     >
-      <Link href={href} {...props}>
+      <Link {...props}>
         <a className="p-3">{children}</a>
       </Link>
     </motion.li>
