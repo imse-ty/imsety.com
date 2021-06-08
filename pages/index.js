@@ -1,11 +1,13 @@
 import Head from 'next/head';
+import { getClient } from '../lib/sanity.server';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Hero from '../components/work/hero';
 import VideoReelLoop from '../components/work/video-reel-loop';
 import ProjectsSection from '../components/work/projects-section';
+import { indexProjectQuery } from '../lib/queries';
 
-export default function Home() {
+export default function Home({ allProjects }) {
   return (
     <div className="bg-imsetyWhite text-imsetyBlack dark:bg-imsetyBlack dark:text-imsetyWhite">
       <Head>
@@ -38,9 +40,17 @@ export default function Home() {
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
         </h2>
-        <ProjectsSection />
+        <ProjectsSection projects={allProjects} />
       </main>
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const allProjects = await getClient().fetch(indexProjectQuery);
+
+  return {
+    props: { allProjects }
+  };
 }
