@@ -6,6 +6,7 @@ import Hero from '../components/work/hero';
 import VideoReelLoop from '../components/work/video-reel-loop';
 import ProjectsSection from '../components/work/projects-section';
 import { indexProjectQuery } from '../lib/queries';
+import RightTrianglePattern from '../public/right-triangle-pattern.svg';
 
 export default function Home({ allProjects }) {
   return (
@@ -36,6 +37,7 @@ export default function Home({ allProjects }) {
           </div>
         </div>
       </div>
+      <RightTrianglePattern />
       <main className="mb-24">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
