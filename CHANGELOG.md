@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-06-08
+
 ### Added
 
 - `Header` component with mobile navigation. (#12)
