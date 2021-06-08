@@ -28,7 +28,17 @@ export default {
     {
       title: 'Cover Image',
       name: 'coverImage',
-      type: 'image'
+      type: 'image',
+      fields: [
+        {
+          title: 'Alternative Text',
+          name: 'alt',
+          type: 'string',
+          options: {
+            isHighlighted: true
+          }
+        }
+      ]
     }
   ]
 };
