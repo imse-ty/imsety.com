@@ -31,13 +31,19 @@ export default function Home({ allProjects }) {
         <div className="flex flex-col w-full h-full lg:flex-row">
           <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
+            <RightTrianglePattern
+              width="740"
+              viewBox="0 0 1008 1080"
+              className="hidden lg:block absolute overflow-hidden -right-96 h-full fill-current text-imsetyBlack dark:text-imsetyWhite opacity-5"
+            />
           </div>
+
           <div className="relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
             <VideoReelLoop />
           </div>
         </div>
       </div>
-      <RightTrianglePattern />
+
       <main className="mb-24">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
