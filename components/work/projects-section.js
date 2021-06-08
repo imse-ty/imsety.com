@@ -1,3 +1,9 @@
+import ProjectCard from './project-card';
+
 export default function ProjectsSection() {
-  return <div>Projects</div>;
+  return (
+    <div>
+      Projects <ProjectCard />
+    </div>
+  );
 }
