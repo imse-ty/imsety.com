@@ -34,8 +34,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <main className="container">
-        <h2 className="mb-12 text-3xl md:text-5xl font-bold ">Projects</h2>
+      <main>
+        <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
+          Projects
+        </h2>
         <ProjectsSection />
       </main>
       <Footer />
