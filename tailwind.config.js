@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
@@ -28,16 +30,17 @@ module.exports = {
     }
   },
   plugins: [
-    ({ addComponents }) => {
-      addComponents({
+    plugin(function ({ addComponents }) {
+      const container = {
         '.container': {
           paddingInline: '2rem',
-
           '@screen md': {
             paddingInline: '5rem'
           }
         }
-      });
-    }
+      };
+
+      addComponents(container, { variants: ['responsive'] });
+    })
   ]
 };
