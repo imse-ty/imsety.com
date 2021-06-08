@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-export default function ProjectCard() {
+export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
   const labelVariants = { active: { opacity: 1 }, idle: { opacity: 0 } };
   const textVariants = {
     active: {
@@ -36,15 +36,15 @@ export default function ProjectCard() {
               variants={textVariants}
               className="mb-3 text-2xl md:text-4xl font-bold"
             >
-              Lorem ipsum
+              {title}
             </motion.h3>
             <motion.p variants={textVariants} className="text-lg">
-              Subtitle
+              {subtitle}
             </motion.p>
           </motion.div>
           <img
-            alt="Project cover image"
-            src="https://source.unsplash.com/user/dayday95/640x640"
+            alt={coverAlt}
+            src={coverSrc}
             width={640}
             height={640}
             className="w-full h-full"
@@ -54,3 +54,10 @@ export default function ProjectCard() {
     </motion.div>
   );
 }
+
+ProjectCard.defaultProps = {
+  title: 'Lorem Ipsum',
+  subtitle: 'Subtitle',
+  coverAlt: 'Project cover image',
+  coverSrc: ''
+};
