@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import Hero from '../components/hero';
-import VideoReelLoop from '../components/video-reel-loop';
+import Hero from '../components/work/hero';
+import VideoReelLoop from '../components/work/video-reel-loop';
 import ProjectsSection from '../components/work/projects-section';
 
 export default function Home() {

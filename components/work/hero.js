@@ -1,4 +1,4 @@
-import SocialMediaIcons from './social-media-icons';
+import SocialMediaIcons from '../social-media-icons';
 
 export default function Hero() {
   return (
