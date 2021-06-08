@@ -7,8 +7,8 @@
 - `Header` component with mobile navigation. (#12)
 - `Footer` component with a link to the [GitHub repo](https://github.com/imse-ty/imsety.com). (#12)
 - Work page with portfolio grid of my work. (#11)
-- Default [container padding](https://tailwindcss.com/docs/container).
 - [Sanity.io](https://www.sanity.io/) CMS with basic content functionality.
+- Default [container padding](https://tailwindcss.com/docs/container).
 
 ### Changed
 
