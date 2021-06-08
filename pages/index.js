@@ -34,7 +34,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <main>
+      <main className="container">
+        <h2 className="mb-12 text-5xl font-bold ">Projects</h2>
         <ProjectsSection />
       </main>
       <Footer />
