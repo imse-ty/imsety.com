@@ -12,6 +12,7 @@ export default function ProjectsSection({ projects }) {
             title={project.title}
             subtitle={project.subtitle}
             coverSrc={urlFor(project.coverImage).width(640).height(640).url()}
+            href={`work/${project.slug}`}
           />
         );
       })}

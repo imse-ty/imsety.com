@@ -2,7 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
+export default function ProjectCard({
+  title,
+  subtitle,
+  coverAlt,
+  coverSrc,
+  href
+}) {
   const labelVariants = { active: { opacity: 1 }, idle: { opacity: 0 } };
   const textVariants = {
     active: {
@@ -21,7 +27,7 @@ export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
       transition={{ type: 'spring', bounce: 0.5 }}
       className="relative w-full h-full text-imsetyWhite overflow-hidden"
     >
-      <Link href="#">
+      <Link href={href}>
         <a>
           <motion.div
             initial={false}
