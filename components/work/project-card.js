@@ -44,9 +44,9 @@ export default function ProjectCard() {
           </motion.div>
           <img
             alt="Project cover image"
-            src="https://source.unsplash.com/user/dayday95/500x500"
-            width={500}
-            height={500}
+            src="https://source.unsplash.com/user/dayday95/640x640"
+            width={640}
+            height={640}
             className="w-full h-full"
           />
         </a>
