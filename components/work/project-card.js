@@ -13,7 +13,7 @@ export default function ProjectCard() {
             whileHover="active"
             animate="idle"
             variants={labelVariants}
-            className="absolute flex flex-col justify-end w-full h-full p-4 md:p-8 bg-imsetyBlack dark:bg-imsetyWhite bg-opacity-20"
+            className="absolute flex flex-col justify-end w-full h-full p-4 md:p-8 bg-imsetyBlack bg-opacity-40"
           >
             <h3 className="mb-3 text-2xl md:text-4xl font-bold">Lorem ipsum</h3>
             <p className="text-lg">Subtitle</p>
