@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <main>
+      <main className="mb-12">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
         </h2>
