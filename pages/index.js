@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <Header />
       <div className="h-screen">
-        <div className="flex flex-col w-screen h-5/6  lg:flex-row">
+        <div className="flex flex-col w-full h-full lg:flex-row">
           <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
           </div>
