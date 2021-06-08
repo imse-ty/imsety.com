@@ -56,8 +56,6 @@ export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
 }
 
 ProjectCard.defaultProps = {
-  title: 'Lorem Ipsum',
-  subtitle: 'Subtitle',
   coverAlt: 'Project cover image',
   coverSrc: ''
 };

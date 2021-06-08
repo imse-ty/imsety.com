@@ -9,6 +9,8 @@ export default function ProjectsSection() {
         return (
           <ProjectCard
             key={index}
+            title="Lorem Ipsum"
+            subtitle="Subtitle"
             coverSrc="https://source.unsplash.com/user/dayday95/640x640"
           />
         );
