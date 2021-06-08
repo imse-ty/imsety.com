@@ -15,7 +15,11 @@ export default function ProjectCard() {
   };
 
   return (
-    <div className="relative w-full h-full text-imsetyWhite overflow-hidden">
+    <motion.div
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: 'spring', bounce: 0.5 }}
+      className="relative w-full h-full text-imsetyWhite overflow-hidden"
+    >
       <Link href="#">
         <a>
           <motion.div
@@ -47,6 +51,6 @@ export default function ProjectCard() {
           />
         </a>
       </Link>
-    </div>
+    </motion.div>
   );
 }
