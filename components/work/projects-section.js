@@ -5,7 +5,6 @@ export default function ProjectsSection({ projects }) {
   return (
     <div className="sm:container grid grid-cols-2 gap-1 md:grid-cols-3 sm:gap-5">
       {projects.map((project) => {
-        console.log(project.coverImage);
         return (
           <ProjectCard
             key={project._id}
