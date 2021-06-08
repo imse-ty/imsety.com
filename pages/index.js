@@ -24,7 +24,7 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <div className="h-screen">
+      <div className="h-screen mb-24">
         <div className="flex flex-col w-full h-full lg:flex-row">
           <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
             <Hero />
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <main className="mb-12">
+      <main className="mb-24">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
         </h2>
