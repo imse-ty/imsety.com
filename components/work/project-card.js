@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
@@ -30,7 +31,7 @@ export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
               staggerChildren: 0.03
             }}
             variants={labelVariants}
-            className="absolute flex flex-col justify-end w-full h-full p-4 md:p-8 bg-imsetyBlack bg-opacity-40"
+            className="absolute z-10 flex flex-col justify-end w-full h-full p-4 md:p-8 bg-imsetyBlack bg-opacity-40"
           >
             <motion.h3
               variants={textVariants}
@@ -42,12 +43,12 @@ export default function ProjectCard({ title, subtitle, coverAlt, coverSrc }) {
               {subtitle}
             </motion.p>
           </motion.div>
-          <img
+          <Image
             alt={coverAlt}
             src={coverSrc}
             width={640}
             height={640}
-            className="w-full h-full"
+            layout="responsive"
           />
         </a>
       </Link>
