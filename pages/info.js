@@ -24,7 +24,7 @@ export default function Info() {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="p-8 md:p-20 lg:pl-36 min-h-1/2 lg:h-full lg:w-1/2 lg:max-w-4xl flex flex-col justify-center">
+        <div className="p-8 md:p-20 lg:p-28 min-h-1/2 lg:h-full lg:w-1/2 lg:max-w-4xl flex flex-col justify-center">
           <h1 className="mb-6 font-bold text-3xl md:text-5xl">About</h1>
           <p className="mb-6 font-medium md:text-lg">
             I'm a Motion Designer based in Atlanta, GA. When I'm designing and
