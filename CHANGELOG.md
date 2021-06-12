@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Info page with basic bio about me. (#19)
+
 ## [0.2.0] - 2021-06-08
 
 ### Added
