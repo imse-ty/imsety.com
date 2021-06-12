@@ -47,7 +47,6 @@ function Menu() {
     <motion.ul variants={variants} className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
       <MenuItem href="/info">Info</MenuItem>
-      <MenuItem href="/blog">Blog</MenuItem>
     </motion.ul>
   );
 }
@@ -99,6 +98,7 @@ export default function Header() {
           viewBox="0 0 933.86 231"
           className="fill-current w-24 md:w-auto"
         />
+        <Navigation />
       </div>
     </header>
   );
