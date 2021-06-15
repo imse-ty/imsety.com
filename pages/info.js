@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import RightTrianglePattern from '../public/right-triangle-pattern.svg';
 
 export default function Info() {
   return (

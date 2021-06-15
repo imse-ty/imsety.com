@@ -6,7 +6,6 @@ import Hero from '../components/work/hero';
 import VideoReelLoop from '../components/work/video-reel-loop';
 import ProjectsSection from '../components/work/projects-section';
 import { indexProjectQuery } from '../lib/queries';
-import RightTrianglePattern from '../public/right-triangle-pattern.svg';
 
 export default function Home({ allProjects }) {
   return (
@@ -23,11 +22,6 @@ export default function Home({ allProjects }) {
         <div className="flex flex-col w-full h-full lg:flex-row">
           <div className="relative flex items-center lg:w-1/2 h-full">
             <Hero />
-            <RightTrianglePattern
-              width="740"
-              viewBox="0 0 1008 1080"
-              className="hidden lg:block absolute overflow-hidden -right-96 h-full fill-current text-imsetyBlack dark:text-imsetyWhite opacity-5"
-            />
           </div>
 
           <div className="hidden lg:block relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
