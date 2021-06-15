@@ -18,17 +18,15 @@ export default function Home({ allProjects }) {
         />
       </Head>
       <Header />
-      <div className="container h-50v mb-24">
-        <div className="flex flex-col w-full h-full lg:flex-row">
-          <div className="relative flex items-center lg:w-1/2 h-full">
-            <Hero />
-          </div>
 
-          <div className="hidden lg:block relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
-            <VideoReelLoop />
-          </div>
+      <section className="flex flex-col min-w-full md:flex-row mb-24 h-80v">
+        <div className="relative overflow-hidden flex-1">
+          <VideoReelLoop />
         </div>
-      </div>
+        <div className="container flex items-center mx-0 py-8 md:w-3/5">
+          <Hero />
+        </div>
+      </section>
 
       <main className="mb-24">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
@@ -36,6 +34,7 @@ export default function Home({ allProjects }) {
         </h2>
         <ProjectsSection projects={allProjects} />
       </main>
+
       <Footer />
     </div>
   );
