@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import RightTrianglePattern from '../public/right-triangle-pattern.svg';
 
 export default function Info() {
   return (
@@ -14,34 +13,32 @@ export default function Info() {
         />
       </Head>
       <Header />
-      <main className="container flex flex-grow mb-24">
-        <div className="flex flex-col lg:flex-row">
-          <div className="h-3/4 lg:h-full lg:w-1/2">
-            <img
-              alt="Imsety looking away in black and white"
-              src="/imsety-looking-away-in-black-and-white.jpg"
-              width="710"
-              height="880"
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="py-8 md:py-20 lg:p-28 min-h-2/4 lg:h-full lg:w-1/2 lg:max-w-4xl flex flex-col justify-center">
-            <h1 className="mb-6 font-bold text-3xl md:text-6xl">About</h1>
-            <p className="mb-10 font-medium md:text-lg">
-              I'm a Motion Designer based in Atlanta, GA. When I'm designing and
-              discovering new ideas with powerful tools such as After Effects or
-              Cinema 4D, I regularly ask myself this question: "Is it pleasing
-              to the eye?"
-            </p>
-            <a href="mailto:hello@imsety.com">
-              <button
-                type="button"
-                className="px-14 py-5 font-bold text-imsetyWhite dark:text-imsetyBlack bg-imsetyBlack dark:bg-imsetyWhite hover:scale-105 transform transition duration-300"
-              >
-                Reach Out
-              </button>
-            </a>
-          </div>
+
+      <main className="flex flex-col md:flex-row flex-grow mb-24 md:h-80v">
+        <img
+          alt="Imsety looking away in black and white"
+          src="/imsety-looking-away-in-black-and-white.jpg"
+          width="710"
+          height="880"
+          className="object-cover w-full md:w-2/5 h-50v md:h-full"
+        />
+
+        <div className="container flex flex-col justify-center mx-0 py-8">
+          <h1 className="mb-6 font-bold text-3xl md:text-6xl">About</h1>
+          <p className="mb-10 max-w-2xl font-medium md:text-lg">
+            I'm a Motion Designer based in Atlanta, GA. When I'm designing and
+            discovering new ideas with powerful tools such as After Effects or
+            Cinema 4D, I regularly ask myself this question: "Is it pleasing to
+            the eye?"
+          </p>
+          <a href="mailto:hello@imsety.com">
+            <button
+              type="button"
+              className="px-14 py-5 font-bold text-imsetyWhite dark:text-imsetyBlack bg-imsetyBlack dark:bg-imsetyWhite hover:scale-105 transform transition duration-300"
+            >
+              Reach Out
+            </button>
+          </a>
         </div>
       </main>
       <Footer />
