@@ -20,10 +20,10 @@ export default function Home({ allProjects }) {
       <Header />
 
       <section className="flex flex-col min-w-full md:flex-row mb-24 h-80v">
-        <div className="relative overflow-hidden flex-1">
+        <div className="relative overflow-hidden md:w-2/4">
           <VideoReelLoop />
         </div>
-        <div className="container flex items-center mx-0 py-8 md:w-3/5">
+        <div className="container flex items-center mx-0 py-8 md:w-3/4">
           <Hero />
         </div>
       </section>
