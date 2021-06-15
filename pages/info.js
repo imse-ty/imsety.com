@@ -14,8 +14,8 @@ export default function Info() {
         />
       </Head>
       <Header />
-      <main className="container flex flex-grow">
-        <div className="flex flex-col lg:flex-row h-50v mb-24">
+      <main className="container flex flex-grow mb-24">
+        <div className="flex flex-col lg:flex-row">
           <div className="h-3/4 lg:h-full lg:w-1/2">
             <img
               alt="Imsety looking away in black and white"
