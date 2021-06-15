@@ -92,12 +92,16 @@ export default function Header() {
   return (
     <header className="sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite  shadow-xl dark:bg-imsetyBlack dark:bg-opacity-75 dark:backdrop-filter backdrop-blur">
       <div className="flex items-center justify-between container mx-auto">
-        <ImsetyWordmark
-          width="132px"
-          height="33px"
-          viewBox="0 0 933.86 231"
-          className="fill-current w-24 md:w-auto"
-        />
+        <Link href="/">
+          <a>
+            <ImsetyWordmark
+              width="132px"
+              height="33px"
+              viewBox="0 0 933.86 231"
+              className="fill-current w-24 md:w-auto"
+            />
+          </a>
+        </Link>
         <Navigation />
       </div>
     </header>

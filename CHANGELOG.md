@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- The Imsety wordmark now takes you to the Work page. ([#22](https://github.com/imse-ty/imsety.com/issues/22))
+
 ## [0.3.0]
 
 ### Added
