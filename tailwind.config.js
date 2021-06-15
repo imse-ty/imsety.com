@@ -44,6 +44,8 @@ module.exports = {
     plugin(function ({ addComponents }) {
       const container = {
         '.container': {
+          maxWidth: '1440px',
+          margin: '0 auto',
           paddingInline: '2rem',
           '@screen md': {
             paddingInline: '5rem'

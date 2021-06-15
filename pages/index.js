@@ -19,9 +19,9 @@ export default function Home({ allProjects }) {
         />
       </Head>
       <Header />
-      <div className="h-70v mb-24">
+      <div className="container h-50v mb-24">
         <div className="flex flex-col w-full h-full lg:flex-row">
-          <div className="container relative flex items-center h-1/2 lg:w-1/2 lg:h-full">
+          <div className="relative flex items-center lg:w-1/2 h-full">
             <Hero />
             <RightTrianglePattern
               width="740"
@@ -30,7 +30,7 @@ export default function Home({ allProjects }) {
             />
           </div>
 
-          <div className="relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
+          <div className="hidden lg:block relative h-1/2 lg:w-1/2 lg:h-full overflow-hidden">
             <VideoReelLoop />
           </div>
         </div>
