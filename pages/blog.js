@@ -1,3 +1,9 @@
+import BlogPost from '../components/blog/blog-post';
+
 export default function Blog() {
-  return <div>Blog page</div>;
+  return (
+    <div>
+      <BlogPost />
+    </div>
+  );
 }
