@@ -14,7 +14,7 @@
 
 - Fixed unresponsive page behavior on smaller screens. ([#27](https://github.com/imse-ty/imsety.com/issues/27))
 
-## [0.3.0]
+## [0.3.0] - 2021-06-12
 
 ### Added
 
