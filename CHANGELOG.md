@@ -9,6 +9,10 @@
 - Redesigned Work and Info page hero sections ([#26](https://github.com/imse-ty/imsety.com/issues/26))
 - The header shadow now only shows up when you start scrolling. ([#29](https://github.com/imse-ty/imsety.com/issues/29))
 
+### Fixed
+
+- Fixed unresponsive page behavior on smaller screens. ([#27](https://github.com/imse-ty/imsety.com/issues/27))
+
 ## [0.3.0]
 
 ### Added
