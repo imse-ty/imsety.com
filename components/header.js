@@ -54,8 +54,8 @@ function Menu() {
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const variants = {
-    opened: { opacity: 1 },
-    closed: { opacity: 0 }
+    opened: { display: 'block', opacity: 1 },
+    closed: { opacity: 0, transitionEnd: { display: 'none' } }
   };
 
   return (
