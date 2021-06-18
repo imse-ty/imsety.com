@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
@@ -89,8 +89,36 @@ function Navigation() {
 }
 
 export default function Header() {
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasShadow((hasShadow) => {
+        if (!hasShadow && window.scrollY > 113) {
+          return true;
+        }
+
+        if (hasShadow && window.scrollY < 2) {
+          return false;
+        }
+
+        return hasShadow;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite  shadow-xl dark:bg-imsetyBlack dark:bg-opacity-75 dark:backdrop-filter backdrop-blur">
+    <header
+      className={`
+        sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite dark:bg-imsetyBlack dark:bg-opacity-75 dark:backdrop-filter backdrop-blur transition-shadow duration-500
+
+        ${hasShadow ? 'shadow-xl' : ''}
+      `}
+    >
       <div className="flex items-center justify-between container mx-auto">
         <Link href="/">
           <a>
