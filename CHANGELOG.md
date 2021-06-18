@@ -8,6 +8,7 @@
 - The Imsety wordmark now takes you to the Work page. ([#22](https://github.com/imse-ty/imsety.com/issues/22))
 - Redesigned Work and Info page hero sections ([#26](https://github.com/imse-ty/imsety.com/issues/26))
 - The header shadow now only shows up when you start scrolling. ([#29](https://github.com/imse-ty/imsety.com/issues/29))
+- Renamed "Info" page to "About" page. ([#32](https://github.com/imse-ty/imsety.com/issues/32))
 
 ### Fixed
 
