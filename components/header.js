@@ -47,6 +47,7 @@ function Menu() {
     <motion.ul variants={variants} className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
       <MenuItem href="/about">About</MenuItem>
+      <MenuItem href="/blog">Blog</MenuItem>
     </motion.ul>
   );
 }
