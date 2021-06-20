@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="bg-imsetyWhite text-imsetyBlack dark:bg-imsetyBlack dark:text-imsetyWhite">
+    <div className="text-lg bg-imsetyWhite text-imsetyBlack dark:bg-imsetyBlack dark:text-imsetyWhite">
       <Head>
         <meta name="keywords" content="motion, design, motion design, art" />
         <meta name="author" content="Imsety Taylor" />
