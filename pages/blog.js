@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import BlogPost from '../components/blog/blog-post';
+import BlogPostSection from '../components/blog/blog-post-section';
 
 export default function Blog() {
   return (
@@ -16,12 +16,7 @@ export default function Blog() {
       <Header />
       <main className="container flex-grow my-12 md:my-24">
         <h1 className="mb-12 text-3xl md:text-5xl font-bold">Blog</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <BlogPost />
-          <BlogPost />
-          <BlogPost />
-          <BlogPost />
-        </div>
+        <BlogPostSection />
       </main>
       <Footer />
     </div>
