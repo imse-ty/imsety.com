@@ -45,6 +45,7 @@ export default {
       rows: 4
     },
     {
+      title: 'Published at',
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime'
