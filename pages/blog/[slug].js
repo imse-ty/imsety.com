@@ -35,7 +35,7 @@ export default function Post({ data = {}, source, preview }) {
         />
       </Head>
       <Header />
-      <main>
+      <main className="my-12 md:my-24">
         <article>
           <PostHeader
             mainImage={urlFor(post.mainImage).url()}
