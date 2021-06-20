@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## Added
+
+- Blog page with dynamic content from Sanity. ([#34](https://github.com/imse-ty/imsety.com/issues/34))
+
 ### Changed
 
 - Made default `font-size` a little bigger (1.125 `rem`). (#37)
