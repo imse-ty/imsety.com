@@ -22,7 +22,7 @@ export default function BlogPost({
               alt={coverAlt}
               src={coverImage}
               width={640}
-              height={320}
+              height={480}
               className="mb-2"
             />
             <div className="mb-2 text-xs tracking-widest text-gray-400">
@@ -42,6 +42,6 @@ BlogPost.defaultProps = {
   subtitle: 'Subtitle',
   caption: 'June 19, 2021 • 2 min read',
   coverAlt: 'Blog post cover image',
-  coverImage: 'https://source.unsplash.com/user/erondu/640x320',
+  coverImage: 'https://source.unsplash.com/user/erondu/640x480',
   href: '#'
 };
