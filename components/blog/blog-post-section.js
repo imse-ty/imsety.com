@@ -5,7 +5,6 @@ export default function BlogPostSection({ posts }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {posts.map((post) => {
-        console.log(post.publishedDate);
         return (
           <BlogPost
             key={post._id}
