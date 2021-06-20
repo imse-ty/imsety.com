@@ -41,6 +41,7 @@ export default function Post({ data = {}, preview }) {
             date={post.publishedAt}
             readingTime={post.estimatedReadingTime}
           />
+          <div className="whitespace-pre">{post.body}</div>
         </article>
       </main>
       <Footer />
