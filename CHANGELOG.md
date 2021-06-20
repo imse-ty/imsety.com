@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Made default `font-size` a little bigger (1.125 `rem`). (#37)
+
 ## [0.4.0] - 2021-06-18
 
 ### Changed
