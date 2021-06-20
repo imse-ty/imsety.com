@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import DateFormatter from '../date-formatter';
 
 export default function BlogPost({
   title,
@@ -28,7 +29,7 @@ export default function BlogPost({
               objectFit="cover"
             />
             <div className="my-2 text-xs tracking-widest text-gray-400">
-              {date} • {readingTime} min read
+              <DateFormatter dateString={date} /> • 2 min read
             </div>
             <h2 className="mb-2 text-2xl font-bold">{title}</h2>
             <p>{summary}</p>
