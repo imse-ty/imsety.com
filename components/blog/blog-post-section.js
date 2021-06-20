@@ -1,7 +1,7 @@
 import { urlFor } from '../../lib/sanity';
 import BlogPost from './blog-post';
 
-export default function ProjectsSection({ projects: posts }) {
+export default function BlogPostSection({ posts }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {posts.map((post) => {
