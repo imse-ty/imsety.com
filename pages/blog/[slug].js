@@ -44,7 +44,7 @@ export default function Post({ data = {}, source, preview }) {
             readingTime={post.estimatedReadingTime}
           />
           <div className="container">
-            <div className="mx-auto prose prose-lg">
+            <div className="mx-auto prose prose-lg dark:prose-light">
               <MDXRemote {...source} />
             </div>
           </div>
