@@ -29,7 +29,8 @@ export default function BlogPost({
               objectFit="cover"
             />
             <div className="my-2 text-xs tracking-widest text-gray-400">
-              <DateFormatter dateString={date} /> • 2 min read
+              <DateFormatter dateString={date} /> •{' '}
+              <time dateTime={`PTM${readingTime}`}>{readingTime} min</time> read
             </div>
             <h2 className="mb-2 text-2xl font-bold">{title}</h2>
             <p>{summary}</p>
