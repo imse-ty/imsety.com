@@ -5,6 +5,7 @@
 ## Added
 
 - Blog page with dynamic content from Sanity. ([#34](https://github.com/imse-ty/imsety.com/issues/34))
+- Blog post page. ([#35](https://github.com/imse-ty/imsety.com/issues/35))
 
 ### Changed
 
