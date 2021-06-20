@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function BlogPost({
   title,
-  subtitle,
+  summary,
   date,
   readingTime,
   coverAlt,
@@ -30,7 +30,7 @@ export default function BlogPost({
               {date} • {readingTime} min read
             </div>
             <h2 className="mb-2 text-2xl font-bold">{title}</h2>
-            <p>{subtitle}</p>
+            <p>{summary}</p>
           </div>
         </a>
       </Link>
@@ -40,7 +40,7 @@ export default function BlogPost({
 
 BlogPost.defaultProps = {
   title: 'Lorem Ipsum',
-  subtitle: 'Subtitle',
+  summary: 'Summary',
   date: 'March 5, 2020',
   readingTime: '2',
   coverAlt: 'Blog post cover image',

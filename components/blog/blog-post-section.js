@@ -9,7 +9,7 @@ export default function BlogPostSection({ posts }) {
           <BlogPost
             key={post._id}
             title={post.title}
-            subtitle={post.subtitle}
+            summary={post.summary}
             date={post.publishedDate}
             readingTime={post.estimatedReadingTime}
             coverAlt={post.coverImage.alt}
