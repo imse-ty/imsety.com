@@ -14,7 +14,7 @@ export default function Blog() {
         />
       </Head>
       <Header />
-      <main className="container flex-grow my-24">
+      <main className="container flex-grow my-12 md:my-24">
         <h1 className="mb-12 text-3xl md:text-5xl font-bold">Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <BlogPost />
