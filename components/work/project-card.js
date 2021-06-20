@@ -45,7 +45,7 @@ export default function ProjectCard({
             >
               {title}
             </motion.h3>
-            <motion.p variants={textVariants} className="max-w-md text-lg">
+            <motion.p variants={textVariants} className="max-w-md">
               {subtitle}
             </motion.p>
           </motion.div>

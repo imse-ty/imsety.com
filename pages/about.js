@@ -25,7 +25,7 @@ export default function Info() {
 
         <div className="container flex flex-col justify-center mx-0 py-8">
           <h1 className="mb-6 font-bold text-3xl md:text-6xl">About</h1>
-          <p className="mb-10 max-w-2xl font-medium md:text-lg">
+          <p className="mb-10 max-w-2xl font-medium">
             I'm a Motion Designer based in Atlanta, GA. When I'm designing and
             discovering new ideas with powerful tools such as After Effects or
             Cinema 4D, I regularly ask myself this question: "Is it pleasing to
