@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.22.1",
     "framer-motion": "^4.1.17",
     "next": "10.1.3",
