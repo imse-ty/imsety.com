@@ -3,9 +3,9 @@ export default function BlogPost() {
     <div>
       <img
         alt="Blog post card cover image"
-        src="https://source.unsplash.com/random/640x640"
+        src="https://source.unsplash.com/user/erondu/640x320"
         width={640}
-        height={640}
+        height={320}
       />
       <div className="text-xs tracking-widest text-gray-400">
         June 19, 2021 • 2 min read
