@@ -35,7 +35,7 @@ export default function Post({ data = {}, source, preview }) {
         />
       </Head>
       <Header />
-      <main className="flex-grow my-12 md:my-24">
+      <main className="flex-grow mb-12 md:mb-24">
         <article>
           <PostHeader
             mainImage={urlFor(post.mainImage).url()}
