@@ -14,7 +14,7 @@ export default function BlogPostSection({ posts }) {
             readingTime={post.estimatedReadingTime}
             coverAlt={post.mainImage.alt}
             coverImage={urlFor(post.mainImage).width(640).height(480).url()}
-            href="blog/is-it-pleasing-to-the-eye"
+            href={`/blog/${post.slug}`}
           />
         );
       })}
