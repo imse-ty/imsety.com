@@ -26,7 +26,7 @@ export default function Post({ data = {}, source, preview }) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Imsety Taylor - Motion Designer</title>
         <meta
@@ -35,7 +35,7 @@ export default function Post({ data = {}, source, preview }) {
         />
       </Head>
       <Header />
-      <main className="my-12 md:my-24">
+      <main className="flex-grow my-12 md:my-24">
         <article>
           <PostHeader
             mainImage={urlFor(post.mainImage).url()}
