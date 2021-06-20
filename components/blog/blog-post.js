@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function BlogPost({
@@ -19,14 +20,14 @@ export default function BlogPost({
       <Link href={href}>
         <a>
           <div>
-            <img
+            <Image
               alt={coverAlt}
               src={coverImage}
               width={640}
               height={480}
-              className="mb-2"
+              objectFit="cover"
             />
-            <div className="mb-2 text-xs tracking-widest text-gray-400">
+            <div className="my-2 text-xs tracking-widest text-gray-400">
               {date} • {readingTime} min read
             </div>
             <h2 className="mb-2 text-2xl font-bold">{title}</h2>
