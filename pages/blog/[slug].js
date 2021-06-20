@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import Error from 'next/error';
 import Head from 'next/head';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from 'next-mdx-remote';
 import { urlFor, usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { postQuery, postSlugsQuery } from '../../lib/queries';
@@ -8,7 +10,7 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import PostHeader from '../../components/blog/post-header';
 
-export default function Post({ data = {}, preview }) {
+export default function Post({ data = {}, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
   const {
@@ -41,7 +43,9 @@ export default function Post({ data = {}, preview }) {
             date={post.publishedAt}
             readingTime={post.estimatedReadingTime}
           />
-          <div className="whitespace-pre">{post.body}</div>
+          <div>
+            <MDXRemote {...source} />
+          </div>
         </article>
       </main>
       <Footer />
@@ -53,11 +57,13 @@ export async function getStaticProps({ params, preview = false }) {
   const post = await getClient().fetch(postQuery, {
     slug: params.slug
   });
+  const mdxSource = await serialize(post.body);
 
   return {
     props: {
       preview,
-      data: { post }
+      data: { post },
+      source: mdxSource
     }
   };
 }
