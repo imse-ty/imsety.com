@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 export default function BlogPost({
   title,
   subtitle,
-  caption,
+  date,
+  readingTime,
   coverAlt,
   coverImage,
   href
@@ -26,7 +27,7 @@ export default function BlogPost({
               className="mb-2"
             />
             <div className="mb-2 text-xs tracking-widest text-gray-400">
-              {caption}
+              {date} • {readingTime} min read
             </div>
             <h2 className="mb-2 text-2xl font-bold">{title}</h2>
             <p>{subtitle}</p>
@@ -40,7 +41,8 @@ export default function BlogPost({
 BlogPost.defaultProps = {
   title: 'Lorem Ipsum',
   subtitle: 'Subtitle',
-  caption: 'June 19, 2021 • 2 min read',
+  date: 'March 5, 2020',
+  readingTime: '2',
   coverAlt: 'Blog post cover image',
   coverImage: 'https://source.unsplash.com/user/erondu/640x480',
   href: '#'
