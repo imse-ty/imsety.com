@@ -42,11 +42,6 @@ export default function BlogPost({
 }
 
 BlogPost.defaultProps = {
-  title: 'Lorem Ipsum',
-  summary: 'Summary',
-  date: 'March 5, 2020',
-  readingTime: '2',
   coverAlt: 'Blog post cover image',
-  coverImage: 'https://source.unsplash.com/user/erondu/640x480',
-  href: '#'
+  coverImage: ''
 };
