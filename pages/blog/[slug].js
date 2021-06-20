@@ -43,8 +43,10 @@ export default function Post({ data = {}, source, preview }) {
             date={post.publishedAt}
             readingTime={post.estimatedReadingTime}
           />
-          <div className="mx-auto prose prose-lg">
-            <MDXRemote {...source} />
+          <div className="container">
+            <div className="mx-auto prose prose-lg">
+              <MDXRemote {...source} />
+            </div>
           </div>
         </article>
       </main>
