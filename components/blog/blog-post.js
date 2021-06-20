@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function BlogPost({
   title,
@@ -9,24 +10,30 @@ export default function BlogPost({
   href
 }) {
   return (
-    <Link href={href}>
-      <a>
-        <div className="mb-4 md:mb-8">
-          <img
-            alt={coverAlt}
-            src={coverImage}
-            width={640}
-            height={320}
-            className="mb-2"
-          />
-          <div className="mb-2 text-xs tracking-widest text-gray-400">
-            {caption}
+    <motion.div
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: 'spring', bounce: 0.5 }}
+      className="mb-4 md:mb-8"
+    >
+      <Link href={href}>
+        <a>
+          <div>
+            <img
+              alt={coverAlt}
+              src={coverImage}
+              width={640}
+              height={320}
+              className="mb-2"
+            />
+            <div className="mb-2 text-xs tracking-widest text-gray-400">
+              {caption}
+            </div>
+            <h2 className="mb-2 text-2xl font-bold">{title}</h2>
+            <p>{subtitle}</p>
           </div>
-          <h2 className="mb-2 text-2xl font-bold">{title}</h2>
-          <p>{subtitle}</p>
-        </div>
-      </a>
-    </Link>
+        </a>
+      </Link>
+    </motion.div>
   );
 }
 
