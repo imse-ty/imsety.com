@@ -11,7 +11,7 @@ export default function BlogPost({
   return (
     <Link href={href}>
       <a>
-        <div className="mb-8">
+        <div className="mb-4 md:mb-8">
           <img
             alt={coverAlt}
             src={coverImage}
