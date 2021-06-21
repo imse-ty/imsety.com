@@ -39,7 +39,7 @@ export default function Post({ data = {}, source, preview }) {
         <article>
           <PostHeader
             mainImageAlt={post.mainImage.alt}
-            mainImage={urlFor(post.mainImage).width(640).height(640).url()}
+            mainImage={urlFor(post.mainImage).width(640).height(480).url()}
             title={post.title}
             date={post.publishedAt}
             readingTime={post.estimatedReadingTime}

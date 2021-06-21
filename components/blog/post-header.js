@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import DateFormatter from '../date-formatter';
 
 export default function PostHeader({
@@ -9,8 +10,15 @@ export default function PostHeader({
 }) {
   return (
     <header className="flex flex-col md:flex-row items-center mb-12">
-      <div className="mb-8 md:w-1/2">
-        <img alt={mainImageAlt} src={mainImage} className="w-full h-auto" />
+      <div className="mb-8 w-full md:w-1/2">
+        <Image
+          alt={mainImageAlt}
+          src={mainImage}
+          width={640}
+          height={480}
+          layout="responsive"
+          objectFit="cover"
+        />
       </div>
       <div className="container md:w-1/2">
         <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold">{title}</h1>
