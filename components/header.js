@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { FaBars } from 'react-icons/fa';
 import ImsetyWordmark from '../public/imsety-wordmark.svg';
 
-function MenuItem({ children, ...props }) {
+function MenuItem({ children, active, ...props }) {
   const { asPath } = useRouter();
   const isCurrentPath = asPath === props.href || asPath === props.as;
   const variants = {
@@ -20,7 +20,7 @@ function MenuItem({ children, ...props }) {
       className={`
         my-6 font-medium text-3xl md:ml-3 md:my-0 md:text-base uppercase
 
-        ${isCurrentPath ? 'font-bold' : ''}
+        ${isCurrentPath || active ? 'font-bold' : ''}
       `}
     >
       <Link {...props}>
@@ -31,6 +31,7 @@ function MenuItem({ children, ...props }) {
 }
 
 function Menu() {
+  const { pathname } = useRouter();
   const variants = {
     opened: {
       transition: {
@@ -47,7 +48,9 @@ function Menu() {
     <motion.ul variants={variants} className={`flex flex-col md:flex-row`}>
       <MenuItem href="/">Work</MenuItem>
       <MenuItem href="/about">About</MenuItem>
-      <MenuItem href="/blog">Blog</MenuItem>
+      <MenuItem href="/blog" active={pathname === '/blog/[slug]'}>
+        Blog
+      </MenuItem>
     </motion.ul>
   );
 }
