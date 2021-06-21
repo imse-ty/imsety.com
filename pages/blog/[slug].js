@@ -38,6 +38,7 @@ export default function Post({ data = {}, source, preview }) {
       <main className="flex-grow mb-12 md:mb-24">
         <article>
           <PostHeader
+            mainImageAlt={post.mainImage.alt}
             mainImage={urlFor(post.mainImage).url()}
             title={post.title}
             date={post.publishedAt}
