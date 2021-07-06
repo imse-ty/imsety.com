@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import SocialMediaIcons from '../components/social-media-icons';
+import Footer from '../components/footer';
 import RightTriangle from '../public/right-triangle.svg';
 
 export default function Home() {
   const [isLight, setIsLight] = useState(false);
-  const socialMediaIconsVariant = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.1 } },
-    hover: { opacity: 1 }
-  };
 
   return (
     <div
@@ -47,18 +42,7 @@ export default function Home() {
         >
           <RightTriangle alt="A right triangle" className="fill-current" />
         </motion.div>
-        <motion.footer
-          variants={socialMediaIconsVariant}
-          initial="hidden"
-          animate="show"
-          whileHover="hover"
-          className="absolute bottom-0 px-4 py-14 my-12 w-full"
-        >
-          <SocialMediaIcons />
-          <p className="mt-12 text-sm text-center opacity-40">
-            Copyright © 2021 Imsety Taylor. All rights reserved.
-          </p>
-        </motion.footer>
+        <Footer />
       </main>
     </div>
   );
