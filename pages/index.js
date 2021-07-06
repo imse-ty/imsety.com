@@ -37,6 +37,10 @@ export default function Home() {
             scale: 3,
             transition: { type: 'spring', duration: 0.5, bounce: 0.4 }
           }}
+          whileTap={{
+            scale: 2.5,
+            transition: { type: 'spring', duration: 0.5, bounce: 0.4 }
+          }}
           animate={{ scale: 2 }}
           transition={{ repeat: Infinity, repeatType: 'reverse', duration: 5 }}
           className="m-auto cursor-pointer"
