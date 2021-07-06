@@ -55,6 +55,9 @@ export default function Home() {
           className="absolute bottom-0 px-4 py-14 my-12 w-full"
         >
           <SocialMediaIcons />
+          <p className="mt-12 text-sm text-center opacity-40">
+            Copyright © 2021 Imsety Taylor. All rights reserved.
+          </p>
         </motion.footer>
       </main>
     </div>
