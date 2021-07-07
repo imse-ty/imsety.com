@@ -14,7 +14,7 @@ export default function Footer() {
       initial="hidden"
       animate="show"
       whileHover="hover"
-      className="absolute bottom-0 px-4 py-14 my-12 w-full"
+      className="absolute bottom-0 px-4 pt-14 pb-8 w-full"
     >
       <SocialMediaIcons />
       <p className="mt-12 text-xs text-center opacity-40">
