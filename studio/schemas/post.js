@@ -1,7 +1,7 @@
 import { FaStickyNote } from 'react-icons/fa';
 
 export default {
-  title: 'Post',
+  title: 'Posts',
   name: 'post',
   type: 'document',
   icon: FaStickyNote,
