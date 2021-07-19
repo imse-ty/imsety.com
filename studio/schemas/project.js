@@ -1,7 +1,7 @@
 import { FaPaintBrush } from 'react-icons/fa';
 
 export default {
-  title: 'Project',
+  title: 'Projects',
   name: 'project',
   type: 'document',
   icon: FaPaintBrush,

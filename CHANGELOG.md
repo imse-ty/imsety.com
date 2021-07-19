@@ -9,6 +9,10 @@
 ### Changed
 
 - Made default `font-size` a little bigger (1.125 `rem`). (#37)
+- Renamed the `project` URL directory to `projects`. ([#42])
+- Changed `project` and `post` schema titles to "Projects" and "Posts" in the Sanity Studio. ([#42])
+
+[#42]: https://github.com/imse-ty/imsety.com/issues/42
 
 ## [0.4.0] - 2021-06-18
 
