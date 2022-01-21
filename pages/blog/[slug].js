@@ -13,17 +13,17 @@ import PostHeader from '../../components/blog/post-header';
 export default function Post({ data = {}, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
-  const {
-    data: { post }
-  } = usePreviewSubscription(postQuery, {
-    params: { slug },
-    initialData: data,
-    enabled: preview && slug
-  });
 
   if (!router.isFallback && !slug) {
     return <Error statusCode={404} />;
   }
+
+  const { data: post } = usePreviewSubscription(postQuery, {
+    params: { slug },
+    initialData: data.post,
+    enabled: preview && slug
+  });
+  const { title, publishedAt, mainImage, estimatedReadingTime } = post;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -38,11 +38,11 @@ export default function Post({ data = {}, source, preview }) {
       <main className="flex-grow mb-12 md:mb-24">
         <article>
           <PostHeader
-            mainImageAlt={post.mainImage.alt}
-            mainImage={urlFor(post.mainImage).width(640).height(480).url()}
-            title={post.title}
-            date={post.publishedAt}
-            readingTime={post.estimatedReadingTime}
+            mainImageAlt={mainImage?.alt}
+            mainImage={urlFor(mainImage).width(640).height(480).url()}
+            title={title}
+            date={publishedAt}
+            readingTime={estimatedReadingTime}
           />
           <div className="container">
             <div className="mx-auto prose prose-lg dark:prose-light">
