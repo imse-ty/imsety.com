@@ -57,7 +57,7 @@ export default function Post({ data = {}, source, preview }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const post = await getClient().fetch(postQuery, {
+  const post = await getClient(preview).fetch(postQuery, {
     slug: params.slug
   });
   const mdxSource = await serialize(post.body);
