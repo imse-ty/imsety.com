@@ -11,12 +11,16 @@ import Footer from '../../components/footer';
 import PostHeader from '../../components/blog/post-header';
 import PreviewAlert from '../../components/preview-alert';
 
-export default function Post({ data = {}, source, preview }) {
+export default function Post({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
 
   if (!router.isFallback && !slug) {
     return <Error statusCode={404} />;
+  }
+
+  if (!data) {
+    return <div>Loading...</div>;
   }
 
   const { data: post } = usePreviewSubscription(postQuery, {
