@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## Added
+### Added
 
 - Blog page with dynamic content from Sanity. ([#34](https://github.com/imse-ty/imsety.com/issues/34))
 - Blog post pages with content from [Markdown](https://github.com/hashicorp/next-mdx-remote) and Sanity ([#35](https://github.com/imse-ty/imsety.com/issues/35))
@@ -10,7 +10,13 @@
 
 ### Changed
 
-- Made default `font-size` a little bigger (1.125 `rem`). (#37)
+- Made default `font-size` a little bigger (1.125 `rem`). ([#37])
+- Renamed the `project` URL directory to `projects`. ([#42])
+- Changed `project` and `post` schema titles to "Projects" and "Posts" in the Sanity Studio. ([#42])
+
+[#34]: https://github.com/imse-ty/imsety.com/issues/34
+[#37]: https://github.com/imse-ty/imsety.com/issues/37
+[#42]: https://github.com/imse-ty/imsety.com/issues/42
 
 ## [0.4.0] - 2021-06-18
 
