@@ -1,6 +1,6 @@
 import { constants } from './constants/constants';
 
-const previewSecret = 'iWKy9eeb.3X7a4f2hpZW';
+const previewSecret = process.env.SANITY_STUDIO_PREVIEW_SECRET;
 const projectUrl = constants.siteUrl;
 
 export default function resolveProductionUrl(document) {
