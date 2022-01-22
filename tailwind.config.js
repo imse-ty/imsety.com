@@ -34,6 +34,18 @@ module.exports = {
         imsetyWhite: '#EDEBEF'
       },
       typography: (theme) => ({
+        dark: {
+          css: [
+            {
+              hr: {
+                borderColor: theme('colors.gray.400')
+              },
+              pre: {
+                backgroundColor: theme('colors.gray.200')
+              }
+            }
+          ]
+        },
         light: {
           css: [
             {
@@ -54,7 +66,7 @@ module.exports = {
                 backgroundColor: theme('colors.imsetyWhite')
               },
               hr: {
-                borderColor: theme('colors.imsetyWhite')
+                borderColor: theme('colors.gray.400')
               },
               blockquote: {
                 color: theme('colors.imsetyWhite'),
