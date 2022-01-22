@@ -9,6 +9,7 @@ import { postQuery, postSlugsQuery } from '../../lib/queries';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import PostHeader from '../../components/blog/post-header';
+import PreviewAlert from '../../components/preview-alert';
 
 export default function Post({ data = {}, source, preview }) {
   const router = useRouter();
@@ -35,6 +36,7 @@ export default function Post({ data = {}, source, preview }) {
         />
       </Head>
       <Header />
+      {preview && <PreviewAlert />}
       <main className="flex-grow mb-12 md:mb-24">
         <article>
           <PostHeader
