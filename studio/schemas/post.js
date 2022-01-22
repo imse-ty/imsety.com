@@ -45,9 +45,14 @@ export default {
       rows: 4
     },
     {
-      name: 'publishedAt',
       title: 'Published at',
+      name: 'publishedAt',
       type: 'datetime'
+    },
+    {
+      title: 'Body',
+      name: 'body',
+      type: 'markdown'
     }
   ]
 };

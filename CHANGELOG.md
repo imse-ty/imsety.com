@@ -4,7 +4,9 @@
 
 ### Added
 
-- Blog page with dynamic content from Sanity. ([#34])
+- Blog page with dynamic content from Sanity. ([#34](https://github.com/imse-ty/imsety.com/issues/34))
+- Blog post pages with content from [Markdown](https://github.com/hashicorp/next-mdx-remote) and Sanity ([#35](https://github.com/imse-ty/imsety.com/issues/35))
+- Ability to have see a live preview of a blog post. ([#35](https://github.com/imse-ty/imsety.com/issues/35))
 
 ### Changed
 

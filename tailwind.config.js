@@ -32,15 +32,92 @@ module.exports = {
       colors: {
         imsetyBlack: '#131214',
         imsetyWhite: '#EDEBEF'
-      }
+      },
+      typography: (theme) => ({
+        dark: {
+          css: [
+            {
+              hr: {
+                borderColor: theme('colors.gray.400')
+              },
+              pre: {
+                backgroundColor: theme('colors.gray.200')
+              }
+            }
+          ]
+        },
+        light: {
+          css: [
+            {
+              color: theme('colors.imsetyWhite'),
+              '[class~="lead"]': {
+                color: theme('colors.imsetyWhite')
+              },
+              a: {
+                color: theme('colors.imsetyWhite')
+              },
+              strong: {
+                color: theme('colors.imsetyWhite')
+              },
+              'ol > li::before': {
+                color: theme('colors.imsetyWhite')
+              },
+              'ul > li::before': {
+                backgroundColor: theme('colors.imsetyWhite')
+              },
+              hr: {
+                borderColor: theme('colors.gray.400')
+              },
+              blockquote: {
+                color: theme('colors.imsetyWhite'),
+                borderLeftColor: theme('colors.gray.400')
+              },
+              h1: {
+                color: theme('colors.imsetyWhite')
+              },
+              h2: {
+                color: theme('colors.imsetyWhite')
+              },
+              h3: {
+                color: theme('colors.imsetyWhite')
+              },
+              h4: {
+                color: theme('colors.imsetyWhite')
+              },
+              'figure figcaption': {
+                color: theme('colors.imsetyWhite')
+              },
+              code: {
+                color: theme('colors.white')
+              },
+              'a code': {
+                color: theme('colors.white')
+              },
+              pre: {
+                color: theme('colors.imsetyWhite'),
+                backgroundColor: theme('colors.gray.800')
+              },
+              thead: {
+                color: theme('colors.imsetyWhite'),
+                borderBottomColor: theme('colors.imsetyWhite')
+              },
+              'tbody tr': {
+                borderBottomColor: theme('colors.imsetyWhite')
+              }
+            }
+          ]
+        }
+      })
     }
   },
   variants: {
     extend: {
-      backdropFilter: ['dark']
+      backdropFilter: ['dark'],
+      typography: ['dark']
     }
   },
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(function ({ addComponents }) {
       const container = {
         '.container': {
