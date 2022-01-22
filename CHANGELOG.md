@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.5.0] - 2022-01-22
+
 ### Added
 
 - Blog page with dynamic content from Sanity. ([#34](https://github.com/imse-ty/imsety.com/issues/34))
@@ -73,7 +75,8 @@
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v0.4.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/imse-ty/imsety.com/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/imse-ty/imsety.com/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/imse-ty/imsety.com/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/imse-ty/imsety.com/compare/v0.1.2...v0.2.0
