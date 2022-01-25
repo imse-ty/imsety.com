@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Footer from '../../components/footer';
+import Image from 'next/image';
 import Header from '../../components/header';
+import Footer from '../../components/footer';
 import ProjectHeader from '../../components/projects/project-header';
 
 export default function Project() {
@@ -23,6 +24,16 @@ export default function Project() {
             timeline="2 weeks"
             tools="Cinema 4D, Redshift, After Effects"
           />
+          <div className="shadow-2xl">
+            <Image
+              alt="Main image alt"
+              src="/200-and-300-instagram-followers-preview.jpg"
+              width={1300}
+              height={754}
+              layout="responsive"
+              objectFit="cover"
+            />
+          </div>
         </article>
       </main>
       <Footer />
