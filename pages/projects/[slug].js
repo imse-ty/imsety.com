@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
+import ProjectHeader from '../../components/projects/project-header';
 
 export default function Project() {
   return (
@@ -13,8 +14,16 @@ export default function Project() {
         />
       </Head>
       <Header />
-      <main className="flex-grow my-12 md:my-24">
-        <article></article>
+      <main className="container flex-grow my-12 md:my-24">
+        <article>
+          <ProjectHeader
+            title="400 Instagram Followers Piece"
+            summary='I gained 200, 300, and 400 followers in quick succession in only a couple of days. Because of that, I wanted to create an animation where the numbers "one-up" each other. As a way to illustrate what actually happened to my Instagram page.'
+            year="2020"
+            timeline="2 weeks"
+            tools="Cinema 4D, Redshift, After Effects"
+          />
+        </article>
       </main>
       <Footer />
     </div>
