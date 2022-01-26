@@ -10,6 +10,7 @@ import { projectQuery, projectSlugsQuery } from '../../lib/queries';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import ProjectHeader from '../../components/projects/project-header';
+import PreviewAlert from '../../components/preview-alert';
 
 export default function Project({ data, source, preview }) {
   const router = useRouter();
@@ -40,6 +41,7 @@ export default function Project({ data, source, preview }) {
         />
       </Head>
       <Header />
+      {preview && <PreviewAlert />}
       <main className="container flex-grow my-12 md:my-24">
         <article>
           <ProjectHeader
