@@ -15,6 +15,7 @@ import PreviewAlert from '../../components/preview-alert';
 export default function Project({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
+  const components = {};
 
   if (!router.isFallback && !slug) {
     return <Error statusCode={404} />;
@@ -62,7 +63,7 @@ export default function Project({ data, source, preview }) {
             />
           </div>
           <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
-            <MDXRemote {...source} />
+            <MDXRemote {...source} components={components} />
           </div>
         </article>
       </main>
