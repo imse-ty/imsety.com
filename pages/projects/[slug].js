@@ -24,7 +24,7 @@ export default function Project() {
             timeline="2 weeks"
             tools="Cinema 4D, Redshift, After Effects"
           />
-          <div className="shadow-2xl">
+          <div className="mb-12 md:mb-24 shadow-2xl">
             <Image
               alt="Main image alt"
               src="/200-and-300-instagram-followers-preview.jpg"
