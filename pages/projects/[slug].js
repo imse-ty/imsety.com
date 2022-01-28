@@ -11,11 +11,40 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import ProjectHeader from '../../components/projects/project-header';
 import PreviewAlert from '../../components/preview-alert';
+import {
+  ProjectImage,
+  ProjectYoutube,
+  ProjectVimeo
+} from '../../components/projects/project-embed';
+import getVideoId from 'get-video-id';
+
+function ProjectEmbed({ alt, url }) {
+  const getServiceName = () => {
+    if (url) {
+      return getVideoId(url).service;
+    }
+  };
+  const serviceName = getServiceName();
+
+  if (serviceName === 'youtube') {
+    return <ProjectYoutube url={url} />;
+  }
+
+  if (serviceName === 'vimeo') {
+    return <ProjectVimeo url={url} />;
+  }
+
+  return <ProjectImage alt={alt} src={url} />;
+}
 
 export default function Project({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
-  const components = {};
+  const components = {
+    ProjectImage,
+    ProjectYoutube,
+    ProjectVimeo
+  };
 
   if (!router.isFallback && !slug) {
     return <Error statusCode={404} />;
@@ -30,7 +59,7 @@ export default function Project({ data, source, preview }) {
     initialData: data.post,
     enabled: preview && slug
   });
-  const { title, summary, year, timeline, tools } = post;
+  const { title, summary, year, timeline, tools, heroAlt, heroUrl } = post;
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -53,14 +82,7 @@ export default function Project({ data, source, preview }) {
             tools={tools}
           />
           <div className="mb-12 md:mb-24 shadow-2xl">
-            <Image
-              alt="Main image alt"
-              src="/200-and-300-instagram-followers-preview.jpg"
-              width={1300}
-              height={754}
-              layout="responsive"
-              objectFit="cover"
-            />
+            <ProjectEmbed alt={heroAlt} url={heroUrl} />
           </div>
           <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
             <MDXRemote {...source} components={components} />
