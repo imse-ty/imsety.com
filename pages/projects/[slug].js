@@ -72,7 +72,7 @@ export default function Project({ data, source, preview }) {
       </Head>
       <Header />
       {preview && <PreviewAlert />}
-      <main className="container flex-grow my-12 md:my-24">
+      <main className="container flex-grow my-12 md:my-24 w-full">
         <article>
           <ProjectHeader
             title={title}
