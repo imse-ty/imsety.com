@@ -42,6 +42,9 @@ module.exports = {
               },
               pre: {
                 backgroundColor: theme('colors.gray.200')
+              },
+              img: {
+                width: '100%'
               }
             }
           ]

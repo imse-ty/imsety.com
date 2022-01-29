@@ -39,6 +39,47 @@ export default {
           }
         }
       ]
+    },
+    {
+      title: 'Summary',
+      name: 'summary',
+      type: 'text',
+      rows: 4
+    },
+    {
+      title: 'Year',
+      name: 'year',
+      type: 'string'
+    },
+    {
+      title: 'Timeline',
+      name: 'timeline',
+      type: 'string'
+    },
+    {
+      title: 'Tools',
+      name: 'tools',
+      type: 'string'
+    },
+    {
+      title: 'Hero alternative text',
+      name: 'heroAlt',
+      type: 'string'
+    },
+    {
+      title: 'Hero URL',
+      name: 'heroUrl',
+      type: 'url'
+    },
+    {
+      title: 'Published at',
+      name: 'publishedAt',
+      type: 'datetime'
+    },
+    {
+      title: 'Body',
+      name: 'body',
+      type: 'markdown'
     }
   ]
 };

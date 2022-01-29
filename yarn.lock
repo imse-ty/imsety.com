@@ -2747,6 +2747,11 @@ get-orientation@1.1.2:
   dependencies:
     stream-parser "^0.3.1"
 
+get-video-id@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/get-video-id/-/get-video-id-3.5.3.tgz#01234a3bc9b23a7579095d3f9ae4c22a8c7f46ee"
+  integrity sha512-YU+v0a0pI45U7TrzDUPsXGV4THacPPviHsAlWTjD0CsVc1uolpybFE8gYhbye0MFyFoPW+yIYGrqu7bF07Q6fw==
+
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/glob-base/-/glob-base-0.3.0.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"

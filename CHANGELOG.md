@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Project entry page. ([#36](https://github.com/imse-ty/imsety.com/issues/36))
+
 ## [0.5.0] - 2022-01-22
 
 ### Added
