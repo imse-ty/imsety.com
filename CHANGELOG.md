@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Google Analytics. ([#45](https://github.com/imse-ty/imsety.com/issues/45))
+
 ## [0.6.0] - 2022-01-29
 
 ### Added
