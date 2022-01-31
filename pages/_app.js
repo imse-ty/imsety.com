@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { DefaultSeo } from 'next-seo';
 import * as gtag from '../lib/gtag';
 import 'tailwindcss/tailwind.css';
 
@@ -22,8 +23,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="text-lg bg-imsetyWhite text-imsetyBlack dark:bg-imsetyBlack dark:text-imsetyWhite">
       <Head>
-        <meta name="keywords" content="motion, design, motion design, art" />
-        <meta name="author" content="Imsety Taylor" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -31,6 +30,21 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
+      <DefaultSeo
+        title="Imsety Taylor - Motion Designer"
+        description="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
+        additionalMetaTags={[
+          {
+            name: 'keywords',
+            content:
+              'motion, design, motion design, art, HTML, CSS, JavaScript, programming, code, freelance, entrepreneur, media, animation, artist, creator, designer'
+          },
+          {
+            name: 'author',
+            content: 'Imsety Taylor'
+          }
+        ]}
+      />
       <Component {...pageProps} />
     </div>
   );
