@@ -26,7 +26,9 @@ export default function Footer() {
           </Link>{' '}
           Thanks for visiting 🙂
         </p>
-        <p className="text-sm">© 2021 Imsety Taylor. All rights reserved.</p>
+        <p className="text-sm">
+          Copyright © 2022 Imsety Taylor. All rights reserved.
+        </p>
       </div>
     </footer>
   );

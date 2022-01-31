@@ -7,6 +7,10 @@
 - Google Analytics. ([#45](https://github.com/imse-ty/imsety.com/issues/45))
 - Changelog page for public release notes. [[#47](https://github.com/imse-ty/imsety.com/issues/47)]
 
+### Changed
+
+- Footer copyright notice thing has been updated from "2021" to "2022." ([#49](https://github.com/imse-ty/imsety.com/issues/49))
+
 ## [0.6.0] - 2022-01-29
 
 ### Added
