@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Error from 'next/error';
-import Head from 'next/head';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { urlFor, usePreviewSubscription } from '../../lib/sanity';
@@ -32,13 +31,6 @@ export default function Post({ data, source, preview }) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Head>
-        <title>Imsety Taylor - Motion Designer</title>
-        <meta
-          name="description"
-          content="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
-        />
-      </Head>
       <Header />
       {preview && <PreviewAlert />}
       <main className="flex-grow mb-12 md:mb-24">
