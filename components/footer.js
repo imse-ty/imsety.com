@@ -9,14 +9,22 @@ export default function Footer() {
           <SocialMediaIcons />
         </div>
         <p className="mb-2 text-sm font-medium">
+          Site designed and{' '}
           <a
             href="https://github.com/imse-ty/imsety.com"
             target="_blank"
             rel="noopener"
-            className="hover:text-gray-500 dark:hover:text-gray-300 transition duration-300"
+            className="underline hover:text-gray-500 dark:hover:text-gray-300 transition duration-300"
           >
-            Site designed and developed my me 🙂
-          </a>
+            developed
+          </a>{' '}
+          my me. Check out the{' '}
+          <Link href="/changelog">
+            <a className="underline hover:text-gray-500 dark:hover:text-gray-300 transition duration-300">
+              changelog!
+            </a>
+          </Link>{' '}
+          Thanks for visiting 🙂
         </p>
         <p className="text-sm">© 2021 Imsety Taylor. All rights reserved.</p>
       </div>
