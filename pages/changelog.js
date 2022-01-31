@@ -54,7 +54,7 @@ export default function Changelog({ data, source }) {
             <p className="max-w-2xl font-medium">
               Check out the source code on{' '}
               <a
-                href="hhttps://github.com/imse-ty/imsety.com"
+                href="https://github.com/imse-ty/imsety.com"
                 target="_blank"
                 rel="noopener"
                 className="underline hover:text-gray-500 dark:hover:text-gray-300 transition duration-300"
