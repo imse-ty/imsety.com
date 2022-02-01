@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <DefaultSeo
-        title="Imsety Taylor - Motion Designer"
+        title="Imsety Taylor"
         description="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
         additionalMetaTags={[
           {
