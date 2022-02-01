@@ -3,6 +3,7 @@ import Error from 'next/error';
 import Image from 'next/image';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import { NextSeo } from 'next-seo';
 import { usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { projectQuery, projectSlugsQuery } from '../../lib/queries';
@@ -62,6 +63,7 @@ export default function Project({ data, source, preview }) {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
       <Header />
       {preview && <PreviewAlert />}
       <main className="container flex-grow my-12 md:my-24 w-full">

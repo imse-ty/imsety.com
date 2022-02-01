@@ -1,5 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
+import { NextSeo } from 'next-seo';
 import { getClient } from '../lib/sanity.server';
 import { changelogQuery } from '../lib/queries';
 import Header from '../components/header';
@@ -12,6 +13,10 @@ export default function Changelog({ data, source }) {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <NextSeo
+        title="Changelog - Imsety Taylor"
+        description="The changelog for imsety.com."
+      />
       <Header />
       <main className="container flex-grow my-12 md:my-24 w-full">
         <article>

@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Error from 'next/error';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import { NextSeo } from 'next-seo';
 import { urlFor, usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { postQuery, postSlugsQuery } from '../../lib/queries';
@@ -27,10 +28,11 @@ export default function Post({ data, source, preview }) {
     initialData: data.post,
     enabled: preview && slug
   });
-  const { title, publishedAt, mainImage, estimatedReadingTime } = post;
+  const { title, publishedAt, mainImage, summary, estimatedReadingTime } = post;
 
   return (
     <div className="flex flex-col min-h-screen">
+      <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
       <Header />
       {preview && <PreviewAlert />}
       <main className="flex-grow mb-12 md:mb-24">

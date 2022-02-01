@@ -1,9 +1,14 @@
+import { NextSeo } from 'next-seo';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
 export default function Info() {
   return (
     <div className="flex flex-col min-h-screen">
+      <NextSeo
+        title="About - Imsety Taylor"
+        description="About Imsety Taylor."
+      />
       <Header />
       <main className="flex flex-col md:flex-row flex-grow mb-24 md:h-80v">
         <img
