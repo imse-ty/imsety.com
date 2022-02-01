@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { getClient } from '../lib/sanity.server';
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -10,15 +9,7 @@ import { indexProjectQuery } from '../lib/queries';
 export default function Home({ allProjects }) {
   return (
     <div>
-      <Head>
-        <title>Imsety Taylor - Motion Designer</title>
-        <meta
-          name="description"
-          content="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
-        />
-      </Head>
       <Header />
-
       <section className="flex flex-col min-w-full md:flex-row mb-24 md:h-80v">
         <div className="relative overflow-hidden h-50v md:h-full md:w-2/5">
           <VideoReelLoop />
@@ -27,14 +18,12 @@ export default function Home({ allProjects }) {
           <Hero />
         </div>
       </section>
-
       <main className="mb-24">
         <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
           Projects
         </h2>
         <ProjectsSection projects={allProjects} />
       </main>
-
       <Footer />
     </div>
   );

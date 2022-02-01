@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import Error from 'next/error';
-import Head from 'next/head';
 import Image from 'next/image';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import { NextSeo } from 'next-seo';
 import { usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { projectQuery, projectSlugsQuery } from '../../lib/queries';
@@ -63,13 +63,7 @@ export default function Project({ data, source, preview }) {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Head>
-        <title>Imsety Taylor - Motion Designer</title>
-        <meta
-          name="description"
-          content="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
-        />
-      </Head>
+      <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
       <Header />
       {preview && <PreviewAlert />}
       <main className="container flex-grow my-12 md:my-24 w-full">
