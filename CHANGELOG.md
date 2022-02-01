@@ -6,6 +6,7 @@
 
 - Google Analytics. ([#45](https://github.com/imse-ty/imsety.com/issues/45))
 - Changelog page for public release notes. ([#47](https://github.com/imse-ty/imsety.com/issues/47))
+- Simple SEO for all pages. ([#51](https://github.com/imse-ty/imsety.com/issues/51))
 
 ### Changed
 
