@@ -12,6 +12,7 @@
 
 - Footer copyright notice thing has been updated from "2021" to "2022." ([#49](https://github.com/imse-ty/imsety.com/issues/49))
 - Upgraded to Next.js 12. ([#53](https://github.com/imse-ty/imsety.com/issues/53))
+- Projects on the home page are now sorted by date published. ([#52](https://github.com/imse-ty/imsety.com/issues/52))
 
 ## [0.6.0] - 2022-01-29
 
