@@ -21,15 +21,19 @@ export default function ProjectHeader({
           <div className="w-16 h-2 bg-gray-500 mb-4 md:mb-6" />
           <h1 className="text-3xl md:text-6xl font-bold">{title}</h1>
         </div>
-        <div className="flex-1">
-          <Tooltip label="Summary" text={summary} />
+        {summary && (
+          <div className="flex-1">
+            <Tooltip label="Summary" text={summary} />
+          </div>
+        )}
+      </div>
+      {year && timeline && tools && (
+        <div className="flex gap-8">
+          {year && <Tooltip label="Year" text={year} />}
+          {timeline && <Tooltip label="Timeline" text={timeline} />}
+          {tools && <Tooltip label="Tools" text={tools} />}
         </div>
-      </div>
-      <div className="flex gap-8">
-        <Tooltip label="Year" text={year} />
-        <Tooltip label="Timeline" text={timeline} />
-        <Tooltip label="Tools" text={tools} />
-      </div>
+      )}
     </header>
   );
 }

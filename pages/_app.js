@@ -32,12 +32,12 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <DefaultSeo
         title="Imsety Taylor"
-        description="Imsety Taylor is a Motion Designer based in Atlanta, GA. He uses tools such as Adobe After Effects, Adobe Premiere Pro, and Cinema 4D."
+        description="My name is Imsety Taylor — a designer and developer based in Atlanta, GA. I leverage skills such as motion design and coding to create engaging experiences ranging from animations to digital projects."
         additionalMetaTags={[
           {
             name: 'keywords',
             content:
-              'motion, design, motion design, art, HTML, CSS, JavaScript, programming, code, freelance, entrepreneur, media, animation, artist, creator, designer'
+              'motion, design, motion design, art, HTML, CSS, JavaScript, programming, developer, code, freelance, entrepreneur, media, animation, artist, creator, designer'
           },
           {
             name: 'author',

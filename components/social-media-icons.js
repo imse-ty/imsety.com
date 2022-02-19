@@ -43,10 +43,7 @@ export default function SocialMediaIcons() {
       <SocialMediaLink href="https://vimeo.com/imsety" alt="Vimeo">
         <FaVimeo />
       </SocialMediaLink>
-      <SocialMediaLink
-        href="https://www.youtube.com/channel/UCVptL5EXU-Rd8lvuQvzDK3A"
-        alt="YouTube"
-      >
+      <SocialMediaLink href="https://www.youtube.com/imsety" alt="YouTube">
         <FaYoutube />
       </SocialMediaLink>
       <SocialMediaLink href="mailto:hello@imsety.com" alt="Email">

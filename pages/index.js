@@ -19,7 +19,10 @@ export default function Home({ allProjects }) {
         </div>
       </section>
       <main className="mb-24">
-        <h2 className="container mb-12 text-3xl md:text-5xl font-bold">
+        <h2
+          id="projects"
+          className="container mb-12 text-3xl md:text-5xl font-bold"
+        >
           Projects
         </h2>
         <ProjectsSection projects={allProjects} />

@@ -7,11 +7,17 @@
 - Google Analytics. ([#45](https://github.com/imse-ty/imsety.com/issues/45))
 - Changelog page for public release notes. ([#47](https://github.com/imse-ty/imsety.com/issues/47))
 - Simple SEO for all pages. ([#51](https://github.com/imse-ty/imsety.com/issues/51))
+- Proper content with real [blurbs](https://en.wikipedia.org/wiki/Blurb)! ([#52](https://github.com/imse-ty/imsety.com/issues/52))
 
 ### Changed
 
 - Footer copyright notice thing has been updated from "2021" to "2022." ([#49](https://github.com/imse-ty/imsety.com/issues/49))
 - Upgraded to Next.js 12. ([#53](https://github.com/imse-ty/imsety.com/issues/53))
+- Projects on the home page are now sorted by date published. ([#52](https://github.com/imse-ty/imsety.com/issues/52))
+- Made sure project entry info such as year, timeline, tools, and summary are hidden when not in use.
+- `title` and `slug` for project entries and blog posts are now required.
+- Updated default page description. ([#52](https://github.com/imse-ty/imsety.com/issues/52))
+- Updated YouTube link to [www.youtube.com/imsety](https://www.youtube.com/imsety). ([#52](https://github.com/imse-ty/imsety.com/issues/52))
 
 ## [0.6.0] - 2022-01-29
 
