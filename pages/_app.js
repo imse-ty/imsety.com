@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           {
             name: 'keywords',
             content:
-              'motion, design, motion design, art, HTML, CSS, JavaScript, programming, code, freelance, entrepreneur, media, animation, artist, creator, designer'
+              'motion, design, motion design, art, HTML, CSS, JavaScript, programming, developer, code, freelance, entrepreneur, media, animation, artist, creator, designer'
           },
           {
             name: 'author',
