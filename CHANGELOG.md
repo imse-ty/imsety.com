@@ -15,6 +15,7 @@
 - Projects on the home page are now sorted by date published. ([#52](https://github.com/imse-ty/imsety.com/issues/52))
 - Made sure project entry info such as year, timeline, tools, and summary are hidden when not in use.
 - `title` and `slug` for project entries and blog posts are now required.
+- Updated default page description. ([#52](https://github.com/imse-ty/imsety.com/issues/52))
 
 ## [0.6.0] - 2022-01-29
 
