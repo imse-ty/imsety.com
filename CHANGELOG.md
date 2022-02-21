@@ -5,6 +5,7 @@
 ### Changed
 
 - Made all of the regular paragraphs a regular `font-weight`. I realized the boldness was too distracting.
+- Make "Reach out" button use Sentence case instead of Title Case.
 
 ## [1.0.0] - 2022-02-19
 
