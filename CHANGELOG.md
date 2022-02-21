@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Made all of the regular paragraphs a regular `font-weight`. I realized the boldness was too distracting.
+
 ## [1.0.0] - 2022-02-19
 
 First stable release 🥳🥳🎉

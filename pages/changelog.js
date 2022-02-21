@@ -22,12 +22,12 @@ export default function Changelog({ data, source }) {
         <article>
           <header className="mb-12 md:mb-24">
             <h1 className="mb-6 font-bold text-3xl md:text-6xl">Changelog</h1>
-            <p className="mb-6 max-w-2xl font-medium">
+            <p className="mb-6 max-w-2xl">
               A growing log of new additions, changes, and bug fixes for this
               site. Some of this is a bit technical and vague. But hey, this is
               all I got! 😅
             </p>
-            <p className="mb-6 max-w-2xl font-medium">
+            <p className="mb-6 max-w-2xl">
               Changelog idea inspired by{' '}
               <a
                 href="https://jacky.wtf/"
@@ -48,7 +48,7 @@ export default function Changelog({ data, source }) {
               </a>
               .
             </p>
-            <p className="max-w-2xl font-medium">
+            <p className="max-w-2xl">
               Check out the source code on{' '}
               <a
                 href="https://github.com/imse-ty/imsety.com"
