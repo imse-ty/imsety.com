@@ -8,6 +8,10 @@
 - Make "Reach out" button use Sentence case instead of Title Case.
 - Change order of social media links.
 
+### Fixed
+
+- "Work" header item not being active when viewing a project entry.
+
 ## [1.0.0] - 2022-02-19
 
 First stable release 🥳🥳🎉
