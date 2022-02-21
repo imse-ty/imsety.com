@@ -21,7 +21,9 @@ export default function PostHeader({
         />
       </div>
       <div className="container md:w-1/2">
-        <h1 className="text-3xl md:text-4xl xl:text-6xl font-bold">{title}</h1>
+        <h1 className="text-3xl md:text-4xl xl:text-6xl xl:leading-snug font-bold">
+          {title}
+        </h1>
         <div className="my-2 text-sm md:text-lg font-medium tracking-widest text-gray-400">
           <DateFormatter dateString={date} /> •{' '}
           <time dateTime={`PTM${readingTime}`}>{readingTime} min</time> read
