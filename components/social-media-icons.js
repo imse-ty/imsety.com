@@ -31,20 +31,20 @@ export default function SocialMediaIcons() {
       <SocialMediaLink href="https://www.instagram.com/imse.ty" alt="Instagram">
         <FaInstagram />
       </SocialMediaLink>
-      <SocialMediaLink href="https://www.behance.net/imsety" alt="Behance">
-        <FaBehance />
+      <SocialMediaLink href="https://www.youtube.com/imsety" alt="YouTube">
+        <FaYoutube />
       </SocialMediaLink>
       <SocialMediaLink href="https://www.linkedin.com/in/imsety" alt="LinkedIn">
         <FaLinkedin />
       </SocialMediaLink>
-      <SocialMediaLink href="https://dribbble.com/Imsety" alt="Dribble">
-        <FaDribbble />
-      </SocialMediaLink>
       <SocialMediaLink href="https://vimeo.com/imsety" alt="Vimeo">
         <FaVimeo />
       </SocialMediaLink>
-      <SocialMediaLink href="https://www.youtube.com/imsety" alt="YouTube">
-        <FaYoutube />
+      <SocialMediaLink href="https://www.behance.net/imsety" alt="Behance">
+        <FaBehance />
+      </SocialMediaLink>
+      <SocialMediaLink href="https://dribbble.com/Imsety" alt="Dribble">
+        <FaDribbble />
       </SocialMediaLink>
       <SocialMediaLink href="mailto:hello@imsety.com" alt="Email">
         <FaEnvelope />
