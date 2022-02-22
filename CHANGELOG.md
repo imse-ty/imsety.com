@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## Added
+
+- New lightbox functionality for project entries using [Simple React Lightbox](https://github.com/michelecocuccio/simple-react-lightbox).
+- A neat `PhotoGrid` component that lets me quickly make photo grids inside MDX.
+
 ### Changed
 
 - Made all of the regular paragraphs a regular `font-weight`. I realized the boldness was too distracting.

@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import Error from 'next/error';
-import Image from 'next/image';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextSeo } from 'next-seo';
+import getVideoId from 'get-video-id';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import { usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { projectQuery, projectSlugsQuery } from '../../lib/queries';
@@ -16,7 +17,7 @@ import {
   ProjectYoutube,
   ProjectVimeo
 } from '../../components/projects/project-embed';
-import getVideoId from 'get-video-id';
+import PhotoGrid from '../../components/projects/photo-grid';
 
 function ProjectEmbed({ alt, url }) {
   const getServiceName = () => {
@@ -43,7 +44,8 @@ export default function Project({ data, source, preview }) {
   const components = {
     ProjectImage,
     ProjectYoutube,
-    ProjectVimeo
+    ProjectVimeo,
+    PhotoGrid
   };
 
   if (!router.isFallback && !slug) {
@@ -61,30 +63,49 @@ export default function Project({ data, source, preview }) {
   });
   const { title, summary, year, timeline, tools, heroAlt, heroUrl } = post;
 
+  const simpleReactLightBoxOptions = {
+    settings: {
+      hideControlsAfter: 1000
+    },
+    thumbnails: {
+      showThumbnails: false
+    },
+    buttons: {
+      showAutoplayButton: false,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showThumbnailsButton: false
+    }
+  };
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
-      <Header />
-      {preview && <PreviewAlert />}
-      <main className="container flex-grow my-12 md:my-24 w-full">
-        <article>
-          <ProjectHeader
-            title={title}
-            summary={summary}
-            year={year}
-            timeline={timeline}
-            tools={tools}
-          />
-          <div className="mb-12 md:mb-24 shadow-2xl">
-            <ProjectEmbed alt={heroAlt} url={heroUrl} />
-          </div>
-          <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
-            <MDXRemote {...source} components={components} />
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </div>
+    <SimpleReactLightbox>
+      <div className="flex flex-col min-h-screen">
+        <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
+        <Header />
+        {preview && <PreviewAlert />}
+        <main className="container flex-grow my-12 md:my-24 w-full">
+          <article>
+            <ProjectHeader
+              title={title}
+              summary={summary}
+              year={year}
+              timeline={timeline}
+              tools={tools}
+            />
+            <div className="mb-12 md:mb-24 shadow-2xl">
+              <ProjectEmbed alt={heroAlt} url={heroUrl} />
+            </div>
+            <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
+              <SRLWrapper options={simpleReactLightBoxOptions}>
+                <MDXRemote {...source} components={components} />
+              </SRLWrapper>
+            </div>
+          </article>
+        </main>
+        <Footer />
+      </div>
+    </SimpleReactLightbox>
   );
 }
 
