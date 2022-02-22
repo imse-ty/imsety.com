@@ -16,8 +16,7 @@ import {
   ProjectYoutube,
   ProjectVimeo
 } from '../../components/projects/project-embed';
-import getVideoId from 'get-video-id';
-import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
+import PhotoGrid from '../../components/projects/photo-grid';
 
 function ProjectEmbed({ alt, url }) {
   const getServiceName = () => {
@@ -44,7 +43,8 @@ export default function Project({ data, source, preview }) {
   const components = {
     ProjectImage,
     ProjectYoutube,
-    ProjectVimeo
+    ProjectVimeo,
+    PhotoGrid
   };
 
   if (!router.isFallback && !slug) {
