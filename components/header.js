@@ -18,7 +18,7 @@ function MenuItem({ children, active, ...props }) {
       variants={variants}
       transition={{ type: 'spring', duration: 0.8 }}
       className={`
-        my-6 text-3xl md:ml-3 md:my-0 md:text-base uppercase
+        my-6 text-3xl md:ml-3 md:my-0 md:text-base font-medium uppercase
 
         ${isCurrentPath || active ? 'font-bold' : ''}
       `}
