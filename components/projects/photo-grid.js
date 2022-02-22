@@ -5,7 +5,7 @@ export default function PhotoGrid({ rows }) {
         return (
           <div
             key={index}
-            className={`grid gap-2 mb-2 sm:gap-3 sm:mb-3 grid-cols-1 sm:grid-cols-${row.columns}`}
+            className={`grid gap-2 mb-2 sm:gap-3 sm:mb-3 grid-cols-1 sm:grid-cols-${row.images.length}`}
           >
             {row.images.map((image, index) => {
               return (

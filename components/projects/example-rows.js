@@ -1,6 +1,5 @@
 export const exampleRows = [
   {
-    columns: 3,
     images: [
       {
         alt: '1',
@@ -17,7 +16,6 @@ export const exampleRows = [
     ]
   },
   {
-    columns: 2,
     images: [
       {
         alt: '1',
@@ -30,7 +28,6 @@ export const exampleRows = [
     ]
   },
   {
-    columns: 1,
     images: [
       {
         alt: '1',
