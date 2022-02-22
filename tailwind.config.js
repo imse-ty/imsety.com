@@ -44,7 +44,8 @@ module.exports = {
                 backgroundColor: theme('colors.gray.200')
               },
               img: {
-                width: '100%'
+                width: '100%',
+                cursor: 'zoom-in'
               }
             }
           ]
