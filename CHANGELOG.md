@@ -18,6 +18,10 @@
 - "Work" header item not being active when viewing a project entry.
 - Fixed project and blog header `line-heights` being too close.
 
+### Security
+
+- Upgraded to [Sanity 2.27.1](https://github.com/sanity-io/sanity/releases/tag/v2.27.1).
+
 ## [1.0.0] - 2022-02-19
 
 First stable release 🥳🥳🎉
