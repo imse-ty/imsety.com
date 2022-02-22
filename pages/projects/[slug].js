@@ -63,6 +63,21 @@ export default function Project({ data, source, preview }) {
   });
   const { title, summary, year, timeline, tools, heroAlt, heroUrl } = post;
 
+  const simpleReactLightBoxOptions = {
+    settings: {
+      hideControlsAfter: 1000
+    },
+    thumbnails: {
+      showThumbnails: false
+    },
+    buttons: {
+      showAutoplayButton: false,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showThumbnailsButton: false
+    }
+  };
+
   return (
     <SimpleReactLightbox>
       <div className="flex flex-col min-h-screen">
@@ -82,7 +97,7 @@ export default function Project({ data, source, preview }) {
               <ProjectEmbed alt={heroAlt} url={heroUrl} />
             </div>
             <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
-              <SRLWrapper>
+              <SRLWrapper options={simpleReactLightBoxOptions}>
                 <MDXRemote {...source} components={components} />
               </SRLWrapper>
             </div>
