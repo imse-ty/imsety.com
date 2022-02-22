@@ -17,6 +17,7 @@ import {
   ProjectVimeo
 } from '../../components/projects/project-embed';
 import getVideoId from 'get-video-id';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 function ProjectEmbed({ alt, url }) {
   const getServiceName = () => {
@@ -62,29 +63,33 @@ export default function Project({ data, source, preview }) {
   const { title, summary, year, timeline, tools, heroAlt, heroUrl } = post;
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
-      <Header />
-      {preview && <PreviewAlert />}
-      <main className="container flex-grow my-12 md:my-24 w-full">
-        <article>
-          <ProjectHeader
-            title={title}
-            summary={summary}
-            year={year}
-            timeline={timeline}
-            tools={tools}
-          />
-          <div className="mb-12 md:mb-24 shadow-2xl">
-            <ProjectEmbed alt={heroAlt} url={heroUrl} />
-          </div>
-          <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
-            <MDXRemote {...source} components={components} />
-          </div>
-        </article>
-      </main>
-      <Footer />
-    </div>
+    <SimpleReactLightbox>
+      <div className="flex flex-col min-h-screen">
+        <NextSeo title={`${title} - Imsety Taylor`} description={summary} />
+        <Header />
+        {preview && <PreviewAlert />}
+        <main className="container flex-grow my-12 md:my-24 w-full">
+          <article>
+            <ProjectHeader
+              title={title}
+              summary={summary}
+              year={year}
+              timeline={timeline}
+              tools={tools}
+            />
+            <div className="mb-12 md:mb-24 shadow-2xl">
+              <ProjectEmbed alt={heroAlt} url={heroUrl} />
+            </div>
+            <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
+              <SRLWrapper>
+                <MDXRemote {...source} components={components} />
+              </SRLWrapper>
+            </div>
+          </article>
+        </main>
+        <Footer />
+      </div>
+    </SimpleReactLightbox>
   );
 }
 

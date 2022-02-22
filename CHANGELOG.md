@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## Added
+
+- New lightbox functionality for project entries using [Simple React Lightbox](https://github.com/michelecocuccio/simple-react-lightbox).
+
 ### Changed
 
 - Made all of the regular paragraphs a regular `font-weight`. I realized the boldness was too distracting.
