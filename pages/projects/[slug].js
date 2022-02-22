@@ -1,9 +1,10 @@
 import { useRouter } from 'next/router';
 import Error from 'next/error';
-import Image from 'next/image';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextSeo } from 'next-seo';
+import getVideoId from 'get-video-id';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import { usePreviewSubscription } from '../../lib/sanity';
 import { getClient } from '../../lib/sanity.server';
 import { projectQuery, projectSlugsQuery } from '../../lib/queries';
