@@ -14,7 +14,7 @@
 
 - Made all of the regular paragraphs a regular `font-weight`. I realized the boldness was too distracting.
 - Make "Reach out" button use Sentence case instead of Title Case.
-- Change order of social media links.
+- Change order of social media links
 
 ### Fixed
 
