@@ -42,9 +42,7 @@ export default function Project({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
   const components = {
-    ProjectImage,
-    ProjectYoutube,
-    ProjectVimeo,
+    ProjectEmbed,
     PhotoGrid
   };
 
@@ -96,7 +94,7 @@ export default function Project({ data, source, preview }) {
             <div className="mb-12 md:mb-24 shadow-2xl">
               <ProjectEmbed alt={heroAlt} url={heroUrl} />
             </div>
-            <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
+            <div className="mx-auto prose prose-dark prose-lg md:prose-2xl dark:prose-light">
               <SRLWrapper options={simpleReactLightBoxOptions}>
                 <MDXRemote {...source} components={components} />
               </SRLWrapper>
