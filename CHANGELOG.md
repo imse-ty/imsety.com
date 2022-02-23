@@ -6,6 +6,7 @@
 
 - New lightbox functionality for project entries using [Simple React Lightbox](https://github.com/michelecocuccio/simple-react-lightbox).
 - A neat `PhotoGrid` component that lets me quickly make photo grids inside MDX.
+- Going to [imsety.com/rebrand](https://imsety.com/rebrand) redirects you to the [Imsety 2022 rebrand case study](https://imsety.com/projects/2022-rebrand).
 
 ### Changed
 

@@ -9,5 +9,14 @@ module.exports = {
     });
 
     return config;
+  },
+  async redirects() {
+    return [
+      {
+        source: '/rebrand',
+        destination: '/projects/2022-rebrand',
+        permanent: true
+      }
+    ];
   }
 };
