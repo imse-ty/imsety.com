@@ -19,6 +19,14 @@ import {
 } from '../../components/projects/project-embed';
 import PhotoGrid from '../../components/projects/photo-grid';
 
+function ExternalLink({ children, href }) {
+  return (
+    <a href={href} target="_blank" rel="noopener">
+      {children}
+    </a>
+  );
+}
+
 function ProjectEmbed({ alt, url }) {
   const getServiceName = () => {
     if (url) {
@@ -42,6 +50,7 @@ export default function Project({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
   const components = {
+    a: ExternalLink,
     ProjectEmbed,
     PhotoGrid
   };
