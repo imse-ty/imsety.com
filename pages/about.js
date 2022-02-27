@@ -14,8 +14,8 @@ export default function Info() {
       <Header />
       <main className="flex flex-col md:flex-row flex-grow mb-24 md:h-80v">
         <img
-          alt="Imsety looking away in black and white"
-          src="/imsety-looking-away-in-black-and-white.jpg"
+          alt="Imsety looking at up the sky in black and white"
+          src="/imsety-looking-at-the-sky-in-black-and-white.jpg"
           width="710"
           height="880"
           className="object-cover w-full md:w-2/5 h-50v md:h-full"
