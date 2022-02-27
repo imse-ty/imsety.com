@@ -5,7 +5,7 @@ export default function PhotoGrid({ rows }) {
         return (
           <div
             key={index}
-            className={`flex flex-col sm:grid sm:grid-cols-${row.images.length} gap-2 sm:gap-3 mb-2 sm:mb-3`}
+            className={`flex flex-col sm:grid grid-cols-${row.images.length} gap-2 sm:gap-3 mb-2 sm:mb-3`}
           >
             {row.images.map((image, index) => {
               return (

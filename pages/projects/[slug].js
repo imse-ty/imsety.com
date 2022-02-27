@@ -103,6 +103,50 @@ export default function Project({ data, source, preview }) {
             <div className="mb-12 md:mb-24 shadow-2xl">
               <ProjectEmbed alt={heroAlt} url={heroUrl} />
             </div>
+            <PhotoGrid
+              rows={[
+                {
+                  images: [
+                    {
+                      alt: '"Space" SetyMedia logo Act 1 styleframe 1',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/a27dbd7ad9c52ccbcd921dcfb290c5a822e0ce75-1920x1080.png'
+                    },
+                    {
+                      alt: '"Space" SetyMedia logo Act 1 styleframe 2',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/45fdd42c83c8297058aa98596aa848d353591d0c-1920x1080.png'
+                    }
+                  ]
+                },
+                {
+                  images: [
+                    {
+                      alt: '"Plastic" SetyMedia logo Act 1 styleframe',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/8428e02644dc8734502f6a5f028c1fc45de2ed81-1920x1080.png'
+                    },
+                    {
+                      alt: '"Plastic" SetyMedia logo test render',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/d5eab286ff862d3f7637924921476a171c39336c-1920x1080.png'
+                    }
+                  ]
+                },
+                {
+                  images: [
+                    {
+                      alt: '"Pillars" styleframe 1',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/0c7d180b0fcc8e92c265c13ef558ff0dbbf07e99-1920x1080.png'
+                    },
+                    {
+                      alt: '"Pillars" styleframe 2',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/66b6733bd052cf0c11069e75f94f672e9034c8b7-1920x1080.png'
+                    },
+                    {
+                      alt: 'Glowing door way',
+                      src: 'https://cdn.sanity.io/images/b01vqf7r/production/c9eaf9bcae3ba836e3e58dcd892978bec0819e5b-1920x1080.png'
+                    }
+                  ]
+                }
+              ]}
+            />
             <div className="mx-auto prose prose-dark prose-lg md:prose-2xl dark:prose-light">
               <SRLWrapper options={simpleReactLightBoxOptions}>
                 <MDXRemote {...source} components={components} />
