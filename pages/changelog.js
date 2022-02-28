@@ -5,11 +5,24 @@ import { getClient } from '../lib/sanity.server';
 import { changelogQuery } from '../lib/queries';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Link from '../components/link';
+
+function ExternalLink({ children, href }) {
+  return (
+    <Link href={href} target="_blank" rel="noopener">
+      {children}
+    </Link>
+  );
+}
 
 export default function Changelog({ data, source }) {
   if (!data) {
     return <div>Loading...</div>;
   }
+
+  const components = {
+    a: ExternalLink
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -62,7 +75,7 @@ export default function Changelog({ data, source }) {
             </p>
           </header>
           <div className="prose prose-dark prose-lg dark:prose-light">
-            <MDXRemote {...source} />
+            <MDXRemote {...source} components={components} />
           </div>
         </article>
       </main>

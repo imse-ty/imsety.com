@@ -10,10 +10,23 @@ import Header from '../../components/header';
 import Footer from '../../components/footer';
 import PostHeader from '../../components/blog/post-header';
 import PreviewAlert from '../../components/preview-alert';
+import Link from '../../components/link';
+
+function ExternalLink({ children, href }) {
+  return (
+    <Link href={href} target="_blank" rel="noopener">
+      {children}
+    </Link>
+  );
+}
 
 export default function Post({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
+
+  const components = {
+    a: ExternalLink
+  };
 
   if (!router.isFallback && !slug) {
     return <Error statusCode={404} />;
@@ -46,7 +59,7 @@ export default function Post({ data, source, preview }) {
           />
           <div className="container">
             <div className="mx-auto prose prose-dark prose-lg dark:prose-light">
-              <MDXRemote {...source} />
+              <MDXRemote {...source} components={components} />
             </div>
           </div>
         </article>

@@ -18,12 +18,13 @@ import {
   ProjectVimeo
 } from '../../components/projects/project-embed';
 import PhotoGrid from '../../components/projects/photo-grid';
+import Link from '../../components/link';
 
 function ExternalLink({ children, href }) {
   return (
-    <a href={href} target="_blank" rel="noopener">
+    <Link href={href} target="_blank" rel="noopener">
       {children}
-    </a>
+    </Link>
   );
 }
 

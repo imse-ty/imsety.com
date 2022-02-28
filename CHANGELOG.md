@@ -6,11 +6,15 @@
 
 - New about page photo :)
 
+### Changed
+
+- Blog and changelog pages now open links in new tab.
+
 ### Fixed
 
 - Project entries not showing full Vimeo controls on mobile.
 - `zoom-in` cursor showing up on blog post images.
-- Project card content overflowing on smaller screens.
+- Project card content overflowing on smaller screens
 
 ## [1.1.0] - 2022-02-22
 
