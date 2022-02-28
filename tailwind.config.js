@@ -34,6 +34,15 @@ module.exports = {
         imsetyWhite: '#EDEBEF'
       },
       typography: (theme) => ({
+        lightbox: {
+          css: [
+            {
+              img: {
+                cursor: 'zoom-in'
+              }
+            }
+          ]
+        },
         dark: {
           css: [
             {
@@ -44,8 +53,7 @@ module.exports = {
                 backgroundColor: theme('colors.gray.200')
               },
               img: {
-                width: '100%',
-                cursor: 'zoom-in'
+                width: '100%'
               }
             }
           ]

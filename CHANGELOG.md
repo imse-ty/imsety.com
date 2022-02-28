@@ -9,6 +9,7 @@
 ### Fixed
 
 - Project entries not showing full Vimeo controls on mobile.
+- `zoom-in` cursor showing up on blog post images.
 
 ## [1.1.0] - 2022-02-22
 
