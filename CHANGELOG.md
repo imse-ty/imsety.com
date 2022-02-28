@@ -6,6 +6,10 @@
 
 - New about page photo :)
 
+### Fixed
+
+- Project entries not showing full Vimeo controls on mobile.
+
 ## [1.1.0] - 2022-02-22
 
 ### Added

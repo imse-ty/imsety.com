@@ -55,7 +55,7 @@ export function ProjectYoutube({ url }) {
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         className="absolute top-0 left-0 w-full h-full"
-      ></iframe>
+      />
     </figure>
   );
 }
@@ -67,7 +67,7 @@ export function ProjectVimeo({ url }) {
     }
   };
   const vimeoId = getVimeoId();
-  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}`;
+  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0`;
 
   return (
     <figure
@@ -78,9 +78,10 @@ export function ProjectVimeo({ url }) {
         src={vimeoUrl}
         title="Vimeo video player"
         frameBorder="0"
-        allow="autoplay; picture-in-picture"
+        allow="autoplay; fullscreen; picture-in-picture"
         className="absolute top-0 left-0 w-full h-full"
-      ></iframe>
+        allowFullScreen
+      />
     </figure>
   );
 }
