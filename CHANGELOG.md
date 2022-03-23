@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Incorrect Instagram icon link. It went to [www.instagram.com/imse.ty](https://www.instagram.com/imse.ty/) instead of [www.instagram.com/imse_ty](https://www.instagram.com/imse_ty/). Oops... 🤦🏾‍♂️ ([#60](https://github.com/imse-ty/imsety.com/issues/60))
+
 ## [1.2.0] - 2022-03-23
 
 ### Added

@@ -28,7 +28,7 @@ export default function SocialMediaIcons() {
       <SocialMediaLink href="https://twitter.com/imse_ty" alt="Twitter">
         <FaTwitter />
       </SocialMediaLink>
-      <SocialMediaLink href="https://www.instagram.com/imse.ty" alt="Instagram">
+      <SocialMediaLink href="https://www.instagram.com/imse_ty" alt="Instagram">
         <FaInstagram />
       </SocialMediaLink>
       <SocialMediaLink href="https://www.youtube.com/imsety" alt="YouTube">
