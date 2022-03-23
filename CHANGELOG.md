@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2022-03-23
+
 ### Fixed
 
 - Incorrect Instagram icon link. It went to [www.instagram.com/imse.ty](https://www.instagram.com/imse.ty/) instead of [www.instagram.com/imse_ty](https://www.instagram.com/imse_ty/). Oops... 🤦🏾‍♂️ ([#60](https://github.com/imse-ty/imsety.com/issues/60))
@@ -145,7 +147,8 @@ First stable release 🥳🥳🎉
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/imse-ty/imsety.com/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/imse-ty/imsety.com/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/imse-ty/imsety.com/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/imse-ty/imsety.com/compare/v0.6.0...v1.0.0
