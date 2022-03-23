@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.2.0] - 2022-03-23
+
 ### Added
 
 - New about page photo :)
@@ -139,7 +141,8 @@ First stable release 🥳🥳🎉
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/imse-ty/imsety.com/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/imse-ty/imsety.com/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/imse-ty/imsety.com/compare/v0.6.0...v1.0.0
 [0.6.0]: https://github.com/imse-ty/imsety.com/compare/v0.5.0...v0.6.0
