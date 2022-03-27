@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Changed contact email from hello@imsety.com to greetings@imsety.com because it sounds cooler.
+
 ## [1.2.1] - 2022-03-23
 
 ### Fixed

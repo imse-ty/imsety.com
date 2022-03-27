@@ -46,7 +46,7 @@ export default function SocialMediaIcons() {
       <SocialMediaLink href="https://dribbble.com/Imsety" alt="Dribble">
         <FaDribbble />
       </SocialMediaLink>
-      <SocialMediaLink href="mailto:hello@imsety.com" alt="Email">
+      <SocialMediaLink href="mailto:greetings@imsety.com" alt="Email">
         <FaEnvelope />
       </SocialMediaLink>
     </div>

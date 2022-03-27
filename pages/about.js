@@ -83,7 +83,7 @@ export default function Info() {
             </Link>
             .
           </p>
-          <a href="mailto:hello@imsety.com">
+          <a href="mailto:greetings@imsety.com">
             <button
               type="button"
               className="px-14 py-5 font-bold text-imsetyWhite dark:text-imsetyBlack bg-imsetyBlack dark:bg-imsetyWhite hover:scale-105 transform transition duration-300"
