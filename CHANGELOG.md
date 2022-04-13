@@ -6,6 +6,10 @@
 
 - Changed contact email from hello@imsety.com to greetings@imsety.com because it sounds cooler.
 
+### Fixed
+
+- About page content overflowing past the header on smaller screens. ([#61](https://github.com/imse-ty/imsety.com/issues/61))
+
 ## [1.2.1] - 2022-03-23
 
 ### Fixed

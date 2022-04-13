@@ -12,13 +12,13 @@ export default function Info() {
         description="About Imsety Taylor."
       />
       <Header />
-      <main className="flex flex-col md:flex-row flex-grow mb-24 md:h-80v">
+      <main className="flex flex-col md:flex-row flex-grow mb-24">
         <img
           alt="Imsety looking at up the sky in black and white"
           src="/imsety-looking-at-the-sky-in-black-and-white.jpg"
           width="710"
           height="880"
-          className="object-cover w-full md:w-2/5 h-50v md:h-full"
+          className="object-cover w-full md:w-2/5 h-50v md:h-80v"
         />
 
         <div className="container flex flex-col justify-center mx-0 py-8">
