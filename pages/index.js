@@ -10,8 +10,8 @@ export default function Home({ allProjects }) {
   return (
     <div>
       <Header />
-      <section className="flex flex-col min-w-full md:flex-row mb-24 md:h-80v">
-        <div className="relative overflow-hidden h-50v md:h-full md:w-2/5">
+      <section className="flex flex-col min-w-full md:flex-row mb-24">
+        <div className="relative overflow-hidden h-50v md:h-80v md:w-2/5 ">
           <VideoReelLoop />
         </div>
         <div className="container flex items-center mx-0 py-8">
