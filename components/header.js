@@ -18,7 +18,7 @@ function MenuItem({ children, active, ...props }) {
       variants={variants}
       transition={{ type: 'spring', duration: 0.8 }}
       className={`
-        my-6 text-3xl md:ml-3 md:my-0 md:text-base font-medium uppercase
+        my-6 text-3xl md:ml-3 md:my-0 md:text-sm font-medium uppercase
 
         ${isCurrentPath || active ? 'font-bold' : ''}
       `}
@@ -120,7 +120,7 @@ export default function Header() {
   return (
     <header
       className={`
-        sticky z-20 top-0 py-4 md:py-10 bg-imsetyWhite dark:bg-imsetyBlack dark:bg-opacity-75 dark:backdrop-filter backdrop-blur transition-shadow duration-500
+        sticky z-20 top-0 py-4 md:py-6 bg-imsetyWhite dark:bg-imsetyBlack dark:bg-opacity-75 dark:backdrop-filter backdrop-blur transition-shadow duration-500
 
         ${hasShadow ? 'shadow-xl' : ''}
       `}
@@ -132,7 +132,7 @@ export default function Header() {
               width="132px"
               height="33px"
               viewBox="0 0 933.86 231"
-              className="fill-current w-24 md:w-auto"
+              className="fill-current w-24 md:w-28"
             />
           </a>
         </Link>

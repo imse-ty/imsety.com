@@ -6,6 +6,7 @@
 
 - Changed contact email from hello@imsety.com to greetings@imsety.com because it sounds cooler.
 - Updated about page photo with a nicer color corrected one 🙂
+- The header is now a bit shorter.
 
 ### Fixed
 
