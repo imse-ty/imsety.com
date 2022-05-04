@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Gave the hero reel video a stand-in poster for users with slow internet.
+
 ### Changed
 
 - Changed contact email from hello@imsety.com to greetings@imsety.com because it sounds cooler.

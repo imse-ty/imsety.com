@@ -7,6 +7,7 @@ export default function VideoReelLoop() {
           autoPlay
           loop
           muted
+          poster="/setymedia-2020-reel-loop-poster.jpg"
           className="absolute object-cover w-auto min-w-full min-h-full"
         >
           <source src="/setymedia-2020-reel-loop.mp4" type="video/mp4" />
