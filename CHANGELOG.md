@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Made sure to only show case studies and blog posts that have a `publishedAt` date.
+
 ## [1.3.0] - 2022-05-04
 
 ### Added
