@@ -67,7 +67,7 @@ export function ProjectVimeo({ url }) {
     }
   };
   const vimeoId = getVimeoId();
-  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0`;
+  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0`;
 
   return (
     <figure
