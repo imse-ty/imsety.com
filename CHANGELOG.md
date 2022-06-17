@@ -6,6 +6,7 @@
 
 - Made sure to only show case studies and blog posts that have a `publishedAt` date.
 - The case study heading is now on the top for larger screens! I don't know why I had it like that before...
+- Updated dependencies.
 
 ## [1.3.0] - 2022-05-04
 
