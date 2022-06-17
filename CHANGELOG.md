@@ -8,6 +8,10 @@
 - The case study heading is now on the top for larger screens! I don't know why I had it like that before...
 - Updated dependencies.
 
+### Fixed
+
+- Broken shadow showing up for Vimeo content that is not 16:9 by setting player's ["transparent" parameter](https://vimeo.zendesk.com/hc/en-us/articles/360001494447-Player-parameters-overview) to false. ([#63](https://github.com/imse-ty/imsety.com/issues/63))
+
 ## [1.3.0] - 2022-05-04
 
 ### Added
