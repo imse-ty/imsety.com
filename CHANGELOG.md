@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.4.0] - 2022-06-17
+
 ### Changed
 
 - Made sure to only show case studies and blog posts that have a `publishedAt` date.
@@ -173,7 +175,8 @@ First stable release 🥳🥳🎉
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.3.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/imse-ty/imsety.com/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/imse-ty/imsety.com/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/imse-ty/imsety.com/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/imse-ty/imsety.com/compare/v1.1.0...v1.2.0
