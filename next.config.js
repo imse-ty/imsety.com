@@ -16,6 +16,11 @@ module.exports = {
         source: '/rebrand',
         destination: '/projects/2022-rebrand',
         permanent: true
+      },
+      {
+        source: '/batchentry',
+        destination: '/projects/batch-logo-challenge',
+        permanent: true
       }
     ];
   }
