@@ -87,7 +87,7 @@ export default {
   preview: {
     select: {
       title: 'title',
-      subtitle: 'summary',
+      subtitle: 'subtitle',
       media: 'coverImage'
     }
   }
