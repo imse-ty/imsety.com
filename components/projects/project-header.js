@@ -29,13 +29,12 @@ export default function ProjectHeader({
           </div>
         )}
       </div>
-      {year && timeline && tools && (
-        <div className="flex gap-8">
-          {year && <Tooltip label="Year" text={year} />}
-          {timeline && <Tooltip label="Timeline" text={timeline} />}
-          {tools && <Tooltip label="Tools" text={tools} />}
-        </div>
-      )}
+
+      <div className="flex gap-8">
+        {year && <Tooltip label="Year" text={year} />}
+        {timeline && <Tooltip label="Timeline" text={timeline} />}
+        {tools && <Tooltip label="Tools" text={tools} />}
+      </div>
     </header>
   );
 }
