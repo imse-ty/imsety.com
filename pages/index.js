@@ -25,7 +25,7 @@ export default function Home({ allProjects }) {
         >
           Projects
         </h2>
-        <ProjectsSection projects={allProjects} />
+        <ProjectsSection projects={allProjects.projects} />
       </main>
       <Footer />
     </div>
