@@ -83,5 +83,12 @@ export default {
       name: 'body',
       type: 'markdown'
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'subtitle',
+      media: 'coverImage'
+    }
+  }
 };

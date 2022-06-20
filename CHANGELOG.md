@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Made a work page document inside Sanity Studio so that I can rearrange the order of projects. ([#65](https://github.com/imse-ty/imsety.com/issues/65))
+
 ## [1.4.0] - 2022-06-17
 
 ### Changed
