@@ -9,6 +9,7 @@
 ### Fixed
 
 - Bug where project case study tool tips do not show up even if one the fields exist.
+- "developed my me" typo. Oops, that should have said "developed by me." Thanks, [M.SAM](https://samessanoussi.com/), for pointing this out!
 
 ## [1.4.0] - 2022-06-17
 

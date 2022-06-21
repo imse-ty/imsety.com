@@ -18,7 +18,7 @@ export default function Footer() {
           >
             developed
           </a>{' '}
-          my me. Check out the{' '}
+          by me. Check out the{' '}
           <Link href="/changelog">
             <a className="underline hover:text-gray-500 dark:hover:text-gray-300 transition duration-300">
               changelog!
