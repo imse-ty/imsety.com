@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.5.0] - 2022-06-21
+
 ### Added
 
 - Made a work page document inside Sanity Studio so that I can rearrange the order of projects. ([#65](https://github.com/imse-ty/imsety.com/issues/65))
@@ -184,7 +186,8 @@ First stable release 🥳🥳🎉
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.4.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/imse-ty/imsety.com/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/imse-ty/imsety.com/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/imse-ty/imsety.com/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/imse-ty/imsety.com/compare/v1.2.0...v1.2.1
