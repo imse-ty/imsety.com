@@ -21,6 +21,11 @@ module.exports = {
         source: '/batchentry',
         destination: '/projects/batch-logo-challenge',
         permanent: true
+      },
+      {
+        source: '/triumph',
+        destination: '/projects/triumph',
+        permanent: true
       }
     ];
   }
