@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Switched from Yarn to npm.
+
 ## [1.5.0] - 2022-06-21
 
 ### Added
