@@ -19,6 +19,7 @@ import {
 } from '../../components/projects/project-embed';
 import PhotoGrid from '../../components/projects/photo-grid';
 import Link from '../../components/link';
+import { Heading1, Heading2, Heading3 } from '../../components/post-heading';
 
 function ExternalLink({ children, href }) {
   return (
@@ -51,6 +52,9 @@ export default function Project({ data, source, preview }) {
   const router = useRouter();
   const slug = data?.post?.slug;
   const components = {
+    h1: Heading1,
+    h2: Heading2,
+    h3: Heading3,
     a: ExternalLink,
     ProjectEmbed,
     PhotoGrid

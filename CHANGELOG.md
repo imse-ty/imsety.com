@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Ability to link to a particular heading in a project case study.
+
 ### Changed
 
 - Switched from Yarn to npm.
