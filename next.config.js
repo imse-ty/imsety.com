@@ -31,6 +31,11 @@ module.exports = {
         source: '/settheory',
         destination: 'https://www.youtube.com/channel/UCovWMiX2_Kno3ODMDZvmKUA',
         permanent: false
+      },
+      {
+        source: '/podcast',
+        destination: 'https://www.youtube.com/channel/UCovWMiX2_Kno3ODMDZvmKUA',
+        permanent: false
       }
     ];
   }
