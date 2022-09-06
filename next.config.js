@@ -26,6 +26,11 @@ module.exports = {
         source: '/triumph',
         destination: '/projects/triumph',
         permanent: true
+      },
+      {
+        source: '/settheory',
+        destination: 'https://www.youtube.com/channel/UCovWMiX2_Kno3ODMDZvmKUA',
+        permanent: false
       }
     ];
   }
