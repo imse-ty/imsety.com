@@ -36,6 +36,11 @@ module.exports = {
         source: '/podcast',
         destination: 'https://youtu.be/H2PSEdEJEYs',
         permanent: false
+      },
+      {
+        source: '/rebooting',
+        destination: 'https://www.instagram.com/reel/CljCpkvt53M/?utm_source=ig_web_copy_link',
+        permanent: false
       }
     ];
   }
