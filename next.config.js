@@ -34,14 +34,19 @@ module.exports = {
       },
       {
         source: '/podcast',
-        destination: 'https://youtu.be/wsH4b9-lb7E',
+        destination: 'https://youtu.be/JIOTd-ClM_8',
         permanent: false
       },
       {
         source: '/rebooting',
         destination: 'https://www.instagram.com/reel/CljCpkvt53M/?utm_source=ig_web_copy_link',
         permanent: false
-      }
+      },
+      {
+        source: '/pianoblack',
+        destination: 'https://www.instagram.com/p/ClyofIbpHNy',
+        permanent: false
+      },
     ];
   }
 };
