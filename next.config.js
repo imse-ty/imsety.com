@@ -29,12 +29,12 @@ module.exports = {
       },
       {
         source: '/settheory',
-        destination: 'https://www.youtube.com/channel/UCovWMiX2_Kno3ODMDZvmKUA',
+        destination: 'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
         permanent: false
       },
       {
         source: '/podcast',
-        destination: 'https://youtu.be/JIOTd-ClM_8',
+        destination: 'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
         permanent: false
       },
       {
