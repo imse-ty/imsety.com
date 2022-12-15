@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         source: '/podcast',
-        destination: 'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
+        destination: 'https://youtu.be/dpKecYGvbww',
         permanent: false
       },
       {
