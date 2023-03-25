@@ -47,6 +47,11 @@ module.exports = {
         destination: 'https://www.instagram.com/p/ClyofIbpHNy',
         permanent: false
       },
+      {
+        source: '/live',
+        destination: 'https://youtube.com/@imsety/live',
+        permanent: true
+      },
     ];
   }
 };
