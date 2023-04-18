@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         source: '/chat',
-        destination: 'https://cal.com/imsety/chat',
+        destination: 'https://cal.com/imsety/chat/',
         permanent: false
       },
     ];
