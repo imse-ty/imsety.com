@@ -57,6 +57,16 @@ module.exports = {
         destination: 'https://cal.com/imsety/chat/',
         permanent: false
       },
+      {
+        source: '/thebreakdown',
+        destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        permanent: false
+      },
+            {
+        source: '/beeple',
+        destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        permanent: false
+      }
     ];
   }
 };
