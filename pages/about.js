@@ -18,7 +18,7 @@ export default function Info() {
           src="/imsety-looking-at-the-sky-in-black-and-white.jpg"
           width="710"
           height="880"
-          className="object-cover w-full md:w-2/5 h-50v md:h-80v"
+          className="object-cover w-full md:w-1/2 h-50v md:h-80v"
         />
 
         <div className="container flex flex-col justify-center mx-0 py-8">
