@@ -67,7 +67,7 @@ export default function ProjectCard({
             alt={coverAlt}
             src={coverSrc}
             width={640}
-            height={480}
+            height={640}
             layout="responsive"
           />
         </a>
