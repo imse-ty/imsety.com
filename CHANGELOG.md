@@ -12,6 +12,7 @@
 - Rounded off some things.
 - Swapped "Hey!" with "Greetings!"
 - Changed front from Poppins to [Hubot Sans](https://github.com/github/hubot-sans).
+- Centered hero images.
 
 ## [1.6.0] - 2022-07-30
 
