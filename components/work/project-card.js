@@ -9,6 +9,10 @@ export default function ProjectCard({
   coverSrc,
   href
 }) {
+  const cardVariants = {
+    active: { zIndex: 10, scale: 1.2 },
+    idle: { scale: 1 }
+  };
   const labelVariants = { active: { opacity: 1 }, idle: { opacity: 0 } };
   const textVariants = {
     active: {
@@ -23,9 +27,16 @@ export default function ProjectCard({
 
   return (
     <motion.div
+      variants={cardVariants}
+      initial="idle"
+      whileHover="active"
       whileTap={{ scale: 0.9 }}
-      transition={{ type: 'spring', bounce: 0.5 }}
-      className="relative w-full h-full text-imsetyWhite overflow-hidden"
+      transition={{
+        type: 'spring',
+        bounce: 0.32,
+        duration: 0.6
+      }}
+      className="z-0 relative w-full h-full text-imsetyWhite overflow-hidden rounded-xl"
     >
       <Link href={href}>
         <a>

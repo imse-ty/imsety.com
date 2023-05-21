@@ -18,6 +18,7 @@ export default function PostHeader({
           height={480}
           layout="responsive"
           objectFit="cover"
+          className="rounded-br-xl"
         />
       </div>
       <div className="container md:w-1/2">

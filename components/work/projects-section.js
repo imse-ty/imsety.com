@@ -1,9 +1,13 @@
+import { motion } from 'framer-motion';
 import { urlFor } from '../../lib/sanity';
 import ProjectCard from './project-card';
 
 export default function ProjectsSection({ projects }) {
   return (
-    <div className="sm:container grid grid-cols-2 gap-1 md:grid-cols-3 sm:gap-5">
+    <motion.div
+      style={{ maxWidth: '2160px' }}
+      className="container grid grid-cols-2 gap-1 md:grid-cols-3 sm:gap-5"
+    >
       {projects.map((project) => {
         return (
           <ProjectCard
@@ -16,6 +20,6 @@ export default function ProjectsSection({ projects }) {
           />
         );
       })}
-    </div>
+    </motion.div>
   );
 }

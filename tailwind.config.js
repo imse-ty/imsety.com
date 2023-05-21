@@ -14,7 +14,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+      sans: ['"Hubot Sans"', 'ui-sans-serif', 'system-ui']
     },
 
     extend: {

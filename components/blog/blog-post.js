@@ -27,6 +27,7 @@ export default function BlogPost({
               width={640}
               height={480}
               objectFit="cover"
+              className="rounded-xl"
             />
             <div className="my-2 text-xs tracking-widest text-gray-400">
               <DateFormatter dateString={date} /> •{' '}

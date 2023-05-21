@@ -11,7 +11,7 @@ export default function Home({ allProjects }) {
     <div>
       <Header />
       <section className="flex flex-col min-w-full md:flex-row mb-24">
-        <div className="relative overflow-hidden h-50v md:h-80v md:w-2/5 ">
+        <div className="relative overflow-hidden h-50v md:h-80v md:w-1/2 rounded-br-xl">
           <VideoReelLoop />
         </div>
         <div className="container flex items-center mx-0 py-8">
@@ -21,6 +21,7 @@ export default function Home({ allProjects }) {
       <main className="mb-24">
         <h2
           id="projects"
+          style={{ maxWidth: '2160px' }}
           className="container mb-12 text-3xl md:text-5xl font-bold"
         >
           Projects

@@ -125,7 +125,10 @@ export default function Header() {
         ${hasShadow ? 'shadow-xl' : ''}
       `}
     >
-      <div className="flex items-center justify-between container mx-auto">
+      <div
+        style={{ maxWidth: '2160px' }}
+        className="flex items-center justify-between container mx-auto"
+      >
         <Link href="/">
           <a>
             <ImsetyWordmark
