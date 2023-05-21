@@ -79,7 +79,7 @@ export function ProjectVimeo({ url }) {
         title="Vimeo video player"
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture"
-        className="absolute top-0 left-0 w-full h-full"
+        className="absolute top-0 left-0 w-full h-full "
         allowFullScreen
       />
     </figure>

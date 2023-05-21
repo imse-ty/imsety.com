@@ -18,7 +18,7 @@ export default function Info() {
           src="/imsety-looking-at-the-sky-in-black-and-white.jpg"
           width="710"
           height="880"
-          className="object-cover w-full md:w-1/2 h-50v md:h-80v"
+          className="object-cover w-full md:w-1/2 h-50v md:h-80v rounded-br-xl"
         />
 
         <div className="container flex flex-col justify-center mx-0 py-8">
@@ -86,7 +86,7 @@ export default function Info() {
           <a href="mailto:greetings@imsety.com">
             <button
               type="button"
-              className="px-14 py-5 font-bold text-imsetyWhite dark:text-imsetyBlack bg-imsetyBlack dark:bg-imsetyWhite hover:scale-105 transform transition duration-300"
+              className="px-14 py-5 font-bold text-imsetyWhite dark:text-imsetyBlack bg-imsetyBlack dark:bg-imsetyWhite hover:scale-105 transform transition duration-300 rounded-xl"
             >
               Reach out
             </button>
