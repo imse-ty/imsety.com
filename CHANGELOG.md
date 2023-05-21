@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.7.0] - 2023-05-21
+
 ### Added
 
 - Cool scale animation when you hover a project.
