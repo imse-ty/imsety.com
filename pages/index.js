@@ -21,7 +21,6 @@ export default function Home({ allProjects }) {
       <main className="mb-24">
         <h2
           id="projects"
-          style={{ maxWidth: '2160px' }}
           className="container mb-12 text-3xl md:text-5xl font-bold"
         >
           Projects

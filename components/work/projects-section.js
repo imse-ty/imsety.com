@@ -4,10 +4,7 @@ import ProjectCard from './project-card';
 
 export default function ProjectsSection({ projects }) {
   return (
-    <motion.div
-      style={{ maxWidth: '2160px' }}
-      className="container grid grid-cols-2 gap-1 md:grid-cols-3 sm:gap-5"
-    >
+    <motion.div className="container grid grid-cols-2 gap-1 md:grid-cols-3 sm:gap-5">
       {projects.map((project) => {
         return (
           <ProjectCard
