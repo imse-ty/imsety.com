@@ -58,6 +58,11 @@ module.exports = {
         permanent: false
       },
       {
+        source: '/call',
+        destination: 'https://cal.com/imsety/call/',
+        permanent: false
+      },
+      {
         source: '/thebreakdown',
         destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
         permanent: false
