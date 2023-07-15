@@ -2,6 +2,7 @@
 
 import { ThemeUIProvider } from 'theme-ui';
 import { Box, buildColorTheme, colors } from 'krado-react';
+import { hubotSans, monaSans } from '@/styles/fonts';
 
 export default function Layout({ children }) {
   const setyTheme = buildColorTheme({
@@ -14,6 +15,11 @@ export default function Layout({ children }) {
   return (
     <ThemeUIProvider
       theme={{
+        fonts: {
+          body: 'Mona Sans, Arial, sans-serif',
+          heading: 'Hubot Sans, Arial, sans-serif',
+          display: 'Hubot Sans, Arial, sans-serif'
+        },
         colors: {
           ...setyTheme,
           primary: {
@@ -30,6 +36,7 @@ export default function Layout({ children }) {
     >
       <Box
         as="main"
+        className={`${(monaSans.className, hubotSans.className)}`}
         backgroundColor="background"
         sx={{
           height: '100vh'
