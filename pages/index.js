@@ -1,26 +1,21 @@
 'use client';
 import Layout from '@/components/layout';
 import PageButton from '@/components/pageButton';
-import { Box, Flex, Text, Heading, colors, Button } from 'krado-react';
+import { Box, Flex, Text, Heading, Button } from 'krado-react';
 import { MdInfoOutline } from 'react-icons/md';
 
 export default function Home() {
   return (
     <Layout>
-      <Box
-        padding={4}
-        color={colors.nso200}
-        backgroundColor={colors.nso1000}
-        sx={{ height: '100%' }}
-      >
+      <Box padding={4} sx={{ height: '100%' }}>
         <Flex
           padding={4}
           sx={{
             height: '100%',
             flexDirection: 'column',
             border: 1,
-            borderColor: colors.nso100,
             borderRadius: 3,
+            borderColor: 'surface.thin',
             justifyContent: 'space-between'
           }}
         >
@@ -38,17 +33,14 @@ export default function Home() {
               INFO
             </Button>
             <Box
+              backgroundColor="divider"
               sx={{
                 width: '100%',
                 maxWidth: '60px',
-                height: '2px',
-                backgroundColor: colors.nso100
+                height: '2px'
               }}
             />
-            <Text
-              color="inherit"
-              sx={{ fontWeight: 'bold', textTransform: 'uppercase' }}
-            >
+            <Text sx={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
               Imsety
             </Text>
           </Flex>
@@ -56,25 +48,18 @@ export default function Home() {
             <Heading
               as="h1"
               variant="display.h5"
-              color="inherit"
               sx={{ fontWeight: 'bold', marginBottom: 3 }}
             >
               Greetings! My name is Imsety. Thanks for stopping by :]
             </Heading>
-            <Text variant="body." color={colors.nso300}>
-              Lorem ipsum dolor sit amet.
-            </Text>
+            <Text variant="body.">Lorem ipsum dolor sit amet.</Text>
           </Box>
           <Flex sx={{ flexDirection: 'column', gap: 2 }}>
             <PageButton>Work</PageButton>
             <PageButton>Play</PageButton>
             <PageButton>Learn</PageButton>
           </Flex>
-          <Text
-            variant="body.footnote"
-            color={colors.nso300}
-            sx={{ marginTop: 3 }}
-          >
+          <Text variant="body.footnote" sx={{ marginTop: 3 }}>
             Copyright © 2023 SetyMedia, LLC. All rights reserved.
           </Text>
         </Flex>
