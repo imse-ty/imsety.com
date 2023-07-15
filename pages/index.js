@@ -1,16 +1,12 @@
 'use client';
+import Layout from '@/components/layout';
 import PageButton from '@/components/pageButton';
 import { Box, Flex, Text, Heading, colors, Button } from 'krado-react';
 import { MdInfoOutline } from 'react-icons/md';
 
 export default function Home() {
   return (
-    <Box
-      as="main"
-      sx={{
-        height: '100vh'
-      }}
-    >
+    <Layout>
       <Box
         padding={4}
         color={colors.nso200}
@@ -83,6 +79,6 @@ export default function Home() {
           </Text>
         </Flex>
       </Box>
-    </Box>
+    </Layout>
   );
 }
