@@ -67,9 +67,29 @@ module.exports = {
         destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
         permanent: false
       },
-            {
+      {
         source: '/beeple',
         destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        permanent: false
+      },
+      {
+        source: '/instagram',
+        destination: 'https://www.instagram.com/imse_ty',
+        permanent: false
+      },
+      {
+        source: '/twitter',
+        destination: 'https://twitter.com/imse_ty',
+        permanent: false
+      },
+      {
+        source: '/youtube',
+        destination: 'https://www.youtube.com/imsety',
+        permanent: false
+      },
+      {
+        source: '/linkedin',
+        destination: 'https://www.linkedin.com/in/imsety',
         permanent: false
       }
     ];
