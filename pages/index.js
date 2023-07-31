@@ -58,7 +58,7 @@ export default function Home() {
               variant="display.h5"
               sx={{
                 marginBottom: [3, 4],
-                fontSize: [6, 10, null, 11],
+                fontSize: [6, 10, 11, '108px'],
                 lineHeight: 1,
                 fontWeight: 'bold',
                 letterSpacing: 'normal'
