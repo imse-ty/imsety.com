@@ -7,9 +7,9 @@ import { MdInfoOutline } from 'react-icons/md';
 export default function Home() {
   return (
     <Layout>
-      <Box padding={4} sx={{ height: '100%' }}>
+      <Box padding={[4, 5]} sx={{ height: '100%' }}>
         <Flex
-          padding={4}
+          padding={[4, 5]}
           sx={{
             height: '100%',
             flexDirection: 'column',
@@ -37,14 +37,16 @@ export default function Home() {
               sx={{
                 width: '100%',
                 maxWidth: '60px',
-                height: '2px'
+                height: '2px',
+                display: ['block', 'none']
               }}
             />
             <Text
               sx={{
                 fontWeight: 'bold',
                 textTransform: 'uppercase',
-                fontStretch: 'expanded'
+                fontStretch: 'expanded',
+                fontSize: [5, 6]
               }}
             >
               Imsety
@@ -55,25 +57,26 @@ export default function Home() {
               as="h1"
               variant="display.h5"
               sx={{
-                marginBottom: 3,
-                fontSize: 6,
+                marginBottom: [3, 4],
+                fontSize: [6, 10, null, 11],
+                lineHeight: 1,
                 fontWeight: 'bold',
                 letterSpacing: 'normal'
               }}
             >
               ◤ Greetings! My name is Imsety. Thanks for stopping by :]
             </Heading>
-            <Text variant="body.smallParagraph" color="surface.light">
+            <Text color="surface.light" sx={{ fontSize: [1, 6] }}>
               Lorem ipsum dolor sit amet.
             </Text>
           </Box>
-          <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          {/* <Flex sx={{ flexDirection: 'column', gap: 2 }}>
             <PageButton>Work</PageButton>
             <PageButton>Play</PageButton>
             <PageButton>Learn</PageButton>
-          </Flex>
+          </Flex> */}
           <Text variant="body.footnote" sx={{ marginTop: 3 }}>
-            Copyright © 2023 SetyMedia, LLC. All rights reserved.
+            Copyright © 2023 Imsety Taylor. All rights reserved.
           </Text>
         </Flex>
       </Box>

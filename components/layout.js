@@ -20,6 +20,10 @@ export default function Layout({ children }) {
           heading: 'Hubot-Sans, Arial, sans-serif',
           display: 'Hubot-Sans, Arial, sans-serif'
         },
+        lineHeights: {
+          body: 2,
+          heading: 2
+        },
         colors: {
           ...setyTheme,
           primary: {
