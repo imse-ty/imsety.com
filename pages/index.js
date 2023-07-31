@@ -40,7 +40,13 @@ export default function Home() {
                 height: '2px'
               }}
             />
-            <Text sx={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
+            <Text
+              sx={{
+                fontWeight: 'bold',
+                textTransform: 'uppercase',
+                fontStretch: 'expanded'
+              }}
+            >
               Imsety
             </Text>
           </Flex>
@@ -57,7 +63,9 @@ export default function Home() {
             >
               ◤ Greetings! My name is Imsety. Thanks for stopping by :]
             </Heading>
-            <Text variant="body.">Lorem ipsum dolor sit amet.</Text>
+            <Text variant="body.smallParagraph" color="surface.light">
+              Lorem ipsum dolor sit amet.
+            </Text>
           </Box>
           <Flex sx={{ flexDirection: 'column', gap: 2 }}>
             <PageButton>Work</PageButton>
