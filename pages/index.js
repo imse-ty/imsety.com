@@ -58,7 +58,7 @@ export default function Home() {
               variant="display.h5"
               sx={{
                 marginBottom: [3, 4],
-                fontSize: [6, 10, 11, '108px'],
+                fontSize: [6, 10, null, '108px'],
                 lineHeight: 1,
                 fontWeight: 'bold',
                 letterSpacing: 'normal'
@@ -70,11 +70,16 @@ export default function Home() {
               Lorem ipsum dolor sit amet.
             </Text>
           </Box>
-          {/* <Flex sx={{ flexDirection: 'column', gap: 2 }}>
+          <Flex
+            sx={{
+              flexDirection: ['column', null, 'row'],
+              gap: [2, null, 4]
+            }}
+          >
             <PageButton>Work</PageButton>
             <PageButton>Play</PageButton>
             <PageButton>Learn</PageButton>
-          </Flex> */}
+          </Flex>
           <Text variant="body.footnote" sx={{ marginTop: 3 }}>
             Copyright © 2023 Imsety Taylor. All rights reserved.
           </Text>
