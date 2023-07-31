@@ -48,9 +48,14 @@ export default function Home() {
             <Heading
               as="h1"
               variant="display.h5"
-              sx={{ fontWeight: 'bold', marginBottom: 3 }}
+              sx={{
+                marginBottom: 3,
+                fontSize: 6,
+                fontWeight: 'bold',
+                letterSpacing: 'normal'
+              }}
             >
-              Greetings! My name is Imsety. Thanks for stopping by :]
+              ◤ Greetings! My name is Imsety. Thanks for stopping by :]
             </Heading>
             <Text variant="body.">Lorem ipsum dolor sit amet.</Text>
           </Box>

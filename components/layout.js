@@ -16,9 +16,9 @@ export default function Layout({ children }) {
     <ThemeUIProvider
       theme={{
         fonts: {
-          body: 'Mona Sans, Arial, sans-serif',
-          heading: 'Hubot Sans, Arial, sans-serif',
-          display: 'Hubot Sans, Arial, sans-serif'
+          body: 'Mona-Sans, Arial, sans-serif',
+          heading: 'Hubot-Sans, Arial, sans-serif',
+          display: 'Hubot-Sans, Arial, sans-serif'
         },
         colors: {
           ...setyTheme,
