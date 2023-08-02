@@ -5,7 +5,7 @@ import PageButton from '@/components/pageButton';
 import { Box, Flex, Text, Heading, Button } from 'krado-react';
 import { MdInfoOutline } from 'react-icons/md';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
 import IndexFooter from '@/components/index-footer';
@@ -13,18 +13,15 @@ import IndexFooter from '@/components/index-footer';
 export default function Home() {
   const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setIsMainButtonsVisible(true);
-
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <Layout>
       <AnimatePresence>
-        <Box padding={[4, 5]} sx={{ height: '100%' }}>
+        <Box
+          padding={[4, 5]}
+          sx={{ height: '100%' }}
+          onWheel={() => setIsMainButtonsVisible(true)}
+          onClick={() => setIsMainButtonsVisible(true)}
+        >
           <Flex
             padding={[4, 5]}
             sx={{
