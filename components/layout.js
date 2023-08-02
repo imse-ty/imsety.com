@@ -46,7 +46,7 @@ export default function Layout({ children }) {
           height: '100vh'
         }}
       >
-        ${children}
+        {children}
       </Box>
     </ThemeUIProvider>
   );

@@ -6,6 +6,9 @@ import { Box, Flex, Text, Heading, Button } from 'krado-react';
 import { MdInfoOutline } from 'react-icons/md';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import IndexHeader from '@/components/index-header';
+import Hero from '@/components/hero';
+import IndexFooter from '@/components/index-footer';
 
 export default function Home() {
   const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(false);
@@ -27,81 +30,17 @@ export default function Home() {
             sx={{
               height: '100%',
               flexDirection: 'column',
+              gap: 5,
               border: 1,
               borderRadius: 3,
               borderColor: 'surface.thin',
-              justifyContent: 'space-between'
+              justifyContent: 'space-between',
+              overflow: 'hidden'
             }}
           >
-            <Flex
-              sx={{
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}
-            >
-              <Button
-                size="small"
-                leftIcon={<MdInfoOutline />}
-                sx={{ paddingX: 3, paddingY: 2, borderRadius: 1 }}
-              >
-                INFO
-              </Button>
-              <Box
-                backgroundColor="divider"
-                sx={{
-                  width: '100%',
-                  maxWidth: '60px',
-                  height: '2px',
-                  display: ['block', 'none']
-                }}
-              />
-              <Text
-                sx={{
-                  fontWeight: 'bold',
-                  textTransform: 'uppercase',
-                  fontStretch: 'expanded',
-                  fontSize: [5, 6]
-                }}
-              >
-                Imsety
-              </Text>
-            </Flex>
+            <IndexHeader />
 
-            {/* Hero */}
-            <motion.div
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                height: '100vh'
-              }}
-              layout
-            >
-              <motion.h1
-                transition={{ type: 'spring', damping: 15 }}
-                as="h1"
-                sx={{
-                  variant: 'display.h5',
-                  marginBottom: [3, 4],
-                  fontSize: [6, 10, null, '108px'],
-                  lineHeight: 1,
-                  fontWeight: 'bold',
-                  letterSpacing: 'normal',
-                  color: 'white'
-                }}
-                layout
-              >
-                ◤ Greetings! My name is Imsety. Thanks for stopping by :]
-              </motion.h1>
-              <motion.p
-                transition={{ type: 'spring', damping: 13 }}
-                sx={{ color: 'surface.light', fontSize: [1, 6] }}
-                layout
-              >
-                Lorem ipsum dolor sit amet.
-              </motion.p>
-            </motion.div>
-            {/* Main buttons */}
+            <Hero />
 
             {isMainButtonsVisible && (
               <motion.div
@@ -110,7 +49,8 @@ export default function Home() {
                 transition={{ staggerChildren: 0.1 }}
                 sx={{
                   display: 'flex',
-                  height: '100vh',
+                  height: '100%',
+                  maxHeight: ['100%', '376px'],
                   flexDirection: ['column', null, 'row'],
                   gap: [2, null, 4]
                 }}
@@ -122,9 +62,7 @@ export default function Home() {
               </motion.div>
             )}
 
-            <Text variant="body.footnote" sx={{ marginTop: 3 }}>
-              Copyright © 2023 Imsety Taylor. All rights reserved.
-            </Text>
+            <IndexFooter />
           </Flex>
         </Box>
       </AnimatePresence>

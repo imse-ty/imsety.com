@@ -16,7 +16,7 @@ export default function PageButton({ children }) {
       sx={{
         display: 'flex',
         width: '100%',
-        height: ['139px', '376px'],
+        height: '100%',
         padding: 4,
         fontSize: 4,
         textTransform: 'uppercase',
