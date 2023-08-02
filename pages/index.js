@@ -2,13 +2,13 @@
 'use client';
 import Layout from '@/components/layout';
 import PageButton from '@/components/pageButton';
-import { Box, Flex, Text, Heading, Button } from 'krado-react';
-import { MdInfoOutline } from 'react-icons/md';
+import { Box, Flex } from 'krado-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
 import IndexFooter from '@/components/index-footer';
+import { MdArrowDownward } from 'react-icons/md';
 
 export default function Home() {
   const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(false);
@@ -25,6 +25,7 @@ export default function Home() {
           <Flex
             padding={[4, 5]}
             sx={{
+              position: 'relative',
               height: '100%',
               flexDirection: 'column',
               gap: 5,
@@ -59,6 +60,32 @@ export default function Home() {
               </motion.div>
             )}
 
+            <AnimatePresence>
+              {!isMainButtonsVisible && (
+                <motion.div
+                  animate={{
+                    y: 25,
+                    transition: {
+                      repeat: Infinity,
+                      repeatType: 'reverse',
+                      duration: 2
+                    }
+                  }}
+                  exit={{ opacity: 0, y: 100 }}
+                  sx={{
+                    position: 'absolute',
+                    bottom: '20%',
+                    left: [4, 5],
+                    marginX: 'auto',
+                    color: 'white',
+                    fontSize: 9
+                  }}
+                  layout
+                >
+                  <MdArrowDownward />
+                </motion.div>
+              )}
+            </AnimatePresence>
             <IndexFooter />
           </Flex>
         </Box>
