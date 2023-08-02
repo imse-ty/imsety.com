@@ -1,9 +1,18 @@
 'use client';
 import { Button } from 'krado-react';
+import { motion } from 'framer-motion';
 
 export default function PageButton({ children }) {
+  const variants = {
+    hidden: { y: 100, opacity: 0 },
+    show: { y: 0, opacity: 1 }
+  };
+
   return (
     <Button
+      as={motion.button}
+      variants={variants}
+      transition={{ type: 'spring', damping: 18 }}
       sx={{
         display: 'flex',
         width: '100%',
