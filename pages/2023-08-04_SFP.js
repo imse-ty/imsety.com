@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 'use client';
 import Layout from '@/components/layout';
-import { Box, Button, Flex } from 'krado-react';
+import { Box, Button, Flex, colors } from 'krado-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
@@ -18,7 +18,13 @@ export default function Home() {
   return (
     <Layout>
       <AnimatePresence>
-        <Box padding={[4, 5]} sx={{ height: '100%' }}>
+        <Box
+          as={motion.div}
+          padding={[4, 5]}
+          sx={{ height: '100%' }}
+          initial={{ color: colors.nso800, backgroundColor: colors.nso200 }}
+          animate={{ color: colors.nso200, backgroundColor: colors.nso1000 }}
+        >
           <Flex
             padding={[4, 5]}
             sx={{
