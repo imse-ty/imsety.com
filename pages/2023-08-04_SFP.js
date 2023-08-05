@@ -79,7 +79,7 @@ export default function Home() {
                     duration: 0.5,
                     stiffness: 300
                   }}
-                  sx={{ width: '100%' }}
+                  sx={{ width: '100%', textDecoration: 'none' }}
                 >
                   <Button
                     sx={{
