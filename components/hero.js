@@ -25,14 +25,17 @@ export default function Hero() {
         }}
         layout
       >
-        ◤ Greetings! My name is Imsety. Thanks for stopping by :]
+        ◤ Greetings Maya Table & Sam Frank Productions team!
       </motion.h1>
       <motion.p
         transition={{ type: 'spring', damping: 13 }}
         sx={{ margin: 0, color: 'surface.light', fontSize: [1, 6] }}
         layout
       >
-        Lorem ipsum dolor sit amet.
+        Excited to work together! Imsety will animate{' '}
+        <strong>seven infographic slides </strong>
+        for the Fearless Fund using existing assets starting{' '}
+        <strong>August 04, 2023.</strong>
       </motion.p>
     </motion.div>
   );
