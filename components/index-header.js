@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import { Box, Button, Flex, Text } from 'krado-react';
+import { motion } from 'framer-motion';
 import { MdInfoOutline } from 'react-icons/md';
 
 export default function IndexHeader() {
@@ -11,32 +12,25 @@ export default function IndexHeader() {
         alignItems: 'center'
       }}
     >
-      <Button
-        size="small"
-        leftIcon={<MdInfoOutline />}
-        sx={{ paddingX: 3, paddingY: 2, borderRadius: 1 }}
+      <motion.a
+        href="https://imsety.com"
+        target="_blank"
+        rel="noopener"
+        whileHover={{ scale: 1.4 }}
+        transition={{ type: 'spring' }}
+        sx={{ textDecoration: 'none' }}
       >
-        INFO
-      </Button>
-      <Box
-        backgroundColor="divider"
-        sx={{
-          width: '100%',
-          maxWidth: '60px',
-          height: '2px',
-          display: ['block', 'none']
-        }}
-      />
-      <Text
-        sx={{
-          fontWeight: 'bold',
-          textTransform: 'uppercase',
-          fontStretch: 'expanded',
-          fontSize: [5, 6]
-        }}
-      >
-        Imsety
-      </Text>
+        <Text
+          sx={{
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            fontStretch: 'expanded',
+            fontSize: [5, 6]
+          }}
+        >
+          Imsety
+        </Text>
+      </motion.a>
     </Flex>
   );
 }
