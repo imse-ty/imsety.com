@@ -6,8 +6,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
 import IndexFooter from '@/components/index-footer';
-import { MdArrowDownward } from 'react-icons/md';
-import { FaReceipt } from 'react-icons/fa6';
+import {
+  MdArrowDownward,
+  MdFolderOpen,
+  MdOutlineReceipt
+} from 'react-icons/md';
 import { useState } from 'react';
 
 export default function Home() {
@@ -69,39 +72,84 @@ export default function Home() {
                   <MdArrowDownward />
                 </motion.div>
 
-                <motion.a
-                  href="https://link.waveapps.com/apqs4s-myakun"
-                  target="_blank"
-                  rel="noopener"
-                  initial={{ opacity: 0, y: -50 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 1.5, type: 'spring' }
-                  }}
-                  whileHover={{ scale: 0.9 }}
-                  transition={{
-                    type: 'spring',
-                    duration: 0.5,
-                    stiffness: 300
-                  }}
-                  sx={{ width: '100%', textDecoration: 'none' }}
-                >
-                  <Button
-                    sx={{
-                      width: '100%',
-                      height: '100px',
-                      fontFamily: 'display',
-                      fontSize: 4,
-                      fontWeight: 500,
-                      textTransform: 'uppercase',
-                      borderRadius: 3
+                <Flex sx={{ flexDirection: ['column', null, 'row'], gap: 4 }}>
+                  <motion.a
+                    href="https://link.waveapps.com/apqs4s-myakun"
+                    target="_blank"
+                    rel="noopener"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 1.5, type: 'spring' }
                     }}
-                    leftIcon={<FaReceipt sx={{ fontSize: 5 }} />}
+                    whileHover={{ scale: 0.9 }}
+                    transition={{
+                      type: 'spring',
+                      duration: 0.5,
+                      stiffness: 300
+                    }}
+                    sx={{
+                      display: 'flex',
+                      width: '100%',
+                      gap: 3,
+                      textDecoration: 'none'
+                    }}
                   >
-                    View Invoice
-                  </Button>
-                </motion.a>
+                    <Button
+                      sx={{
+                        width: '100%',
+                        height: '100px',
+                        fontFamily: 'display',
+                        fontSize: 4,
+                        fontWeight: 500,
+                        textTransform: 'uppercase',
+                        borderRadius: 3
+                      }}
+                      leftIcon={<MdOutlineReceipt sx={{ fontSize: 5 }} />}
+                    >
+                      View Invoice
+                    </Button>
+                  </motion.a>
+                  <motion.a
+                    href="https://drive.google.com/open?id=1CV7iE3FuaDnGc6YVYREWer1rE4KasSrK&usp=drive_fs"
+                    target="_blank"
+                    rel="noopener"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 1.5, type: 'spring' }
+                    }}
+                    whileHover={{ scale: 0.9 }}
+                    transition={{
+                      type: 'spring',
+                      duration: 0.5,
+                      stiffness: 300
+                    }}
+                    sx={{
+                      display: 'flex',
+                      width: '100%',
+                      gap: 3,
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <Button
+                      sx={{
+                        width: '100%',
+                        height: '100px',
+                        fontFamily: 'display',
+                        fontSize: 4,
+                        fontWeight: 500,
+                        textTransform: 'uppercase',
+                        borderRadius: 3
+                      }}
+                      leftIcon={<MdFolderOpen sx={{ fontSize: 5 }} />}
+                    >
+                      View Deliverables
+                    </Button>
+                  </motion.a>
+                </Flex>
               </Flex>
             )}
 

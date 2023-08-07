@@ -61,7 +61,7 @@ export default function Hero() {
           flexWrap: 'wrap',
           variant: 'display.h5',
           marginBottom: [3, 4],
-          fontSize: [6, 10, null, '108px'],
+          fontSize: [6, 10, null, null, '108px'],
           lineHeight: 1,
           fontWeight: 'bold',
           letterSpacing: 'normal',
