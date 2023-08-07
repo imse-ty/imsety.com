@@ -72,7 +72,9 @@ export default function Home() {
                   <MdArrowDownward />
                 </motion.div>
 
-                <Flex sx={{ flexDirection: ['column', null, 'row'], gap: 4 }}>
+                <Flex
+                  sx={{ flexDirection: ['column', null, 'row'], gap: [2, 4] }}
+                >
                   <motion.a
                     href="https://link.waveapps.com/apqs4s-myakun"
                     target="_blank"
@@ -99,9 +101,9 @@ export default function Home() {
                     <Button
                       sx={{
                         width: '100%',
-                        height: '100px',
+                        height: ['75px', '100px'],
                         fontFamily: 'display',
-                        fontSize: 4,
+                        fontSize: [1, 4],
                         fontWeight: 500,
                         textTransform: 'uppercase',
                         borderRadius: 3
@@ -137,9 +139,9 @@ export default function Home() {
                     <Button
                       sx={{
                         width: '100%',
-                        height: '100px',
+                        height: ['75px', '100px'],
                         fontFamily: 'display',
-                        fontSize: 4,
+                        fontSize: [1, 4],
                         fontWeight: 500,
                         textTransform: 'uppercase',
                         borderRadius: 3
