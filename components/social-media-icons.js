@@ -54,6 +54,7 @@ export default function SocialMediaIcons() {
         justifyContent: 'space-between',
         fontSize: [7, 8],
         color: 'surface.extralight',
+        marginLeft: [0, null, -4],
         gap: [3, 3]
       }}
     >
