@@ -1,23 +1,15 @@
 /** @jsxImportSource theme-ui */
 
-import { Box, Button, Flex, Text } from 'krado-react';
-import { MdInfoOutline } from 'react-icons/md';
+import { Box, Flex, Text } from 'krado-react';
 
 export default function IndexHeader() {
   return (
     <Flex
       sx={{
-        justifyContent: 'space-between',
+        justifyContent: 'right',
         alignItems: 'center'
       }}
     >
-      <Button
-        size="small"
-        leftIcon={<MdInfoOutline />}
-        sx={{ paddingX: 3, paddingY: 2, borderRadius: 1 }}
-      >
-        INFO
-      </Button>
       <Box
         backgroundColor="divider"
         sx={{
