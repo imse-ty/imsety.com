@@ -35,7 +35,7 @@ function SocialMediaLink(props) {
       whileFocus="active"
       transition={{ type: 'spring', delay: props.delay }}
       sx={{
-        padding: 4,
+        padding: [0, null, 4],
         color: 'inherit',
         textDecoration: 'none',
         '&:focus': { outline: 'none' }
@@ -48,7 +48,15 @@ function SocialMediaLink(props) {
 
 export default function SocialMediaIcons() {
   return (
-    <Flex sx={{ fontSize: 8, color: 'surface.extralight', gap: 3 }}>
+    <Flex
+      sx={{
+        width: ['100%', null, 'initial'],
+        justifyContent: 'space-between',
+        fontSize: [7, 8],
+        color: 'surface.extralight',
+        gap: [3, 3]
+      }}
+    >
       <SocialMediaLink href="https://www.instagram.com/imse_ty" alt="Instagram">
         <FaInstagram />
       </SocialMediaLink>
