@@ -10,15 +10,6 @@ export default function IndexHeader() {
         alignItems: 'center'
       }}
     >
-      <Box
-        backgroundColor="divider"
-        sx={{
-          width: '100%',
-          maxWidth: '60px',
-          height: '2px',
-          display: ['block', 'none']
-        }}
-      />
       <Text
         sx={{
           fontWeight: 'bold',

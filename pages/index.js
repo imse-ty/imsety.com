@@ -40,62 +40,64 @@ export default function Home() {
           >
             <IndexHeader />
 
-            <Hero />
-            {isMainButtonsVisible && (
-              <Flex sx={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                <SocialMediaIcons />
-                {/* <motion.div
-                initial={{ width: '0px' }}
-                animate={{ width: '80px' }}
-                transition={{
-                  delay: 0.5,
-                  duration: 1,
-                  ease: [0.485, 0.005, 0.17, 1.0]
-                }}
-                sx={{
-                  height: '2px',
-                  width: '80px',
-                  backgroundColor: 'surface.extralight'
-                }}
-              />
-              <Flex sx={{ gap: 3 }}>
-                <Button
-                  as={motion.button}
-                  variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ type: 'spring', delay: 0.7 }}
-                  leftIcon={<MdInfoOutline />}
-                  sx={{
-                    paddingX: 4,
-                    paddingY: 3,
-                    borderRadius: 1,
-                    textTransform: 'uppercase',
-                    fontWeight: 300
+            <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+              <Hero />
+              {isMainButtonsVisible && (
+                <Flex sx={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                  <SocialMediaIcons />
+                  {/* <motion.div
+                  initial={{ width: '0px' }}
+                  animate={{ width: '80px' }}
+                  transition={{
+                    delay: 0.5,
+                    duration: 1,
+                    ease: [0.485, 0.005, 0.17, 1.0]
                   }}
-                >
-                  About
-                </Button>
-                <Button
-                  as={motion.button}
-                  variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ type: 'spring', delay: 0.9 }}
-                  leftIcon={<MdInfoOutline />}
                   sx={{
-                    paddingX: 4,
-                    paddingY: 3,
-                    borderRadius: 1,
-                    textTransform: 'uppercase',
-                    fontWeight: 300
+                    height: '2px',
+                    width: '80px',
+                    backgroundColor: 'surface.extralight'
                   }}
-                >
-                  Contact
-                </Button>
-              </Flex> */}
-              </Flex>
-            )}
+                />
+                <Flex sx={{ gap: 3 }}>
+                  <Button
+                    as={motion.button}
+                    variants={buttonVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ type: 'spring', delay: 0.7 }}
+                    leftIcon={<MdInfoOutline />}
+                    sx={{
+                      paddingX: 4,
+                      paddingY: 3,
+                      borderRadius: 1,
+                      textTransform: 'uppercase',
+                      fontWeight: 300
+                    }}
+                  >
+                    About
+                  </Button>
+                  <Button
+                    as={motion.button}
+                    variants={buttonVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ type: 'spring', delay: 0.9 }}
+                    leftIcon={<MdInfoOutline />}
+                    sx={{
+                      paddingX: 4,
+                      paddingY: 3,
+                      borderRadius: 1,
+                      textTransform: 'uppercase',
+                      fontWeight: 300
+                    }}
+                  >
+                    Contact
+                  </Button>
+                </Flex> */}
+                </Flex>
+              )}
+            </Flex>
 
             <IndexFooter />
           </Flex>

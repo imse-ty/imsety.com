@@ -81,15 +81,15 @@ export default function Hero() {
           </motion.span>
         ))}
       </motion.h1>
-      <motion.p
+      {/* <motion.p
         transition={{ type: 'spring', damping: 13, delay: 2 }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         sx={{ margin: 0, color: 'surface.light', fontSize: [1, 6] }}
         layout
       >
-        Yknow, you should prob click on those...
-      </motion.p>
+        Maker of things...
+      </motion.p> */}
     </motion.div>
   );
 }
