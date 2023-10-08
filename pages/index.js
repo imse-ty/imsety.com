@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
 'use client';
+import { useState } from 'react';
 import Layout from '@/components/layout';
 import { Box, Button, Flex } from 'krado-react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -14,6 +15,10 @@ export default function Home() {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
   };
+
+  const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(false);
+
+  setInterval(() => setIsMainButtonsVisible(true), 2000);
 
   return (
     <Layout>
@@ -36,10 +41,10 @@ export default function Home() {
             <IndexHeader />
 
             <Hero />
-
-            <Flex sx={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-              <SocialMediaIcons />
-              {/* <motion.div
+            {isMainButtonsVisible && (
+              <Flex sx={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <SocialMediaIcons />
+                {/* <motion.div
                 initial={{ width: '0px' }}
                 animate={{ width: '80px' }}
                 transition={{
@@ -89,7 +94,8 @@ export default function Home() {
                   Contact
                 </Button>
               </Flex> */}
-            </Flex>
+              </Flex>
+            )}
 
             <IndexFooter />
           </Flex>
