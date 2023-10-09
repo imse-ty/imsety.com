@@ -33,7 +33,7 @@ export default function Home() {
               gap: 5,
               border: 1,
               borderRadius: 3,
-              borderColor: 'surface.thin',
+              borderColor: 'divider',
               justifyContent: 'space-between',
               overflow: 'hidden'
             }}

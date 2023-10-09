@@ -1,14 +1,17 @@
 /** @jsxImportSource theme-ui */
 
-import { Flex, colors } from 'krado-react';
+import { Flex, buildColorTheme, colors, theme } from 'krado-react';
 import { motion } from 'framer-motion';
+import { getColor } from '@theme-ui/color';
 import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  FaGithub
+  FaGithub,
+  FaEnvelope
 } from 'react-icons/fa';
+import { setyTheme } from '@/constants/site-theme';
 
 function SocialMediaLink(props) {
   const variants = {
@@ -18,7 +21,7 @@ function SocialMediaLink(props) {
       scale: 2,
       marginLeft: '40px',
       marginRight: '40px',
-      color: colors.nso200,
+      color: getColor(setyTheme, 'primary.regular'),
       transition: { type: 'spring' }
     }
   };
@@ -53,7 +56,7 @@ export default function SocialMediaIcons() {
         width: ['100%', null, 'initial'],
         justifyContent: 'space-between',
         fontSize: [7, 8],
-        color: 'surface.extralight',
+        color: getColor(setyTheme, 'secondary.regular'),
         marginLeft: [0, null, -4],
         gap: [3, 3]
       }}
@@ -61,7 +64,7 @@ export default function SocialMediaIcons() {
       <SocialMediaLink href="https://www.instagram.com/imse_ty" alt="Instagram">
         <FaInstagram />
       </SocialMediaLink>
-      <SocialMediaLink href="https://twitter.com/imse_ty" alt="Twitter">
+      <SocialMediaLink href="https://twitter.com/imse_ty" alt="Twitter [X]">
         <FaTwitter />
       </SocialMediaLink>
       <SocialMediaLink
@@ -80,10 +83,17 @@ export default function SocialMediaIcons() {
       </SocialMediaLink>
       <SocialMediaLink
         href="https://www.github.com/imse-ty"
-        alt="YouTube"
-        delay={0.2}
+        alt="GitHub"
+        delay={0.3}
       >
         <FaGithub />
+      </SocialMediaLink>
+      <SocialMediaLink
+        href="mailto:greetings@imsety.com"
+        alt="Email"
+        delay={0.4}
+      >
+        <FaEnvelope />
       </SocialMediaLink>
     </Flex>
   );
