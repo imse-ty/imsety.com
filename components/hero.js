@@ -3,17 +3,16 @@
 import { setyTheme } from '@/constants/site-theme';
 import { getColor } from '@theme-ui/color';
 import { motion } from 'framer-motion';
-import { colors, theme } from 'krado-react';
 
 export default function Hero() {
   const words =
     '◤ Greetings! My name is Imsety. Thanks for stopping by :]'.split(' ');
 
   const container = {
-    hidden: { opacity: 0, color: getColor(setyTheme, 'primary.regular') },
+    hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      color: getColor(setyTheme, 'text.primary'),
+
       transition: {
         staggerChildren: 0.12,
         delayChildren: 0.04 * i,
@@ -73,8 +72,7 @@ export default function Hero() {
         {words.map((words, index) => (
           <motion.span
             whileHover={{
-              scale: 0.96,
-              color: getColor(setyTheme, 'primary.regular')
+              scale: 0.96
             }}
             transition={{ type: 'spring' }}
             variants={child}

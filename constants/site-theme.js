@@ -28,7 +28,11 @@ export const setyTheme = {
     divider: colors.nso900,
     modes: {
       dark: {
-        background: 'black'
+        text: {
+          primary: colors.nso200
+        },
+        background: colors.nso1000,
+        divider: colors.nso200
       }
     }
   }

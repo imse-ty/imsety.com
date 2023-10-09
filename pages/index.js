@@ -9,6 +9,7 @@ import Hero from '@/components/hero';
 import IndexFooter from '@/components/index-footer';
 import SocialMediaIcons from '@/components/social-media-icons';
 import { MdInfoOutline } from 'react-icons/md';
+import { useColorMode } from 'theme-ui';
 
 export default function Home() {
   const buttonVariants = {
