@@ -4,17 +4,17 @@ const nextConfig = {
     return [
       {
         source: '/rebrand',
-        destination: 'v1.imsety.com/projects/2022-rebrand',
+        destination: 'https://v1.imsety.com/projects/2022-rebrand',
         permanent: true
       },
       {
         source: '/batchentry',
-        destination: 'v1.imsety.com/projects/batch-logo-challenge',
+        destination: 'https://v1.imsety.com/projects/batch-logo-challenge',
         permanent: true
       },
       {
         source: '/triumph',
-        destination: 'v1.imsety.com/projects/triumph',
+        destination: 'https://v1.imsety.com/projects/triumph',
         permanent: true
       },
       {
@@ -89,6 +89,16 @@ const nextConfig = {
       {
         source: '/github',
         destination: 'https://github.com/imse-ty',
+        permanent: false
+      },
+      {
+        source: '/rebrand',
+        destination: 'v1.imsety.com/projects/2022-rebrand',
+        permanent: true
+      },
+      {
+        source: '/projects/:path*',
+        destination: 'https://v1.imsety.com/projects/:path*',
         permanent: false
       }
     ];
