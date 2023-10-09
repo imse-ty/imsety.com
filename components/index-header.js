@@ -1,9 +1,11 @@
 /** @jsxImportSource theme-ui */
 
-import { Box, Button, Flex, Text } from 'krado-react';
-import { MdInfoOutline } from 'react-icons/md';
+import { Flex, Text, ToggleIcon } from 'krado-react';
+import { FaMoon, FaSun } from 'react-icons/fa';
+import { useColorMode } from 'theme-ui';
 
 export default function IndexHeader() {
+  const [colorMode, setColorMode] = useColorMode('dark');
   return (
     <Flex
       sx={{
@@ -11,22 +13,14 @@ export default function IndexHeader() {
         alignItems: 'center'
       }}
     >
-      <Button
-        size="small"
-        leftIcon={<MdInfoOutline />}
-        sx={{ paddingX: 3, paddingY: 2, borderRadius: 1 }}
-      >
-        INFO
-      </Button>
-      <Box
-        backgroundColor="divider"
-        sx={{
-          width: '100%',
-          maxWidth: '60px',
-          height: '2px',
-          display: ['block', 'none']
+      <ToggleIcon
+        onClick={(e) => {
+          setColorMode(colorMode === 'default' ? 'dark' : 'default');
         }}
-      />
+        sx={{ fontSize: 8, color: 'secondary.regular', boxShadow: 3 }}
+      >
+        {colorMode === 'default' ? <FaSun /> : <FaMoon />}
+      </ToggleIcon>
       <Text
         sx={{
           fontWeight: 'bold',
