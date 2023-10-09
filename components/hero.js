@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-import { setyTheme } from '@/constants/site-theme';
+import { setyTheme } from '@/lib/site-theme';
 import { getColor } from '@theme-ui/color';
 import { motion } from 'framer-motion';
 

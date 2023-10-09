@@ -3,7 +3,7 @@
 import { ThemeUIProvider } from 'theme-ui';
 import { Box } from 'krado-react';
 import { hubotSans, monaSans } from '@/styles/fonts';
-import { setyTheme } from '@/constants/site-theme';
+import { setyTheme } from '@/lib/site-theme';
 
 export default function Layout({ children }) {
   return (

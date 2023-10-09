@@ -11,7 +11,7 @@ import {
   FaGithub,
   FaEnvelope
 } from 'react-icons/fa';
-import { setyTheme } from '@/constants/site-theme';
+import { setyTheme } from '@/lib/site-theme';
 
 function SocialMediaLink(props) {
   const variants = {
