@@ -100,6 +100,11 @@ const nextConfig = {
         source: '/projects/:path*',
         destination: 'https://v1.imsety.com/projects/:path*',
         permanent: false
+      },
+      {
+        source: '/blog/:path*',
+        destination: 'https://v1.imsety.com/blog/:path*',
+        permanent: false
       }
     ];
   }
