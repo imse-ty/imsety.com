@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-import { Button, Flex, Text, ToggleIcon } from 'krado-react';
+import { Flex, Text, ToggleIcon } from 'krado-react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useColorMode } from 'theme-ui';
 

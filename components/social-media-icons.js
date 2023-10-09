@@ -55,7 +55,7 @@ export default function SocialMediaIcons() {
       sx={{
         width: ['100%', null, 'initial'],
         justifyContent: 'space-between',
-        fontSize: [7, 8],
+        fontSize: [6, 7, 8],
         color: getColor(setyTheme, 'secondary.regular'),
         marginLeft: [0, null, -4],
         gap: [3, 3]
@@ -82,7 +82,7 @@ export default function SocialMediaIcons() {
         <FaYoutube />
       </SocialMediaLink>
       <SocialMediaLink
-        href="https://www.github.com/imse-ty"
+        href="https://github.com/imse-ty"
         alt="GitHub"
         delay={0.3}
       >
