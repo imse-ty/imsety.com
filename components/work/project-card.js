@@ -6,7 +6,7 @@ import { Heading, theme } from 'krado-react';
 import Link from 'next/link';
 import { Flex } from 'theme-ui';
 
-export default function ProjectCard({ title, alt, src, href }) {
+export default function ProjectCard({ title, alt, src, href, layoutId }) {
   const boxVariants = {
     active: {
       scale: 0.97,
@@ -69,7 +69,7 @@ export default function ProjectCard({ title, alt, src, href }) {
               height: 'auto',
               objectFit: 'cover'
             }}
-            layoutId="bruh"
+            layoutId={layoutId}
           />
         </motion.div>
 
