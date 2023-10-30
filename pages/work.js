@@ -21,12 +21,12 @@ export default function Work() {
             height: '75vh'
           }}
         >
-          <ProjectCard title="Beloved Benefit" />
-          <ProjectCard title="Chick-fil-A" />
-          <ProjectCard title="Beeple Studios" />
-          <ProjectCard title="Rock the Bells x Ford" />
-          <ProjectCard title="Space and Time" />
-          <ProjectCard title="OSOS" />
+          <ProjectCard title="Beloved Benefit" href="/" />
+          <ProjectCard title="Chick-fil-A" href="/" />
+          <ProjectCard title="Beeple Studios" href="/" />
+          <ProjectCard title="Rock The Bells x Ford" href="/" />
+          <ProjectCard title="Space and Time" href="/" />
+          <ProjectCard title="OSOS" href="/" />
         </Grid>
       </Container>
     </Layout>
