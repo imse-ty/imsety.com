@@ -69,6 +69,7 @@ export default function ProjectCard({ title, alt, src, href }) {
               height: 'auto',
               objectFit: 'cover'
             }}
+            layoutId="bruh"
           />
         </motion.div>
 
