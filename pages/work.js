@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import Layout from '@/components/layout';
-import ProjectCard from '@/components/project-card';
+import ProjectCard from '@/components/work/project-card';
 import { Container, Grid, Heading, theme } from 'krado-react';
 
 export default function Work() {
@@ -9,7 +9,7 @@ export default function Work() {
       <Container sx={{ height: '100vh' }}>
         <Heading
           variant="display.h1"
-          sx={{ marginBottom: 5, fontWeight: '500' }}
+          sx={{ marginBottom: 5, fontSize: 11, fontWeight: '500' }}
         >
           Projects
         </Heading>
@@ -21,26 +21,12 @@ export default function Work() {
             height: '75vh'
           }}
         >
-          <ProjectCard
-            title="Beloved Benefit"
-            alt="nah"
-            src="/20230618_020031.jpg"
-          />
-          <ProjectCard
-            title="Chick-fil-A"
-            alt="nah"
-            src="/20230824_081204.jpg"
-          />
-          <ProjectCard
-            title="Beeple Studios"
-            alt="nah"
-            src="/20230824_081204.jpg"
-          />
-          <ProjectCard
-            title="Keller Williams"
-            alt="nah"
-            src="/20230618_020031.jpg"
-          />
+          <ProjectCard title="Beloved Benefit" />
+          <ProjectCard title="Chick-fil-A" />
+          <ProjectCard title="Beeple Studios" />
+          <ProjectCard title="Rock the Bells x Ford" />
+          <ProjectCard title="Space and Time" />
+          <ProjectCard title="OSOS" />
         </Grid>
       </Container>
     </Layout>
