@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { ThemeUIProvider } from 'theme-ui';
 import { theme } from 'krado-react';
+import '../styles/globals.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (

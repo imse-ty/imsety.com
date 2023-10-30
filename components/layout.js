@@ -2,7 +2,6 @@
 
 import { ThemeUIProvider } from 'theme-ui';
 import { Box } from 'krado-react';
-import { hubotSans, monaSans } from '@/styles/fonts';
 import { setyTheme } from '@/lib/site-theme';
 
 export default function Layout({ children }) {
@@ -10,7 +9,6 @@ export default function Layout({ children }) {
     <ThemeUIProvider theme={setyTheme}>
       <Box
         as="main"
-        className={`${(monaSans.className, hubotSans.className)}`}
         backgroundColor="background"
         sx={{
           height: '100vh'
