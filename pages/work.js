@@ -17,7 +17,7 @@ export default function Work() {
         <Grid
           sx={{
             gap: 5,
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: ['1fr', null, '1fr 1fr'],
             width: '100%',
             height: '75vh'
           }}

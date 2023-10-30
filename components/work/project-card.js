@@ -53,7 +53,7 @@ export default function ProjectCard({ title, alt, src, href, layoutId }) {
             backgroundColor: 'secondary.light',
             borderRadius: '24px',
             width: '100%',
-            height: '500px',
+            height: ['250px', '500px'],
             position: 'relative',
             overflow: 'hidden',
             outline: `solid ${getColor(setyTheme, 'surface.thin')} 1px`
