@@ -28,7 +28,7 @@ export default function ProjectCard({ title, alt, src, href }) {
     }
   };
 
-  const bruh = {
+  const iconVariants = {
     active: {
       left: 0,
       opacity: 1
@@ -74,7 +74,7 @@ export default function ProjectCard({ title, alt, src, href }) {
 
         <Flex sx={{ alignItems: 'center', position: 'relative' }}>
           <motion.div
-            variants={bruh}
+            variants={iconVariants}
             transition={{ type: 'spring', duration: 0.5 }}
             sx={{
               position: 'absolute',
