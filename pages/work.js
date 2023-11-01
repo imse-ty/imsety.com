@@ -1,13 +1,15 @@
 /** @jsxImportSource theme-ui */
 import Layout from '@/components/layout';
 import ProjectCard from '@/components/work/project-card';
-import { AnimatePresence } from 'framer-motion';
-import { Container, Grid, Heading, theme } from 'krado-react';
+import ReelVideo from '@/components/work/reel-video';
+import { Container, Grid, Heading } from 'krado-react';
 
 export default function Work() {
   return (
     <Layout>
       <Container sx={{ height: '100vh' }}>
+        <ReelVideo />
+
         <Heading
           variant="display.h1"
           sx={{ marginBottom: 5, fontSize: 11, fontWeight: '500' }}
