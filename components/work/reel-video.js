@@ -70,8 +70,8 @@ export function PlayButton() {
         zIndex: 3
       }}
     >
-      <motion.div variants={playButtonVariants}>
-        <PlayIcon />
+      <motion.div variants={playButtonVariants} sx={{ width: '57px' }}>
+        <PlayIcon width="100%" height="auto" viewBox="0 0 38 43" />
       </motion.div>
     </Flex>
   );
