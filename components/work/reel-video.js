@@ -1,3 +1,4 @@
+/** @jsxImportSource theme-ui */
 import { motion } from 'framer-motion';
 import { Box, Flex, Heading, Image } from 'krado-react';
 import PlayIcon from '@/public/play-icon.svg';
@@ -8,7 +9,7 @@ export function DifferenceText({ children, textAlign }) {
       fontStretch: '125%'
     },
     click: {
-      scale: 0.6,
+      fontSize: '90px',
       transition: { type: 'spring', duration: 0.3 }
     }
   };
@@ -19,10 +20,12 @@ export function DifferenceText({ children, textAlign }) {
       variants={variants}
       transition={{ type: 'spring', damping: 9 }}
       sx={{
-        fontSize: '100px',
+        marginTop: 3,
+        fontSize: '150px',
         fontWeight: '600',
         fontStretch: '50%',
         mixBlendMode: 'difference',
+        color: 'white',
         textAlign: textAlign,
         zIndex: 3
       }}
@@ -42,7 +45,7 @@ export function PlayButton() {
   };
 
   const containerVariants = {
-    active: { scale: 1.3, borderRadius: '70px' },
+    active: { scale: 1.3, borderRadius: '75px' },
     click: {
       scale: 0.5,
       transition: { type: 'spring', duration: 0.3 }
@@ -58,9 +61,9 @@ export function PlayButton() {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        width: '200px',
-        height: '130px',
-        borderRadius: '40px',
+        width: '300px',
+        height: '195px',
+        borderRadius: '60px',
         backgroundColor: 'rgba(217, 217, 217, 0.35)',
         backdropFilter: 'blur(12.5px)',
         border: '1px solid transparent',
@@ -77,7 +80,7 @@ export function PlayButton() {
 export default function ReelVideo() {
   const containerVariants = {
     active: {
-      gap: '400px'
+      gap: '500px'
     }
   };
 
@@ -95,10 +98,9 @@ export default function ReelVideo() {
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: '300px',
+        gap: '400px',
         backgroundColor: 'secondary.light',
-        borderRadius: '84px',
-        cursor: 'pointer'
+        borderRadius: '84px'
       }}
     >
       <DifferenceText textAlign="end">VIEW</DifferenceText>
