@@ -37,7 +37,7 @@ export function DifferenceText({ children, textAlign }) {
 
 export function PlayButton() {
   const playButtonVariants = {
-    active: { scale: 1.1 },
+    active: { scale: 1.1, opacity: 0.8 },
     click: {
       scale: 1.4,
       transition: { type: 'spring', damping: 9 }
@@ -66,11 +66,14 @@ export function PlayButton() {
         borderRadius: '60px',
         backgroundColor: 'rgba(217, 217, 217, 0.35)',
         backdropFilter: 'blur(12.5px)',
-        border: '1px solid transparent',
+        border: '1px solid lightgray',
         zIndex: 3
       }}
     >
-      <motion.div variants={playButtonVariants} sx={{ width: '57px' }}>
+      <motion.div
+        variants={playButtonVariants}
+        sx={{ width: '57px', opacity: 0.6 }}
+      >
         <PlayIcon width="100%" height="auto" viewBox="0 0 38 43" />
       </motion.div>
     </Flex>
@@ -82,6 +85,10 @@ export default function ReelVideo() {
     active: {
       gap: '500px'
     }
+  };
+
+  const blackFilterVariants = {
+    active: { opacity: 0 }
   };
 
   return (
@@ -107,6 +114,8 @@ export default function ReelVideo() {
       <PlayButton />
       <DifferenceText>REEL</DifferenceText>
       <Box
+        as={motion.div}
+        variants={blackFilterVariants}
         sx={{
           backgroundColor: 'black',
           opacity: 0.25,
