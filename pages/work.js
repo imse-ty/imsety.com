@@ -2,40 +2,46 @@
 import Layout from '@/components/layout';
 import ProjectCard from '@/components/work/project-card';
 import ReelVideo from '@/components/work/reel-video';
-import { Container, Grid, Heading } from 'krado-react';
+import { Container, Flex, Grid, Heading } from 'krado-react';
 
 export default function Work() {
   return (
     <Layout>
       <Container sx={{ height: '100vh' }}>
-        <ReelVideo />
+        <Flex sx={{ flexDirection: 'column', gap: 6 }}>
+          <section>
+            <ReelVideo />
+          </section>
 
-        <Heading
-          variant="display.h1"
-          sx={{ marginBottom: 5, fontSize: 11, fontWeight: '500' }}
-        >
-          Projects
-        </Heading>
-        <Grid
-          sx={{
-            gap: 5,
-            gridTemplateColumns: ['1fr', null, '1fr 1fr'],
-            width: '100%',
-            height: '75vh'
-          }}
-        >
-          <ProjectCard
-            src="/20230618_020031.jpg"
-            title="Beloved Benefit"
-            href="/projects/hi"
-            layoutId="bruh"
-          />
-          <ProjectCard title="Chick-fil-A" href="/projects/hi" />
-          <ProjectCard title="Beeple Studios" href="/projects/hi" />
-          <ProjectCard title="Rock The Bells x Ford" href="/projects/hi" />
-          <ProjectCard title="Space and Time" href="/projects/hi" />
-          <ProjectCard title="OSOS" href="/projects/hi" />
-        </Grid>
+          <section>
+            <Heading
+              variant="display.h1"
+              sx={{ marginBottom: 5, fontSize: 11, fontWeight: '500' }}
+            >
+              Projects
+            </Heading>
+            <Grid
+              sx={{
+                gap: 5,
+                gridTemplateColumns: ['1fr', null, '1fr 1fr'],
+                width: '100%',
+                height: '75vh'
+              }}
+            >
+              <ProjectCard
+                src="/20230618_020031.jpg"
+                title="Beloved Benefit"
+                href="/projects/hi"
+                layoutId="bruh"
+              />
+              <ProjectCard title="Chick-fil-A" href="/projects/hi" />
+              <ProjectCard title="Beeple Studios" href="/projects/hi" />
+              <ProjectCard title="Rock The Bells x Ford" href="/projects/hi" />
+              <ProjectCard title="Space and Time" href="/projects/hi" />
+              <ProjectCard title="OSOS" href="/projects/hi" />
+            </Grid>
+          </section>
+        </Flex>
       </Container>
     </Layout>
   );
