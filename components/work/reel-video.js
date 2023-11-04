@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { motion } from 'framer-motion';
-import { Box, Flex, Heading, Image } from 'krado-react';
+import { Box, Flex, Heading } from 'krado-react';
 import PlayIcon from '@/public/play-icon.svg';
 
 export function DifferenceText({ children, textAlign }) {
@@ -116,9 +116,13 @@ export default function ReelVideo() {
           height: '100%'
         }}
       />
-      <Image
-        alt="nah"
-        src="./turntable-thumbnail.png"
+      <motion.video
+        variants={{ active: { scale: 1.05 } }}
+        transition={{ type: 'spring' }}
+        autoPlay
+        loop
+        muted
+        poster="/turntable-thumbnail.png"
         sx={{
           zIndex: 1,
           position: 'absolute',
@@ -127,7 +131,10 @@ export default function ReelVideo() {
           minHeight: '100%',
           objectFit: 'cover'
         }}
-      />
+      >
+        <source src="/turntable.mp4#t=08,30" type="video/mp4" />
+        Your browser does not support the video tag.
+      </motion.video>
     </Flex>
   );
 }
