@@ -1,18 +1,30 @@
 /** @jsxImportSource theme-ui */
 import Layout from '@/components/layout';
+import FullScreenVideo from '@/components/work/full-screen-video';
 import ProjectCard from '@/components/work/project-card';
 import ReelVideo from '@/components/work/reel-video';
+import { AnimatePresence } from 'framer-motion';
 import { Container, Flex, Grid, Heading } from 'krado-react';
+import { useState } from 'react';
 
 export default function Work() {
+  const [isVideoHidden, setIsVideoHidden] = useState(true);
+
   return (
     <Layout>
-      <Container sx={{ height: '100vh' }}>
+      <Container
+        sx={{
+          height: '100vh',
+          overflowY: isVideoHidden ? 'initial' : 'hidden'
+        }}
+      >
         <Flex sx={{ flexDirection: 'column', gap: 6 }}>
           <section>
-            <ReelVideo />
+            {!isVideoHidden && (
+              <FullScreenVideo onClick={() => setIsVideoHidden(true)} />
+            )}
+            <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
           </section>
-
           <section>
             <Heading
               variant="display.h1"

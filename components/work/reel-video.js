@@ -80,8 +80,11 @@ export function PlayButton() {
   );
 }
 
-export default function ReelVideo() {
+export default function ReelVideo({ onClick }) {
   const containerVariants = {
+    idle: {
+      borderRadius: '84px'
+    },
     active: {
       gap: '500px'
     }
@@ -94,10 +97,13 @@ export default function ReelVideo() {
   return (
     <Flex
       as={motion.div}
+      initial="idle"
       whileHover="active"
       whileTap="click"
       variants={containerVariants}
       transition={{ type: 'spring' }}
+      onClick={onClick}
+      layoutId="video"
       sx={{
         overflow: 'hidden',
         width: '100%',
@@ -107,7 +113,8 @@ export default function ReelVideo() {
         alignItems: 'center',
         gap: '400px',
         backgroundColor: 'secondary.light',
-        borderRadius: '84px'
+        borderRadius: '84px',
+        cursor: 'pointer'
       }}
     >
       <DifferenceText textAlign="end">VIEW</DifferenceText>
@@ -135,10 +142,8 @@ export default function ReelVideo() {
         sx={{
           zIndex: 1,
           position: 'absolute',
-          width: 'auto',
           minWidth: '100%',
-          minHeight: '100%',
-          objectFit: 'cover'
+          minHeight: '100%'
         }}
       >
         <source src="/turntable.mp4#t=08,30" type="video/mp4" />
