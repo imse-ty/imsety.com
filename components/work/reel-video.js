@@ -107,7 +107,7 @@ export default function ReelVideo({ onClick }) {
       sx={{
         overflow: 'hidden',
         width: '100%',
-        height: '75vh',
+        height: '100%',
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',

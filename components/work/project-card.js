@@ -50,7 +50,7 @@ export default function ProjectCard({ title, alt, src, href, layoutId }) {
           variants={boxVariants}
           transition={{ type: 'spring', duration: 1 }}
           sx={{
-            backgroundColor: 'secondary.light',
+            backgroundColor: 'rgba(11, 2, 31, 0.05)',
             borderRadius: '24px',
             width: '100%',
             height: ['250px', '500px'],
