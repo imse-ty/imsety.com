@@ -39,7 +39,7 @@ export default function Work() {
           <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
         </Section>
 
-        <section>
+        {/* <section>
           <Heading
             variant="display.h1"
             sx={{
@@ -126,7 +126,7 @@ export default function Work() {
               + code
             </Heading>
           </Flex>
-        </section>
+        </section> */}
       </Flex>
     </Container>
   );
