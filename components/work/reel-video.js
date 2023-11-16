@@ -19,9 +19,9 @@ export function DifferenceText({ children, textAlign }) {
       as={motion.h3}
       variants={variants}
       transition={{ type: 'spring', damping: 9 }}
+      variant="display.display"
       sx={{
-        marginTop: 3,
-        fontSize: '150px',
+        marginTop: [2, 3],
         fontWeight: '600',
         fontStretch: '50%',
         mixBlendMode: 'difference',
@@ -45,7 +45,7 @@ export function PlayButton() {
   };
 
   const containerVariants = {
-    active: { scale: 1.3, borderRadius: '75px' },
+    active: { scale: 1.3 },
     click: {
       scale: 0.5,
       transition: { type: 'spring', duration: 0.3 }
@@ -61,9 +61,9 @@ export function PlayButton() {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        width: '300px',
-        height: '195px',
-        borderRadius: '60px',
+        width: ['91px', '300px'],
+        height: ['60px', '195px'],
+        borderRadius: ['17px', '60px'],
         backgroundColor: 'rgba(217, 217, 217, 0.35)',
         backdropFilter: 'blur(12.5px)',
         border: '1px solid lightgray',
@@ -72,7 +72,7 @@ export function PlayButton() {
     >
       <motion.div
         variants={playButtonVariants}
-        sx={{ width: '57px', opacity: 0.6 }}
+        sx={{ marginTop: 1, width: ['18px', '57px'], opacity: 0.6 }}
       >
         <PlayIcon width="100%" height="auto" viewBox="0 0 38 43" />
       </motion.div>
@@ -84,10 +84,10 @@ export default function ReelVideo({ onClick }) {
   const containerVariants = {
     idle: {
       borderRadius: '84px'
-    },
-    active: {
-      gap: '500px'
     }
+    // active: {
+    //   gap: '500px'
+    // }
   };
 
   const blackFilterVariants = {
@@ -111,9 +111,9 @@ export default function ReelVideo({ onClick }) {
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: '400px',
+        gap: ['120px', '400px'],
         backgroundColor: 'secondary.light',
-        borderRadius: '84px',
+        borderRadius: ['42px', '84px'],
         cursor: 'pointer'
       }}
     >

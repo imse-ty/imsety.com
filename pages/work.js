@@ -1,10 +1,12 @@
 /** @jsxImportSource theme-ui */
+import Heading from '@/components/fixed-krado-components/Heading';
+import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import Section from '@/components/section';
 import FullScreenVideo from '@/components/work/full-screen-video';
 import ProjectCard from '@/components/work/project-card';
 import ReelVideo from '@/components/work/reel-video';
-import { Box, Container, Flex, Grid, Heading, Text } from 'krado-react';
+import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
 
 export default function Work() {
@@ -17,22 +19,22 @@ export default function Work() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
+
             marginTop: 6,
-            height: '90vh'
+            height: ['60vh']
           }}
         >
           <Heading
+            variant="display.display"
             sx={{
-              textAlign: 'center',
-              fontSize: '140px',
-              fontWeight: '600',
-              lineHeight: '144px'
+              fontWeight: '600'
             }}
           >
-            Krate design and
-            <br />
-            motion studio
+            Let&apos;s ◤ WORK together
           </Heading>
+          <Text variant="body.summary" sx={{ marginBottom: [4, 5] }}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
           {!isVideoHidden && (
             <FullScreenVideo onClick={() => setIsVideoHidden(true)} />
           )}

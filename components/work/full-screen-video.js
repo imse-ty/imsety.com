@@ -7,7 +7,7 @@ export default function FullScreenVideo({ onClick }) {
   const containerVariants = {
     hidden: { backgroundColor: 'rgba(0,0,0,0)' },
     active: {
-      backgroundColor: ['rgba(0,0,0,0)', 'rgba(0,0,0,0.95)'],
+      backgroundColor: ['rgba(0,0,0,0)', 'rgba(0,0,0,0.85)'],
       transition: { duration: 4 }
     }
   };
@@ -16,7 +16,7 @@ export default function FullScreenVideo({ onClick }) {
     hidden: { width: '100%', height: '75vh', borderRadius: '84px' },
     active: {
       width: '90%',
-      height: '90%',
+      height: '50%',
       borderRadius: '50px'
     }
   };
