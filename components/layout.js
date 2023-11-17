@@ -57,7 +57,7 @@ export default function Layout({ children }) {
       }}
     >
       {/* <div ref={circle} className="circle"></div> */}
-      <MouseTrail {...config} />
+      {/* <MouseTrail {...config} /> */}
       {children}
     </Box>
   );
