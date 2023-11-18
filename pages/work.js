@@ -17,7 +17,7 @@ export default function Work() {
   return (
     <Layout>
       <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-        <section
+        <header
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -30,7 +30,7 @@ export default function Work() {
             <FullScreenVideo onClick={() => setIsVideoHidden(true)} />
           )}
           <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
-        </section>
+        </header>
 
         <Container>
           <SectionTitle
