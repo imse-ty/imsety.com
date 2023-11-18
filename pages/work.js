@@ -3,6 +3,7 @@ import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import Section from '@/components/section';
+import SectionTitle from '@/components/section-title';
 import HorizontalCard from '@/components/work/HorizontalCard';
 import FullScreenVideo from '@/components/work/full-screen-video';
 import ProjectCard from '@/components/work/project-card';
@@ -33,48 +34,10 @@ export default function Work() {
         </section>
 
         <Container>
-          <Flex
-            sx={{
-              flexDirection: ['column', null, 'row'],
-              marginBottom: [4, null, 5],
-              borderRadius: '24px',
-              border: '2px solid',
-              paddingX: [0, null, 5],
-              borderColor: 'secondary.bold',
-              height: ['146px', '200px', null, '116px']
-            }}
-          >
-            <Heading
-              variant="display.h1"
-              sx={{
-                paddingX: [4, null, 0],
-                marginY: 'auto',
-                fontWeight: '500'
-              }}
-            >
-              Recent work
-            </Heading>
-            <Box
-              sx={{
-                marginX: [0, null, 5],
-                width: ['100%', null, '2px'],
-                height: ['2px', null, '100%'],
-                backgroundColor: 'secondary.bold'
-              }}
-            />
-            <Text
-              variant="body.h2"
-              sx={{
-                paddingX: [4, null, 0],
-                marginY: 'auto',
-                fontWeight: '500',
-                maxWidth: ['none', null, '50%']
-              }}
-            >
-              Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida
-              adipiscing augue sit.
-            </Text>
-          </Flex>
+          <SectionTitle
+            title="Work"
+            summary="Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida adipiscing augue sit."
+          />
           <Grid
             sx={{
               gap: 4,
