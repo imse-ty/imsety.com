@@ -70,12 +70,12 @@ export default function Work() {
               src="work/kw-mega-agent-camp.png"
             />
             <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
-            <ProjectCard
+            {/* <ProjectCard
               title="Rock The Bells x Ford"
               href="#"
               src="work/ford.png"
             />
-            <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" />
+            <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
             <ProjectCard
               title="Space and Time"
               href="#"
