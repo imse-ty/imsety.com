@@ -52,8 +52,7 @@ export default function Layout({ children }) {
       as="main"
       backgroundColor="background"
       sx={{
-        height: '100vh',
-        cursor: 'none'
+        height: '100vh'
       }}
     >
       {/* <div ref={circle} className="circle"></div> */}
