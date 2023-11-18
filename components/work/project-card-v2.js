@@ -33,16 +33,16 @@ export default function ProjectCardV2({ src, href }) {
           sx={{
             position: ['block', 'absolute'],
             flexDirection: ['row', null, 'column'],
-            marginLeft: 4,
+            marginLeft: [0, 4],
             bottom: 4,
             right: 4,
             backgroundColor: 'rgba(0,0,0,0.70)',
             backdropFilter: 'blur(12.5px)',
             borderRadius: ['none', '24px'],
-            paddingTop: 4,
-            paddingRight: 6,
-            paddingBottom: 4,
-            paddingLeft: 4,
+            paddingTop: [3, 4],
+            paddingRight: [4, 6],
+            paddingBottom: [3, 4],
+            paddingLeft: [3, 4],
             gap: 2
           }}
         >
