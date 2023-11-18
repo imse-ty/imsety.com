@@ -1,13 +1,11 @@
 /** @jsxImportSource theme-ui */
 import CallToAction from '@/components/call-to-action';
 import Heading from '@/components/fixed-krado-components/Heading';
-import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import SectionTitle from '@/components/section-title';
-import HorizontalCard from '@/components/work/HorizontalCard';
+import HorizontalCard from '@/components/work/horizontal-card';
 import FullScreenVideo from '@/components/work/full-screen-video';
 import ProjectCard from '@/components/work/project-card';
-import ProjectCardV2 from '@/components/work/project-card-v2';
 import ReelVideo from '@/components/work/reel-video';
 import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
@@ -51,12 +49,12 @@ export default function Work() {
               gridTemplateColumns: ['1fr', null, '1fr 1fr']
             }}
           >
-            <ProjectCardV2 href="#" src="/turntable-cover.jpg" />
-            <ProjectCardV2 href="#" src="" />
-            <ProjectCardV2 href="#" src="" />
-            <ProjectCardV2 href="#" src="" />
-            <ProjectCardV2 href="#" src="" />
-            <ProjectCardV2 href="#" src="" />
+            <ProjectCard href="#" src="/turntable-cover.jpg" />
+            <ProjectCard href="#" src="" />
+            <ProjectCard href="#" src="" />
+            <ProjectCard href="#" src="" />
+            <ProjectCard href="#" src="" />
+            <ProjectCard href="#" src="" />
           </Grid>
         </Container>
 

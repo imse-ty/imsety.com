@@ -1,106 +1,72 @@
 /** @jsxImportSource theme-ui */
-import { setyTheme } from '@/lib/site-theme';
-import { getColor } from '@theme-ui/color';
-import { motion } from 'framer-motion';
-import { theme } from 'krado-react';
-import Link from 'next/link';
-import { Flex } from 'theme-ui';
+
+import { Flex, Image } from 'krado-react';
+import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
+import { MdNorthEast } from 'react-icons/md';
+import Link from 'next/link';
 
-export default function ProjectCard({ title, alt, src, href, layoutId }) {
-  const boxVariants = {
-    active: {
-      scale: 0.97,
-      outline: `solid ${getColor(theme, 'surface.thin')} 15px`
-    }
-  };
-
-  const imageVariants = {
-    active: {
-      scale: 1.2
-    }
-  };
-
-  const labelVariants = {
-    active: {
-      x: '50px',
-      fontStretch: '125%',
-      fontWeight: 500
-    }
-  };
-
-  const iconVariants = {
-    active: {
-      left: 0,
-      opacity: 1
-    }
-  };
-
+export default function ProjectCard({ src, href }) {
   return (
-    <Link href={href} sx={{ textDecoration: 'none', color: 'primary;regular' }}>
-      <motion.div
-        initial="idle"
-        whileHover="active"
+    <Link href={href}>
+      <Flex
         sx={{
+          position: 'relative',
           width: '100%',
-          height: '100%',
-          position: 'relative'
+          borderRadius: '24px',
+          overflow: 'hidden',
+          flexDirection: 'column',
+          border: '2px solid',
+          borderColor: 'secondary.bold'
         }}
       >
-        <motion.div
-          variants={boxVariants}
-          transition={{ type: 'spring', duration: 1 }}
+        <Image
+          src={src}
+          alt="My alt"
           sx={{
-            backgroundColor: 'rgba(11, 2, 31, 0.05)',
-            borderRadius: '24px',
-            width: '100%',
-            height: ['250px', '500px'],
-            position: 'relative',
-            overflow: 'hidden',
-            outline: `solid ${getColor(setyTheme, 'surface.thin')} 1px`
+            objectFit: 'cover',
+            height: ['300px', '600px']
+          }}
+        />
+        <Flex
+          sx={{
+            position: ['block', 'absolute'],
+            flexDirection: ['row', null, 'column'],
+            marginLeft: [0, 4],
+            bottom: 4,
+            right: 4,
+            backgroundColor: 'rgba(0,0,0,0.70)',
+            backdropFilter: 'blur(12.5px)',
+            borderRadius: ['none', '24px'],
+            paddingTop: [3, 4],
+            paddingRight: [4, 6],
+            paddingBottom: [3, 4],
+            paddingLeft: [3, 4],
+            gap: 2
           }}
         >
-          <motion.img
-            variants={imageVariants}
-            transition={{ type: 'spring' }}
-            alt={alt}
-            src={src}
-            sx={{
-              width: '100%',
-              height: 'auto',
-              objectFit: 'cover'
-            }}
-            layoutId={layoutId}
-          />
-        </motion.div>
-
-        <Flex sx={{ alignItems: 'center', position: 'relative' }}>
-          <motion.div
-            variants={iconVariants}
-            transition={{ type: 'spring', duration: 0.5 }}
-            sx={{
-              position: 'absolute',
-              borderRadius: 4,
-              backgroundColor: 'secondary.regular',
-              width: '30px',
-              height: '30px',
-              top: '38px',
-              left: -2,
-              opacity: 0
-            }}
-          />
-
-          <Heading
-            as={motion.h3}
-            variant="body.h1"
-            variants={labelVariants}
-            transition={{ type: 'spring', duration: 0.5 }}
-            sx={{ marginTop: 3 }}
-          >
-            {title}
+          <Heading variant="display.h4" sx={{ color: 'secondary.contrast' }}>
+            Beeple Studios
           </Heading>
+          <Flex
+            sx={{
+              gap: 2,
+              color: 'secondary.light',
+              display: ['none', null, 'flex']
+            }}
+          >
+            <Text variant="body.h4" sx={{ color: 'inherit' }}>
+              View work
+            </Text>
+            <MdNorthEast
+              sx={{
+                color: 'inherit',
+                fontSize: 6
+              }}
+            />
+          </Flex>
         </Flex>
-      </motion.div>
+      </Flex>
     </Link>
   );
 }
