@@ -3,6 +3,7 @@ import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import Section from '@/components/section';
+import HorizontalCard from '@/components/work/HorizontalCard';
 import FullScreenVideo from '@/components/work/full-screen-video';
 import ProjectCard from '@/components/work/project-card';
 import ProjectCardV2 from '@/components/work/project-card-v2';
@@ -100,6 +101,34 @@ export default function Work() {
               <ProjectCardV2 href="#" src="" />
               <ProjectCardV2 href="#" src="" />
             </Grid>
+          </Section>
+
+          <Section>
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Motion design"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Web & mobile design"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Consultancy"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Consultancy"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Consultancy"
+            />
           </Section>
 
           {/* <section>
