@@ -103,32 +103,41 @@ export default function Work() {
             </Grid>
           </Section>
 
-          <Section>
-            <HorizontalCard
-              imageAlt="hi"
-              imageSrc="/turntable-thumbnail.png"
-              label="Motion design"
-            />
-            <HorizontalCard
-              imageAlt="hi"
-              imageSrc="/turntable-thumbnail.png"
-              label="Web & mobile design"
-            />
-            <HorizontalCard
-              imageAlt="hi"
-              imageSrc="/turntable-thumbnail.png"
-              label="Consultancy"
-            />
-            <HorizontalCard
-              imageAlt="hi"
-              imageSrc="/turntable-thumbnail.png"
-              label="Consultancy"
-            />
-            <HorizontalCard
-              imageAlt="hi"
-              imageSrc="/turntable-thumbnail.png"
-              label="Consultancy"
-            />
+        <Container>
+          <Heading
+            variant="display.h3"
+            sx={{
+              marginBottom: 3,
+              fontWeight: '600'
+            }}
+          >
+            Areas of expertise
+          </Heading>
+          <HorizontalCard
+            imageAlt="hi"
+            imageSrc="/turntable-thumbnail.png"
+            label="Motion design"
+          />
+          <HorizontalCard
+            imageAlt="hi"
+            imageSrc="/turntable-thumbnail.png"
+            label="Web & mobile design"
+          />
+          <HorizontalCard
+            imageAlt="hi"
+            imageSrc="/turntable-thumbnail.png"
+            label="Consultancy"
+          />
+          <HorizontalCard
+            imageAlt="hi"
+            imageSrc="/turntable-thumbnail.png"
+            label="Consultancy"
+          />
+          <HorizontalCard
+            imageAlt="hi"
+            imageSrc="/turntable-thumbnail.png"
+            label="Consultancy"
+          />
           </Section>
 
           {/* <section>
