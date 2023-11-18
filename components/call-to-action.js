@@ -28,11 +28,23 @@ export default function CallToAction({ title, text }) {
     >
       <Heading
         variant="display.display"
-        sx={{ marginBottom: [2, 3], fontWeight: '500' }}
+        sx={{
+          marginBottom: [2, 3],
+          fontWeight: '500',
+          color: 'primary.contrast'
+        }}
       >
         {title}
       </Heading>
-      <Text sx={{ marginBottom: 4, maxWidth: ['none', '50%'] }}>{text}</Text>
+      <Text
+        sx={{
+          marginBottom: 4,
+          maxWidth: ['none', '50%'],
+          color: 'primary.contrast'
+        }}
+      >
+        {text}
+      </Text>
       <Button
         color="secondary.bold"
         backgroundColor="secondary.contrast"

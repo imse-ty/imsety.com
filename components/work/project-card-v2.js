@@ -12,7 +12,6 @@ export default function ProjectCardV2({ src, href }) {
       <Flex
         sx={{
           position: 'relative',
-
           width: '100%',
           borderRadius: '24px',
           overflow: 'hidden',
@@ -46,11 +45,13 @@ export default function ProjectCardV2({ src, href }) {
             gap: 2
           }}
         >
-          <Heading variant="display.h4">Beeple Studios</Heading>
+          <Heading variant="display.h4" sx={{ color: 'secondary.contrast' }}>
+            Beeple Studios
+          </Heading>
           <Flex
             sx={{
               gap: 2,
-              color: 'text.secondary',
+              color: 'secondary.light',
               display: ['none', null, 'flex']
             }}
           >
