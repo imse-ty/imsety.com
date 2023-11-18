@@ -19,7 +19,7 @@ export default function Work() {
         sx={{
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 6
+          gap: [5, 6]
         }}
       >
         <header
