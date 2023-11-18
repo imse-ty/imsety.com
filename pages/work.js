@@ -2,7 +2,6 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
-import Section from '@/components/section';
 import SectionTitle from '@/components/section-title';
 import HorizontalCard from '@/components/work/HorizontalCard';
 import FullScreenVideo from '@/components/work/full-screen-video';
