@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+import CallToAction from '@/components/call-to-action';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
@@ -16,7 +17,13 @@ export default function Work() {
 
   return (
     <Layout>
-      <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 6
+        }}
+      >
         <header
           sx={{
             display: 'flex',
@@ -78,6 +85,13 @@ export default function Work() {
             label="Lorem ipsum"
           />
         </Container>
+        <Container>
+          <CallToAction
+            title="Let's connect"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
+          />
+        </Container>
+        <Box sx={{ marginBottom: 6 }} />
       </Flex>
     </Layout>
   );
