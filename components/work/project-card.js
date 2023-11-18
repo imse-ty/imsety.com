@@ -6,7 +6,7 @@ import Heading from '../fixed-krado-components/Heading';
 import { MdNorthEast } from 'react-icons/md';
 import Link from 'next/link';
 
-export default function ProjectCard({ src, href }) {
+export default function ProjectCard({ title, src, href }) {
   return (
     <Link href={href}>
       <Flex
@@ -46,7 +46,7 @@ export default function ProjectCard({ src, href }) {
           }}
         >
           <Heading variant="display.h4" sx={{ color: 'secondary.contrast' }}>
-            Beeple Studios
+            {title}
           </Heading>
           <Flex
             sx={{

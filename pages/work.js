@@ -49,7 +49,11 @@ export default function Work() {
               gridTemplateColumns: ['1fr', null, '1fr 1fr']
             }}
           >
-            <ProjectCard href="#" src="/turntable-cover.jpg" />
+            <ProjectCard
+              title="Beloved Benefit"
+              href="#"
+              src="/turntable-cover.jpg"
+            />
             <ProjectCard href="#" src="" />
             <ProjectCard href="#" src="" />
             <ProjectCard href="#" src="" />
