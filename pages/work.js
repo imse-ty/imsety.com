@@ -38,6 +38,7 @@ export default function Work() {
             title="Work"
             summary="Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida adipiscing augue sit."
           />
+
           <Grid
             sx={{
               gap: 4,
@@ -55,10 +56,9 @@ export default function Work() {
 
         <Container>
           <Heading
-            variant="display.h3"
+            variant="display.h4"
             sx={{
-              marginBottom: 3,
-              fontWeight: '600'
+              marginBottom: [3, 4]
             }}
           >
             Areas of expertise
@@ -71,22 +71,12 @@ export default function Work() {
           <HorizontalCard
             imageAlt="hi"
             imageSrc="/turntable-thumbnail.png"
-            label="Web & mobile design"
+            label="Lorem ipsum"
           />
           <HorizontalCard
             imageAlt="hi"
             imageSrc="/turntable-thumbnail.png"
-            label="Consultancy"
-          />
-          <HorizontalCard
-            imageAlt="hi"
-            imageSrc="/turntable-thumbnail.png"
-            label="Consultancy"
-          />
-          <HorizontalCard
-            imageAlt="hi"
-            imageSrc="/turntable-thumbnail.png"
-            label="Consultancy"
+            label="Lorem ipsum"
           />
         </Container>
       </Flex>

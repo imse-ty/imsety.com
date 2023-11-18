@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import { Flex, Image } from 'krado-react';
-import { MdArrowDownward } from 'react-icons/md';
+import { MdAdd } from 'react-icons/md';
 import Heading from '../fixed-krado-components/Heading';
 
 export default function HorizontalCard({ imageSrc, imageAlt, label }) {
@@ -26,14 +26,14 @@ export default function HorizontalCard({ imageSrc, imageAlt, label }) {
           borderRadius: ['18px', '24px']
         }}
       />
-      <Heading variant="display.h4" sx={{ fontWeight: '500' }}>
+      <Heading variant="display.h3" sx={{ fontWeight: '500' }}>
         {label}
       </Heading>
-      <MdArrowDownward
+      <MdAdd
         sx={{
           display: ['none', 'block'],
           marginLeft: 'auto',
-          color: 'text.secondary',
+          color: 'secondary.regular',
           fontSize: 7
         }}
       />

@@ -48,7 +48,11 @@ export default function ProjectCardV2({ src, href }) {
         >
           <Heading variant="display.h4">Beeple Studios</Heading>
           <Flex
-            sx={{ color: 'text.secondary', display: ['none', null, 'flex'] }}
+            sx={{
+              gap: 2,
+              color: 'text.secondary',
+              display: ['none', null, 'flex']
+            }}
           >
             <Text variant="body.h4" sx={{ color: 'inherit' }}>
               View work
