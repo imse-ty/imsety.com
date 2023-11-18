@@ -35,7 +35,7 @@ export default function CallToAction({ title, text }) {
       <Text sx={{ marginBottom: 4, maxWidth: ['none', '50%'] }}>{text}</Text>
       <Button
         color="secondary.bold"
-        backgroundColor="white"
+        backgroundColor="secondary.contrast"
         leftIcon={<MdOutlineCalendarToday />}
         sx={{ borderRadius: 4 }}
       >
