@@ -16,92 +16,79 @@ export default function Work() {
 
   return (
     <Layout>
-      <Container>
-        <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-          <Section
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
+      <Flex sx={{ flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+        <section
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: [4, 5],
+            width: '100%',
+            height: '100vh'
+          }}
+        >
+          {!isVideoHidden && (
+            <FullScreenVideo onClick={() => setIsVideoHidden(true)} />
+          )}
+          <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
+        </section>
 
-              marginTop: 6,
-              height: ['70vh']
+        <Container>
+          <Flex
+            sx={{
+              flexDirection: ['column', null, 'row'],
+              marginBottom: [4, null, 5],
+              borderRadius: '24px',
+              border: '2px solid',
+              paddingX: [0, null, 5],
+              borderColor: 'secondary.bold',
+              height: ['146px', '200px', null, '116px']
             }}
           >
             <Heading
-              variant="display.display"
+              variant="display.h1"
               sx={{
-                marginBottom: 3,
-                fontWeight: '600'
+                paddingX: [4, null, 0],
+                marginY: 'auto',
+                fontWeight: '500'
               }}
             >
-              Let&apos;s ◤ WORK together
+              Recent work
             </Heading>
-            <Text variant="body.summary" sx={{ marginBottom: [4, 5] }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <Box
+              sx={{
+                marginX: [0, null, 5],
+                width: ['100%', null, '2px'],
+                height: ['2px', null, '100%'],
+                backgroundColor: 'secondary.bold'
+              }}
+            />
+            <Text
+              variant="body.h2"
+              sx={{
+                paddingX: [4, null, 0],
+                marginY: 'auto',
+                fontWeight: '500',
+                maxWidth: ['none', null, '50%']
+              }}
+            >
+              Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida
+              adipiscing augue sit.
             </Text>
-            {!isVideoHidden && (
-              <FullScreenVideo onClick={() => setIsVideoHidden(true)} />
-            )}
-            <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
-          </Section>
-
-          <Section>
-            <Flex
-              sx={{
-                flexDirection: ['column', null, 'row'],
-                marginBottom: [4, null, 5],
-                borderRadius: '24px',
-                border: '2px solid',
-                paddingX: [0, null, 5],
-                borderColor: 'secondary.bold',
-                height: ['146px', '200px', null, '116px']
-              }}
-            >
-              <Heading
-                variant="display.h1"
-                sx={{
-                  paddingX: [4, null, 0],
-                  marginY: 'auto',
-                  fontWeight: '500'
-                }}
-              >
-                Recent work
-              </Heading>
-              <Box
-                sx={{
-                  marginX: [0, null, 5],
-                  width: ['100%', null, '2px'],
-                  height: ['2px', null, '100%'],
-                  backgroundColor: 'secondary.bold'
-                }}
-              />
-              <Text
-                variant="body.h2"
-                sx={{
-                  paddingX: [4, null, 0],
-                  marginY: 'auto',
-                  fontWeight: '500',
-                  maxWidth: ['none', null, '50%']
-                }}
-              >
-                Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida
-                adipiscing augue sit.
-              </Text>
-            </Flex>
-            <Grid
-              sx={{
-                gap: 4,
-                gridTemplateColumns: ['1fr', null, '1fr 1fr']
-              }}
-            >
-              <ProjectCardV2 href="#" src="/turntable-cover.jpg" />
-              <ProjectCardV2 href="#" src="" />
-              <ProjectCardV2 href="#" src="" />
-              <ProjectCardV2 href="#" src="" />
-              <ProjectCardV2 href="#" src="" />
-              <ProjectCardV2 href="#" src="" />
-            </Grid>
-          </Section>
+          </Flex>
+          <Grid
+            sx={{
+              gap: 4,
+              gridTemplateColumns: ['1fr', null, '1fr 1fr']
+            }}
+          >
+            <ProjectCardV2 href="#" src="/turntable-cover.jpg" />
+            <ProjectCardV2 href="#" src="" />
+            <ProjectCardV2 href="#" src="" />
+            <ProjectCardV2 href="#" src="" />
+            <ProjectCardV2 href="#" src="" />
+            <ProjectCardV2 href="#" src="" />
+          </Grid>
+        </Container>
 
         <Container>
           <Heading
@@ -138,9 +125,9 @@ export default function Work() {
             imageSrc="/turntable-thumbnail.png"
             label="Consultancy"
           />
-          </Section>
+        </Container>
 
-          {/* <section>
+        {/* <section>
             <Heading
               variant="display.h1"
               sx={{
@@ -228,8 +215,7 @@ export default function Work() {
               </Heading>
             </Flex>
           </section> */}
-        </Flex>
-      </Container>
+      </Flex>
     </Layout>
   );
 }

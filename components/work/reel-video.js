@@ -61,9 +61,9 @@ export function PlayButton() {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        width: ['91px', '300px'],
-        height: ['60px', '195px'],
-        borderRadius: ['17px', '60px'],
+        width: ['91px', null, '300px'],
+        height: ['60px', null, '195px'],
+        borderRadius: ['17px', null, '60px'],
         backgroundColor: 'rgba(217, 217, 217, 0.35)',
         backdropFilter: 'blur(12.5px)',
         border: '1px solid lightgray',
@@ -72,7 +72,7 @@ export function PlayButton() {
     >
       <motion.div
         variants={playButtonVariants}
-        sx={{ marginTop: 1, width: ['18px', '57px'], opacity: 0.6 }}
+        sx={{ marginTop: 1, width: ['18px', null, '57px'], opacity: 0.6 }}
       >
         <PlayIcon width="100%" height="auto" viewBox="0 0 38 43" />
       </motion.div>
@@ -84,10 +84,10 @@ export default function ReelVideo({ onClick }) {
   const containerVariants = {
     idle: {
       borderRadius: '84px'
+    },
+    active: {
+      gap: '500px'
     }
-    // active: {
-    //   gap: '500px'
-    // }
   };
 
   const blackFilterVariants = {
@@ -105,15 +105,16 @@ export default function ReelVideo({ onClick }) {
       onClick={onClick}
       layoutId="video"
       sx={{
+        flexDirection: ['column', null, null, 'row'],
         overflow: 'hidden',
         width: '100%',
         height: '100%',
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: ['120px', '400px'],
+        gap: ['120px', null, '400px'],
         backgroundColor: 'secondary.light',
-        borderRadius: ['42px', '84px'],
+        borderRadius: ['42px', null, '84px'],
         cursor: 'pointer'
       }}
     >
