@@ -51,7 +51,7 @@ export default function CallToAction({ title, text }) {
         leftIcon={<MdOutlineCalendarToday />}
         sx={{ borderRadius: 4 }}
       >
-        Schedule a chat
+        Reach out
       </Button>
       <video
         sx={{
