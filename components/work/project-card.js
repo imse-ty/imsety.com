@@ -2,9 +2,10 @@
 import { setyTheme } from '@/lib/site-theme';
 import { getColor } from '@theme-ui/color';
 import { motion } from 'framer-motion';
-import { Heading, theme } from 'krado-react';
+import { theme } from 'krado-react';
 import Link from 'next/link';
 import { Flex } from 'theme-ui';
+import Heading from '../fixed-krado-components/Heading';
 
 export default function ProjectCard({ title, alt, src, href, layoutId }) {
   const boxVariants = {
@@ -91,6 +92,7 @@ export default function ProjectCard({ title, alt, src, href, layoutId }) {
 
           <Heading
             as={motion.h3}
+            variant="body.h1"
             variants={labelVariants}
             transition={{ type: 'spring', duration: 0.5 }}
             sx={{ marginTop: 3 }}
