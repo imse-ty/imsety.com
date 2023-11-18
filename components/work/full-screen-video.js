@@ -16,7 +16,7 @@ export default function FullScreenVideo({ onClick }) {
     hidden: { width: '100%', height: '75vh', borderRadius: '84px' },
     active: {
       width: '90%',
-      height: '50%',
+      height: '90%',
       borderRadius: '50px'
     }
   };
