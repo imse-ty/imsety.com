@@ -52,13 +52,35 @@ export default function Work() {
             <ProjectCard
               title="Beloved Benefit"
               href="#"
-              src="/turntable-cover.jpg"
+              src="work/beloved-benefit-2.jpg"
             />
-            <ProjectCard href="#" src="" />
-            <ProjectCard href="#" src="" />
-            <ProjectCard href="#" src="" />
-            <ProjectCard href="#" src="" />
-            <ProjectCard href="#" src="" />
+            <ProjectCard
+              title="Chick-fil-A"
+              href="#"
+              src="work/chick-fil-a.png"
+            />
+            <ProjectCard
+              title="Beeple Studios"
+              href="#"
+              src="work/beeple-3.png"
+            />
+            <ProjectCard
+              title="Keller Willams"
+              href="#"
+              src="work/kw-mega-agent-camp.png"
+            />
+            <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
+            <ProjectCard
+              title="Rock The Bells x Ford"
+              href="#"
+              src="work/ford.png"
+            />
+            <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" />
+            <ProjectCard
+              title="Space and Time"
+              href="#"
+              src="work/space-and-time.png"
+            />
           </Grid>
         </Container>
 
