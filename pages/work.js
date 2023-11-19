@@ -9,6 +9,7 @@ import ProjectCard from '@/components/work/project-card';
 import ReelVideo from '@/components/work/reel-video';
 import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
+import Header from '@/components/header';
 
 export default function Work() {
   const [isVideoHidden, setIsVideoHidden] = useState(true);
@@ -26,7 +27,7 @@ export default function Work() {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            padding: [4, 5],
+
             width: '100%',
             height: '100vh'
           }}

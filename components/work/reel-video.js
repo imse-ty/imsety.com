@@ -82,9 +82,6 @@ export function PlayButton() {
 
 export default function ReelVideo({ onClick }) {
   const containerVariants = {
-    idle: {
-      borderRadius: '84px'
-    },
     active: {
       gap: '500px'
     }
@@ -114,13 +111,10 @@ export default function ReelVideo({ onClick }) {
         alignItems: 'center',
         gap: ['120px', null, '400px'],
         backgroundColor: 'secondary.light',
-        borderRadius: ['42px', null, '84px'],
+        // borderRadius: ['42px', null, '84px'],
         cursor: 'pointer'
       }}
     >
-      <DifferenceText textAlign="end">VIEW</DifferenceText>
-      <PlayButton />
-      <DifferenceText>REEL</DifferenceText>
       <Box
         as={motion.div}
         variants={blackFilterVariants}

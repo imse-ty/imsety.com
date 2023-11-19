@@ -52,7 +52,8 @@ export default function Layout({ children }) {
       as="main"
       backgroundColor="background"
       sx={{
-        height: '100vh'
+        height: '100vh',
+        position: 'relative'
       }}
     >
       {/* <div ref={circle} className="circle"></div> */}

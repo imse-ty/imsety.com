@@ -13,11 +13,10 @@ export default function FullScreenVideo({ onClick }) {
   };
 
   const videoPlayerVariants = {
-    hidden: { width: '100%', height: '75vh', borderRadius: '84px' },
+    hidden: { width: '100%', height: '75vh' },
     active: {
-      width: '90%',
-      height: '90%',
-      borderRadius: '50px'
+      width: '100%',
+      height: '100%'
     }
   };
 
@@ -48,9 +47,7 @@ export default function FullScreenVideo({ onClick }) {
         sx={{
           margin: 'auto',
           backgroundColor: 'black',
-          overflow: 'hidden',
-          maxWidth: '1920px',
-          maxHeight: '1080px'
+          overflow: 'hidden'
         }}
         poster="/turntable-thumbnail.png"
         autoPlay
