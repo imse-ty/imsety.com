@@ -61,7 +61,7 @@ export default function ProjectCard({ title, src, href }) {
           <Flex
             sx={{
               gap: 2,
-              color: 'secondary.light',
+              color: 'text.secondary',
               display: ['none', null, 'flex']
             }}
           >
