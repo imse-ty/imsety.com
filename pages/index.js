@@ -116,7 +116,7 @@ export default function Home() {
                   color: 'secondary.regular'
                 }}
               >
-                {colorMode === 'default' ? <FaSun /> : <FaMoon />}
+                {colorMode === 'default' ? <FaMoon /> : <FaSun />}
               </ToggleIcon>
             </Flex>
           </FooterContent>
