@@ -70,7 +70,7 @@ export default function Home() {
 
                     fontWeight: 500,
                     color: 'text.primary',
-                    backgroundColor: 'secondary.light'
+                    backgroundColor: 'secondary.bold'
                   }}
                 >
                   Work
@@ -89,7 +89,7 @@ export default function Home() {
                     borderRadius: 3,
                     fontWeight: 500,
                     color: 'text.primary',
-                    backgroundColor: 'secondary.light'
+                    backgroundColor: 'secondary.bold'
                   }}
                 >
                   Play
@@ -113,7 +113,7 @@ export default function Home() {
                 sx={{
                   fontSize: 3,
                   marginLeft: 4,
-                  color: 'secondary.regular'
+                  color: 'text.secondary'
                 }}
               >
                 {colorMode === 'default' ? <FaMoon /> : <FaSun />}

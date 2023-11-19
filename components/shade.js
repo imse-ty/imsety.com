@@ -78,7 +78,7 @@ export default function Shade() {
         sx={{ flexDirection: 'column', gap: 3, alignItems: 'center' }}
         layout
       >
-        <Heading variant="display.display" sx={{ color: 'black' }}>
+        <Heading variant="display.display" sx={{ color: 'secondary.bold' }}>
           Hello!
         </Heading>
 
@@ -89,14 +89,14 @@ export default function Shade() {
               variants={buttonVariants}
               initial="hidden"
               animate="visible"
-              transition={{ type: 'spring', delay: 0.5, duration: 2 }}
+              transition={{ type: 'spring', delay: 0.3, duration: 2 }}
               size="small"
               leftIcon={<MdHome />}
               sx={{
                 borderRadius: 3,
                 fontWeight: 500,
                 color: 'text.primary',
-                backgroundColor: 'secondary.regular'
+                backgroundColor: 'secondary.bold'
               }}
             >
               Home
