@@ -49,7 +49,7 @@ export default function CallToAction({ title, text }) {
         color="secondary.bold"
         backgroundColor="secondary.contrast"
         leftIcon={<MdOutlineCalendarToday />}
-        sx={{ borderRadius: 4 }}
+        sx={{ borderRadius: 3 }}
       >
         Reach out
       </Button>
