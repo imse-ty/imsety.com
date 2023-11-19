@@ -8,7 +8,7 @@ export default function IndexHeader() {
       <Flex
         sx={{
           justifyContent: 'space-between',
-          alignItems: 'center',
+
           paddingY: [4, 5]
         }}
       >

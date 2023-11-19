@@ -10,12 +10,14 @@ import ReelVideo from '@/components/work/reel-video';
 import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
 import Header from '@/components/header';
+import Shade from '@/components/shade';
 
 export default function Work() {
   const [isVideoHidden, setIsVideoHidden] = useState(true);
 
   return (
     <Layout>
+      <Shade />
       <Flex
         sx={{
           flexDirection: 'column',

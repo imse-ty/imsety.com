@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Shade />
+      {/* <Shade /> */}
       <Flex
         sx={{
           flexDirection: 'column',
