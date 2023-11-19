@@ -21,6 +21,7 @@ import { MdSquareFoot, MdVideogameAsset } from 'react-icons/md';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useColorMode } from 'theme-ui';
 import Link from 'next/link';
+import Shade from '@/components/shade';
 
 export default function Home() {
   const buttonVariants = {
@@ -35,6 +36,7 @@ export default function Home() {
 
   return (
     <Layout>
+      <Shade />
       <Flex
         sx={{
           flexDirection: 'column',
