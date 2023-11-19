@@ -56,7 +56,7 @@ export default function Shade() {
         width: '100vw',
         height: '100vh',
         color: 'primary.contrast',
-        backgroundColor: 'text.primary',
+        backgroundColor: 'rgba(232,232,232,0.97)',
         zIndex: 5,
         alignItems: 'center',
         justifyContent: 'center'
