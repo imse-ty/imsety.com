@@ -17,7 +17,12 @@ export default function ProjectCard({ title, src, href }) {
           overflow: 'hidden',
           flexDirection: 'column',
           border: '2px solid',
-          borderColor: 'secondary.bold'
+          borderColor: 'secondary.bold',
+          transition: 'transform 325ms ease, box-shadow 325ms ease',
+          '&:hover': {
+            transform: 'scale(1.02)',
+            boxShadow: 'soft.highMiddle'
+          }
         }}
       >
         <Image
@@ -42,7 +47,12 @@ export default function ProjectCard({ title, src, href }) {
             paddingRight: [4, 6],
             paddingBottom: [3, 4],
             paddingLeft: [3, 4],
-            gap: 2
+            gap: 2,
+            transition: 'transform 325ms ease, box-shadow 325ms ease',
+            '&:hover': {
+              transform: 'scale(1.02)',
+              boxShadow: 'soft.highMiddle'
+            }
           }}
         >
           <Heading variant="display.h4" sx={{ color: 'secondary.contrast' }}>
