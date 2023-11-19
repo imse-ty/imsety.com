@@ -2,13 +2,23 @@
 'use client';
 import { useState } from 'react';
 import Layout from '@/components/layout';
-import { Box, Button, Flex } from 'krado-react';
+import {
+  Box,
+  Button,
+  Flex,
+  Footer,
+  FooterContent,
+  FooterFootnote,
+  FooterItem,
+  ToggleIcon
+} from 'krado-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
 import IndexFooter from '@/components/index-footer';
 import SocialMediaIcons from '@/components/social-media-icons';
-import { MdSquareFoot } from 'react-icons/md';
+import { MdSquareFoot, MdVideogameAsset } from 'react-icons/md';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { useColorMode } from 'theme-ui';
 import Link from 'next/link';
 
@@ -17,80 +27,99 @@ export default function Home() {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
   };
+  const [colorMode, setColorMode] = useColorMode('dark');
 
-  const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(false);
+  const [isMainButtonsVisible, setIsMainButtonsVisible] = useState(true);
 
-  setInterval(() => setIsMainButtonsVisible(true), 2000);
+  // setInterval(() => setIsMainButtonsVisible(true), 3000);
 
   return (
     <Layout>
-      <AnimatePresence>
-        <Box padding={[4, 5]} sx={{ height: '100%' }}>
-          <Flex
-            padding={[4, 5]}
-            sx={{
-              position: 'relative',
-              height: '100%',
-              flexDirection: 'column',
-              gap: 5,
-              border: 1,
-              borderRadius: 3,
-              borderColor: 'divider',
-              justifyContent: 'space-between',
-              overflow: 'hidden'
-            }}
-          >
-            <IndexHeader />
+      <Flex
+        sx={{
+          flexDirection: 'column',
+          height: '100%'
+        }}
+      >
+        <IndexHeader />
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            gap: 5
+          }}
+        >
+          <Hero />
+          {isMainButtonsVisible && (
+            <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+              <Link href="/work">
+                <Button
+                  as={motion.button}
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ type: 'spring', delay: 2, duration: 2 }}
+                  size="small"
+                  leftIcon={<MdSquareFoot />}
+                  sx={{
+                    borderRadius: 3,
 
-            <Flex sx={{ flexDirection: 'column', gap: 4 }}>
-              <Hero />
-              {isMainButtonsVisible && (
-                <Flex sx={{ display: 'flex', alignItems: 'center', gap: 5 }}>
-                  <SocialMediaIcons />
-                  <motion.div
-                    initial={{ width: '0px' }}
-                    animate={{ width: '80px' }}
-                    transition={{
-                      delay: 0.5,
-                      duration: 1,
-                      ease: [0.485, 0.005, 0.17, 1.0]
-                    }}
-                    sx={{
-                      height: '2px',
-                      width: '80px',
-                      backgroundColor: 'surface.extralight'
-                    }}
-                  />
-                  <Flex sx={{ gap: 3 }}>
-                    <Link href="/work">
-                      <Button
-                        as={motion.button}
-                        variants={buttonVariants}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{ type: 'spring', delay: 0.7 }}
-                        leftIcon={<MdSquareFoot />}
-                        sx={{
-                          paddingX: 4,
-                          paddingY: 3,
-                          borderRadius: 1,
-                          textTransform: 'uppercase',
-                          fontWeight: 300,
-                          backgroundColor: 'secondary.bold'
-                        }}
-                      >
-                        Work
-                      </Button>
-                    </Link>
-                  </Flex>
-                </Flex>
-              )}
+                    fontWeight: 500,
+                    color: 'text.primary',
+                    backgroundColor: 'secondary.light'
+                  }}
+                >
+                  Work
+                </Button>
+              </Link>
+              <Link href="/play">
+                <Button
+                  as={motion.button}
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ type: 'spring', delay: 2.3, duration: 2 }}
+                  size="small"
+                  leftIcon={<MdVideogameAsset />}
+                  sx={{
+                    borderRadius: 3,
+                    fontWeight: 500,
+                    color: 'text.primary',
+                    backgroundColor: 'secondary.light'
+                  }}
+                >
+                  Play
+                </Button>
+              </Link>
             </Flex>
-
-            <IndexFooter />
-          </Flex>
-        </Box>
-      </AnimatePresence>
+          )}
+        </Flex>
+        <Footer>
+          <FooterFootnote>
+            Copyright © 2023 Imsety LLC. All rights reserved.
+          </FooterFootnote>
+          <FooterContent>
+            <Flex sx={{ alignItems: 'center' }}>
+              <FooterItem href="#">Contact</FooterItem>
+              <FooterItem href="#">About</FooterItem>
+              <ToggleIcon
+                onClick={(e) => {
+                  setColorMode(colorMode === 'default' ? 'dark' : 'default');
+                }}
+                sx={{
+                  fontSize: 3,
+                  marginLeft: 4,
+                  color: 'secondary.regular'
+                }}
+              >
+                {colorMode === 'default' ? <FaSun /> : <FaMoon />}
+              </ToggleIcon>
+            </Flex>
+          </FooterContent>
+        </Footer>
+      </Flex>
     </Layout>
   );
 }

@@ -3,10 +3,11 @@
 import { setyTheme } from '@/lib/site-theme';
 import { getColor } from '@theme-ui/color';
 import { motion } from 'framer-motion';
+import Heading from './fixed-krado-components/Heading';
+import Text from './fixed-krado-components/Text';
 
 export default function Hero() {
-  const words =
-    '◤ Greetings! My name is Imsety. Thanks for stopping by :]'.split(' ');
+  const words = 'Lorem ipsum dolor sit amet.'.split(' ');
 
   const container = {
     hidden: { opacity: 0 },
@@ -15,7 +16,7 @@ export default function Hero() {
 
       transition: {
         staggerChildren: 0.12,
-        delayChildren: 0.04 * i,
+        delayChildren: 0.02 * i,
         duration: 2
       }
     })
@@ -47,21 +48,23 @@ export default function Hero() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        textAlign: 'center'
       }}
       layout
     >
-      <motion.h1
+      <Heading
+        as={motion.h1}
         variants={container}
         transition={{ type: 'spring' }}
         initial="hidden"
         animate="visible"
+        variant="display.h1"
         sx={{
           display: 'flex',
           flexWrap: 'wrap',
-          variant: 'display.h5',
-          marginBottom: [3, 4],
-          fontSize: [6, 10, null, null, '108px'],
+          justifyContent: 'center',
+          marginBottom: [2, 3],
           lineHeight: 1,
           fontWeight: 'bold',
           letterSpacing: 'normal',
@@ -76,23 +79,25 @@ export default function Hero() {
             }}
             transition={{ type: 'spring' }}
             variants={child}
-            sx={{ marginRight: [1, 3] }}
+            sx={{ marginRight: 1 }}
             key={index}
             layout
           >
             {words}
           </motion.span>
         ))}
-      </motion.h1>
-      {/* <motion.p
-        transition={{ type: 'spring', damping: 13, delay: 2 }}
-        initial={{ opacity: 0, y: 50 }}
+      </Heading>
+      <Text
+        as={motion.p}
+        transition={{ type: 'spring', damping: 20, delay: 1 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        sx={{ margin: 0, color: 'surface.light', fontSize: [1, 6] }}
+        variant="body.summary"
+        sx={{ margin: 0, color: 'text.secondary' }}
         layout
       >
-        Maker of things...
-      </motion.p> */}
+        Consectetur adipiscing elit donec euismod hendrerit nisi.
+      </Text>
     </motion.div>
   );
 }
