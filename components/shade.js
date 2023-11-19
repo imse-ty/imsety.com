@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { Box, Button, Flex } from 'krado-react';
+import { Box, Button, Flex, Text } from 'krado-react';
 import { useState } from 'react';
 import Heading from './fixed-krado-components/Heading';
 import { getColor } from '@theme-ui/color';
@@ -75,14 +75,31 @@ export default function Shade() {
         variants={contentVariants}
         animate={isCovered ? 'show' : 'hide'}
         transition={{ type: 'spring', duration: 1 }}
-        sx={{ flexDirection: 'column', gap: 3, alignItems: 'center' }}
+        sx={{
+          flexDirection: 'column',
+          gap: 3,
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
         layout
       >
-        <Heading variant="display.display" sx={{ color: 'secondary.bold' }}>
-          Hello!
-        </Heading>
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            maxWidth: '75%',
+            gap: 3,
+            marginBottom: 4
+          }}
+        >
+          {/* <Heading variant="display.h5" sx={{ color: 'secondary.bold' }}>
+            Greetings,
+          </Heading> */}
+          <Text variant="display.h3" sx={{ color: 'secondary.bold' }}>
+            We solve design problems so you can solve business problems.
+          </Text>
+        </Flex>
 
-        {isCovered && (
+        {/* {isCovered && (
           <Link href="/">
             <Button
               as={motion.button}
@@ -102,7 +119,7 @@ export default function Shade() {
               Home
             </Button>
           </Link>
-        )}
+        )} */}
       </Flex>
     </Flex>
   );
