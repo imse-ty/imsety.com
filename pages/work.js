@@ -22,14 +22,15 @@ export default function Work() {
         sx={{
           flexDirection: 'column',
           alignItems: 'center',
-          gap: [5, 6]
+          gap: [5, 6],
+          position: 'relative'
         }}
       >
         <header
           sx={{
             display: 'flex',
             flexDirection: 'column',
-
+            position: 'fixed',
             width: '100%',
             height: '100vh'
           }}
@@ -40,85 +41,100 @@ export default function Work() {
           <ReelVideo onClick={() => setIsVideoHidden(!isVideoHidden)} />
         </header>
 
-        <Container>
-          <SectionTitle
-            title="Work"
-            summary="Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida adipiscing augue sit."
-          />
+        <Flex
+          sx={{
+            marginTop: '100vh',
+            padding: [3, 4, 5],
+            width: '100%',
+            gap: [5, 6],
+            backgroundColor: 'background',
+            flexDirection: 'column',
+            borderTopLeftRadius: ['40px', '80px'],
+            borderTopRightRadius: ['40px', '80px'],
+            zIndex: 2
+          }}
+        >
+          <Container sx={{ marginTop: 5 }}>
+            <SectionTitle
+              title="Work"
+              summary="Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida adipiscing augue sit."
+            />
 
-          <Grid
-            sx={{
-              gap: 4,
-              gridTemplateColumns: ['1fr', null, '1fr 1fr']
-            }}
-          >
-            <ProjectCard
-              title="Beloved Benefit"
-              href="#"
-              src="work/beloved-benefit-2.jpg"
-            />
-            <ProjectCard
-              title="Chick-fil-A"
-              href="#"
-              src="work/chick-fil-a.png"
-            />
-            <ProjectCard
-              title="Beeple Studios"
-              href="#"
-              src="work/beeple-3.png"
-            />
-            <ProjectCard
-              title="Keller Willams"
-              href="#"
-              src="work/kw-mega-agent-camp.png"
-            />
-            <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
-            {/* <ProjectCard
-              title="Rock The Bells x Ford"
-              href="#"
-              src="work/ford.png"
-            />
-            <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
-            <ProjectCard
-              title="Space and Time"
-              href="#"
-              src="work/space-and-time.png"
-            />
-          </Grid>
-        </Container>
+            <Grid
+              sx={{
+                gap: 4,
+                gridTemplateColumns: ['1fr', null, '1fr 1fr']
+              }}
+            >
+              <ProjectCard
+                title="Beloved Benefit"
+                href="#"
+                src="work/beloved-benefit-2.jpg"
+              />
+              <ProjectCard
+                title="Chick-fil-A"
+                href="#"
+                src="work/chick-fil-a.png"
+              />
+              <ProjectCard
+                title="Beeple Studios"
+                href="#"
+                src="work/beeple-3.png"
+              />
+              <ProjectCard
+                title="Keller Willams"
+                href="#"
+                src="work/kw-mega-agent-camp.png"
+              />
+              <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
+              {/* <ProjectCard
+                      title="Rock The Bells x Ford"
+                      href="#"
+                      src="work/ford.png"
+                    />
+                    <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
+              <ProjectCard
+                title="Space and Time"
+                href="#"
+                src="work/space-and-time.png"
+              />
+            </Grid>
+          </Container>
 
-        <Container>
-          <Heading
-            variant="display.h4"
-            sx={{
-              marginBottom: [3, 4]
-            }}
-          >
-            Areas of expertise
-          </Heading>
-          <HorizontalCard
-            imageAlt="hi"
-            imageSrc="/turntable-thumbnail.png"
-            label="Motion design"
-          />
-          <HorizontalCard
-            imageAlt="hi"
-            imageSrc="/turntable-thumbnail.png"
-            label="Lorem ipsum"
-          />
-          <HorizontalCard
-            imageAlt="hi"
-            imageSrc="/turntable-thumbnail.png"
-            label="Lorem ipsum"
-          />
-        </Container>
-        <Container>
+          <Container>
+            <Heading
+              variant="display.h4"
+              sx={{
+                marginBottom: [3, 4]
+              }}
+            >
+              Areas of expertise
+            </Heading>
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Motion design"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Lorem ipsum"
+            />
+            <HorizontalCard
+              imageAlt="hi"
+              imageSrc="/turntable-thumbnail.png"
+              label="Lorem ipsum"
+            />
+          </Container>
+        </Flex>
+
+        {/* <Container sx={{ position: 'fixed', bottom: 0 }}>
           <CallToAction
             title="Let's connect"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
           />
-        </Container>
-        <Box sx={{ marginBottom: 6 }} />
+        </Container> */}
+        <Box />
       </Flex>
     </Layout>
   );

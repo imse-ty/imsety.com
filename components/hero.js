@@ -7,7 +7,7 @@ import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
 
 export default function Hero() {
-  const words = 'Lorem ipsum dolor sit amet.'.split(' ');
+  const words = 'Symmetry in motion!'.split(' ');
 
   const container = {
     hidden: { opacity: 0 },
@@ -59,45 +59,50 @@ export default function Hero() {
         transition={{ type: 'spring' }}
         initial="hidden"
         animate="visible"
-        variant="display.h1"
+        variant="display.display"
         sx={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-          marginBottom: [2, 3],
+          marginBottom: 4,
           lineHeight: 1,
           fontWeight: 'bold',
-          letterSpacing: 'normal',
-          color: 'text.primary'
+          letterSpacing: 'normal'
         }}
         layout
       >
-        {words.map((words, index) => (
-          <motion.span
-            whileHover={{
-              scale: 0.96
-            }}
-            transition={{ type: 'spring' }}
-            variants={child}
-            sx={{ marginRight: 1 }}
-            key={index}
-            layout
-          >
-            {words}
-          </motion.span>
-        ))}
+        Symmetry in motion!
       </Heading>
-      <Text
+      <Heading
+        as={motion.h1}
+        variants={container}
+        transition={{ type: 'spring' }}
+        initial="hidden"
+        animate="visible"
+        variant="display.h2"
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          marginBottom: [2, 4],
+          lineHeight: 1,
+          letterSpacing: 'normal'
+        }}
+        layout
+      >
+        (is business strategy in action)
+      </Heading>
+      {/* <Text
         as={motion.p}
         transition={{ type: 'spring', damping: 20, delay: 1 }}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        variant="body.summary"
+        variant="body.h3"
         sx={{ margin: 0, color: 'text.secondary' }}
         layout
       >
-        Consectetur adipiscing elit donec euismod hendrerit nisi.
-      </Text>
+        Where good design meets good business.
+      </Text> */}
     </motion.div>
   );
 }

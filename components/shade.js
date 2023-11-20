@@ -5,7 +5,8 @@ import Heading from './fixed-krado-components/Heading';
 import { getColor } from '@theme-ui/color';
 import { setyTheme } from '@/lib/site-theme';
 import Link from 'next/link';
-import { MdHome } from 'react-icons/md';
+import { MdHome, MdSquareFoot, MdVideogameAsset } from 'react-icons/md';
+import Hero from '@/components/hero';
 
 export default function Shade() {
   const notchSize = 75;
@@ -81,45 +82,62 @@ export default function Shade() {
           alignItems: 'center',
           textAlign: 'center'
         }}
-        layout
       >
         <Flex
           sx={{
             flexDirection: 'column',
-            maxWidth: '75%',
-            gap: 3,
-            marginBottom: 4
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%',
+            gap: 5
           }}
         >
-          {/* <Heading variant="display.h5" sx={{ color: 'secondary.bold' }}>
-            Greetings,
-          </Heading> */}
-          <Text variant="display.h3" sx={{ color: 'secondary.bold' }}>
-            We solve design problems so you can solve business problems.
-          </Text>
-        </Flex>
+          <Hero />
+          {isCovered && (
+            <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+              <Link href="/work">
+                <Button
+                  as={motion.button}
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ type: 'spring', delay: 2, duration: 2 }}
+                  size="small"
+                  leftIcon={<MdSquareFoot />}
+                  sx={{
+                    borderRadius: 3,
 
-        {/* {isCovered && (
-          <Link href="/">
-            <Button
-              as={motion.button}
-              variants={buttonVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ type: 'spring', delay: 0.3, duration: 2 }}
-              size="small"
-              leftIcon={<MdHome />}
-              sx={{
-                borderRadius: 3,
-                fontWeight: 500,
-                color: 'text.primary',
-                backgroundColor: 'secondary.bold'
-              }}
-            >
-              Home
-            </Button>
-          </Link>
-        )} */}
+                    fontWeight: 500,
+                    color: 'text.primary',
+                    backgroundColor: 'secondary.bold'
+                  }}
+                >
+                  Work
+                </Button>
+              </Link>
+              <Link href="/play">
+                <Button
+                  as={motion.button}
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ type: 'spring', delay: 2.3, duration: 2 }}
+                  variant="ghost"
+                  size="small"
+                  sx={{
+                    borderRadius: 3,
+                    fontWeight: 500,
+                    color: 'black',
+                    borderColor: 'black'
+                  }}
+                >
+                  View work
+                </Button>
+              </Link>
+            </Flex>
+          )}
+        </Flex>
       </Flex>
     </Flex>
   );

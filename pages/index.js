@@ -64,16 +64,13 @@ export default function Home() {
                   animate="visible"
                   transition={{ type: 'spring', delay: 2, duration: 2 }}
                   size="small"
-                  leftIcon={<MdSquareFoot />}
                   sx={{
-                    borderRadius: 3,
+                    borderRadius: 2,
 
-                    fontWeight: 500,
-                    color: 'text.primary',
-                    backgroundColor: 'secondary.bold'
+                    fontWeight: 500
                   }}
                 >
-                  Work
+                  Play reel
                 </Button>
               </Link>
               <Link href="/play">
@@ -83,16 +80,16 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                   transition={{ type: 'spring', delay: 2.3, duration: 2 }}
+                  variant="ghost"
                   size="small"
-                  leftIcon={<MdVideogameAsset />}
                   sx={{
-                    borderRadius: 3,
+                    borderRadius: 2,
                     fontWeight: 500,
-                    color: 'text.primary',
-                    backgroundColor: 'secondary.bold'
+                    borderColor: 'black',
+                    color: 'black'
                   }}
                 >
-                  Play
+                  View work
                 </Button>
               </Link>
             </Flex>
