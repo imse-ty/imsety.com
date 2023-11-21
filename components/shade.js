@@ -1,23 +1,41 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { Box, Button, Flex, Text } from 'krado-react';
+/** @jsxImportSource theme-ui */
+
+import { motion } from 'framer-motion';
+import { Button, Flex } from 'krado-react';
 import { useState } from 'react';
-import Heading from './fixed-krado-components/Heading';
 import { getColor } from '@theme-ui/color';
 import { setyTheme } from '@/lib/site-theme';
 import Link from 'next/link';
-import { MdHome, MdSquareFoot, MdVideogameAsset } from 'react-icons/md';
 import Hero from '@/components/hero';
 
-export default function Shade() {
-  const notchSize = 75;
-  const [isCovered, setIsCovered] = useState(true);
-
+export function CTAButton({ href, children, variant }) {
   const buttonVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
   };
+  return (
+    <Link href={href}>
+      <Button
+        as={motion.button}
+        variants={buttonVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ type: 'spring', delay: 0.7, duration: 2 }}
+        variant={variant}
+        size="small"
+        sx={{
+          borderRadius: 2,
+          fontWeight: 500
+        }}
+      >
+        {children}
+      </Button>
+    </Link>
+  );
+}
 
-  console.log(isCovered);
+export default function Shade() {
+  const [isCovered, setIsCovered] = useState(true);
 
   const shadeVariants = {
     show: {
@@ -49,11 +67,6 @@ export default function Shade() {
       onTap={() => setIsCovered(!isCovered)}
       sx={{
         position: 'fixed',
-
-        // bottom: `calc(100% - ${notchSize}px)`,
-        // right: `calc(100% - ${notchSize}px)`,
-
-        // transform: `translate(calc(-100% + 75px), calc(-100% + 75px))`,
         width: '100vw',
         height: '100vh',
         color: 'primary.contrast',
@@ -61,14 +74,6 @@ export default function Shade() {
         zIndex: 5,
         alignItems: 'center',
         justifyContent: 'center'
-        //   clipPath: `polygon(
-        //     100% 0,
-        //     100% calc(-100% + 75px),
-        //     calc(-100% + 75px) 100%,
-        //     0 100%,
-        //     0 0
-        //   )
-        // `
       }}
     >
       <Flex
@@ -78,80 +83,19 @@ export default function Shade() {
         transition={{ type: 'spring', duration: 1 }}
         sx={{
           flexDirection: 'column',
-          gap: 3,
           alignItems: 'center',
+          gap: 3,
           textAlign: 'center'
         }}
       >
-        <Flex
-          sx={{
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            width: '100%',
-            gap: 5
-          }}
-        >
-          <Hero />
-          {isCovered && (
-            <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-              <Link href="/work">
-                <Button
-                  as={motion.button}
-                  variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ type: 'spring', delay: 2, duration: 2 }}
-                  size="small"
-                  leftIcon={<MdSquareFoot />}
-                  sx={{
-                    borderRadius: 3,
-
-                    fontWeight: 500,
-                    color: 'text.primary',
-                    backgroundColor: 'secondary.bold'
-                  }}
-                >
-                  Work
-                </Button>
-              </Link>
-              <Link href="/play">
-                <Button
-                  as={motion.button}
-                  variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ type: 'spring', delay: 2.3, duration: 2 }}
-                  variant="ghost"
-                  size="small"
-                  sx={{
-                    borderRadius: 3,
-                    fontWeight: 500,
-                    color: 'black',
-                    borderColor: 'black'
-                  }}
-                >
-                  View work
-                </Button>
-              </Link>
-            </Flex>
-          )}
+        <Hero />
+        <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+          <CTAButton href="#">Play reel</CTAButton>
+          <CTAButton href="#" variant="ghost">
+            View work
+          </CTAButton>
         </Flex>
       </Flex>
     </Flex>
   );
 }
-
-// @keyframes wipe-out-top-left {
-//   from {
-//     clip-path: polygon(-50% 0%, 200% 0, 0 200%, 0 -50%);
-//   }
-//   to {
-//     clip-path: polygon(0 0, 0 0, 0 0, 0 50%);
-//   }
-// }
-
-// [transition-style="out:wipe:top-left"] {
-//   animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-out-top-left both;
-// }
