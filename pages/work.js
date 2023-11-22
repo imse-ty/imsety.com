@@ -26,11 +26,18 @@ export default function Work() {
   const [isCovered, setIsCovered] = useState(false);
 
   const ref = useRef(null);
+  const ctaRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['0 1', '0.45 1']
   });
+
+  const scrollCtaProgress = useScroll({
+    offset: ['0 1', '0.0.75 1']
+  }).scrollYProgress;
+
+  // const ctaScroll = useTransform(scrollCtaProgress, [0, 1], [0.5, 1]);
 
   const workScroll = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const workScrollSpring = useSpring(workScroll, { damping: 20 });
@@ -94,14 +101,16 @@ export default function Work() {
         <Flex
           as={motion.div}
           sx={{
+            position: 'relative',
             marginTop: '100vh',
-            padding: [3, 4, 5],
+            marginBottom: '80vh',
+            paddingBottom: 6,
             width: '100%',
             gap: [5, 6],
             backgroundColor: 'background',
             flexDirection: 'column',
-            borderTopLeftRadius: ['40px', '80px'],
-            borderTopRightRadius: ['40px', '80px'],
+            borderRadius: ['40px', '80px'],
+
             zIndex: 2
           }}
           style={{ scale: workScrollSpring }}
@@ -186,7 +195,7 @@ export default function Work() {
             </div>
           </Container>
 
-          <Container>
+          {/* <Container>
             <Heading
               variant="body.pretext"
               sx={{
@@ -210,15 +219,14 @@ export default function Work() {
               imageSrc="/turntable-thumbnail.png"
               label="Lorem ipsum"
             />
-          </Container>
-        </Flex>
-
-        {/* <Container sx={{ position: 'fixed', bottom: 0 }}>
-            <CallToAction
-              title="Let's connect"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
-            />
           </Container> */}
+        </Flex>
+        <motion.div ref={ctaRef} style={{ opacity: scrollCtaProgress }}>
+          <CallToAction
+            title="Let's connect"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
+          />
+        </motion.div>
         <Box />
       </Flex>
     </Layout>
