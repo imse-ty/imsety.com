@@ -11,13 +11,19 @@ import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
 import Header from '@/components/header';
 import Shade, { ShadeButton } from '@/components/shade';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
 import { useRef } from 'react';
 import Text from '@/components/fixed-krado-components/Text';
 
 export default function Work() {
   const [isVideoHidden, setIsVideoHidden] = useState(true);
-  const [isCovered, setIsCovered] = useState(true);
+  const [isCovered, setIsCovered] = useState(false);
 
   const ref = useRef(null);
 
@@ -145,8 +151,9 @@ export default function Work() {
               >
                 <ProjectCard
                   title="Beloved Benefit"
-                  href="#"
+                  href="/projects/beloved23"
                   src="work/beloved-benefit-2.jpg"
+                  layoutId="thumbnail"
                 />
                 <ProjectCard
                   title="Chick-fil-A"
@@ -165,11 +172,11 @@ export default function Work() {
                 />
                 <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
                 {/* <ProjectCard
-                  title="Rock The Bells x Ford"
-                  href="#"
-                  src="work/ford.png"
-                />
-                <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
+                    title="Rock The Bells x Ford"
+                    href="#"
+                    src="work/ford.png"
+                  />
+                  <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
                 <ProjectCard
                   title="Space and Time"
                   href="#"
@@ -207,11 +214,11 @@ export default function Work() {
         </Flex>
 
         {/* <Container sx={{ position: 'fixed', bottom: 0 }}>
-          <CallToAction
-            title="Let's connect"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
-          />
-        </Container> */}
+            <CallToAction
+              title="Let's connect"
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
+            />
+          </Container> */}
         <Box />
       </Flex>
     </Layout>

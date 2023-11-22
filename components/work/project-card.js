@@ -5,8 +5,9 @@ import Text from '../fixed-krado-components/Text';
 import Heading from '../fixed-krado-components/Heading';
 import { MdNorthEast } from 'react-icons/md';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-export default function ProjectCard({ title, src, href }) {
+export default function ProjectCard({ title, src, href, layoutId }) {
   return (
     <Link href={href}>
       <Flex
@@ -26,12 +27,14 @@ export default function ProjectCard({ title, src, href }) {
         }}
       >
         <Image
+          as={motion.img}
           src={src}
           alt="My alt"
           sx={{
             objectFit: 'cover',
             height: ['300px', '600px']
           }}
+          layoutId={layoutId}
         />
         <Flex
           sx={{
