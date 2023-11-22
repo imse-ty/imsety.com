@@ -14,6 +14,10 @@
   font-stretch: 75% 125%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .circle {
   height: 24px;
   width: 24px;

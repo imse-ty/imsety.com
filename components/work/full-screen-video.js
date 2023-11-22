@@ -13,11 +13,10 @@ export default function FullScreenVideo({ onClick, style }) {
   };
 
   const videoPlayerVariants = {
-    hidden: { width: '100%', height: '75vh', borderRadius: '84px' },
+    hidden: { opacity: 0, borderRadius: '84px' },
     active: {
-      width: '90%',
-      height: '90%',
-      borderRadius: '50px'
+      borderRadius: '0px',
+      opacity: 1
     }
   };
 
@@ -50,13 +49,15 @@ export default function FullScreenVideo({ onClick, style }) {
           margin: 'auto',
           backgroundColor: 'black',
           overflow: 'hidden',
-          maxWidth: '1920px',
-          maxHeight: '1080px',
+          width: '100%',
+          height: '100%',
           objectFit: 'cover'
         }}
-        poster="/turntable-thumbnail.png"
         autoPlay
         controls
+        disablePictureInPicture
+        controlsList="nofullscreen"
+        muted
       >
         <source src="/2020-reel.mp4" type="video/mp4" />
         Your browser does not support the video tag.

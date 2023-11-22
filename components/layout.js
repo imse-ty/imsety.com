@@ -5,7 +5,7 @@ import { Box } from 'krado-react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 
-export default function Layout({ children }) {
+export default function Layout({ children, disableScroll }) {
   // const container = useRef();
 
   // const circle = useRef();
@@ -53,7 +53,8 @@ export default function Layout({ children }) {
       backgroundColor="background"
       sx={{
         height: '100vh',
-        position: 'relative'
+        position: 'relative',
+        overflow: disableScroll ? 'hidden' : 'initial'
       }}
     >
       {/* <div ref={circle} className="circle"></div> */}

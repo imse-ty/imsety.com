@@ -10,13 +10,14 @@ import ReelVideo from '@/components/work/reel-video';
 import { Box, Container, Flex, Grid } from 'krado-react';
 import { useState } from 'react';
 import Header from '@/components/header';
-import Shade from '@/components/shade';
+import Shade, { ShadeButton } from '@/components/shade';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import Text from '@/components/fixed-krado-components/Text';
 
 export default function Work() {
   const [isVideoHidden, setIsVideoHidden] = useState(true);
+  const [isCovered, setIsCovered] = useState(true);
 
   const ref = useRef(null);
 
@@ -33,8 +34,28 @@ export default function Work() {
   const workHeaderScrollSpring = useSpring(workHeaderScroll, { damping: 20 });
 
   return (
-    <Layout>
-      <Shade />
+    <Layout disableScroll={!isVideoHidden}>
+      <Shade isCovered={isCovered} onTap={() => setIsCovered(!isCovered)}>
+        <ShadeButton
+          href="#"
+          onClick={() => {
+            setIsCovered(false);
+            setIsVideoHidden(false);
+          }}
+        >
+          Play reel
+        </ShadeButton>
+        <ShadeButton
+          href="/work/#work"
+          variant="ghost"
+          onClick={() => {
+            setIsCovered(false);
+            setIsVideoHidden(true);
+          }}
+        >
+          View work
+        </ShadeButton>
+      </Shade>
       <Flex
         sx={{
           flexDirection: 'column',
@@ -84,10 +105,12 @@ export default function Work() {
               <Heading
                 as={motion.h2}
                 variant="display.display"
+                id="work"
                 sx={{
                   marginTop: 5,
                   marginBottom: 3,
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  scrollMarginTop: '3.8em'
                 }}
                 style={{
                   scale: workScrollSpring,

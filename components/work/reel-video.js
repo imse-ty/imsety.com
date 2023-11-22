@@ -117,7 +117,7 @@ export default function ReelVideo({ onClick, style }) {
       }}
       style={style}
     >
-      <Box
+      {/* <Box
         as={motion.div}
         variants={blackFilterVariants}
         sx={{
@@ -128,7 +128,7 @@ export default function ReelVideo({ onClick, style }) {
           width: '100%',
           height: '100%'
         }}
-      />
+      /> */}
       <motion.video
         variants={{ active: { scale: 1.05 } }}
         transition={{ type: 'spring' }}

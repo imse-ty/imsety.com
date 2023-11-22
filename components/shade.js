@@ -20,7 +20,7 @@ import IndexHeader from './index-header';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useColorMode } from 'theme-ui';
 
-export function CTAButton({ href, children, variant }) {
+export function ShadeButton({ href, children, variant, onClick }) {
   const buttonVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
@@ -28,6 +28,7 @@ export function CTAButton({ href, children, variant }) {
   return (
     <Link href={href}>
       <Button
+        onClick={onClick}
         as={motion.button}
         variants={buttonVariants}
         initial="hidden"
@@ -46,9 +47,14 @@ export function CTAButton({ href, children, variant }) {
   );
 }
 
-export default function Shade() {
+export default function Shade({
+  playReelCallback,
+  isCovered,
+  onTap,
+  children
+}) {
   const [colorMode, setColorMode] = useColorMode('dark');
-  const [isCovered, setIsCovered] = useState(true);
+  // const [isCovered, setIsCovered] = useState(true);
 
   const shadeVariants = {
     show: {
@@ -82,7 +88,7 @@ export default function Shade() {
       animate={isCovered ? 'show' : 'hide'}
       whileHover={isCovered ? '' : 'hover'}
       transition={{ type: 'spring', bounce: 0.2, duration: 0.8 }}
-      onTap={() => setIsCovered(!isCovered)}
+      onTap={onTap}
       sx={{
         position: 'fixed',
         width: '100vw',
@@ -112,10 +118,7 @@ export default function Shade() {
       >
         <Hero />
         <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-          <CTAButton href="#">Play reel</CTAButton>
-          <CTAButton href="#" variant="ghost">
-            View work
-          </CTAButton>
+          {children}
         </Flex>
       </Flex>
       <Footer>
@@ -150,7 +153,7 @@ export default function Shade() {
           height: '100%',
           backgroundColor: 'background',
           // backdropFilter: 'blur(30px)',
-          opacity: 0.98,
+          opacity: 0.97,
           zIndex: -1
         }}
       />
