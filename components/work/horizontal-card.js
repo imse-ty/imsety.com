@@ -33,7 +33,7 @@ export default function HorizontalCard({ imageSrc, imageAlt, label }) {
         sx={{
           display: ['none', 'block'],
           marginLeft: 'auto',
-          color: 'secondary.regular',
+          color: 'text.secondary',
           fontSize: 7
         }}
       />
