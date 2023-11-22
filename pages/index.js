@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Layout from '@/components/layout';
 import {
-  Box,
   Button,
   Flex,
   Footer,
@@ -12,16 +11,12 @@ import {
   FooterItem,
   ToggleIcon
 } from 'krado-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import IndexHeader from '@/components/index-header';
 import Hero from '@/components/hero';
-import IndexFooter from '@/components/index-footer';
-import SocialMediaIcons from '@/components/social-media-icons';
-import { MdSquareFoot, MdVideogameAsset } from 'react-icons/md';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useColorMode } from 'theme-ui';
 import Link from 'next/link';
-import Shade from '@/components/shade';
 
 export default function Home() {
   const buttonVariants = {
