@@ -80,7 +80,7 @@ export function PlayButton() {
   );
 }
 
-export default function ReelVideo({ onClick }) {
+export default function ReelVideo({ onClick, style }) {
   const containerVariants = {
     active: {
       gap: '500px'
@@ -111,9 +111,11 @@ export default function ReelVideo({ onClick }) {
         alignItems: 'center',
         gap: ['120px', null, '400px'],
         backgroundColor: 'secondary.light',
+
         // borderRadius: ['42px', null, '84px'],
         cursor: 'pointer'
       }}
+      style={style}
     >
       <Box
         as={motion.div}

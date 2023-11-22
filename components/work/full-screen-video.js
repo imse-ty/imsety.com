@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Box, Flex } from 'krado-react';
 
-export default function FullScreenVideo({ onClick }) {
+export default function FullScreenVideo({ onClick, style }) {
   const containerVariants = {
     hidden: { backgroundColor: 'rgba(0,0,0,0)' },
     active: {
@@ -13,10 +13,11 @@ export default function FullScreenVideo({ onClick }) {
   };
 
   const videoPlayerVariants = {
-    hidden: { width: '100%', height: '75vh' },
+    hidden: { width: '100%', height: '75vh', borderRadius: '84px' },
     active: {
-      width: '100%',
-      height: '100%'
+      width: '90%',
+      height: '90%',
+      borderRadius: '50px'
     }
   };
 
@@ -37,6 +38,7 @@ export default function FullScreenVideo({ onClick }) {
         left: 0,
         cursor: 'crosshair'
       }}
+      style={style}
     >
       <motion.video
         variants={videoPlayerVariants}
@@ -47,7 +49,10 @@ export default function FullScreenVideo({ onClick }) {
         sx={{
           margin: 'auto',
           backgroundColor: 'black',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          maxWidth: '1920px',
+          maxHeight: '1080px',
+          objectFit: 'cover'
         }}
         poster="/turntable-thumbnail.png"
         autoPlay
