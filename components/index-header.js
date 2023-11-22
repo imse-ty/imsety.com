@@ -21,7 +21,7 @@ export default function IndexHeader() {
             fontSize: [5, 6]
           }}
         >
-          Set Theory
+          Imsety
         </Text>
       </Flex>
     </Container>
