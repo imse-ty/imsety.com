@@ -9,6 +9,7 @@ import {
   MdOutlineCalendarToday,
   MdOutlineMailOutline
 } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 export default function CallToAction({ title, text }) {
   return (

@@ -26,7 +26,6 @@ export default function Work() {
   const [isCovered, setIsCovered] = useState(false);
 
   const ref = useRef(null);
-  const ctaRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,10 +33,8 @@ export default function Work() {
   });
 
   const scrollCtaProgress = useScroll({
-    offset: ['0 1', '0.0.75 1']
+    offset: ['200vh end', 'center center']
   }).scrollYProgress;
-
-  // const ctaScroll = useTransform(scrollCtaProgress, [0, 1], [0.5, 1]);
 
   const workScroll = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const workScrollSpring = useSpring(workScroll, { damping: 20 });
@@ -221,12 +218,12 @@ export default function Work() {
             />
           </Container> */}
         </Flex>
-        <motion.div ref={ctaRef} style={{ opacity: scrollCtaProgress }}>
+        <motion.section style={{ opacity: scrollCtaProgress }}>
           <CallToAction
             title="Let's connect"
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
           />
-        </motion.div>
+        </motion.section>
         <Box />
       </Flex>
     </Layout>
