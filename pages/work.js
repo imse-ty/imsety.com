@@ -100,7 +100,7 @@ export default function Work() {
           sx={{
             position: 'relative',
             marginTop: '100vh',
-            marginBottom: '80vh',
+            marginBottom: '40vh',
             paddingBottom: 6,
             width: '100%',
             gap: [5, 6],

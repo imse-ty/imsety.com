@@ -20,6 +20,7 @@ export default function CallToAction({ title, text }) {
         left: 0,
         width: '100vw',
         height: '100vh',
+        paddingTop: '40vh',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
