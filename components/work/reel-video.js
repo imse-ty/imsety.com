@@ -80,7 +80,7 @@ export function PlayButton() {
   );
 }
 
-export default function ReelVideo({ onClick, style }) {
+export default function ReelVideo({ onClick, style, layoutId }) {
   const containerVariants = {
     active: {
       gap: '500px'
@@ -100,7 +100,7 @@ export default function ReelVideo({ onClick, style }) {
       variants={containerVariants}
       transition={{ type: 'spring' }}
       onClick={onClick}
-      layoutId="video"
+      layoutId={layoutId}
       sx={{
         flexDirection: ['column', null, null, 'row'],
         overflow: 'hidden',

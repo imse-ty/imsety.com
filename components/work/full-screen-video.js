@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Box, Flex } from 'krado-react';
 
-export default function FullScreenVideo({ onClick, style }) {
+export default function FullScreenVideo({ onClick, style, layoutId }) {
   const containerVariants = {
     hidden: { backgroundColor: 'rgba(0,0,0,0)' },
     active: {
@@ -44,7 +44,7 @@ export default function FullScreenVideo({ onClick, style }) {
         initial="hidden"
         animate="active"
         exit="hidden"
-        layoutId="video"
+        layoutId={layoutId}
         sx={{
           margin: 'auto',
           backgroundColor: 'black',

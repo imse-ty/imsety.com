@@ -87,11 +87,13 @@ export default function Work() {
             <FullScreenVideo
               onClick={() => setIsVideoHidden(true)}
               style={{ scale: videoScroll, borderRadius: borderScroll }}
+              layoutId="video"
             />
           )}
           <ReelVideo
             onClick={() => setIsVideoHidden(!isVideoHidden)}
             style={{ scale: videoScroll, borderRadius: borderScroll }}
+            layoutId="video"
           />
         </motion.header>
 

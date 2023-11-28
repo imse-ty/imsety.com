@@ -1,8 +1,9 @@
+/** @jsxImportSource theme-ui */
+
+import Heading from '@/components/fixed-krado-components/Heading';
+import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
-import { motion } from 'framer-motion';
-import { Button, Flex, Image } from 'krado-react';
-import Link from 'next/link';
-import React from 'react';
+import { Flex, Image } from 'krado-react';
 
 export default function Project() {
   return (
@@ -10,26 +11,20 @@ export default function Project() {
       <Flex
         sx={{
           flexDirection: 'column',
-          justifyContent: 'center',
           alignItems: 'center',
-          height: '100%',
-          gap: 5
+          gap: [5, 6],
+          position: 'relative'
         }}
       >
-        <Image
-          as={motion.img}
-          transition={{ type: 'spring', damping: 16 }}
-          src="/work/beloved-benefit-2.jpg"
-          alt="My alt"
-          sx={{
-            width: '50%',
-            height: 'auto'
-          }}
-          layoutId="thumbnail"
-        />
-        <Link href="/work#work">
-          <Button>Back</Button>
-        </Link>
+        <header>
+          <Heading>Title</Heading>
+          <Image alt="My alt" src="/work/beloved-benefit-2.jpg" />
+          <Flex>
+            <Text>Stat</Text>
+            <Text>Stat</Text>
+            <Text>Stat</Text>
+          </Flex>
+        </header>
       </Flex>
     </Layout>
   );
