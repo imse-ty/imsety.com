@@ -3,7 +3,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
-import { Flex, Image } from 'krado-react';
+import { Box, Container, Flex, Image } from 'krado-react';
 
 export default function Project() {
   return (
@@ -16,15 +16,46 @@ export default function Project() {
           position: 'relative'
         }}
       >
-        <header>
-          <Heading>Title</Heading>
-          <Image alt="My alt" src="/work/beloved-benefit-2.jpg" />
-          <Flex>
-            <Text>Stat</Text>
-            <Text>Stat</Text>
-            <Text>Stat</Text>
+        <header sx={{ overflow: 'hidden' }}>
+          <Flex
+            sx={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100vw',
+              height: '75vh',
+              position: 'relative'
+            }}
+          >
+            <Heading
+              variant="display.display"
+              sx={{ position: 'absolute', zIndex: 1 }}
+            >
+              Beloved Benefit
+            </Heading>
+            <Box
+              sx={{
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'black',
+                opacity: 0.5
+              }}
+            />
+            <Image
+              alt="My alt"
+              src="/work/beloved-benefit-2.jpg"
+              sx={{ objectFit: 'cover' }}
+            />
           </Flex>
         </header>
+
+        <Flex>
+          <Text>Stat</Text>
+          <Text>Stat</Text>
+          <Text>Stat</Text>
+        </Flex>
+
+        <Container sx={{ color: 'white' }}>## My content Hello?</Container>
       </Flex>
     </Layout>
   );

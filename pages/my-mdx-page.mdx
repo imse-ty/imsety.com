@@ -14,15 +14,19 @@ import { Box, Container, Flex, Image } from 'krado-react';
       position: 'relative'
     }}
   >
-    <header>
-      <Heading>Title</Heading>
-      <Image alt="My alt" src="/work/beloved-benefit-2.jpg" />
-      <Flex>
-        <Text>Stat</Text>
-        <Text>Stat</Text>
-        <Text>Stat</Text>
-      </Flex>
+    <header sx={{width:'100vw', height: '100vh'}} >
+
+        <Heading variant="display.display" sx={{position: 'absolute', marginX: 'auto'}}>Beloved Benefit</Heading>
+        <Image alt="My alt" src="/work/beloved-benefit-2.jpg" />
+
+
     </header>
+
+        <Flex>
+          <Text>Stat</Text>
+          <Text>Stat</Text>
+          <Text>Stat</Text>
+        </Flex>
 
     <Container sx={{color: 'white'}}>
       ## My content
