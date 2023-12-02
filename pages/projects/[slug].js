@@ -5,6 +5,17 @@ import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
 import { Box, Container, Flex, Image } from 'krado-react';
 
+export function ProjectStat({ children }) {
+  return (
+    <Text
+      variant="body.h1"
+      sx={{ borderLeft: 1, borderColor: 'divider', paddingX: 4 }}
+    >
+      {children}
+    </Text>
+  );
+}
+
 export default function Project() {
   return (
     <Layout>
@@ -16,46 +27,58 @@ export default function Project() {
           position: 'relative'
         }}
       >
-        <header sx={{ overflow: 'hidden' }}>
-          <Flex
+        <Flex
+          as="header"
+          sx={{
+            flexDirection: 'column',
+            overflow: 'hidden',
+            height: '100vh',
+            width: '100vw'
+          }}
+        >
+          <Image
+            alt="My alt"
+            src="/work/beloved-benefit-2.jpg"
             sx={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '100vw',
-              height: '75vh',
-              position: 'relative'
+              objectFit: 'cover',
+              width: '100%',
+              height: '75%'
             }}
-          >
-            <Heading
-              variant="display.display"
-              sx={{ position: 'absolute', zIndex: 1 }}
-            >
-              Beloved Benefit
-            </Heading>
-            <Box
+          />
+
+          <Container sx={{ height: '100%' }}>
+            <Flex
               sx={{
-                position: 'absolute',
+                flexDirection: ['column', null, null, 'row'],
                 width: '100%',
                 height: '100%',
-                backgroundColor: 'black',
-                opacity: 0.5
+                justifyContent: ['left', null, null, 'space-between'],
+                gap: [5, null, null, 0],
+                alignItems: ['left', null, null, 'center']
               }}
-            />
-            <Image
-              alt="My alt"
-              src="/work/beloved-benefit-2.jpg"
-              sx={{ objectFit: 'cover' }}
-            />
-          </Flex>
-        </header>
-
-        <Flex>
-          <Text>Stat</Text>
-          <Text>Stat</Text>
-          <Text>Stat</Text>
+            >
+              <Flex sx={{ flexDirection: 'column' }}>
+                <Heading variant="display.display" sx={{ marginBottom: 3 }}>
+                  Beloved Benefit
+                </Heading>
+                <Text
+                  variant="body.summary"
+                  sx={{
+                    fontWeight: 400
+                  }}
+                >
+                  Ut nunc, dui sit sit nisl, cras velit lorem. Laoreet gravida
+                  adipiscing augue sit.
+                </Text>
+              </Flex>
+              <Flex>
+                <ProjectStat>800 Hrs</ProjectStat>
+                <ProjectStat>$130k</ProjectStat>
+                <ProjectStat>88.00</ProjectStat>
+              </Flex>
+            </Flex>
+          </Container>
         </Flex>
-
-        <Container sx={{ color: 'white' }}>## My content Hello?</Container>
       </Flex>
     </Layout>
   );
