@@ -1,14 +1,16 @@
 /** @jsxImportSource theme-ui */
 
+import { useMDXComponent } from 'next-contentlayer/hooks';
+import { allPosts } from 'contentlayer/generated';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
-import { Box, Container, Flex, Image } from 'krado-react';
+import { Box, Container, Flex, Image, Button } from 'krado-react';
 
 export function ProjectStat({ children }) {
   return (
     <Text
-      variant="body.h1"
+      variant='body.h1'
       sx={{ borderLeft: 1, borderColor: 'divider', paddingX: 4 }}
     >
       {children}
@@ -16,7 +18,14 @@ export function ProjectStat({ children }) {
   );
 }
 
-export default function Project() {
+const mdxComponents = {
+  Button,
+  Image
+};
+
+export default function Project({ post }) {
+  const MDXContent = useMDXComponent(post.body.code);
+
   return (
     <Layout>
       <Flex
@@ -28,7 +37,7 @@ export default function Project() {
         }}
       >
         <Flex
-          as="header"
+          as='header'
           sx={{
             flexDirection: 'column',
             overflow: 'hidden',
@@ -37,15 +46,14 @@ export default function Project() {
           }}
         >
           <Image
-            alt="My alt"
-            src="/work/beloved-benefit-2.jpg"
+            alt='My alt'
+            src='/work/beloved-benefit-2.jpg'
             sx={{
               objectFit: 'cover',
               width: '100%',
               height: '75%'
             }}
           />
-
           <Container sx={{ height: '100%' }}>
             <Flex
               sx={{
@@ -58,11 +66,11 @@ export default function Project() {
               }}
             >
               <Flex sx={{ flexDirection: 'column' }}>
-                <Heading variant="display.display" sx={{ marginBottom: 3 }}>
+                <Heading variant='display.display' sx={{ marginBottom: 3 }}>
                   Beloved Benefit
                 </Heading>
                 <Text
-                  variant="body.summary"
+                  variant='body.summary'
                   sx={{
                     fontWeight: 400
                   }}
@@ -79,7 +87,28 @@ export default function Project() {
             </Flex>
           </Container>
         </Flex>
+
+        <Box sx={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
+          <MDXContent components={mdxComponents} />
+        </Box>
       </Flex>
     </Layout>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = allPosts.map((post) => post.url);
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  return {
+    props: {
+      post
+    }
+  };
 }
