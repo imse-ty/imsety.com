@@ -1,7 +1,6 @@
 /** @jsxImportSource theme-ui */
 
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import { allPosts } from 'contentlayer/generated';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
@@ -24,8 +23,6 @@ const mdxComponents = {
 };
 
 export default function Project({ post }) {
-  const MDXContent = useMDXComponent(post.body.code);
-
   return (
     <Layout>
       <Flex
@@ -88,27 +85,10 @@ export default function Project({ post }) {
           </Container>
         </Flex>
 
-        <Box sx={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
-          <MDXContent components={mdxComponents} />
-        </Box>
+        <Box
+          sx={{ backgroundColor: 'red', width: '100%', height: '100vh' }}
+        ></Box>
       </Flex>
     </Layout>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = allPosts.map((post) => post.url);
-  return {
-    paths,
-    fallback: false
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-  return {
-    props: {
-      post
-    }
-  };
 }
