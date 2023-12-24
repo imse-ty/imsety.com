@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import Layout from '@/components/layout';
