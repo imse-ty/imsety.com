@@ -1,23 +1,12 @@
 /** @jsxImportSource theme-ui */
 
 import Heading from '@/components/fixed-krado-components/Heading';
-import { PortableText } from '@portabletext/react';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
-import { useLiveQuery } from 'next-sanity/preview';
-
-import { readToken } from '@/lib/sanity.api';
-import { getClient } from '@/lib/sanity.client';
-import {
-  getPost,
-  type Post,
-  postBySlugQuery,
-  postSlugsQuery
-} from '@/lib/sanity.queries';
-import type { SharedPageProps } from '@/pages/_app';
-import Layout from '@/components/layout';
 import Text from '@/components/fixed-krado-components/Text';
-import { Box, Container, Flex, Image } from 'krado-react';
+import Layout from '@/components/layout';
 import { components } from '@/lib/components';
+import { client } from '@/sanity/lib/client';
+import { PortableText } from '@portabletext/react';
+import { Box, Container, Flex, Image } from 'krado-react';
 
 export function ProjectStat({ children }) {
   return (
@@ -30,14 +19,8 @@ export function ProjectStat({ children }) {
   );
 }
 
-export default function ProjectSlugRoute(
-  props: InferGetStaticPropsType<typeof getStaticProps>
-) {
-  const [post] = useLiveQuery(props.post, postBySlugQuery, {
-    slug: props.post.slug.current
-  });
-
-  console.log(post.body);
+export default function Project({ post }) {
+  console.log(post);
 
   return (
     <Layout disableScroll={false}>
@@ -80,7 +63,7 @@ export default function ProjectSlugRoute(
             >
               <Flex sx={{ flexDirection: 'column' }}>
                 <Heading variant='display.display' sx={{ marginBottom: 3 }}>
-                  {post.title}
+                  {post?.title}
                 </Heading>
                 <Text
                   variant='body.summary'
@@ -101,55 +84,37 @@ export default function ProjectSlugRoute(
           </Container>
         </Flex>
 
-        <Container
-          sx={{
-            maxWidth: '1440px',
-            height: '100vh'
-          }}
-        >
-          <Flex sx={{ flexDirection: 'column' }}>
-            <PortableText value={post.body} components={components} />
-          </Flex>
-        </Container>
+        <Box sx={{ backgroundColor: 'red', width: '100%', height: '100vh' }}>
+          <PortableText value={post.body} components={components} />
+        </Box>
       </Flex>
     </Layout>
   );
 }
 
-export const getStaticPaths = async () => {
-  const client = getClient();
-  const slugs = await client.fetch(postSlugsQuery);
+export async function getStaticPaths() {
+  const paths = await client.fetch(
+    `*[_type == "post" && defined(slug.current)][].slug.current`
+  );
 
   return {
-    paths: slugs?.map(({ slug }) => `/projects/${slug}`) || [],
-    fallback: 'blocking'
+    paths: paths.map((slug) => ({ params: { slug } })),
+    fallback: true
   };
-};
-
-interface Query {
-  [key: string]: string;
 }
 
-export const getStaticProps: GetStaticProps<
-  SharedPageProps & {
-    post: Post;
-  },
-  Query
-> = async ({ draftMode = false, params = {} }) => {
-  const client = getClient(draftMode ? { token: readToken } : undefined);
-  const post = await getPost(client, params.slug);
-
-  if (!post) {
-    return {
-      notFound: true
-    };
-  }
+export async function getStaticProps(context) {
+  const { slug = '' } = context.params;
+  const post = await client.fetch(
+    `
+  *[_type == "post" && slug.current == $slug][0]
+  `,
+    { slug }
+  );
 
   return {
     props: {
-      draftMode,
-      token: draftMode ? readToken : '',
       post
     }
   };
-};
+}

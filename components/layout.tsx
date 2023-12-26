@@ -5,8 +5,8 @@ import { Box } from 'krado-react';
 export default function Layout({ children, disableScroll }) {
   return (
     <Box
-      as="main"
-      backgroundColor="background"
+      as='main'
+      backgroundColor='background'
       sx={{
         height: '100vh',
         position: 'relative',
