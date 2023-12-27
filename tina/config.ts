@@ -5,8 +5,6 @@ const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
-  'v2_work-page' ||
-  'v2' ||
   'main';
 
 export default defineConfig({
