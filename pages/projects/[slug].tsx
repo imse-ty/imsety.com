@@ -22,7 +22,7 @@ import { components } from '@/lib/components';
 export function ProjectStat({ children }) {
   return (
     <Text
-      variant='body.h1'
+      variant="body.h1"
       sx={{ borderLeft: 1, borderColor: 'divider', paddingX: 4 }}
     >
       {children}
@@ -50,7 +50,7 @@ export default function ProjectSlugRoute(
         }}
       >
         <Flex
-          as='header'
+          as="header"
           sx={{
             flexDirection: 'column',
             overflow: 'hidden',
@@ -59,8 +59,8 @@ export default function ProjectSlugRoute(
           }}
         >
           <Image
-            alt='My alt'
-            src='/work/beloved-benefit-2.jpg'
+            alt="My alt"
+            src="/work/beloved-benefit-2.jpg"
             sx={{
               objectFit: 'cover',
               width: '100%',
@@ -79,11 +79,11 @@ export default function ProjectSlugRoute(
               }}
             >
               <Flex sx={{ flexDirection: 'column' }}>
-                <Heading variant='display.display' sx={{ marginBottom: 3 }}>
+                <Heading variant="display.display" sx={{ marginBottom: 3 }}>
                   {post.title}
                 </Heading>
                 <Text
-                  variant='body.summary'
+                  variant="body.summary"
                   sx={{
                     fontWeight: 400
                   }}
