@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+/** @ts-nocheck */
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Layout from '@/components/layout';
