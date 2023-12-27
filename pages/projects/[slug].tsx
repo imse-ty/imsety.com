@@ -5,14 +5,15 @@ import Layout from '@/components/layout';
 import Text from '@/components/fixed-krado-components/Text';
 import { Container, Flex, Image } from 'krado-react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
-import client from '@/tina/__generated__/client';
 import { useTina } from 'tinacms/dist/react';
 import { useThemedStylesWithMdx } from '@theme-ui/mdx';
+import client from '@/tina/__generated__/client';
+import { components } from '@/lib/components';
 
 export function ProjectStat({ children }) {
   return (
     <Text
-      variant="body.h1"
+      variant='body.h1'
       sx={{ borderLeft: 1, borderColor: 'divider', paddingX: 4 }}
     >
       {children}
@@ -38,7 +39,7 @@ export default function Project(props) {
         }}
       >
         <Flex
-          as="header"
+          as='header'
           sx={{
             flexDirection: 'column',
             overflow: 'hidden',
@@ -47,8 +48,8 @@ export default function Project(props) {
           }}
         >
           <Image
-            alt="My alt"
-            src="/work/beloved-benefit-2.jpg"
+            alt='My alt'
+            src='/work/beloved-benefit-2.jpg'
             sx={{
               objectFit: 'cover',
               width: '100%',
@@ -67,11 +68,11 @@ export default function Project(props) {
               }}
             >
               <Flex sx={{ flexDirection: 'column' }}>
-                <Heading variant="display.display" sx={{ marginBottom: 3 }}>
+                <Heading variant='display.display' sx={{ marginBottom: 3 }}>
                   Temp Title
                 </Heading>
                 <Text
-                  variant="body.summary"
+                  variant='body.summary'
                   sx={{
                     fontWeight: 400
                   }}
@@ -96,7 +97,7 @@ export default function Project(props) {
           }}
         >
           <Flex sx={{ flexDirection: 'column' }}>
-            <TinaMarkdown content={data.post.body} />
+            <TinaMarkdown content={data.post.body} components={components} />
           </Flex>
         </Container>
       </Flex>
