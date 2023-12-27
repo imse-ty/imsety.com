@@ -30,7 +30,7 @@ export default function Work(props) {
     data: props.data
   });
 
-  const postsList = data.postConnection.edges;
+  const projectsList = data.workPage.projects;
 
   const [isVideoHidden, setIsVideoHidden] = useState(true);
   const [isCovered, setIsCovered] = useState(false);
@@ -167,10 +167,11 @@ export default function Work(props) {
                   gridTemplateColumns: ['1fr', null, '1fr 1fr']
                 }}
               >
-                {postsList.map((post) => (
+                {projectsList.map(({ project }) => (
                   <ProjectCard
-                    title={post.node.title}
-                    href={`/projects/${post.node._sys.filename}`}
+                    title={project.title}
+                    href={`/projects/${project._sys.filename}`}
+                    src={project.coverImage}
                   />
                 ))}
               </Grid>
@@ -216,7 +217,9 @@ export default function Work(props) {
 }
 
 export const getStaticProps = async () => {
-  const { data, query, variables } = await client.queries.postConnection();
+  const { data, query, variables } = await client.queries.workPage({
+    relativePath: 'work-page.json'
+  });
 
   return {
     props: {

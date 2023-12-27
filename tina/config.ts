@@ -29,9 +29,43 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: 'post',
-        label: 'Posts',
-        path: 'content/posts',
+        name: 'workPage',
+        label: 'Work page',
+        path: 'content/work-page',
+        format: 'json',
+        ui: {
+          global: true,
+          allowedActions: {
+            create: false,
+            delete: false
+          }
+        },
+        fields: [
+          {
+            type: 'object',
+            name: 'projects',
+            label: 'Projects',
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return { label: item?.project };
+              }
+            },
+            fields: [
+              {
+                name: 'project',
+                label: 'Project',
+                type: 'reference',
+                collections: ['project']
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'project',
+        label: 'Projects',
+        path: 'content/projects',
         format: 'mdx',
         fields: [
           {
@@ -40,6 +74,11 @@ export default defineConfig({
             label: 'Title',
             isTitle: true,
             required: true
+          },
+          {
+            type: 'image',
+            name: 'coverImage',
+            label: 'Cover image'
           },
           {
             type: 'rich-text',
