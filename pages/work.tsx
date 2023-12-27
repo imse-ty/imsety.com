@@ -20,8 +20,18 @@ import {
 } from 'framer-motion';
 import { useRef } from 'react';
 import Text from '@/components/fixed-krado-components/Text';
+import client from '@/tina/__generated__/client';
+import { useTina } from 'tinacms/dist/react';
 
-export default function Work() {
+export default function Work(props) {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data
+  });
+
+  const postsList = data.postConnection.edges;
+
   const [isVideoHidden, setIsVideoHidden] = useState(true);
   const [isCovered, setIsCovered] = useState(false);
 
@@ -47,7 +57,7 @@ export default function Work() {
     <Layout disableScroll={!isVideoHidden}>
       <Shade isCovered={isCovered} onTap={() => setIsCovered(!isCovered)}>
         <ShadeButton
-          href="#"
+          href='#'
           onClick={() => {
             setIsCovered(false);
             setIsVideoHidden(false);
@@ -56,8 +66,8 @@ export default function Work() {
           Play reel
         </ShadeButton>
         <ShadeButton
-          href="/work/#work"
-          variant="ghost"
+          href='/work/#work'
+          variant='ghost'
           onClick={() => {
             setIsCovered(false);
             setIsVideoHidden(true);
@@ -87,13 +97,13 @@ export default function Work() {
             <FullScreenVideo
               onClick={() => setIsVideoHidden(true)}
               style={{ scale: videoScroll, borderRadius: borderScroll }}
-              layoutId="video"
+              layoutId='video'
             />
           )}
           <ReelVideo
             onClick={() => setIsVideoHidden(!isVideoHidden)}
             style={{ scale: videoScroll, borderRadius: borderScroll }}
-            layoutId="video"
+            layoutId='video'
           />
         </motion.header>
 
@@ -118,8 +128,8 @@ export default function Work() {
             <div ref={ref}>
               <Heading
                 as={motion.h2}
-                variant="display.display"
-                id="work"
+                variant='display.display'
+                id='work'
                 sx={{
                   marginTop: 5,
                   marginBottom: 3,
@@ -136,7 +146,7 @@ export default function Work() {
 
               <Text
                 as={motion.h2}
-                variant="body.summary"
+                variant='body.summary'
                 sx={{
                   marginBottom: 5,
                   textAlign: 'center',
@@ -157,39 +167,12 @@ export default function Work() {
                   gridTemplateColumns: ['1fr', null, '1fr 1fr']
                 }}
               >
-                <ProjectCard
-                  title="Beloved Benefit"
-                  href="/projects/beloved23"
-                  src="work/beloved-benefit-2.jpg"
-                  layoutId="thumbnail"
-                />
-                <ProjectCard
-                  title="Chick-fil-A"
-                  href="#"
-                  src="work/chick-fil-a.png"
-                />
-                <ProjectCard
-                  title="Beeple Studios"
-                  href="#"
-                  src="work/beeple-3.png"
-                />
-                <ProjectCard
-                  title="Keller Willams"
-                  href="#"
-                  src="work/kw-mega-agent-camp.png"
-                />
-                <ProjectCard title="Ozone" href="#" src="work/ozone-4.jpg" />
-                {/* <ProjectCard
-                    title="Rock The Bells x Ford"
-                    href="#"
-                    src="work/ford.png"
+                {postsList.map((post) => (
+                  <ProjectCard
+                    title={post.node.title}
+                    href={`/projects/${post.node._sys.filename}`}
                   />
-                  <ProjectCard title="OSOS" href="#" src="work/osos-5.jpg" /> */}
-                <ProjectCard
-                  title="Space and Time"
-                  href="#"
-                  src="work/space-and-time.png"
-                />
+                ))}
               </Grid>
             </div>
           </Container>
@@ -223,7 +206,7 @@ export default function Work() {
         <motion.section style={{ opacity: scrollCtaProgress }}>
           <CallToAction
             title="Let's connect"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna.'
           />
         </motion.section>
         <Box />
@@ -231,3 +214,16 @@ export default function Work() {
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const { data, query, variables } = await client.queries.postConnection();
+
+  return {
+    props: {
+      data,
+      query,
+      variables
+      //myOtherProp: 'some-other-data',
+    }
+  };
+};
