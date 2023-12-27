@@ -174,6 +174,7 @@ export default function Work(props) {
                     title={project.title}
                     href={`/projects/${project._sys.filename}`}
                     src={project.coverImage}
+                    key={project._sys.filename}
                   />
                 ))}
               </Grid>
