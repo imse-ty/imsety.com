@@ -69,7 +69,7 @@ export default function Project(props) {
             >
               <Flex sx={{ flexDirection: 'column' }}>
                 <Heading variant='display.display' sx={{ marginBottom: 3 }}>
-                  Temp Title
+                  {data.post.title}
                 </Heading>
                 <Text
                   variant='body.summary'
@@ -119,7 +119,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   let data = {};
   let query = {};
-  let variables = { relativePath: `${params.slug}.md` };
+  let variables = { relativePath: `${params.slug}.mdx` };
   try {
     const res = await client.queries.post(variables);
     query = res.query;

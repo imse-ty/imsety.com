@@ -32,6 +32,7 @@ export default defineConfig({
         name: 'post',
         label: 'Posts',
         path: 'content/posts',
+        format: 'mdx',
         fields: [
           {
             type: 'string',
@@ -44,12 +45,34 @@ export default defineConfig({
             type: 'rich-text',
             name: 'body',
             label: 'Body',
-            isBody: true
+            isBody: true,
+            templates: [
+              {
+                name: 'Button',
+                label: 'Button',
+                fields: [
+                  {
+                    name: 'children',
+                    label: 'Label',
+                    type: 'string'
+                  }
+                ]
+              }
+            ]
           }
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/projects/${document._sys.filename}`
+          router: ({ document }) => `/projects/${document._sys.filename}`,
+          filename: {
+            // if disabled, the editor can not edit the filename
+            readonly: false,
+            // Example of using a custom slugify function
+            slugify: (values) => {
+              // Values is an object containing all the values of the form. In this case it is {title?: string, topic?: string}
+              return `${values?.title?.toLowerCase().replace(/ /g, '-')}`;
+            }
+          }
         }
       }
     ]
