@@ -4,6 +4,10 @@ import Heading from '@/components/fixed-krado-components/Heading';
 import Layout from '@/components/layout';
 import Text from '@/components/fixed-krado-components/Text';
 import { Container, Flex, Image } from 'krado-react';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import client from '@/tina/__generated__/client';
+import { useTina } from 'tinacms/dist/react';
+import { useThemedStylesWithMdx } from '@theme-ui/mdx';
 
 export function ProjectStat({ children }) {
   return (
@@ -16,7 +20,13 @@ export function ProjectStat({ children }) {
   );
 }
 
-export default function Project() {
+export default function Project(props) {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data
+  });
+
   return (
     <Layout disableScroll={false}>
       <Flex
@@ -85,9 +95,45 @@ export default function Project() {
             height: '100vh'
           }}
         >
-          <Flex sx={{ flexDirection: 'column' }}></Flex>
+          <Flex sx={{ flexDirection: 'column' }}>
+            <TinaMarkdown content={data.post.body} />
+          </Flex>
         </Container>
       </Flex>
     </Layout>
   );
 }
+
+export const getStaticPaths = async () => {
+  const postsListData = await client.queries.postConnection();
+
+  return {
+    paths: postsListData.data.postConnection.edges.map((post) => ({
+      params: { slug: post.node._sys.filename }
+    })),
+    fallback: false
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  let data = {};
+  let query = {};
+  let variables = { relativePath: `${params.slug}.md` };
+  try {
+    const res = await client.queries.post(variables);
+    query = res.query;
+    data = res.data;
+    variables = res.variables;
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: {
+      variables: variables,
+      data: data,
+      query: query
+      //myOtherProp: 'some-other-data',
+    }
+  };
+};
