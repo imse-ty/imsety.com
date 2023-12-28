@@ -3,13 +3,7 @@
 import { Button, Container, Flex, colors } from 'krado-react';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
-import {
-  MdCalendarMonth,
-  MdEmail,
-  MdOutlineCalendarToday,
-  MdOutlineMailOutline
-} from 'react-icons/md';
-import { motion } from 'framer-motion';
+import { MdOutlineCalendarToday } from 'react-icons/md';
 
 export default function CallToAction({ title, text }) {
   return (
@@ -38,7 +32,7 @@ export default function CallToAction({ title, text }) {
           }}
         >
           <Heading
-            variant="display.display"
+            variant='display.display'
             sx={{
               marginBottom: [2, 3],
               color: 'primary.contrast'
@@ -55,8 +49,8 @@ export default function CallToAction({ title, text }) {
             {text}
           </Text>
           <Button
-            color="secondary.bold"
-            backgroundColor="secondary.contrast"
+            color='secondary.bold'
+            backgroundColor='secondary.contrast'
             leftIcon={<MdOutlineCalendarToday />}
             sx={{ borderRadius: 3 }}
           >
