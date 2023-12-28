@@ -13,6 +13,7 @@ import client from '@/tina/__generated__/client';
 import { useTina } from 'tinacms/dist/react';
 import ProjectsSection from '@/components/work/projects-section';
 import ServicesSection from '@/components/work/services-section';
+import AboutSection from '@/components/work/about-section';
 
 export default function Work(props) {
   const { data } = useTina({
@@ -110,6 +111,7 @@ export default function Work(props) {
           style={{ scale: workScrollSpring }}
         >
           <ProjectsSection projects={projectsList} />
+          <AboutSection />
           <ServicesSection />
         </Flex>
 
