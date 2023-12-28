@@ -1,0 +1,31 @@
+{
+  "name": "imsety.com",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@theme-ui/color": "^0.16.1",
+    "@theme-ui/mdx": "^0.16.1",
+    "eslint": "8.42.0",
+    "eslint-config-next": "^14.0.4",
+    "framer-motion": "^10.12.21",
+    "krado-react": "imse-ty/krado-react",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "theme-ui": "^0.16.0",
+    "tinacms": "^1.5.28"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^20.10.5",
+    "@types/react": "18.2.45"
+  }
+}

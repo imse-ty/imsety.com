@@ -34,7 +34,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-# sanity
-studio/dist
-public/studio
-studio/node_modules
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+node_modules
+.env

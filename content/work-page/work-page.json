@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "project": "content/projects/beloved-benefit.mdx"
+    },
+    {
+      "project": "content/projects/chick-fil-a.mdx"
+    },
+    {
+      "project": "content/projects/beeple-studios.mdx"
+    },
+    {
+      "project": "content/projects/kw.mdx"
+    },
+    {
+      "project": "content/projects/ozone.mdx"
+    },
+    {
+      "project": "content/projects/space-and-time.mdx"
+    }
+  ]
+}

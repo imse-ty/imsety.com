@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-10-08
+
+Complete rewrite of site with simple landing page.
+
 ## [1.7.0] - 2023-05-21
 
 ### Added
@@ -210,7 +214,8 @@ First stable release 🥳🥳🎉
 
 Initial development.
 
-[unreleased]: https://github.com/imse-ty/imsety.com/compare/v1.7.0...HEAD
+[unreleased]: https://github.com/imse-ty/imsety.com/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/imse-ty/imsety.com/compare/v1.7.0...v2.0.0
 [1.7.0]: https://github.com/imse-ty/imsety.com/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/imse-ty/imsety.com/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/imse-ty/imsety.com/compare/v1.4.0...v1.5.0
