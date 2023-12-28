@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-/** @ts-nocheck */
+// @ts-nocheck
 
 import CallToAction from '@/components/call-to-action';
 import Heading from '@/components/fixed-krado-components/Heading';

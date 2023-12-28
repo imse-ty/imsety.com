@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-/** @ts-nocheck */
+// @ts-nocheck
 
 import { motion } from 'framer-motion';
 import {

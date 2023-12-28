@@ -1,5 +1,5 @@
 /** @jsxImportSource theme-ui */
-/** @ts-nocheck */
+// @ts-nocheck
 
 'use client';
 import { useState } from 'react';
