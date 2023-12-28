@@ -25,16 +25,14 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env.local
-.env.development
-.env.development.local
-.env.test.local
-.env.production.local
+.env*.local
 
 # vercel
 .vercel
 
-# sanity
-studio/dist
-public/studio
-studio/node_modules
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+node_modules
+.env

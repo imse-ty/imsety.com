@@ -1,10 +1,12 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ['cdn.sanity.io']
+    domains: ['assets.tina.io']
   },
   webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/,
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack']
     });
 
@@ -14,22 +16,23 @@ module.exports = {
     return [
       {
         source: '/rebrand',
-        destination: '/projects/2022-rebrand',
+        destination: 'https://v1.imsety.com/projects/2022-rebrand',
         permanent: true
       },
       {
         source: '/batchentry',
-        destination: '/projects/batch-logo-challenge',
+        destination: 'https://v1.imsety.com/projects/batch-logo-challenge',
         permanent: true
       },
       {
         source: '/triumph',
-        destination: '/projects/triumph',
+        destination: 'https://v1.imsety.com/projects/triumph',
         permanent: true
       },
       {
         source: '/settheory',
-        destination: 'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
+        destination:
+          'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
         permanent: false
       },
       {
@@ -39,7 +42,8 @@ module.exports = {
       },
       {
         source: '/rebooting',
-        destination: 'https://www.instagram.com/reel/CljCpkvt53M/?utm_source=ig_web_copy_link',
+        destination:
+          'https://www.instagram.com/reel/CljCpkvt53M/?utm_source=ig_web_copy_link',
         permanent: false
       },
       {
@@ -64,12 +68,14 @@ module.exports = {
       },
       {
         source: '/thebreakdown',
-        destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        destination:
+          'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
         permanent: false
       },
       {
         source: '/beeple',
-        destination: 'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        destination:
+          'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
         permanent: false
       },
       {
@@ -91,7 +97,24 @@ module.exports = {
         source: '/linkedin',
         destination: 'https://www.linkedin.com/in/imsety',
         permanent: false
+      },
+      {
+        source: '/github',
+        destination: 'https://github.com/imse-ty',
+        permanent: false
+      },
+      {
+        source: '/rebrand',
+        destination: 'v1.imsety.com/projects/2022-rebrand',
+        permanent: true
+      },
+      {
+        source: '/blog/:path*',
+        destination: 'https://v1.imsety.com/blog/:path*',
+        permanent: false
       }
     ];
   }
 };
+
+module.exports = nextConfig;

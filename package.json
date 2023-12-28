@@ -1,31 +1,31 @@
 {
   "name": "imsety.com",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.1",
-    "date-fns": "^2.22.1",
-    "framer-motion": "^4.1.17",
-    "get-video-id": "^3.5.3",
-    "next": "^12.0.9",
-    "next-mdx-remote": "^3.0.2",
-    "next-sanity": "^0.2.0",
-    "next-seo": "^5.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.2.0",
-    "simple-react-lightbox": "^3.6.9-0",
-    "slugify": "^1.6.5"
+    "@theme-ui/color": "^0.16.1",
+    "@theme-ui/mdx": "^0.16.1",
+    "eslint": "8.42.0",
+    "eslint-config-next": "^14.0.4",
+    "framer-motion": "^10.12.21",
+    "krado-react": "imse-ty/krado-react",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "theme-ui": "^0.16.0",
+    "tinacms": "^1.5.28"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.10",
-    "tailwindcss": "^2.1.1"
+    "@svgr/webpack": "^8.1.0",
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^20.10.5",
+    "@types/react": "18.2.45"
   }
 }
