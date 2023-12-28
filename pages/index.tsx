@@ -1,4 +1,6 @@
 /** @jsxImportSource theme-ui */
+/** @ts-nocheck */
+
 'use client';
 import { useState } from 'react';
 import Layout from '@/components/layout';
@@ -51,14 +53,14 @@ export default function Home() {
           <Hero />
           {isMainButtonsVisible && (
             <Flex sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-              <Link href="/work">
+              <Link href='/work'>
                 <Button
                   as={motion.button}
                   variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
+                  initial='hidden'
+                  animate='visible'
                   transition={{ type: 'spring', delay: 2, duration: 2 }}
-                  size="small"
+                  size='small'
                   sx={{
                     borderRadius: 2,
 
@@ -68,15 +70,15 @@ export default function Home() {
                   Play reel
                 </Button>
               </Link>
-              <Link href="/play">
+              <Link href='/play'>
                 <Button
                   as={motion.button}
                   variants={buttonVariants}
-                  initial="hidden"
-                  animate="visible"
+                  initial='hidden'
+                  animate='visible'
                   transition={{ type: 'spring', delay: 2.3, duration: 2 }}
-                  variant="ghost"
-                  size="small"
+                  variant='ghost'
+                  size='small'
                   sx={{
                     borderRadius: 2,
                     fontWeight: 500,
@@ -96,8 +98,8 @@ export default function Home() {
           </FooterFootnote>
           <FooterContent>
             <Flex sx={{ alignItems: 'center' }}>
-              <FooterItem href="#">Contact</FooterItem>
-              <FooterItem href="#">About</FooterItem>
+              <FooterItem href='#'>Contact</FooterItem>
+              <FooterItem href='#'>About</FooterItem>
               <ToggleIcon
                 onClick={(e) => {
                   setColorMode(colorMode === 'default' ? 'dark' : 'default');

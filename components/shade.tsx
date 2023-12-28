@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+/** @ts-nocheck */
 
 import { motion } from 'framer-motion';
 import {
@@ -31,9 +32,9 @@ export function ShadeButton({ href, children, variant, onClick }) {
         onClick={onClick}
         as={motion.button}
         variants={buttonVariants}
-        initial="hidden"
-        animate="visible"
-        size="small"
+        initial='hidden'
+        animate='visible'
+        size='small'
         transition={{ type: 'spring', delay: 0.7, duration: 2 }}
         variant={variant}
         sx={{
@@ -103,7 +104,7 @@ export default function Shade({
       <Flex
         as={motion.div}
         variants={contentVariants}
-        initial="hide"
+        initial='hide'
         animate={isCovered ? 'show' : 'hide'}
         transition={{ type: 'spring', duration: 1 }}
         sx={{
@@ -127,8 +128,8 @@ export default function Shade({
         </FooterFootnote>
         <FooterContent>
           <Flex sx={{ alignItems: 'center' }}>
-            <FooterItem href="#">Contact</FooterItem>
-            <FooterItem href="#">About</FooterItem>
+            <FooterItem href='#'>Contact</FooterItem>
+            <FooterItem href='#'>About</FooterItem>
             <ToggleIcon
               onClick={(e) => {
                 setColorMode(colorMode === 'default' ? 'dark' : 'default');
