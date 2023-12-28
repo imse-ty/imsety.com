@@ -1,5 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['assets.tina.io']
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack']
+    });
+
+    return config;
+  },
   async redirects() {
     return [
       {
@@ -95,11 +107,6 @@ const nextConfig = {
         source: '/rebrand',
         destination: 'v1.imsety.com/projects/2022-rebrand',
         permanent: true
-      },
-      {
-        source: '/projects/:path*',
-        destination: 'https://v1.imsety.com/projects/:path*',
-        permanent: false
       },
       {
         source: '/blog/:path*',
