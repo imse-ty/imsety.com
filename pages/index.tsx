@@ -48,7 +48,7 @@ export default function Work(props) {
   const borderScroll = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <Layout disableScroll={!isActive}>
+    <Layout disableScroll={false}>
       <AnimatePresence>
         {isActive && (
           <motion.div
@@ -57,7 +57,7 @@ export default function Work(props) {
             exit={{ color: 'rgba(255,255,255,0)' }}
           >
             <RightTriangle
-              fill='currentColor'
+              fill="currentColor"
               onClick={() => setIsActive(false)}
               sx={{
                 position: 'fixed',
@@ -92,13 +92,13 @@ export default function Work(props) {
               <FullScreenVideo
                 onClick={() => setIsVideoHidden(true)}
                 style={{ scale: videoScroll, borderRadius: borderScroll }}
-                layoutId='video'
+                layoutId="video"
               />
             )}
             <ReelVideo
               onClick={() => setIsVideoHidden(!isVideoHidden)}
               style={{ scale: videoScroll, borderRadius: borderScroll }}
-              layoutId='video'
+              layoutId="video"
             />
           </motion.header>
 
@@ -123,10 +123,10 @@ export default function Work(props) {
             <ServicesSection />
           </Flex>
 
-          <motion.footer style={{ opacity: scrollCtaProgress }}>
+          <motion.footer style={{ opacity: 0 }}>
             <CallToAction
               title="Let's connect"
-              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna.'
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
             />
           </motion.footer>
         </Flex>

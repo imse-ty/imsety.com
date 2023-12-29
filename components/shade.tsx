@@ -4,7 +4,6 @@
 import useMousePosition from '@/lib/use-mouse-position';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Box, Flex } from 'krado-react';
-import Hero from './hero';
 import ShadeHero from './shade-hero';
 
 export default function Shade({ children, isActive, setIsActive }) {
@@ -25,7 +24,7 @@ export default function Shade({ children, isActive, setIsActive }) {
     lock: {
       WebkitMaskPosition: '0px 0px',
       WebkitMaskSize: ['250px', '500px', '5000px', '10000px'],
-
+      maskImage: 'none',
       transition: {
         type: 'tween',
         ease: 'backOut',
@@ -34,6 +33,9 @@ export default function Shade({ children, isActive, setIsActive }) {
           type: 'tween',
           ease: 'easeOut',
           duration: 1.5
+        },
+        maskImage: {
+          delay: 1
         }
       }
     }
@@ -60,10 +62,11 @@ export default function Shade({ children, isActive, setIsActive }) {
         animate={isActive ? 'lock' : 'follow'}
         sx={{
           position: 'absolute',
+          overflowY: 'scroll',
           top: 0,
           left: 0,
           width: '100%',
-          height: '400%',
+          height: '600%',
           maskImage: 'url(/right-triangle.svg)',
           maskRepeat: 'no-repeat',
           WebkitMaskSize: '250px'

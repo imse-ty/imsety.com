@@ -32,7 +32,7 @@ export default function CallToAction({ title, text }) {
           }}
         >
           <Heading
-            variant='display.display'
+            variant="display.display"
             sx={{
               marginBottom: [2, 3],
               color: 'primary.contrast'
@@ -49,8 +49,8 @@ export default function CallToAction({ title, text }) {
             {text}
           </Text>
           <Button
-            color='secondary.bold'
-            backgroundColor='secondary.contrast'
+            color="secondary.bold"
+            backgroundColor="secondary.contrast"
             leftIcon={<MdOutlineCalendarToday />}
             sx={{ borderRadius: 3 }}
           >
