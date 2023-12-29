@@ -8,12 +8,19 @@ import ReelVideo from '@/components/work/reel-video';
 import { Box, Flex } from 'krado-react';
 import { useState } from 'react';
 import Shade, { ShadeButton } from '@/components/shade';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
 import client from '@/tina/__generated__/client';
 import { useTina } from 'tinacms/dist/react';
 import ProjectsSection from '@/components/work/projects-section';
 import ServicesSection from '@/components/work/services-section';
 import AboutSection from '@/components/work/about-section';
+import RightTriangle from '../public/right-triangle.svg';
 
 export default function Work(props) {
   const { data } = useTina({
@@ -25,7 +32,7 @@ export default function Work(props) {
   const projectsList = data.workPage.projects;
 
   const [isVideoHidden, setIsVideoHidden] = useState(true);
-  const [isCovered, setIsCovered] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const { scrollYProgress } = useScroll({
     offset: ['0 1', '0.45 1']
@@ -41,87 +48,89 @@ export default function Work(props) {
   const borderScroll = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <Layout disableScroll={!isVideoHidden}>
-      <Shade isCovered={isCovered} onTap={() => setIsCovered(!isCovered)}>
-        <ShadeButton
-          href='#'
-          onClick={() => {
-            setIsCovered(false);
-            setIsVideoHidden(false);
-          }}
-        >
-          Play reel
-        </ShadeButton>
-        <ShadeButton
-          href='/work/#work'
-          variant='ghost'
-          onClick={() => {
-            setIsCovered(false);
-            setIsVideoHidden(true);
-          }}
-        >
-          View work
-        </ShadeButton>
-      </Shade>
-      <Flex
-        sx={{
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: [5, 6],
-          position: 'relative'
-        }}
-      >
-        <motion.header
+    <Layout disableScroll={!isActive}>
+      <AnimatePresence>
+        {isActive && (
+          <motion.div
+            initial={{ color: 'rgba(255,255,255,0)' }}
+            animate={{ color: 'rgba(255,255,255,1)' }}
+            exit={{ color: 'rgba(255,255,255,0)' }}
+          >
+            <RightTriangle
+              fill='currentColor'
+              onClick={() => setIsActive(false)}
+              sx={{
+                position: 'fixed',
+                top: '100px',
+                left: '100px',
+                zIndex: 3
+              }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <Shade isActive={isActive} setIsActive={() => setIsActive(true)}>
+        <Flex
           sx={{
-            display: 'flex',
             flexDirection: 'column',
-            position: 'fixed',
-            width: '100%',
-            height: '100vh'
+            alignItems: 'center',
+            gap: [5, 6],
+            position: 'relative'
           }}
         >
-          {!isVideoHidden && (
-            <FullScreenVideo
-              onClick={() => setIsVideoHidden(true)}
+          <motion.header
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              position: 'fixed',
+              width: '100%',
+              height: '100vh'
+            }}
+          >
+            {!isVideoHidden && (
+              <FullScreenVideo
+                onClick={() => setIsVideoHidden(true)}
+                style={{ scale: videoScroll, borderRadius: borderScroll }}
+                layoutId='video'
+              />
+            )}
+            <ReelVideo
+              onClick={() => setIsVideoHidden(!isVideoHidden)}
               style={{ scale: videoScroll, borderRadius: borderScroll }}
               layoutId='video'
             />
-          )}
-          <ReelVideo
-            onClick={() => setIsVideoHidden(!isVideoHidden)}
-            style={{ scale: videoScroll, borderRadius: borderScroll }}
-            layoutId='video'
-          />
-        </motion.header>
+          </motion.header>
 
-        <Flex
-          as={motion.div}
-          sx={{
-            position: 'relative',
-            marginTop: '100vh',
-            marginBottom: '40vh',
-            paddingBottom: 6,
-            width: '100%',
-            gap: [5, 6],
-            backgroundColor: 'background',
-            flexDirection: 'column',
-            borderRadius: ['40px', '80px'],
-            zIndex: 2
-          }}
-          style={{ scale: workScrollSpring }}
-        >
-          <ProjectsSection projects={projectsList} />
-          <AboutSection />
-          <ServicesSection />
+          <Flex
+            as={motion.div}
+            sx={{
+              position: 'relative',
+              marginTop: '100vh',
+              marginBottom: '40vh',
+              paddingBottom: 6,
+              width: '100%',
+              gap: [5, 6],
+              backgroundColor: 'background',
+              flexDirection: 'column',
+              borderRadius: ['40px', '80px'],
+              zIndex: 2
+            }}
+            style={{ scale: workScrollSpring }}
+          >
+            <ProjectsSection projects={projectsList} />
+            <AboutSection />
+            <ServicesSection />
+          </Flex>
+
+          <motion.footer style={{ opacity: scrollCtaProgress }}>
+            <CallToAction
+              title="Let's connect"
+              text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna.'
+            />
+          </motion.footer>
         </Flex>
-
-        <motion.footer style={{ opacity: scrollCtaProgress }}>
-          <CallToAction
-            title="Let's connect"
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna.'
-          />
-        </motion.footer>
-      </Flex>
+      </Shade>
     </Layout>
   );
 }
