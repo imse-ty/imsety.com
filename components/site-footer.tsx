@@ -24,14 +24,18 @@ export function FooterLink({ icon, children, href }) {
 export default function SiteFooter() {
   return (
     <Footer>
-      <FooterFootnote sx={{ color: 'text.secondary' }}>
+      <FooterFootnote
+        sx={{ color: 'text.secondary', textAlign: ['center', null, 'left'] }}
+      >
         Copyright © 2024 Imsety LLC. All rights reserved.
       </FooterFootnote>
       <FooterContent
         sx={{
           display: 'flex',
           gap: [3, null, null, 5],
-          marginTop: [3, null, 0]
+          marginTop: [3, null, 0],
+          flexWrap: 'wrap',
+          justifyContent: 'center'
         }}
       >
         <FooterLink
