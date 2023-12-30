@@ -1,26 +1,11 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import CallToAction from '@/components/call-to-action';
-import Layout from '@/components/layout';
-import FullScreenVideo from '@/components/work/full-screen-video';
-import ReelVideo from '@/components/work/reel-video';
-import { Box, Flex } from 'krado-react';
-import { useState } from 'react';
-import Shade, { ShadeButton } from '@/components/shade';
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useSpring,
-  useTransform
-} from 'framer-motion';
-import client from '@/tina/__generated__/client';
+import { Container, Flex } from 'krado-react';
 import { useTina } from 'tinacms/dist/react';
-import ProjectsSection from '@/components/work/projects-section';
-import ServicesSection from '@/components/work/services-section';
-import AboutSection from '@/components/work/about-section';
-import RightTriangle from '../public/right-triangle.svg';
+import client from '@/tina/__generated__/client';
+import Layout from '@/components/layout';
+import Hero from '@/components/hero';
 
 export default function Work(props) {
   const { data } = useTina({
@@ -31,7 +16,11 @@ export default function Work(props) {
 
   const projectsList = data.workPage.projects;
 
-  return <Layout disableScroll={false}></Layout>;
+  return (
+    <Layout disableScroll={false}>
+      <Hero />
+    </Layout>
+  );
 }
 
 export const getStaticProps = async () => {
