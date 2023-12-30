@@ -1,20 +1,37 @@
 /** @jsxImportSource theme-ui */
-// @ts-nocheck
-
 import useMousePosition from '@/lib/use-mouse-position';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Box, Flex } from 'krado-react';
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
+import { useRef } from 'react';
 import Hero from './hero';
 
-export default function Shade({ children, isActive, setIsActive }) {
+export default function Shade() {
   const { x, y } = useMousePosition();
-  const size = isActive ? 1000 : 250;
+
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end end']
+  });
+
+  const size = useTransform(scrollYProgress, [0, 1], [250, 8000]);
+  const sizeSpring = useSpring(size, { damping: 30 });
+  const maskSize = useMotionTemplate`auto, ${sizeSpring}px, auto`;
+  const maskPosition = useTransform(scrollYProgress, [0, 0.05], [3, 2]);
 
   const variants = {
     follow: {
-      WebkitMaskPosition: `${x - size / 3}px ${y - size / 3}px`,
-      WebkitMaskSize: '250px',
-
+      maskPosition: `
+      center center,
+      ${x - sizeSpring.get() / maskPosition.get()}px
+      ${y - sizeSpring.get() / maskPosition.get()}px
+    `,
       transition: {
         type: 'tween',
         ease: 'backOut',
@@ -22,59 +39,46 @@ export default function Shade({ children, isActive, setIsActive }) {
       }
     },
     lock: {
-      WebkitMaskPosition: '0px 0px',
-      WebkitMaskSize: ['250px', '500px', '5000px', '10000px'],
-      maskImage: 'none',
+      maskPosition: 'center center, 0px 0px',
       transition: {
         type: 'tween',
-        ease: 'backOut',
-        duration: 0.5,
-        WebkitMaskSize: {
-          type: 'tween',
-          ease: 'easeOut',
-          duration: 1.5
-        },
-        maskImage: {
-          delay: 1
-        }
+        ease: 'easeOut',
+        duration: 0.5
       }
     }
   };
 
   return (
-    <Flex
+    <div
+      ref={ref}
       sx={{
-        width: '100vw',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'background'
+        position: 'relative',
+        height: '200vh',
+        zIndex: 1,
+        overflow: 'clip',
+        pointerEvents: 'none'
       }}
     >
-      <div
-        onClick={setIsActive}
-        sx={{ position: 'fixed', width: '100%', height: '100%', zIndex: 1 }}
-      >
-        <AnimatePresence>{!isActive && <Hero />}</AnimatePresence>
-      </div>
-      <Box
-        as={motion.div}
+      <motion.div
         variants={variants}
-        animate={isActive ? 'lock' : 'follow'}
+        animate={scrollYProgress.get() > 0.3 ? 'lock' : 'follow'}
+        style={{ maskSize: maskSize }}
+        transition={{
+          type: 'tween',
+          ease: 'backOut',
+          duration: 0.5
+        }}
         sx={{
-          position: 'absolute',
-          overflowY: 'scroll',
-          top: 0,
-          left: 0,
           width: '100%',
           height: '100%',
-          maskImage: 'url(/right-triangle.svg)',
+          position: 'fixed',
+          backgroundColor: 'red',
+          maskImage:
+            'linear-gradient(black, black), url("/right-triangle.svg")',
           maskRepeat: 'no-repeat',
-          WebkitMaskSize: '250px'
+          maskComposite: 'exclude'
         }}
-      >
-        {children}
-      </Box>
-    </Flex>
+      />
+    </div>
   );
 }

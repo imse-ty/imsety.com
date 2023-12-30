@@ -17,7 +17,8 @@ export default function Hero() {
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        backgroundColor: 'red'
       }}
     >
       <Container
