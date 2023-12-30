@@ -11,10 +11,12 @@ export default function IndexSection({
   imageAlt,
   title,
   subtitle,
-  href
+  href,
+  id
 }) {
   return (
     <Flex
+      id={id}
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',

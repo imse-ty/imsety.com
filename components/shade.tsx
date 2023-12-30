@@ -10,7 +10,7 @@ import {
 import { useRef } from 'react';
 import Hero from './hero';
 
-export default function Shade() {
+export default function Shade({ children }) {
   const { x, y } = useMousePosition();
 
   const ref = useRef(null);
@@ -21,14 +21,15 @@ export default function Shade() {
   });
 
   const size = useTransform(scrollYProgress, [0, 1], [250, 8000]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const sizeSpring = useSpring(size, { damping: 30 });
-  const maskSize = useMotionTemplate`auto, ${sizeSpring}px, auto`;
+  const maskSize = useMotionTemplate`${sizeSpring}px, auto`;
   const maskPosition = useTransform(scrollYProgress, [0, 0.05], [3, 2]);
 
   const variants = {
     follow: {
       maskPosition: `
-      center center,
       ${x - sizeSpring.get() / maskPosition.get()}px
       ${y - sizeSpring.get() / maskPosition.get()}px
     `,
@@ -39,14 +40,33 @@ export default function Shade() {
       }
     },
     lock: {
-      maskPosition: 'center center, 0px 0px',
+      maskPosition: '0px 0px',
       transition: {
         type: 'tween',
         ease: 'easeOut',
         duration: 0.5
       }
+    },
+    hidden: {
+      maskImage: 'none'
     }
   };
+
+  function getMaskState() {
+    if (scrollYProgress.get() > 0.3) {
+      return 'lock';
+    } else {
+      return 'follow';
+    }
+  }
+
+  function hideHero() {
+    if (scrollYProgress.get() > 0.5) {
+      return 'none';
+    } else {
+      return 'block';
+    }
+  }
 
   return (
     <div
@@ -55,13 +75,24 @@ export default function Shade() {
         position: 'relative',
         height: '200vh',
         zIndex: 1,
-        overflow: 'clip',
-        pointerEvents: 'none'
+        overflow: 'clip'
       }}
     >
       <motion.div
+        style={{ opacity, scale: heroScale }}
+        sx={{
+          display: hideHero(),
+          position: 'fixed',
+          zIndex: 1,
+          width: '100%',
+          height: '100%'
+        }}
+      >
+        <Hero />
+      </motion.div>
+      <motion.div
         variants={variants}
-        animate={scrollYProgress.get() > 0.3 ? 'lock' : 'follow'}
+        animate={getMaskState()}
         style={{ maskSize: maskSize }}
         transition={{
           type: 'tween',
@@ -72,13 +103,12 @@ export default function Shade() {
           width: '100%',
           height: '100%',
           position: 'fixed',
-          backgroundColor: 'red',
-          maskImage:
-            'linear-gradient(black, black), url("/right-triangle.svg")',
-          maskRepeat: 'no-repeat',
-          maskComposite: 'exclude'
+          maskImage: 'url("/right-triangle.svg")',
+          maskRepeat: 'no-repeat'
         }}
-      />
+      >
+        {children}
+      </motion.div>
     </div>
   );
 }

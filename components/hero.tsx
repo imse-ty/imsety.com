@@ -17,8 +17,7 @@ export default function Hero() {
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '100vh',
-        backgroundColor: 'red'
+        minHeight: '100vh'
       }}
     >
       <Container
@@ -53,9 +52,14 @@ export default function Hero() {
             arcu, fringilla a egestas condimentum, vulputate at purus.
           </Text>
         </Flex>
-        <Button leftIcon={<MdNorthEast />} sx={{ display: ['none', 'block'] }}>
-          Explore
-        </Button>
+        <a href='#reel' sx={{ textDecoration: 'none' }}>
+          <Button
+            leftIcon={<MdNorthEast />}
+            sx={{ display: ['none', 'block'] }}
+          >
+            Explore
+          </Button>
+        </a>
       </Container>
       <SiteFooter />
     </Flex>
