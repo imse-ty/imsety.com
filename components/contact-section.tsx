@@ -34,6 +34,7 @@ export default function ContactSection() {
             <Heading
               variant='display.h2'
               sx={{
+                fontSize: [7, 8, 9],
                 marginBottom: [3, 4]
               }}
             >
