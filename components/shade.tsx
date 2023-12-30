@@ -4,7 +4,7 @@
 import useMousePosition from '@/lib/use-mouse-position';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Box, Flex } from 'krado-react';
-import ShadeHero from './shade-hero';
+import Hero from './hero';
 
 export default function Shade({ children, isActive, setIsActive }) {
   const { x, y } = useMousePosition();
@@ -47,14 +47,15 @@ export default function Shade({ children, isActive, setIsActive }) {
         width: '100vw',
         height: '100vh',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'background'
       }}
     >
       <div
         onClick={setIsActive}
-        sx={{ position: 'fixed', zIndex: 1, width: '100%', height: '100%' }}
+        sx={{ position: 'fixed', width: '100%', height: '100%', zIndex: 1 }}
       >
-        <AnimatePresence>{!isActive && <ShadeHero />}</AnimatePresence>
+        <AnimatePresence>{!isActive && <Hero />}</AnimatePresence>
       </div>
       <Box
         as={motion.div}
@@ -66,7 +67,7 @@ export default function Shade({ children, isActive, setIsActive }) {
           top: 0,
           left: 0,
           width: '100%',
-          height: '600%',
+          height: '100%',
           maskImage: 'url(/right-triangle.svg)',
           maskRepeat: 'no-repeat',
           WebkitMaskSize: '250px'
