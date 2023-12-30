@@ -40,6 +40,7 @@ export default function Work(props) {
         imageAlt='My image'
         imageSrc='work/space-and-time.png'
       />
+      <ContactSection />
     </Layout>
   );
 }
