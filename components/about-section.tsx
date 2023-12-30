@@ -19,7 +19,8 @@ export default function AboutSection({
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '100vh',
-        position: 'relative'
+        position: 'relative',
+        paddingTop: 5
       }}
     >
       <Container
