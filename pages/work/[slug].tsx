@@ -10,6 +10,8 @@ import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import { components } from '@/lib/components';
 import ProjectHeader from '@/components/projects/project-header';
+import ProjectInfo from '@/components/projects/project-info';
+import Tooltip from '@/components/tooltip';
 
 export default function Project(props) {
   const { data } = useTina({
@@ -27,10 +29,19 @@ export default function Project(props) {
         imageSrc={data.project.coverImage}
         href='/work'
       />
+      <Container sx={{ marginTop: 5, maxWidth: '900px' }}>
+        <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
+          <Tooltip label='Timeline' text='2 months' />
+          <Tooltip label='Year' text='2023' />
+          <Tooltip label='Stress meter' text='Max' />
+        </Flex>
+      </Container>
+      <ProjectInfo />
       <Container
         sx={{
-          maxWidth: '1440px',
-          height: '100vh'
+          marginTop: 5,
+          maxWidth: '900px',
+          minHeight: '100vh'
         }}
       >
         <Flex sx={{ flexDirection: 'column' }}>
