@@ -7,6 +7,8 @@ import client from '@/tina/__generated__/client';
 import Layout from '@/components/layout';
 import Hero from '@/components/hero';
 import IndexSection from '@/components/index-section';
+import AboutSection from '@/components/about-section';
+import ContactSection from '@/components/contact-section';
 
 export default function Work(props) {
   const { data } = useTina({
@@ -32,7 +34,7 @@ export default function Work(props) {
         imageAlt='My image'
         imageSrc='work/chick-fil-a.png'
       />
-      <IndexSection
+      <AboutSection
         title='About'
         subtitle='arcu, fringilla.'
         imageAlt='My image'
