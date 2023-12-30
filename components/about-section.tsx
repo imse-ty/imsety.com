@@ -3,7 +3,7 @@
 import { MdNorthEast } from 'react-icons/md';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
-import { Container, Box, Flex, Button, Image } from 'krado-react';
+import { Container, Flex, Button, Image } from 'krado-react';
 
 export default function AboutSection({ imageSrc, imageAlt, title, subtitle }) {
   return (
