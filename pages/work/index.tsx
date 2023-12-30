@@ -1,13 +1,10 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import { Container, Flex } from 'krado-react';
+import { Container } from 'krado-react';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import Layout from '@/components/layout';
-import Hero from '@/components/hero';
-import IndexSection from '@/components/index-section';
-import AboutSection from '@/components/about-section';
 import ContactSection from '@/components/contact-section';
 import ProjectsSection from '@/components/work/projects-section';
 import Text from '@/components/fixed-krado-components/Text';

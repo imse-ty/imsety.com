@@ -102,7 +102,7 @@ export default defineConfig({
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/projects/${document._sys.filename}`,
+          router: ({ document }) => `/work/${document._sys.filename}`,
           filename: {
             // if disabled, the editor can not edit the filename
             readonly: false,

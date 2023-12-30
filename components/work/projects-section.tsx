@@ -15,7 +15,7 @@ export default function ProjectsSection({ projects }) {
       {projects.map(({ project }) => (
         <ProjectCard
           title={project.title}
-          href={`/projects/${project._sys.filename}`}
+          href={`/work/${project._sys.filename}`}
           src={project.coverImage}
           key={project._sys.filename}
         />
