@@ -65,15 +65,15 @@ export default function ProjectCard({ title, src, href, layoutId }) {
               display: ['none', null, 'flex']
             }}
           >
-            <Text variant='body.h4' sx={{ color: 'inherit' }}>
-              View work
-            </Text>
             <MdNorthEast
               sx={{
                 color: 'inherit',
                 fontSize: 6
               }}
             />
+            <Text variant='body.h4' sx={{ color: 'inherit' }}>
+              View project
+            </Text>
           </Flex>
         </Flex>
       </Flex>
