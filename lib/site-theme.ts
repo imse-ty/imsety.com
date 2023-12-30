@@ -89,12 +89,14 @@ export const setyTheme = {
         variant: 'text.base',
         fontFamily: 'display',
         fontSize: [7, 10],
+        fontWeight: 600,
         lineHeight: '1.1',
         letterSpacing: 'display'
       },
       h2: {
         variant: 'text.display.h1',
         fontSize: [8, 9],
+        fontWeight: 600,
         lineHeight: '65px'
       },
       h3: {
