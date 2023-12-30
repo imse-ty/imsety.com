@@ -4,8 +4,15 @@ import { MdNorthEast } from 'react-icons/md';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
 import { Container, Flex, Button, Image } from 'krado-react';
+import Link from 'next/link';
 
-export default function AboutSection({ imageSrc, imageAlt, title, subtitle }) {
+export default function AboutSection({
+  imageSrc,
+  imageAlt,
+  title,
+  subtitle,
+  href
+}) {
   return (
     <Flex
       sx={{
@@ -55,7 +62,9 @@ export default function AboutSection({ imageSrc, imageAlt, title, subtitle }) {
           </Heading>
           <Text>{subtitle}</Text>
         </Flex>
-        <Button leftIcon={<MdNorthEast />}>Explore</Button>
+        <Link href={href}>
+          <Button leftIcon={<MdNorthEast />}>Explore</Button>
+        </Link>
       </Container>
     </Flex>
   );
