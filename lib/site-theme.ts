@@ -126,7 +126,7 @@ export const setyTheme = {
       summary: {
         variant: 'text.base',
         fontSize: [5, 6],
-        lineHeight: '1',
+        lineHeight: '1.4',
         letterSpacing: '-0.02em'
       },
       h1: {
