@@ -12,16 +12,14 @@ export default function Hero() {
       }}
     >
       <Heading
-        variant="display.display"
+        variant='display.display'
         sx={{
           marginBottom: [2, 3],
           fontWeight: '600',
           fontSize: '140px'
         }}
       >
-        Krate design and
-        <br />
-        motion studio
+        Still coming back? 👀
       </Heading>
     </Flex>
   );
