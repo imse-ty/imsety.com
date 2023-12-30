@@ -11,10 +11,10 @@ function ScrollButton() {
       sx={{
         justifyContent: 'center',
         alignItems: 'center',
-        paddingY: 4,
+        paddingY: 3,
         backgroundColor: 'primary.regular',
         zIndex: 1,
-        fontSize: 8
+        fontSize: 7
       }}
     >
       <MdExpandMore />
