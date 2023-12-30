@@ -14,11 +14,8 @@ export default function ProjectCard({ title, src, href, layoutId }) {
         sx={{
           position: 'relative',
           width: '100%',
-          borderRadius: '24px',
           overflow: 'hidden',
           flexDirection: 'column',
-          border: '2px solid',
-          borderColor: 'secondary.bold',
           transition: 'transform 325ms ease, box-shadow 325ms ease',
           '&:hover': {
             transform: 'scale(1.02)',
@@ -29,7 +26,7 @@ export default function ProjectCard({ title, src, href, layoutId }) {
         <Image
           as={motion.img}
           src={src}
-          alt="My alt"
+          alt='My alt'
           sx={{
             objectFit: 'cover',
             height: ['300px', '600px']
@@ -58,7 +55,7 @@ export default function ProjectCard({ title, src, href, layoutId }) {
             }
           }}
         >
-          <Heading variant="display.h4" sx={{ color: 'secondary.contrast' }}>
+          <Heading variant='display.h4' sx={{ color: 'secondary.contrast' }}>
             {title}
           </Heading>
           <Flex
@@ -68,7 +65,7 @@ export default function ProjectCard({ title, src, href, layoutId }) {
               display: ['none', null, 'flex']
             }}
           >
-            <Text variant="body.h4" sx={{ color: 'inherit' }}>
+            <Text variant='body.h4' sx={{ color: 'inherit' }}>
               View work
             </Text>
             <MdNorthEast
