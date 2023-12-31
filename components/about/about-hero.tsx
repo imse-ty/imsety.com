@@ -16,11 +16,14 @@ export default function AboutHero() {
       }}
     >
       <Container sx={{ textAlign: 'center' }}>
-        <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
+        <Heading
+          variant='display.h1'
+          sx={{ marginBottom: 2, color: 'secondary.contrast' }}
+        >
           About
         </Heading>
 
-        <Text variant='body.summary'>
+        <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
       </Container>

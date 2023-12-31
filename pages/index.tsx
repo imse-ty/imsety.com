@@ -30,15 +30,18 @@ export default function Home(props) {
           href='#work'
         />
       </Shade>
-      <WorkSection projects={projectsList} />
-      <AboutSection
-        title='About'
-        subtitle='arcu, fringilla.'
-        imageAlt='My image'
-        imageSrc='work/space-and-time.png'
-        href='/about'
-      />
-      <ContactSection />
+
+      <div sx={{ position: 'relative', zIndex: 1 }}>
+        <WorkSection projects={projectsList} />
+        <AboutSection
+          title='About'
+          subtitle='arcu, fringilla.'
+          imageAlt='My image'
+          imageSrc='work/space-and-time.png'
+          href='/about'
+        />
+        <ContactSection />
+      </div>
     </Layout>
   );
 }

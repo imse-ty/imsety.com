@@ -9,12 +9,12 @@ import Tooltip from './tooltip';
 
 export default function AboutSection() {
   return (
-    <Box sx={{ backgroundColor: 'black' }}>
+    <Box sx={{ backgroundColor: 'background' }}>
       <Box
         sx={{
           paddingTop: 6,
           paddingBottom: 6,
-          backgroundColor: '#36454f',
+          backgroundColor: 'surface.heavy',
           borderRadius: '48px 48px 0px 0px'
         }}
       >
@@ -25,7 +25,7 @@ export default function AboutSection() {
             <Tooltip label='Year' text='2023' />
             <Tooltip label='Stress meter' text='Max' />
           </Flex>
-          <Text variant='body.summary'>
+          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
             arcu, fringilla a egestas condimentum, vulputate at purus. Sed enim
             diam, rhoncus congue gravida ultrices, iaculis ac metus.

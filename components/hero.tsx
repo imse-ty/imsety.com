@@ -42,12 +42,13 @@ export default function Hero() {
           <Heading
             variant='display.display'
             sx={{
-              marginBottom: [2, 3]
+              marginBottom: [2, 3],
+              color: 'secondary.contrast'
             }}
           >
             Lorem ipsum!
           </Heading>
-          <Text variant='body.summary'>
+          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
             arcu, fringilla a egestas condimentum, vulputate at purus.
           </Text>

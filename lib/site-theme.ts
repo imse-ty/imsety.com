@@ -2,10 +2,17 @@ import { buildColorTheme, colors, getColors, theme } from 'krado-react';
 
 const setyThemeColors = buildColorTheme({
   primary: 'nut',
-  secondary: 'nso',
-  accent: 'nso',
+  secondary: 'nut',
+  accent: 'nut',
+  error: 'asset',
+  warning: 'oshun',
+  success: 'usir',
+  info: 'ptah',
+  surface: 'nut',
   action: 'nut',
-  text: 'nso'
+  text: 'nut',
+  background: 'nut',
+  divider: 'nut'
 });
 
 export const setyTheme = {
@@ -23,53 +30,7 @@ export const setyTheme = {
     display: '1.1'
   },
   colors: {
-    ...setyThemeColors,
-    secondary: {
-      bold: colors.nso300,
-      contrast: colors.nso100
-    },
-    action: {
-      active: getColors('nso', '500'),
-      hover: getColors('nso', '400'),
-      selected: getColors('nso', '500'),
-      disabled: getColors('nso', '300'),
-      contrast: getColors('nso', '100')
-    },
-    text: {
-      primary: colors.nso900,
-      secondary: colors.nso600,
-      placeholder: getColors('nso', '200'),
-      disabled: getColors('nso', '100')
-    },
-    background: colors.nso200,
-    divider: colors.nso900,
-    modes: {
-      dark: {
-        primary: {
-          regular: colors.nso300,
-          contrast: colors.nso900
-        },
-        secondary: {
-          bold: colors.nso900,
-          contrast: colors.nso100
-        },
-        action: {
-          active: colors.nso700,
-          hover: colors.nso800,
-          selected: colors.nso900,
-          disabled: colors.nso900,
-          contrast: colors.nso900
-        },
-        text: {
-          primary: colors.nso200,
-          secondary: colors.nso400,
-          placeholder: getColors('nso', '200'),
-          disabled: getColors('nso', '100')
-        },
-        background: colors.nso1000,
-        divider: colors.nso300
-      }
-    }
+    ...setyThemeColors
   },
   text: {
     ...theme.text,

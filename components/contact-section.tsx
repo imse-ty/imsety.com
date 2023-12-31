@@ -9,12 +9,12 @@ export default function ContactSection() {
   return (
     <Box
       sx={{
-        backgroundColor: '#36454f'
+        backgroundColor: 'surface.heavy'
       }}
     >
       <Box
         sx={{
-          backgroundColor: '#1B1212',
+          backgroundColor: 'surface.extraheavy',
           borderRadius: '48px 48px 0px 0px'
         }}
       >
@@ -28,13 +28,14 @@ export default function ContactSection() {
                 variant='display.h2'
                 sx={{
                   fontSize: [7, 8, 9],
-                  marginBottom: [3, 4]
+                  marginBottom: [3, 4],
+                  color: 'secondary.contrast'
                 }}
               >
                 greetings@imsety.com
               </Heading>
             </a>
-            <Text variant='body.h3'>
+            <Text variant='body.h3' sx={{ color: 'surface.extralight' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Text>
           </Container>

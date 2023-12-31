@@ -4,7 +4,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Layout from '@/components/layout';
 import Text from '@/components/fixed-krado-components/Text';
-import { Container, Flex, Image } from 'krado-react';
+import { Container, Flex, Box, Image } from 'krado-react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
@@ -37,6 +37,7 @@ export default function Project(props) {
         </Flex>
       </Container>
       <ProjectInfo />
+
       <Container
         sx={{
           marginTop: 5,

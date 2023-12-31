@@ -9,7 +9,7 @@ export function FooterLink({ icon, children, href }) {
       sx={{
         alignItems: 'center',
         gap: 2,
-        color: 'text.secondary',
+        color: 'secondary.contrast',
         textDecoration: 'none'
       }}
     >
@@ -23,9 +23,12 @@ export function FooterLink({ icon, children, href }) {
 
 export default function SiteFooter() {
   return (
-    <Footer>
+    <Footer style={{ backgroundColor: 'transparent' }}>
       <FooterFootnote
-        sx={{ color: 'text.secondary', textAlign: ['center', null, 'left'] }}
+        sx={{
+          color: 'secondary.contrast',
+          textAlign: ['center', null, 'left']
+        }}
       >
         Copyright © 2024 Imsety LLC. All rights reserved.
       </FooterFootnote>

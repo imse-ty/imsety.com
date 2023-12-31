@@ -2,6 +2,8 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import { setyTheme } from '@/lib/site-theme';
+import { getColor } from '@theme-ui/color';
 import { motion } from 'framer-motion';
 import { Container, Box, Flex, Image } from 'krado-react';
 import { MdExpandMore } from 'react-icons/md';
@@ -13,7 +15,8 @@ function ScrollButton() {
         justifyContent: 'center',
         alignItems: 'center',
         paddingY: 3,
-        backgroundColor: 'primary.regular',
+
+        backgroundColor: 'secondary.light',
         zIndex: 2,
         fontSize: 7
       }}
@@ -53,12 +56,15 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
           <Heading
             variant='display.h1'
             sx={{
+              color: 'secondary.contrast',
               marginBottom: [1, 2]
             }}
           >
             {title}
           </Heading>
-          <Text variant='body.summary'>{subtitle}</Text>
+          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
+            {subtitle}
+          </Text>
         </Flex>
       </Container>
       <ScrollButton />
@@ -76,8 +82,10 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
             position: 'absolute',
             width: '100%',
             height: '100%',
-            background:
-              'linear-gradient(180deg, rgba(217, 217, 217, 0.00) 4.23%, #180544 100%)'
+            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 4.23%, ${getColor(
+              setyTheme,
+              'secondary.bold'
+            )} 100%)`
           }}
         />
         <Image

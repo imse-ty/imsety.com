@@ -34,7 +34,7 @@ export default function WorkSection({ projects }) {
         sx={{
           paddingTop: 6,
           paddingBottom: 6,
-          backgroundColor: 'black',
+          backgroundColor: 'background',
           borderRadius: '48px 48px 0px 0px'
         }}
       >

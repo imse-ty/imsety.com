@@ -7,6 +7,8 @@ import { Container, Box, Flex, Button, Image } from 'krado-react';
 import Link from 'next/link';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { getColor } from '@theme-ui/color';
+import { setyTheme } from '@/lib/site-theme';
 
 export default function ReelSection({
   imageSrc,
@@ -16,84 +18,86 @@ export default function ReelSection({
   href,
   id
 }) {
-  const container = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'start start']
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
-  const scaleSpring = useSpring(scale, { damping: 30 });
-
   return (
-    <div ref={container}>
-      <Flex
-        as={motion.div}
-        style={{ scale: scaleSpring }}
-        id={id}
+    <Flex
+      id={id}
+      sx={{
+        flexDirection: 'column',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        position: 'relative'
+      }}
+    >
+      <Container
         sx={{
+          display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          minHeight: '100vh',
-          position: 'relative',
-          backgroundColor: 'black'
+          alignItems: 'center',
+          gap: 4,
+          marginTop: 'auto',
+          marginBottom: 5,
+          zIndex: 1
         }}
       >
-        <Container
+        <Flex
           sx={{
-            display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            gap: 4,
-            marginTop: 'auto',
-            marginBottom: 5,
-            zIndex: 1
+            textAlign: 'center'
           }}
         >
-          <Flex
+          <Heading
+            variant='display.h1'
             sx={{
-              flexDirection: 'column',
-              textAlign: 'center'
+              marginBottom: [1, 2],
+              color: 'secondary.contrast'
             }}
           >
-            <Heading
-              variant='display.h1'
-              sx={{
-                marginBottom: [1, 2]
-              }}
-            >
-              {title}
-            </Heading>
-            <Text variant='body.summary'>{subtitle}</Text>
-          </Flex>
-          <Link href={href}>
-            <Button leftIcon={<MdNorthEast />}>Explore</Button>
-          </Link>
-        </Container>
+            {title}
+          </Heading>
+          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
+            {subtitle}
+          </Text>
+        </Flex>
+        <Link href={href}>
+          <Button
+            leftIcon={<MdNorthEast />}
+            sx={{
+              color: 'secondary.bold',
+              backgroundColor: 'secondary.contrast'
+            }}
+          >
+            Explore
+          </Button>
+        </Link>
+      </Container>
+      <Box
+        sx={{
+          position: 'absolute',
+          height: '100%',
+          width: 'auto'
+        }}
+      >
         <Box
           sx={{
             position: 'absolute',
+            width: '100%',
             height: '100%',
-            width: 'auto'
+            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 4.23%, ${getColor(
+              setyTheme,
+              'secondary.bold'
+            )} 100%)`
           }}
-        >
-          <Box
-            sx={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              background:
-                'linear-gradient(180deg, rgba(217, 217, 217, 0.00) 4.23%, #180544 100%)'
-            }}
-          />
-          <Image
-            alt={imageAlt}
-            src={imageSrc}
-            sx={{ height: '100%', width: 'auto', objectFit: 'cover' }}
-          />
-        </Box>
-      </Flex>
-    </div>
+        />
+        <Image
+          alt={imageAlt}
+          src={imageSrc}
+          sx={{
+            height: '100%',
+            width: 'auto',
+            objectFit: 'cover'
+          }}
+        />
+      </Box>
+    </Flex>
   );
 }
