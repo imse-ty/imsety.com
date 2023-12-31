@@ -1,4 +1,6 @@
 /** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import useMousePosition from '@/lib/use-mouse-position';
 import {
   motion,
@@ -73,9 +75,7 @@ export default function Shade({ children }) {
       ref={ref}
       sx={{
         position: 'relative',
-        height: '200vh',
-        zIndex: 1,
-        overflow: 'clip'
+        height: '200vh'
       }}
     >
       <motion.div

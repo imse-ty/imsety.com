@@ -7,7 +7,7 @@ export default function Layout({ children, disableScroll }) {
     <Box
       sx={{
         position: 'relative',
-        overflow: disableScroll ? 'hidden' : 'initial'
+        paddingBottom: '100vh'
       }}
     >
       {children}
