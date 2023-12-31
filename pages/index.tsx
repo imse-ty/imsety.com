@@ -8,6 +8,7 @@ import WorkSection from '@/components/work/work-section';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import AboutSection from '@/components/about-section';
+import ContactSection from '@/components/contact-section';
 
 export default function Home(props) {
   const { data } = useTina({
@@ -37,6 +38,7 @@ export default function Home(props) {
         imageSrc='work/space-and-time.png'
         href='/about'
       />
+      <ContactSection />
     </Layout>
   );
 }

@@ -13,6 +13,7 @@ export default function AboutSection() {
       <Box
         sx={{
           paddingTop: 6,
+          paddingBottom: 6,
           backgroundColor: '#36454f',
           borderRadius: '48px 48px 0px 0px'
         }}
