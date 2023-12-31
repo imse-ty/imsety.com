@@ -1,18 +1,17 @@
 /** @jsxImportSource theme-ui */
 
-import { Container } from 'krado-react';
-
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
-import { Box, Grid } from 'krado-react';
+import { Box, Container } from 'krado-react';
 import ProjectCard from './project-card';
 
 function ProjectsSection({ projects }) {
   return (
-    <Grid
+    <Container
       sx={{
+        display: 'grid',
         marginTop: 5,
-        gap: 0,
+        gap: 4,
         gridTemplateColumns: ['1fr', null, '1fr 1fr']
       }}
     >
@@ -24,7 +23,7 @@ function ProjectsSection({ projects }) {
           key={project._sys.filename}
         />
       ))}
-    </Grid>
+    </Container>
   );
 }
 

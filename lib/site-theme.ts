@@ -9,6 +9,9 @@ const setyThemeColors = buildColorTheme({
 });
 
 export const setyTheme = {
+  sizes: {
+    container: '1920px'
+  },
   fonts: {
     body: 'Mona Sans, Arial, sans-serif',
     heading: 'Hubot Sans, Arial, sans-serif',
