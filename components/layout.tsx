@@ -7,8 +7,7 @@ export default function Layout({ children }) {
   return (
     <Box
       sx={{
-        position: 'relative',
-        paddingBottom: '100vh'
+        position: 'relative'
       }}
     >
       {children}
