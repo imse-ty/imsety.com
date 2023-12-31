@@ -4,6 +4,8 @@ import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import { Box, Container } from 'krado-react';
 import ProjectCard from './project-card';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 function ProjectsSection({ projects }) {
   return (
@@ -28,27 +30,40 @@ function ProjectsSection({ projects }) {
 }
 
 export default function WorkSection({ projects }) {
-  return (
-    <Box>
-      <Box
-        sx={{
-          paddingTop: 6,
-          paddingBottom: 6,
-          backgroundColor: 'background',
-          borderRadius: '48px 48px 0px 0px'
-        }}
-      >
-        <Container sx={{ textAlign: 'center' }}>
-          <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
-            Work
-          </Heading>
+  const container = useRef(null);
 
-          <Text variant='body.summary'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </Container>
-        <ProjectsSection projects={projects} />
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start end', 'start start']
+  });
+
+  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scale = useSpring(scrollScale, { mass: 0.1 });
+
+  return (
+    <div ref={container}>
+      <Box>
+        <motion.div
+          style={{ scale }}
+          sx={{
+            paddingTop: 6,
+            paddingBottom: 6,
+            backgroundColor: 'background',
+            borderRadius: '48px'
+          }}
+        >
+          <Container sx={{ textAlign: 'center' }}>
+            <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
+              Work
+            </Heading>
+
+            <Text variant='body.summary'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Text>
+          </Container>
+          <ProjectsSection projects={projects} />
+        </motion.div>
       </Box>
-    </Box>
+    </div>
   );
 }
