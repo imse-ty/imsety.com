@@ -58,14 +58,14 @@ export default function IndexSection({
             }}
           >
             <Heading
-              variant='display.h2'
+              variant='display.h1'
               sx={{
                 marginBottom: [1, 2]
               }}
             >
               {title}
             </Heading>
-            <Text>{subtitle}</Text>
+            <Text variant='body.summary'>{subtitle}</Text>
           </Flex>
           <Link href={href}>
             <Button leftIcon={<MdNorthEast />}>Explore</Button>

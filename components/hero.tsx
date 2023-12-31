@@ -47,7 +47,7 @@ export default function Hero() {
           >
             Lorem ipsum!
           </Heading>
-          <Text>
+          <Text variant='body.summary'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
             arcu, fringilla a egestas condimentum, vulputate at purus.
           </Text>

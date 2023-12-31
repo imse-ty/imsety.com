@@ -51,14 +51,14 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
           }}
         >
           <Heading
-            variant='display.h2'
+            variant='display.h1'
             sx={{
               marginBottom: [1, 2]
             }}
           >
             {title}
           </Heading>
-          <Text>{subtitle}</Text>
+          <Text variant='body.summary'>{subtitle}</Text>
         </Flex>
       </Container>
       <ScrollButton />
