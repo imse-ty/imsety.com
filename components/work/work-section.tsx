@@ -35,21 +35,12 @@ export default function WorkSection({ projects }) {
         sx={{
           paddingTop: 6,
           backgroundColor: 'black',
-          borderRadius: '48px'
+          borderRadius: '48px 48px 0px 0px',
+          paddingBottom: 6
         }}
       >
-        <Container
-          sx={{
-            textAlign: 'center'
-          }}
-        >
-          <Heading
-            variant='display.h1'
-            sx={{
-              marginBottom: 2,
-              scrollMarginTop: '3.8em'
-            }}
-          >
+        <Container sx={{ textAlign: 'center' }}>
+          <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
             Work
           </Heading>
 

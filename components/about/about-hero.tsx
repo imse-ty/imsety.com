@@ -1,6 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import Heading from '@/components/fixed-krado-components/Heading';
+import Text from '@/components/fixed-krado-components/Text';
 import { Container, Image } from 'krado-react';
 
 export default function AboutHero() {
@@ -10,11 +11,19 @@ export default function AboutHero() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: 4,
-        paddingTop: 6,
+        gap: 5,
         marginBottom: 5
       }}
     >
+      <Container sx={{ textAlign: 'center' }}>
+        <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
+          About
+        </Heading>
+
+        <Text variant='body.summary'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Text>
+      </Container>
       <Image
         alt='My about'
         src='work/space-and-time.png'
@@ -24,14 +33,6 @@ export default function AboutHero() {
           borderRadius: '40px'
         }}
       />
-      <Heading
-        variant='display.display'
-        sx={{
-          marginBottom: [1, 2]
-        }}
-      >
-        About
-      </Heading>
     </Container>
   );
 }

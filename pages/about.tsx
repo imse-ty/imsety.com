@@ -2,7 +2,7 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Container, Flex, Button, Image } from 'krado-react';
+import { Container, Flex } from 'krado-react';
 import Layout from '@/components/layout';
 import AboutHero from '@/components/about/about-hero';
 import ContactSection from '@/components/contact-section';
@@ -10,7 +10,7 @@ import Tooltip from '@/components/tooltip';
 
 export default function About() {
   return (
-    <Layout disableScroll={false}>
+    <Layout>
       <AboutHero />
       <Container sx={{ maxWidth: '900px' }}>
         <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
