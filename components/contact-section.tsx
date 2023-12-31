@@ -7,7 +7,7 @@ import SiteFooter from './site-footer';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-export default function ContactSection() {
+export default function ContactSection({ useTransparentBackground }) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -20,10 +20,18 @@ export default function ContactSection() {
 
   return (
     <div ref={container}>
-      <Box sx={{ backgroundColor: 'surface.heavy', marginTop: -5 }}>
+      <Box
+        sx={{
+          backgroundColor: useTransparentBackground
+            ? 'transparent'
+            : 'surface.heavy',
+          marginTop: -5
+        }}
+      >
         <motion.div
           style={{ scale }}
           sx={{
+            paddingTop: 6,
             backgroundColor: 'surface.extraheavy',
             borderRadius: '48px 48px 0px 0px'
           }}

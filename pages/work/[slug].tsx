@@ -12,6 +12,7 @@ import { components } from '@/lib/components';
 import ProjectHeader from '@/components/projects/project-header';
 import ProjectInfo from '@/components/projects/project-info';
 import Tooltip from '@/components/tooltip';
+import ContactSection from '@/components/contact-section';
 
 export default function Project(props) {
   const { data } = useTina({
@@ -49,6 +50,7 @@ export default function Project(props) {
           <TinaMarkdown content={data.project.body} components={components} />
         </Flex>
       </Container>
+      <ContactSection useTransparentBackground />
     </Layout>
   );
 }
