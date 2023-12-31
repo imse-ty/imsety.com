@@ -30,6 +30,7 @@ export default function Home(props) {
           href='#work'
         />
       </Shade>
+      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
 
       <div sx={{ position: 'relative', zIndex: 1 }}>
         <WorkSection projects={projectsList} />

@@ -15,12 +15,10 @@ export default function ReelSection({
   imageAlt,
   title,
   subtitle,
-  href,
-  id
+  href
 }) {
   return (
     <Flex
-      id={id}
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',

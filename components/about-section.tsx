@@ -22,7 +22,7 @@ export default function AboutSection() {
 
   return (
     <div ref={container}>
-      <Box sx={{ backgroundColor: 'background', marginTop: -5 }}>
+      <Box id='about' sx={{ backgroundColor: 'background', marginTop: -5 }}>
         <motion.div
           style={{ scale }}
           sx={{

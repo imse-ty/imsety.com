@@ -29,6 +29,7 @@ export default function ContactSection({ useTransparentBackground }) {
         }}
       >
         <motion.div
+          id='contact'
           style={{ scale }}
           sx={{
             paddingTop: 6,

@@ -42,7 +42,7 @@ export default function WorkSection({ projects }) {
 
   return (
     <div ref={container}>
-      <Box>
+      <Box id='work'>
         <motion.div
           style={{ scale }}
           sx={{
