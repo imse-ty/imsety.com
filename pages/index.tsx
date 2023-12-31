@@ -2,7 +2,7 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import IndexSection from '@/components/index-section';
+import ReelSection from '@/components/reel-section';
 import Shade from '@/components/shade';
 import WorkSection from '@/components/work/work-section';
 import { useTina } from 'tinacms/dist/react';
@@ -22,7 +22,7 @@ export default function Home(props) {
   return (
     <Layout>
       <Shade>
-        <IndexSection
+        <ReelSection
           title='Reel'
           subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
           imageAlt='My image'

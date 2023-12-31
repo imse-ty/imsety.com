@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-export default function IndexSection({
+export default function ReelSection({
   imageSrc,
   imageAlt,
   title,
