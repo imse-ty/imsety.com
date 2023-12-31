@@ -75,8 +75,7 @@ export default function Shade({ children }) {
       ref={ref}
       sx={{
         position: 'relative',
-        height: '200vh',
-        zIndex: -1
+        height: '200vh'
       }}
     >
       <motion.div
@@ -105,7 +104,8 @@ export default function Shade({ children }) {
           height: '100%',
           position: 'fixed',
           maskImage: 'url("/right-triangle.svg")',
-          maskRepeat: 'no-repeat'
+          maskRepeat: 'no-repeat',
+          zIndex: -1
         }}
       >
         {children}
