@@ -69,6 +69,14 @@ export default function Shade({ children }) {
     }
   }
 
+  function getPointerEvents() {
+    if (scrollYProgress.get() > 0.3) {
+      return 'none';
+    } else {
+      return 'auto';
+    }
+  }
+
   return (
     <div
       ref={ref}
@@ -84,7 +92,8 @@ export default function Shade({ children }) {
           position: 'fixed',
           zIndex: 1,
           width: '100%',
-          height: '100%'
+          height: '100%',
+          pointerEvents: getPointerEvents()
         }}
       >
         <Hero />
