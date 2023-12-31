@@ -20,7 +20,9 @@ export default function AboutSection({
         justifyContent: 'center',
         minHeight: '100vh',
         position: 'relative',
-        paddingTop: 5
+        paddingTop: 5,
+        backgroundColor: 'black',
+        zIndex: 1
       }}
     >
       <Container

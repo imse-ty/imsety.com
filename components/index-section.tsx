@@ -21,7 +21,9 @@ export default function IndexSection({
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '100vh',
-        position: 'relative'
+        position: 'relative',
+        backgroundColor: 'black',
+        zIndex: 1
       }}
     >
       <Container
