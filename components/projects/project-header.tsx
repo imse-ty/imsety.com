@@ -2,6 +2,7 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import { motion } from 'framer-motion';
 import { Container, Box, Flex, Image } from 'krado-react';
 import { MdExpandMore } from 'react-icons/md';
 
@@ -13,7 +14,7 @@ function ScrollButton() {
         alignItems: 'center',
         paddingY: 3,
         backgroundColor: 'primary.regular',
-        zIndex: 1,
+        zIndex: 2,
         fontSize: 7
       }}
     >
@@ -40,7 +41,7 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
           gap: 4,
           marginTop: 'auto',
           marginBottom: 5,
-          zIndex: 1
+          zIndex: 2
         }}
       >
         <Flex
@@ -71,6 +72,7 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
       >
         <Box
           sx={{
+            zIndex: 1,
             position: 'absolute',
             width: '100%',
             height: '100%',
@@ -79,9 +81,18 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
           }}
         />
         <Image
+          as={motion.img}
           alt={imageAlt}
           src={imageSrc}
-          sx={{ width: '100vw', height: '100%', objectFit: 'cover' }}
+          initial={{ scale: 1.5 }}
+          animate={{ scale: 1 }}
+          sx={{
+            width: '100vw',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: -1
+          }}
+          transition={{ type: 'spring', stiffness: 40 }}
         />
       </Box>
     </Flex>

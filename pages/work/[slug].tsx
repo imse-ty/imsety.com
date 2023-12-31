@@ -21,7 +21,7 @@ export default function Project(props) {
   });
 
   return (
-    <Layout disableScroll={false}>
+    <Layout>
       <ProjectHeader
         title={data.project.title}
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'

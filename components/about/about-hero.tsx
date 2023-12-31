@@ -11,7 +11,7 @@ export default function AboutHero() {
         flexDirection: 'column',
         alignItems: 'center',
         gap: 4,
-        marginTop: 6,
+        paddingTop: 6,
         marginBottom: 5
       }}
     >

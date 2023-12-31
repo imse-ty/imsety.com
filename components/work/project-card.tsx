@@ -7,7 +7,7 @@ import { MdNorthEast } from 'react-icons/md';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-export default function ProjectCard({ title, src, href, layoutId }) {
+export default function ProjectCard({ title, src, href }) {
   return (
     <Link href={href}>
       <Flex
@@ -31,7 +31,6 @@ export default function ProjectCard({ title, src, href, layoutId }) {
             objectFit: 'cover',
             height: ['300px', '600px']
           }}
-          layoutId={layoutId}
         />
         <Flex
           sx={{

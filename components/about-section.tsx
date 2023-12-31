@@ -28,8 +28,6 @@ export default function AboutSection({
   return (
     <div ref={container}>
       <Flex
-        as={motion.div}
-        style={{ scale: scaleSpring }}
         sx={{
           flexDirection: 'column',
           justifyContent: 'center',
@@ -41,6 +39,8 @@ export default function AboutSection({
         id='about'
       >
         <Container
+          as={motion.div}
+          style={{ scale: scaleSpring }}
           sx={{
             display: 'flex',
             flexDirection: 'column',
