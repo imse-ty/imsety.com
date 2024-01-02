@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+// @ts-nocheck
 
 import useMousePosition from '@/lib/use-mouse-position';
 import {

@@ -1,9 +1,6 @@
 /** @jsxImportSource theme-ui */
 
 import { Flex, Image } from 'krado-react';
-import Text from '../fixed-krado-components/Text';
-import Heading from '../fixed-krado-components/Heading';
-import { MdNorthEast } from 'react-icons/md';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 

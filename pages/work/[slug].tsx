@@ -7,10 +7,10 @@ import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import { components } from '@/lib/components';
-import ProjectHeader from '@/components/projects/project-header';
+import ProjectMasthead from '@/components/projects/project-masthead';
 import ProjectInfo from '@/components/projects/project-info';
 
-import ContactSection from '@/components/contact-section';
+import ContactSection from '@/components/contact/contact-section';
 
 export default function Project(props) {
   const { data } = useTina({
@@ -21,7 +21,7 @@ export default function Project(props) {
 
   return (
     <Layout>
-      <ProjectHeader
+      <ProjectMasthead
         title={data.project.title}
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
         imageAlt='My image'

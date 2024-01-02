@@ -2,7 +2,7 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Card, Container, Box, Image } from 'krado-react';
+import { Container, Box, Image } from 'krado-react';
 
 export default function AboutHero() {
   return (

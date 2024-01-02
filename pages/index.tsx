@@ -2,13 +2,13 @@
 //@ts-nocheck
 
 import Layout from '@/components/layout';
-import ReelSection from '@/components/reel-section';
+import ReelSection from '@/components/reel/reel-section';
 import Shade from '@/components/shade';
 import WorkSection from '@/components/work/work-section';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
-import AboutSection from '@/components/about-section';
-import ContactSection from '@/components/contact-section';
+import AboutSection from '@/components/about/about-section';
+import ContactSection from '@/components/contact/contact-section';
 
 export default function Home(props) {
   const { data } = useTina({

@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import { Grid, Container } from 'krado-react';
+import { Grid } from 'krado-react';
 import ProjectCard from './project-card';
 
 export default function ProjectsSection({ projects }) {

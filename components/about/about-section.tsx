@@ -1,11 +1,11 @@
 /** @jsxImportSource theme-ui */
 
 import { MdNorthEast } from 'react-icons/md';
-import Heading from './fixed-krado-components/Heading';
-import Text from './fixed-krado-components/Text';
+import Heading from '../fixed-krado-components/Heading';
+import Text from '../fixed-krado-components/Text';
 import { Container, Box, Flex } from 'krado-react';
-import AboutHero from './about/about-hero';
-import Tooltip from './tooltip';
+import AboutHero from './about-hero';
+import Tooltip from '../tooltip';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 

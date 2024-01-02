@@ -26,7 +26,12 @@ function ScrollButton() {
   );
 }
 
-export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
+export default function ProjectMasthead({
+  imageSrc,
+  imageAlt,
+  title,
+  subtitle
+}) {
   return (
     <Flex
       sx={{

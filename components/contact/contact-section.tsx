@@ -1,9 +1,9 @@
 /** @jsxImportSource theme-ui */
 
-import Heading from './fixed-krado-components/Heading';
-import Text from './fixed-krado-components/Text';
+import Heading from '../fixed-krado-components/Heading';
+import Text from '../fixed-krado-components/Text';
 import { Container, Box, Flex } from 'krado-react';
-import SiteFooter from './site-footer';
+import SiteFooter from '../site-footer';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
