@@ -1,5 +1,8 @@
+import { useColorMode } from 'theme-ui';
 import { Footer, FooterFootnote, FooterContent, Flex, Text } from 'krado-react';
 import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa6';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 export function FooterLink({ icon, children, href }) {
   return (
@@ -22,6 +25,8 @@ export function FooterLink({ icon, children, href }) {
 }
 
 export default function SiteFooter({ textColor, linkColor }) {
+  const [colorMode, setColorMode] = useColorMode();
+
   return (
     <Footer style={{ backgroundColor: 'transparent' }}>
       <FooterFootnote
@@ -60,6 +65,21 @@ export default function SiteFooter({ textColor, linkColor }) {
         <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
           Twitter
         </FooterLink>
+        <Flex
+          as={motion.div}
+          onClick={(e) => {
+            const next = colorMode === 'dark' ? 'light' : 'dark';
+            setColorMode(next);
+          }}
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: 'spring', duration: 0.8 }}
+          sx={{
+            fontSize: 5,
+            color: 'inherit'
+          }}
+        >
+          {colorMode === 'dark' ? <MdLightMode /> : <MdDarkMode />}
+        </Flex>
       </FooterContent>
     </Footer>
   );
