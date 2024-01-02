@@ -15,8 +15,8 @@ function ScrollButton() {
         justifyContent: 'center',
         alignItems: 'center',
         paddingY: 3,
-        color: 'secondary.contrast',
-        backgroundColor: 'secondary.bold',
+        color: 'surface.black',
+        backgroundColor: 'surface.light',
         zIndex: 2,
         fontSize: 7
       }}
