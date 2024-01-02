@@ -1,17 +1,15 @@
 /** @jsxImportSource theme-ui */
 // @ts-nocheck
 
-import Heading from '@/components/fixed-krado-components/Heading';
 import Layout from '@/components/layout';
-import Text from '@/components/fixed-krado-components/Text';
-import { Container, Flex, Box, Image } from 'krado-react';
+import { Container, Flex } from 'krado-react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import { components } from '@/lib/components';
 import ProjectHeader from '@/components/projects/project-header';
 import ProjectInfo from '@/components/projects/project-info';
-import Tooltip from '@/components/tooltip';
+
 import ContactSection from '@/components/contact-section';
 
 export default function Project(props) {
@@ -30,35 +28,8 @@ export default function Project(props) {
         imageSrc={data.project.coverImage}
         href='/work'
       />
-      <Box sx={{ paddingY: 6, backgroundColor: 'secondary.bold' }}>
-        <Container sx={{ maxWidth: '900px' }}>
-          <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
-            <Tooltip
-              label='Timeline'
-              text='2 months'
-              labelColor='secondary.regular'
-              textColor='secondary.contrast'
-              dividerColor='surface.bold'
-            />
-            <Tooltip
-              label='Year'
-              text='2023'
-              labelColor='secondary.regular'
-              textColor='secondary.contrast'
-              dividerColor='surface.bold'
-            />
-            <Tooltip
-              label='Stress meter'
-              text='Max'
-              labelColor='secondary.regular'
-              textColor='secondary.contrast'
-              dividerColor='surface.bold'
-            />
-          </Flex>
-        </Container>
-        <ProjectInfo />
-      </Box>
 
+      <ProjectInfo />
       <Container
         sx={{
           marginTop: 5,
