@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 
 import { motion } from 'framer-motion';
-import { Box, Flex } from 'krado-react';
+import { Flex } from 'krado-react';
 
 export default function FullScreenVideo({ onClick, style, layoutId }) {
   const containerVariants = {
@@ -24,9 +24,9 @@ export default function FullScreenVideo({ onClick, style, layoutId }) {
     <Flex
       as={motion.div}
       variants={containerVariants}
-      initial="hidden"
-      animate="active"
-      exit="hidden"
+      initial='hidden'
+      animate='active'
+      exit='hidden'
       onClick={onClick}
       sx={{
         width: '100vw',
@@ -41,9 +41,9 @@ export default function FullScreenVideo({ onClick, style, layoutId }) {
     >
       <motion.video
         variants={videoPlayerVariants}
-        initial="hidden"
-        animate="active"
-        exit="hidden"
+        initial='hidden'
+        animate='active'
+        exit='hidden'
         layoutId={layoutId}
         sx={{
           margin: 'auto',
@@ -56,10 +56,10 @@ export default function FullScreenVideo({ onClick, style, layoutId }) {
         autoPlay
         controls
         disablePictureInPicture
-        controlsList="nofullscreen"
+        controlsList='nofullscreen'
         muted
       >
-        <source src="/2020-reel.mp4" type="video/mp4" />
+        <source src='/2020-reel.mp4' type='video/mp4' />
         Your browser does not support the video tag.
       </motion.video>
     </Flex>

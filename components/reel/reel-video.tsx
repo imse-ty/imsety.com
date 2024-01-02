@@ -19,7 +19,7 @@ export function DifferenceText({ children, textAlign }) {
       as={motion.h3}
       variants={variants}
       transition={{ type: 'spring', damping: 9 }}
-      variant="display.display"
+      variant='display.display'
       sx={{
         marginTop: [2, 3],
         fontWeight: '600',
@@ -74,7 +74,7 @@ export function PlayButton() {
         variants={playButtonVariants}
         sx={{ marginTop: 1, width: ['18px', null, '57px'], opacity: 0.6 }}
       >
-        <PlayIcon width="100%" height="auto" viewBox="0 0 38 43" />
+        <PlayIcon width='100%' height='auto' viewBox='0 0 38 43' />
       </motion.div>
     </Flex>
   );
@@ -94,9 +94,9 @@ export default function ReelVideo({ onClick, style, layoutId }) {
   return (
     <Flex
       as={motion.div}
-      initial="idle"
-      whileHover="active"
-      whileTap="click"
+      initial='idle'
+      whileHover='active'
+      whileTap='click'
       variants={containerVariants}
       transition={{ type: 'spring' }}
       onClick={onClick}
@@ -135,7 +135,7 @@ export default function ReelVideo({ onClick, style, layoutId }) {
         autoPlay
         loop
         muted
-        poster="/turntable-thumbnail.png"
+        poster='/turntable-thumbnail.png'
         sx={{
           zIndex: 1,
           position: 'absolute',
@@ -143,7 +143,7 @@ export default function ReelVideo({ onClick, style, layoutId }) {
           minHeight: '100%'
         }}
       >
-        <source src="/turntable.mp4#t=08,30" type="video/mp4" />
+        <source src='/turntable.mp4#t=08,30' type='video/mp4' />
         Your browser does not support the video tag.
       </motion.video>
     </Flex>

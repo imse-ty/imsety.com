@@ -2,15 +2,11 @@
 
 import { Box } from 'krado-react';
 
-export default function Layout({ children, disableScroll }) {
+export default function Layout({ children }) {
   return (
     <Box
-      as='main'
-      backgroundColor='background'
       sx={{
-        height: '100vh',
-        position: 'relative',
-        overflow: disableScroll ? 'hidden' : 'initial'
+        position: 'relative'
       }}
     >
       {children}

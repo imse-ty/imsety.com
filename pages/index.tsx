@@ -1,28 +1,16 @@
 /** @jsxImportSource theme-ui */
-// @ts-nocheck
+//@ts-nocheck
 
-import CallToAction from '@/components/call-to-action';
 import Layout from '@/components/layout';
-import FullScreenVideo from '@/components/work/full-screen-video';
-import ReelVideo from '@/components/work/reel-video';
-import { Box, Flex } from 'krado-react';
-import { useState } from 'react';
-import Shade, { ShadeButton } from '@/components/shade';
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useSpring,
-  useTransform
-} from 'framer-motion';
-import client from '@/tina/__generated__/client';
+import ReelSection from '@/components/reel/reel-section';
+import Shade from '@/components/shade';
+import WorkSection from '@/components/work/work-section';
 import { useTina } from 'tinacms/dist/react';
-import ProjectsSection from '@/components/work/projects-section';
-import ServicesSection from '@/components/work/services-section';
-import AboutSection from '@/components/work/about-section';
-import RightTriangle from '../public/right-triangle.svg';
+import client from '@/tina/__generated__/client';
+import AboutSection from '@/components/about/about-section';
+import ContactSection from '@/components/contact/contact-section';
 
-export default function Work(props) {
+export default function Home(props) {
   const { data } = useTina({
     query: props.query,
     variables: props.variables,
@@ -31,106 +19,30 @@ export default function Work(props) {
 
   const projectsList = data.workPage.projects;
 
-  const [isVideoHidden, setIsVideoHidden] = useState(true);
-  const [isActive, setIsActive] = useState(false);
-
-  const { scrollYProgress } = useScroll({
-    offset: ['0 1', '0.45 1']
-  });
-
-  const scrollCtaProgress = useScroll({
-    offset: ['200vh end', 'center center']
-  }).scrollYProgress;
-
-  const workScroll = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const workScrollSpring = useSpring(workScroll, { damping: 20 });
-  const videoScroll = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
-  const borderScroll = useTransform(scrollYProgress, [0, 1], [0, 80]);
-
   return (
-    <Layout disableScroll={false}>
-      <AnimatePresence>
-        {isActive && (
-          <motion.div
-            initial={{ color: 'rgba(255,255,255,0)' }}
-            animate={{ color: 'rgba(255,255,255,1)' }}
-            exit={{ color: 'rgba(255,255,255,0)' }}
-          >
-            <RightTriangle
-              fill="currentColor"
-              onClick={() => setIsActive(false)}
-              sx={{
-                position: 'fixed',
-                top: '100px',
-                left: '100px',
-                zIndex: 3
-              }}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <Shade isActive={isActive} setIsActive={() => setIsActive(true)}>
-        <Flex
-          sx={{
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: [5, 6],
-            position: 'relative'
-          }}
-        >
-          <motion.header
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              position: 'fixed',
-              width: '100%',
-              height: '100vh'
-            }}
-          >
-            {!isVideoHidden && (
-              <FullScreenVideo
-                onClick={() => setIsVideoHidden(true)}
-                style={{ scale: videoScroll, borderRadius: borderScroll }}
-                layoutId="video"
-              />
-            )}
-            <ReelVideo
-              onClick={() => setIsVideoHidden(!isVideoHidden)}
-              style={{ scale: videoScroll, borderRadius: borderScroll }}
-              layoutId="video"
-            />
-          </motion.header>
-
-          <Flex
-            as={motion.div}
-            sx={{
-              position: 'relative',
-              marginTop: '100vh',
-              marginBottom: '40vh',
-              paddingBottom: 6,
-              width: '100%',
-              gap: [5, 6],
-              backgroundColor: 'background',
-              flexDirection: 'column',
-              borderRadius: ['40px', '80px'],
-              zIndex: 2
-            }}
-            style={{ scale: workScrollSpring }}
-          >
-            <ProjectsSection projects={projectsList} />
-            <AboutSection />
-            <ServicesSection />
-          </Flex>
-
-          <motion.footer style={{ opacity: 0 }}>
-            <CallToAction
-              title="Let's connect"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id auctor neque, eu dictum urna."
-            />
-          </motion.footer>
-        </Flex>
+    <Layout>
+      <Shade>
+        <ReelSection
+          title='Reel'
+          subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
+          imageAlt='My image'
+          imageSrc='work/beeple-3.png'
+          href='#work'
+        />
       </Shade>
+      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
+
+      <div sx={{ position: 'relative', zIndex: 1 }}>
+        <WorkSection projects={projectsList} />
+        <AboutSection
+          title='About'
+          subtitle='arcu, fringilla.'
+          imageAlt='My image'
+          imageSrc='work/space-and-time.png'
+          href='/about'
+        />
+        <ContactSection />
+      </div>
     </Layout>
   );
 }

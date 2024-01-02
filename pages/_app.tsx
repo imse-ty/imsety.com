@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeUIProvider theme={{ ...theme, ...setyTheme }}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
       <Component {...pageProps} />
     </ThemeUIProvider>

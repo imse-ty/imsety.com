@@ -2,19 +2,39 @@
 // @ts-nocheck
 
 import useMousePosition from '@/lib/use-mouse-position';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Box, Flex } from 'krado-react';
-import ShadeHero from './shade-hero';
+import {
+  motion,
+  useMotionTemplate,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
+import { useRef } from 'react';
+import Hero from './hero';
 
-export default function Shade({ children, isActive, setIsActive }) {
+export default function Shade({ children }) {
   const { x, y } = useMousePosition();
-  const size = isActive ? 1000 : 250;
+
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end end']
+  });
+
+  const size = useTransform(scrollYProgress, [0, 1], [200, 8000]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const sizeSpring = useSpring(size, { damping: 15 });
+  const maskSize = useMotionTemplate`${sizeSpring}px, auto`;
+  const maskPosition = useTransform(scrollYProgress, [0, 0.05], [3, 2]);
 
   const variants = {
     follow: {
-      WebkitMaskPosition: `${x - size / 3}px ${y - size / 3}px`,
-      WebkitMaskSize: '250px',
-
+      maskPosition: `
+      ${x - sizeSpring.get() / maskPosition.get()}px
+      ${y - sizeSpring.get() / maskPosition.get()}px
+    `,
       transition: {
         type: 'tween',
         ease: 'backOut',
@@ -22,58 +42,82 @@ export default function Shade({ children, isActive, setIsActive }) {
       }
     },
     lock: {
-      WebkitMaskPosition: '0px 0px',
-      WebkitMaskSize: ['250px', '500px', '5000px', '10000px'],
-      maskImage: 'none',
+      maskPosition: '0px 0px',
       transition: {
         type: 'tween',
-        ease: 'backOut',
-        duration: 0.5,
-        WebkitMaskSize: {
-          type: 'tween',
-          ease: 'easeOut',
-          duration: 1.5
-        },
-        maskImage: {
-          delay: 1
-        }
+        ease: 'easeOut',
+        duration: 0.5
       }
+    },
+    hidden: {
+      maskImage: 'none'
     }
   };
 
+  function getMaskState() {
+    if (scrollYProgress.get() > 0.3) {
+      return 'lock';
+    } else {
+      return 'follow';
+    }
+  }
+
+  function hideHero() {
+    if (scrollYProgress.get() > 0.5) {
+      return 'none';
+    } else {
+      return 'block';
+    }
+  }
+
+  function getPointerEvents() {
+    if (scrollYProgress.get() > 0.3) {
+      return 'none';
+    } else {
+      return 'auto';
+    }
+  }
+
   return (
-    <Flex
+    <div
+      ref={ref}
       sx={{
-        width: '100vw',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center'
+        height: '200vh',
+        backgroundColor: 'background'
       }}
     >
-      <div
-        onClick={setIsActive}
-        sx={{ position: 'fixed', zIndex: 1, width: '100%', height: '100%' }}
-      >
-        <AnimatePresence>{!isActive && <ShadeHero />}</AnimatePresence>
-      </div>
-      <Box
-        as={motion.div}
-        variants={variants}
-        animate={isActive ? 'lock' : 'follow'}
+      <motion.div
+        style={{ opacity, scale: heroScale }}
         sx={{
-          position: 'absolute',
-          overflowY: 'scroll',
-          top: 0,
-          left: 0,
+          display: hideHero(),
+          position: 'fixed',
+          zIndex: 1,
           width: '100%',
-          height: '600%',
-          maskImage: 'url(/right-triangle.svg)',
-          maskRepeat: 'no-repeat',
-          WebkitMaskSize: '250px'
+          height: '100%',
+          pointerEvents: getPointerEvents()
+        }}
+      >
+        <Hero />
+      </motion.div>
+      <motion.div
+        variants={variants}
+        animate={getMaskState()}
+        style={{ maskSize: maskSize }}
+        transition={{
+          type: 'tween',
+          ease: 'backOut',
+          duration: 0.5
+        }}
+        sx={{
+          width: '100%',
+          height: '100%',
+          position: 'fixed',
+          maskImage: 'url("/right-triangle.svg")',
+          maskRepeat: 'no-repeat'
         }}
       >
         {children}
-      </Box>
-    </Flex>
+      </motion.div>
+    </div>
   );
 }

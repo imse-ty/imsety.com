@@ -1,26 +1,66 @@
 /** @jsxImportSource theme-ui */
 
+import { MdNorthEast } from 'react-icons/md';
 import Heading from './fixed-krado-components/Heading';
-import { Flex, Text } from 'krado-react';
+import Text from './fixed-krado-components/Text';
+import { Container, Flex, Button } from 'krado-react';
+import SiteFooter from './site-footer';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
     <Flex
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       sx={{
         flexDirection: 'column',
-        textAlign: 'center'
+        justifyContent: 'center',
+        minHeight: '100vh'
       }}
     >
-      <Heading
-        variant='display.display'
+      <Container
+        as={motion.div}
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0.8 }}
         sx={{
-          marginBottom: [2, 3],
-          fontWeight: '600',
-          fontSize: '140px'
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 5,
+          marginTop: 'auto'
         }}
       >
-        Still coming back? 👀
-      </Heading>
+        <Flex
+          sx={{
+            flexDirection: 'column',
+            textAlign: 'center'
+          }}
+        >
+          <Heading
+            variant='display.display'
+            sx={{
+              marginBottom: [2, 3]
+            }}
+          >
+            Lorem ipsum!
+          </Heading>
+          <Text variant='body.summary'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+        </Flex>
+        <a
+          href='#reel'
+          sx={{ display: ['none', 'block'], textDecoration: 'none' }}
+        >
+          <Button leftIcon={<MdNorthEast />} sx={{}}>
+            Explore
+          </Button>
+        </a>
+      </Container>
+      <SiteFooter textColor='text.primary' linkColor='primary.regular' />
     </Flex>
   );
 }

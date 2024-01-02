@@ -1,14 +1,13 @@
-import { buildColorTheme, colors, getColors, theme } from 'krado-react';
-
-const setyThemeColors = buildColorTheme({
-  primary: 'nut',
-  secondary: 'nso',
-  accent: 'nso',
-  action: 'nut',
-  text: 'nso'
-});
+import { theme } from 'krado-react';
+import monochromaticTheme from './monochromatic-theme';
 
 export const setyTheme = {
+  config: {
+    initialColorModeName: 'light'
+  },
+  sizes: {
+    container: '1920px'
+  },
   fonts: {
     body: 'Mona Sans, Arial, sans-serif',
     heading: 'Hubot Sans, Arial, sans-serif',
@@ -19,54 +18,9 @@ export const setyTheme = {
     heading: '1.1',
     display: '1.1'
   },
+  radii: [4, 8, 16, 32, 64, 99999],
   colors: {
-    ...setyThemeColors,
-    secondary: {
-      bold: colors.nso300,
-      contrast: colors.nso100
-    },
-    action: {
-      active: getColors('nso', '500'),
-      hover: getColors('nso', '400'),
-      selected: getColors('nso', '500'),
-      disabled: getColors('nso', '300'),
-      contrast: getColors('nso', '100')
-    },
-    text: {
-      primary: colors.nso900,
-      secondary: colors.nso600,
-      placeholder: getColors('nso', '200'),
-      disabled: getColors('nso', '100')
-    },
-    background: colors.nso200,
-    divider: colors.nso900,
-    modes: {
-      dark: {
-        primary: {
-          regular: colors.nso300,
-          contrast: colors.nso900
-        },
-        secondary: {
-          bold: colors.nso900,
-          contrast: colors.nso100
-        },
-        action: {
-          active: colors.nso700,
-          hover: colors.nso800,
-          selected: colors.nso900,
-          disabled: colors.nso900,
-          contrast: colors.nso900
-        },
-        text: {
-          primary: colors.nso200,
-          secondary: colors.nso400,
-          placeholder: getColors('nso', '200'),
-          disabled: getColors('nso', '100')
-        },
-        background: colors.nso1000,
-        divider: colors.nso300
-      }
-    }
+    ...monochromaticTheme
   },
   text: {
     ...theme.text,
@@ -88,28 +42,30 @@ export const setyTheme = {
       h1: {
         variant: 'text.base',
         fontFamily: 'display',
-        fontSize: [7, 10],
+        fontSize: [8, 11],
+        fontWeight: 600,
         lineHeight: '1.1',
         letterSpacing: 'display'
       },
       h2: {
         variant: 'text.display.h1',
-        fontSize: [8, 9],
+        fontSize: [9, 10],
+        fontWeight: 600,
         lineHeight: '65px'
       },
       h3: {
         variant: 'text.display.h1',
-        fontSize: [7, 8],
+        fontSize: [8, 9],
         lineHeight: '44px'
       },
       h4: {
         variant: 'text.display.h1',
-        fontSize: [6, 7],
+        fontSize: [7, 8],
         lineHeight: '40px'
       },
       h5: {
         variant: 'text.display.h1',
-        fontSize: [4, 5],
+        fontSize: [5, 6],
         lineHeight: '28px'
       },
       quote: {
@@ -124,7 +80,7 @@ export const setyTheme = {
       summary: {
         variant: 'text.base',
         fontSize: [5, 6],
-        lineHeight: '1',
+        lineHeight: '1.4',
         letterSpacing: '-0.02em'
       },
       h1: {
