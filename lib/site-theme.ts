@@ -115,7 +115,7 @@ function buildDarkColorTheme(
   return {
     primary: {
       regular: getColors(colorNames.primary, '300'),
-      contrast: getColors(colorNames.primary, '100')
+      contrast: getColors(colorNames.primary, '800')
     },
     secondary: {
       light: getColors(colorNames.secondary, '200'),
@@ -173,8 +173,8 @@ function buildDarkColorTheme(
       extraheavy: colors.nso1000
     },
     action: {
-      active: getColors(colorNames.action, '700'),
-      hover: getColors(colorNames.action, '400'),
+      active: getColors(colorNames.action, '400'),
+      hover: getColors(colorNames.action, '200'),
       selected: getColors(colorNames.action, '500'),
       disabled: getColors(colorNames.action, '300'),
       contrast: getColors(colorNames.action, '100')
@@ -205,7 +205,7 @@ export const setyTheme = {
     display: '1.1'
   },
   colors: {
-    ...buildColorTheme()
+    ...buildDarkColorTheme()
   },
   text: {
     ...theme.text,

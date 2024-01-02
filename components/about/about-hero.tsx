@@ -2,12 +2,13 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Container, Image } from 'krado-react';
+import { Container, Box, Image } from 'krado-react';
 
 export default function AboutHero() {
   return (
     <Container
       sx={{
+        maxWidth: '900px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -19,13 +20,14 @@ export default function AboutHero() {
         alt='My about'
         src='work/space-and-time.png'
         sx={{
+          objectFit: 'cover',
           width: '100%',
-          objectFit: 'none',
-          maxWidth: '1000px',
+          height: '100%',
           borderRadius: '40px'
         }}
       />
-      <Container sx={{ textAlign: 'center' }}>
+
+      <Box sx={{ textAlign: 'center' }}>
         <Heading
           variant='display.h1'
           sx={{ marginBottom: 2, color: 'surface.extralight' }}
@@ -36,7 +38,7 @@ export default function AboutHero() {
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
-      </Container>
+      </Box>
     </Container>
   );
 }

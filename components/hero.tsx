@@ -60,7 +60,7 @@ export default function Hero() {
           </Button>
         </a>
       </Container>
-      <SiteFooter textColor='text.secondary' linkColor='text.primary' />
+      <SiteFooter textColor='text.primary' linkColor='primary.regular' />
     </Flex>
   );
 }

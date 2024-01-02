@@ -47,18 +47,20 @@ export default function ContactSection({ useTransparentBackground }) {
                   variant='display.h2'
                   sx={{
                     color: 'surface.extralight',
-                    fontSize: [7, 8, 9],
                     marginBottom: [3, 4]
                   }}
                 >
                   greetings@imsety.com
                 </Heading>
               </a>
-              <Text variant='body.h3' sx={{ color: 'surface.light' }}>
+              <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Text>
             </Container>
-            <SiteFooter textColor='surface.light' linkColor='surface.thin' />
+            <SiteFooter
+              textColor='surface.extralight'
+              linkColor='surface.light'
+            />
           </Flex>
         </motion.div>
       </Box>
