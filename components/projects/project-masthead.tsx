@@ -11,6 +11,11 @@ import { MdExpandMore } from 'react-icons/md';
 function ScrollButton() {
   return (
     <Flex
+      as={motion.a}
+      href='#info'
+      whileHover={{
+        backgroundColor: getColor(setyTheme, 'surface.thin')
+      }}
       sx={{
         justifyContent: 'center',
         alignItems: 'center',

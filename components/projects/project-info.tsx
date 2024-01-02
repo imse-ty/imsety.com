@@ -6,7 +6,7 @@ import Tooltip from '../tooltip';
 
 export default function ProjectInfo() {
   return (
-    <Box sx={{ paddingY: 5, backgroundColor: 'surface.extralight' }}>
+    <Box id='info' sx={{ paddingY: 5, backgroundColor: 'surface.extralight' }}>
       <Container
         sx={{
           display: 'flex',
