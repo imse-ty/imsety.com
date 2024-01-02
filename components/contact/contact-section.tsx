@@ -48,7 +48,8 @@ export default function ContactSection({ useTransparentBackground }) {
                   variant='display.h2'
                   sx={{
                     color: 'surface.extralight',
-                    marginBottom: [3, 4]
+                    marginBottom: [3, 4],
+                    fontSize: [7, 9, 10]
                   }}
                 >
                   greetings@imsety.com
