@@ -114,7 +114,7 @@ function buildDarkColorTheme(
 ) {
   return {
     primary: {
-      regular: getColors(colorNames.primary, '500'),
+      regular: getColors(colorNames.primary, '300'),
       contrast: getColors(colorNames.primary, '100')
     },
     secondary: {
@@ -205,7 +205,7 @@ export const setyTheme = {
     display: '1.1'
   },
   colors: {
-    ...buildDarkColorTheme()
+    ...buildColorTheme()
   },
   text: {
     ...theme.text,
