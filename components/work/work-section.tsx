@@ -49,7 +49,7 @@ export default function WorkSection({ projects }) {
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'background',
-            borderRadius: '48px'
+            borderRadius: 4
           }}
         >
           <Container sx={{ textAlign: 'center' }}>

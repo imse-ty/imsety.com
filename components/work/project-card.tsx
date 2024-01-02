@@ -16,7 +16,7 @@ export default function ProjectCard({ title, src, href }) {
           aspectRatio: '4/3',
           overflow: 'hidden',
           flexDirection: 'column',
-          borderRadius: '24px',
+          borderRadius: 3,
           transition: 'transform 325ms ease, box-shadow 325ms ease',
           '&:hover': {
             transform: 'scale(1.02)',

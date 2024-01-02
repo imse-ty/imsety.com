@@ -204,8 +204,9 @@ export const setyTheme = {
     heading: '1.1',
     display: '1.1'
   },
+  radii: [4, 8, 16, 32, 64, 99999],
   colors: {
-    ...buildDarkColorTheme()
+    ...buildColorTheme()
   },
   text: {
     ...theme.text,

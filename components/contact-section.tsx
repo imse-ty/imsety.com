@@ -34,7 +34,8 @@ export default function ContactSection({ useTransparentBackground }) {
           sx={{
             paddingTop: 6,
             backgroundColor: 'surface.extraheavy',
-            borderRadius: '48px 48px 0px 0px'
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4
           }}
         >
           <Flex sx={{ flexDirection: 'column', minHeight: '100vh' }}>
