@@ -6,7 +6,7 @@ import Tooltip from '../tooltip';
 
 export default function ProjectInfo() {
   return (
-    <Box sx={{ paddingY: 5, backgroundColor: 'surface.light' }}>
+    <Box sx={{ paddingY: 5, backgroundColor: 'surface.extralight' }}>
       <Container
         sx={{
           display: 'flex',
@@ -19,31 +19,31 @@ export default function ProjectInfo() {
           <Tooltip
             label='Timeline'
             text='2 months'
-            labelColor='surface.medium'
-            textColor='surface.black'
-            dividerColor='surface.regular'
+            labelColor='surface.regular'
+            textColor='surface.bold'
+            dividerColor='surface.light'
           />
           <Tooltip
             label='Year'
             text='2023'
-            labelColor='surface.medium'
-            textColor='surface.black'
-            dividerColor='surface.regular'
+            labelColor='surface.regular'
+            textColor='surface.bold'
+            dividerColor='surface.light'
           />
           <Tooltip
             label='Stress meter'
             text='Max'
-            labelColor='surface.medium'
-            textColor='surface.black'
-            dividerColor='surface.regular'
+            labelColor='surface.regular'
+            textColor='surface.bold'
+            dividerColor='surface.light'
           />
         </Flex>
 
         <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-          <Text variant='body.pretext' sx={{ color: 'surface.medium' }}>
+          <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
             Goal
           </Text>
-          <Text variant='body.summary' sx={{ color: 'surface.black' }}>
+          <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
             arcu, fringilla a egestas condimentum, vulputate at purus. Sed enim
             diam, rhoncus congue gravida ultrices, iaculis ac metus.
@@ -51,10 +51,10 @@ export default function ProjectInfo() {
           </Text>
         </Flex>
         <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-          <Text variant='body.pretext' sx={{ color: 'surface.medium' }}>
+          <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
             Result
           </Text>
-          <Text variant='body.summary' sx={{ color: 'surface.black' }}>
+          <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
             arcu, fringilla a egestas condimentum, vulputate at purus. Sed enim
             diam, rhoncus congue gravida ultrices, iaculis ac metus.
