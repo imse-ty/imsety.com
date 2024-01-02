@@ -91,7 +91,7 @@ function buildColorTheme(
       placeholder: getColors(colorNames.text, '200'),
       disabled: getColors(colorNames.text, '100')
     },
-    background: getColors(colorNames.background, '200'),
+    background: getColors(colorNames.background, '100'),
     divider: getColors(colorNames.divider, '200')
   };
 }
