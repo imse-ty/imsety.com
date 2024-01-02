@@ -15,8 +15,10 @@ export default function ProjectInfo() {
       }}
     >
       <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-        <Text variant='body.pretext'>Goal</Text>
-        <Text variant='body.summary'>
+        <Text variant='body.pretext' sx={{ color: 'secondary.regular' }}>
+          Goal
+        </Text>
+        <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
           arcu, fringilla a egestas condimentum, vulputate at purus. Sed enim
           diam, rhoncus congue gravida ultrices, iaculis ac metus. Pellentesque
@@ -24,8 +26,10 @@ export default function ProjectInfo() {
         </Text>
       </Flex>
       <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-        <Text variant='body.pretext'>Result</Text>
-        <Text variant='body.summary'>
+        <Text variant='body.pretext' sx={{ color: 'secondary.regular' }}>
+          Result
+        </Text>
+        <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
           arcu, fringilla a egestas condimentum, vulputate at purus. Sed enim
           diam, rhoncus congue gravida ultrices, iaculis ac metus. Pellentesque

@@ -35,11 +35,29 @@ export default function AboutSection() {
           <AboutHero />
           <Container sx={{ maxWidth: '900px' }}>
             <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
-              <Tooltip label='Timeline' text='2 months' />
-              <Tooltip label='Year' text='2023' />
-              <Tooltip label='Stress meter' text='Max' />
+              <Tooltip
+                label='Timeline'
+                text='2 months'
+                dividerColor='surface.semiblack'
+                labelColor='surface.light'
+                textColor='surface.thin'
+              />
+              <Tooltip
+                label='Year'
+                text='2023'
+                dividerColor='surface.semiblack'
+                labelColor='surface.light'
+                textColor='surface.thin'
+              />
+              <Tooltip
+                label='Stress meter'
+                text='Max'
+                dividerColor='surface.semiblack'
+                labelColor='surface.light'
+                textColor='surface.thin'
+              />
             </Flex>
-            <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
+            <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
               arcu, fringilla a egestas condimentum, vulputate at purus. Sed
               enim diam, rhoncus congue gravida ultrices, iaculis ac metus.

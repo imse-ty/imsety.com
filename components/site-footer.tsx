@@ -9,7 +9,7 @@ export function FooterLink({ icon, children, href }) {
       sx={{
         alignItems: 'center',
         gap: 2,
-        color: 'secondary.contrast',
+        color: 'inherit',
         textDecoration: 'none'
       }}
     >
@@ -21,12 +21,12 @@ export function FooterLink({ icon, children, href }) {
   );
 }
 
-export default function SiteFooter() {
+export default function SiteFooter({ textColor, linkColor }) {
   return (
     <Footer style={{ backgroundColor: 'transparent' }}>
       <FooterFootnote
         sx={{
-          color: 'secondary.contrast',
+          color: textColor,
           textAlign: ['center', null, 'left']
         }}
       >
@@ -38,7 +38,8 @@ export default function SiteFooter() {
           gap: [3, null, null, 5],
           marginTop: [3, null, 0],
           flexWrap: 'wrap',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          color: linkColor
         }}
       >
         <FooterLink

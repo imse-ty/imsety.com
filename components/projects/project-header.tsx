@@ -15,8 +15,8 @@ function ScrollButton() {
         justifyContent: 'center',
         alignItems: 'center',
         paddingY: 3,
-
-        backgroundColor: 'secondary.light',
+        color: 'secondary.contrast',
+        backgroundColor: 'secondary.bold',
         zIndex: 2,
         fontSize: 7
       }}
@@ -82,7 +82,7 @@ export default function ProjectHeader({ imageSrc, imageAlt, title, subtitle }) {
             position: 'absolute',
             width: '100%',
             height: '100%',
-            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 4.23%, ${getColor(
+            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${getColor(
               setyTheme,
               'secondary.bold'
             )} 100%)`

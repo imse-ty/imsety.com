@@ -30,14 +30,34 @@ export default function Project(props) {
         imageSrc={data.project.coverImage}
         href='/work'
       />
-      <Container sx={{ marginTop: 5, maxWidth: '900px' }}>
-        <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
-          <Tooltip label='Timeline' text='2 months' />
-          <Tooltip label='Year' text='2023' />
-          <Tooltip label='Stress meter' text='Max' />
-        </Flex>
-      </Container>
-      <ProjectInfo />
+      <Box sx={{ paddingY: 6, backgroundColor: 'secondary.bold' }}>
+        <Container sx={{ maxWidth: '900px' }}>
+          <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
+            <Tooltip
+              label='Timeline'
+              text='2 months'
+              labelColor='secondary.regular'
+              textColor='secondary.contrast'
+              dividerColor='surface.bold'
+            />
+            <Tooltip
+              label='Year'
+              text='2023'
+              labelColor='secondary.regular'
+              textColor='secondary.contrast'
+              dividerColor='surface.bold'
+            />
+            <Tooltip
+              label='Stress meter'
+              text='Max'
+              labelColor='secondary.regular'
+              textColor='secondary.contrast'
+              dividerColor='surface.bold'
+            />
+          </Flex>
+        </Container>
+        <ProjectInfo />
+      </Box>
 
       <Container
         sx={{

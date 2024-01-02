@@ -46,8 +46,8 @@ export default function ReelSection({
           <Heading
             variant='display.h1'
             sx={{
-              marginBottom: [1, 2],
-              color: 'secondary.contrast'
+              color: 'secondary.contrast',
+              marginBottom: [1, 2]
             }}
           >
             {title}
@@ -61,7 +61,7 @@ export default function ReelSection({
             leftIcon={<MdNorthEast />}
             sx={{
               color: 'secondary.bold',
-              backgroundColor: 'secondary.contrast'
+              backgroundColor: 'secondary.light'
             }}
           >
             Explore

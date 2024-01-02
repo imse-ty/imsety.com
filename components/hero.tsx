@@ -42,27 +42,25 @@ export default function Hero() {
           <Heading
             variant='display.display'
             sx={{
-              marginBottom: [2, 3],
-              color: 'secondary.contrast'
+              marginBottom: [2, 3]
             }}
           >
             Lorem ipsum!
           </Heading>
-          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
-            arcu, fringilla a egestas condimentum, vulputate at purus.
+          <Text variant='body.summary'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </Text>
         </Flex>
-        <a href='#reel' sx={{ textDecoration: 'none' }}>
-          <Button
-            leftIcon={<MdNorthEast />}
-            sx={{ display: ['none', 'block'] }}
-          >
+        <a
+          href='#reel'
+          sx={{ display: ['none', 'block'], textDecoration: 'none' }}
+        >
+          <Button leftIcon={<MdNorthEast />} sx={{}}>
             Explore
           </Button>
         </a>
       </Container>
-      <SiteFooter />
+      <SiteFooter textColor='text.secondary' linkColor='text.primary' />
     </Flex>
   );
 }

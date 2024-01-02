@@ -82,7 +82,7 @@ export default function Shade({ children }) {
       ref={ref}
       sx={{
         height: '200vh',
-        backgroundColor: 'secondary.bold'
+        backgroundColor: 'background'
       }}
     >
       <motion.div
