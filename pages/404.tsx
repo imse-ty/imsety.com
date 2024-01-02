@@ -35,7 +35,7 @@ export function Custom404Footer() {
 
 export default function Custom404() {
   return (
-    <Layout disableScroll={false}>
+    <Layout>
       <Flex sx={{ minHeight: '100vh', flexDirection: 'column' }}>
         <Container
           sx={{
