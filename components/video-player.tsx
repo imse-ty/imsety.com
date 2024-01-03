@@ -19,7 +19,6 @@ function PlayingVideo() {
       sx={{
         position: 'absolute',
         margin: 'auto',
-        zIndex: 1,
         borderRadius: 3
       }}
     >
@@ -74,6 +73,7 @@ export default function VideoPlayer({ isActive, onClick }) {
       onClick={onClick}
     >
       {isActive && <PlayingVideo />}
+
       <IdleVideo />
     </Flex>
   );

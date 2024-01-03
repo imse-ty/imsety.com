@@ -5,8 +5,8 @@ import Text from '@/components/fixed-krado-components/Text';
 import { setyTheme } from '@/lib/site-theme';
 import { getColor } from '@theme-ui/color';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Container, Box, Flex } from 'krado-react';
-import { MdExpandMore } from 'react-icons/md';
+import { Container, Box, Flex, Button } from 'krado-react';
+import { MdExpandMore, MdPlayArrow } from 'react-icons/md';
 import VideoPlayer from '../video-player';
 import { useState } from 'react';
 
@@ -67,29 +67,48 @@ export default function ProjectMasthead({ title, subtitle }) {
                   position: 'absolute',
                   display: 'flex',
                   flexDirection: 'column',
+                  alignItems: 'center',
                   textAlign: 'center',
-                  gap: [1, 2],
+                  gap: 4,
                   bottom: 0,
                   marginTop: 'auto',
                   marginBottom: 5,
                   zIndex: 2
                 }}
               >
-                <Heading
-                  variant='display.h1'
+                <Flex
                   sx={{
-                    color: 'secondary.contrast',
-                    marginBottom: [1, 2]
+                    flexDirection: 'column',
+                    textAlign: 'center'
                   }}
                 >
-                  {title}
-                </Heading>
-                <Text
-                  variant='body.summary'
-                  sx={{ color: 'secondary.contrast' }}
+                  <Heading
+                    variant='display.h1'
+                    sx={{
+                      color: 'secondary.contrast',
+                      marginBottom: [1, 2]
+                    }}
+                  >
+                    {title}
+                  </Heading>
+                  <Text
+                    variant='body.summary'
+                    sx={{ color: 'secondary.contrast' }}
+                  >
+                    {subtitle}
+                  </Text>
+                </Flex>
+
+                <Button
+                  onClick={() => setIsVideoActive(true)}
+                  leftIcon={<MdPlayArrow />}
+                  sx={{
+                    color: 'secondary.bold',
+                    backgroundColor: 'secondary.light'
+                  }}
                 >
-                  {subtitle}
-                </Text>
+                  View video
+                </Button>
               </Container>
               <Box
                 as={motion.div}
