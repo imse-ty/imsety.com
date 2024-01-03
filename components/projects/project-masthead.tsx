@@ -4,9 +4,11 @@ import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import { setyTheme } from '@/lib/site-theme';
 import { getColor } from '@theme-ui/color';
-import { motion } from 'framer-motion';
-import { Container, Box, Flex, Image } from 'krado-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Container, Box, Flex } from 'krado-react';
 import { MdExpandMore } from 'react-icons/md';
+import VideoPlayer from '../video-player';
+import { useState } from 'react';
 
 function ScrollButton() {
   return (
@@ -31,74 +33,91 @@ function ScrollButton() {
   );
 }
 
-export default function ProjectMasthead({
-  imageSrc,
-  imageAlt,
-  title,
-  subtitle
-}) {
+export default function ProjectMasthead({ title, subtitle }) {
+  const [isVideoActive, setIsVideoActive] = useState(false);
+
   return (
     <Flex
       sx={{
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '100vh',
-        position: 'relative'
+        height: '100vh',
+        position: 'relative',
+        backgroundColor: 'surface.heavy'
       }}
     >
-      <Container
+      <Flex
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 4,
-          marginTop: 'auto',
-          marginBottom: 5,
-          zIndex: 2
-        }}
-      >
-        <Flex
-          sx={{
-            flexDirection: 'column',
-            textAlign: 'center'
-          }}
-        >
-          <Heading
-            variant='display.h1'
-            sx={{
-              color: 'secondary.contrast',
-              marginBottom: [1, 2]
-            }}
-          >
-            {title}
-          </Heading>
-          <Text variant='body.summary' sx={{ color: 'secondary.contrast' }}>
-            {subtitle}
-          </Text>
-        </Flex>
-      </Container>
-      <ScrollButton />
-      <Box
-        sx={{
-          position: 'absolute',
           height: '100%',
-          width: 'auto',
-          overflow: 'hidden'
+          width: '100%',
+          position: 'relative'
         }}
       >
-        <Box
-          sx={{
-            zIndex: 1,
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${getColor(
-              setyTheme,
-              'secondary.bold'
-            )} 100%)`
-          }}
+        <AnimatePresence>
+          {!isVideoActive && (
+            <>
+              <Container
+                as={motion.div}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: 'spring' }}
+                sx={{
+                  maxWidth: 'none',
+                  position: 'absolute',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  textAlign: 'center',
+                  gap: [1, 2],
+                  bottom: 0,
+                  marginTop: 'auto',
+                  marginBottom: 5,
+                  zIndex: 2
+                }}
+              >
+                <Heading
+                  variant='display.h1'
+                  sx={{
+                    color: 'secondary.contrast',
+                    marginBottom: [1, 2]
+                  }}
+                >
+                  {title}
+                </Heading>
+                <Text
+                  variant='body.summary'
+                  sx={{ color: 'secondary.contrast' }}
+                >
+                  {subtitle}
+                </Text>
+              </Container>
+              <Box
+                as={motion.div}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                sx={{
+                  zIndex: 1,
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%',
+                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${getColor(
+                    setyTheme,
+                    'secondary.bold'
+                  )} 100%)`,
+                  pointerEvents: 'none'
+                }}
+              />
+            </>
+          )}
+        </AnimatePresence>
+
+        <VideoPlayer
+          isActive={isVideoActive}
+          onClick={() => setIsVideoActive(!isVideoActive)}
         />
-        <Image
+
+        {/* <Image
           as={motion.img}
           alt={imageAlt}
           src={imageSrc}
@@ -111,8 +130,9 @@ export default function ProjectMasthead({
             zIndex: -1
           }}
           transition={{ type: 'spring', stiffness: 40 }}
-        />
-      </Box>
+        /> */}
+      </Flex>
+      <ScrollButton />
     </Flex>
   );
 }
