@@ -1,6 +1,6 @@
 import { buildColorTheme, getColors } from 'krado-react';
 
-const colorName = 'nut';
+const colorName = 'sekmet';
 
 const monochromaticTheme = {
   primary: {
