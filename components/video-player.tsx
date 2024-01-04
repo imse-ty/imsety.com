@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Flex } from 'krado-react';
 
-function PlayingVideo() {
+function PlayingVideo({ src, poster }) {
   return (
     <motion.video
       initial={{ opacity: 0 }}
@@ -12,8 +12,7 @@ function PlayingVideo() {
       layoutId='video'
       autoPlay
       controls
-      muted
-      poster='/turntable-thumbnail.png'
+      poster={poster}
       width='1920'
       height='1080'
       sx={{
@@ -22,19 +21,19 @@ function PlayingVideo() {
         borderRadius: 3
       }}
     >
-      <source src='/2020-reel.mp4' type='video/mp4' />
+      <source src={src} type='video/mp4' />
       Your browser does not support the video tag.
     </motion.video>
   );
 }
 
-function IdleVideo() {
+function IdleVideo({ src, poster }) {
   return (
     <motion.video
       autoPlay
       loop
       muted
-      poster='/turntable-thumbnail.png'
+      poster={poster}
       layoutId='video'
       sx={{
         position: 'absolute',
@@ -43,13 +42,13 @@ function IdleVideo() {
         objectFit: 'cover'
       }}
     >
-      <source src='/2020-reel.mp4' type='video/mp4' />
+      <source src={src} type='video/mp4' />
       Your browser does not support the video tag.
     </motion.video>
   );
 }
 
-export default function VideoPlayer({ isActive, onClick }) {
+export default function VideoPlayer({ isActive, onClick, src, poster }) {
   const variants = {
     active: { width: '90%', height: '90%', borderRadius: '32px' },
     idle: { width: '100%', height: '100%', borderRadius: '0px' }
@@ -72,9 +71,9 @@ export default function VideoPlayer({ isActive, onClick }) {
       }}
       onClick={onClick}
     >
-      {isActive && <PlayingVideo />}
+      {isActive && <PlayingVideo src={src} poster={poster} />}
 
-      <IdleVideo />
+      <IdleVideo src={src} poster={poster} />
     </Flex>
   );
 }

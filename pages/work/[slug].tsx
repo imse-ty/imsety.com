@@ -36,8 +36,8 @@ export default function Project(props) {
       <ProjectMasthead
         title={data.project.title}
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
-        imageAlt='My image'
-        imageSrc={data.project.coverImage}
+        video={data.project.coverVideo}
+        coverImage={data.project.coverImage}
         href='/work'
       />
 

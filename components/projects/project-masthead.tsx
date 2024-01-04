@@ -33,7 +33,12 @@ function ScrollButton() {
   );
 }
 
-export default function ProjectMasthead({ title, subtitle }) {
+export default function ProjectMasthead({
+  title,
+  subtitle,
+  video,
+  coverImage
+}) {
   const [isVideoActive, setIsVideoActive] = useState(false);
 
   return (
@@ -132,6 +137,8 @@ export default function ProjectMasthead({ title, subtitle }) {
         </AnimatePresence>
 
         <VideoPlayer
+          src={video}
+          poster={coverImage}
           isActive={isVideoActive}
           onClick={() => setIsVideoActive(!isVideoActive)}
         />

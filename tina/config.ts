@@ -77,6 +77,11 @@ export default defineConfig({
           },
           {
             type: 'image',
+            name: 'coverVideo',
+            label: 'coverVideo'
+          },
+          {
+            type: 'image',
             name: 'coverImage',
             label: 'Cover image'
           },
