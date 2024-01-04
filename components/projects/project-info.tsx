@@ -16,10 +16,10 @@ export default function ProjectInfo({ stats, goal, result }) {
         }}
       >
         <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 4 }}>
-          {stats.map((item) => {
+          {stats.map((item, index) => {
             return (
               <Tooltip
-                key={item.index}
+                key={index}
                 label={item.label}
                 text={item.stat}
                 labelColor='surface.regular'
