@@ -1,7 +1,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import ProjectImage from '@/components/projects/project-image';
-import { Link, Button, Container } from 'krado-react';
+import { Link } from 'krado-react';
 
 export const components = {
   p: (props) => (
