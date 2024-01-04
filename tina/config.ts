@@ -76,6 +76,11 @@ export default defineConfig({
             required: true
           },
           {
+            type: 'string',
+            name: 'subtitle',
+            label: 'Subtitle'
+          },
+          {
             type: 'image',
             name: 'coverVideo',
             label: 'coverVideo'
@@ -84,6 +89,47 @@ export default defineConfig({
             type: 'image',
             name: 'coverImage',
             label: 'Cover image'
+          },
+          {
+            type: 'object',
+            name: 'stats',
+            label: 'Stats',
+            list: true,
+            fields: [
+              {
+                name: 'label',
+                label: 'Label',
+                type: 'string'
+              },
+              {
+                label: 'Stat',
+                name: 'stat',
+                type: 'string'
+              }
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: `${item?.label} - ${item?.stat}` };
+              }
+            }
+          },
+
+          {
+            type: 'string',
+            name: 'goal',
+            label: 'Goal',
+            component: 'textarea'
+          },
+          {
+            type: 'string',
+            name: 'result',
+            label: 'Result',
+            component: 'textarea'
+          },
+          {
+            type: 'datetime',
+            name: 'publishedAt',
+            label: 'Published at'
           },
           {
             type: 'rich-text',

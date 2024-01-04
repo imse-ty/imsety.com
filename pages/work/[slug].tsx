@@ -35,13 +35,17 @@ export default function Project(props) {
     <Layout>
       <ProjectMasthead
         title={data.project.title}
-        subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
+        subtitle={data.project.subtitle}
         video={data.project.coverVideo}
         coverImage={data.project.coverImage}
         href='/work'
       />
 
-      <ProjectInfo />
+      <ProjectInfo
+        stats={data.project.stats}
+        goal={data.project.goal}
+        result={data.project.result}
+      />
       <div ref={container}>
         <Box sx={{ backgroundColor: 'surface.extralight' }}>
           <motion.div
