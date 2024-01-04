@@ -54,9 +54,6 @@ export const components = {
       </Link>
     );
   },
-  Button: ({ children }) => {
-    return <Button>{children}</Button>;
-  },
   ProjectImage: ({ src, alt }) => {
     return <ProjectImage alt={alt} src={src} />;
   }
