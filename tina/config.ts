@@ -147,6 +147,22 @@ export default defineConfig({
                     type: 'string'
                   }
                 ]
+              },
+              {
+                name: 'ProjectImage',
+                label: 'Project image',
+                fields: [
+                  {
+                    name: 'alt',
+                    label: 'Alterative text',
+                    type: 'string'
+                  },
+                  {
+                    name: 'src',
+                    label: 'Image',
+                    type: 'image'
+                  }
+                ]
               }
             ]
           }

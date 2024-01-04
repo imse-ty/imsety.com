@@ -14,6 +14,10 @@ import ContactSection from '@/components/contact/contact-section';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
+function BodyContainer({ ...rest }) {
+  return <Container sx={{ maxWidth: '900px' }} {...rest} />;
+}
+
 export default function Project(props) {
   const { data } = useTina({
     query: props.query,
@@ -58,10 +62,9 @@ export default function Project(props) {
               borderTopRightRadius: 4
             }}
           >
-            <Container
+            <BodyContainer
               sx={{
                 marginTop: 5,
-                maxWidth: '900px',
                 minHeight: '100vh'
               }}
             >
@@ -71,7 +74,7 @@ export default function Project(props) {
                   components={components}
                 />
               </Flex>
-            </Container>
+            </BodyContainer>
             <ContactSection useTransparentBackground />
           </motion.div>
         </Box>

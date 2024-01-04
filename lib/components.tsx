@@ -1,6 +1,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Link, Button } from 'krado-react';
+import ProjectImage from '@/components/projects/project-image';
+import { Link, Button, Container } from 'krado-react';
 
 export const components = {
   p: (props) => (
@@ -55,5 +56,8 @@ export const components = {
   },
   Button: ({ children }) => {
     return <Button>{children}</Button>;
+  },
+  ProjectImage: ({ src, alt }) => {
+    return <ProjectImage alt={alt} src={src} />;
   }
 };
