@@ -1,5 +1,6 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import ProjectGrid from '@/components/projects/project-grid';
 import ProjectImage from '@/components/projects/project-image';
 import { Link } from 'krado-react';
 
@@ -56,5 +57,8 @@ export const components = {
   },
   ProjectImage: ({ src, alt }) => {
     return <ProjectImage alt={alt} src={src} />;
+  },
+  ProjectGrid: ({ images }) => {
+    return <ProjectGrid images={images} />;
   }
 };

@@ -163,6 +163,25 @@ export default defineConfig({
                     type: 'image'
                   }
                 ]
+              },
+              {
+                name: 'ProjectGrid',
+                label: 'Project grid',
+                fields: [
+                  {
+                    type: 'object',
+                    name: 'images',
+                    label: 'Images',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'image',
+                        label: 'Image',
+                        type: 'image'
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
