@@ -19,10 +19,10 @@ export default function ProjectImage({ alt, src }) {
   });
 
   const parallax = useSpring(scrollYProgress, { damping: 35 });
-  const parallaxTransform = useTransform(parallax, [0, 1], [0, 10]);
+  const parallaxTransform = useTransform(parallax, [0, 1], [0, 0]);
 
-  const parallaxTemplate = useMotionTemplate`${parallaxTransform}vh`;
-  const parallaxTemplateNegative = useMotionTemplate`-${parallaxTransform}vh`;
+  const parallaxTemplate = useMotionTemplate`${parallaxTransform}%`;
+  const parallaxTemplateNegative = useMotionTemplate`-${parallaxTransform}%`;
 
   return (
     <div ref={container}>
@@ -31,7 +31,7 @@ export default function ProjectImage({ alt, src }) {
         sx={{
           marginY: 4,
           marginX: [0, null, null, null, '-50%'],
-          height: '80vh',
+          height: '100%',
           borderRadius: 3,
           overflow: 'hidden',
           backgroundColor: 'red'
@@ -44,7 +44,7 @@ export default function ProjectImage({ alt, src }) {
           src={src}
           sx={{
             width: '100%',
-            height: '90vh',
+            height: '100%',
             objectFit: 'cover',
             objectPosition: 'center center'
           }}
