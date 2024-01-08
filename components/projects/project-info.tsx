@@ -2,11 +2,24 @@
 
 import { Container, Flex, Box } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
-import Tooltip from '../tooltip';
+import { StatCard, StatGrid } from './project-stats';
+import {
+  MdCalendarToday,
+  MdCampaign,
+  MdLightbulb,
+  MdPerson,
+  MdSchedule
+} from 'react-icons/md';
 
 export default function ProjectInfo({ stats, goal, result }) {
   return (
-    <Box id='info' sx={{ paddingY: 5, backgroundColor: 'surface.extralight' }}>
+    <Box
+      id='info'
+      sx={{
+        paddingY: 5,
+        backgroundColor: 'surface.extralight'
+      }}
+    >
       <Container
         sx={{
           display: 'flex',
@@ -15,37 +28,41 @@ export default function ProjectInfo({ stats, goal, result }) {
           gap: 4
         }}
       >
-        <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 4 }}>
-          {stats.map((item, index) => {
-            return (
-              <Tooltip
-                key={index}
-                label={item.label}
-                text={item.stat}
-                labelColor='surface.regular'
-                textColor='surface.bold'
-                dividerColor='surface.light'
-              />
-            );
-          })}
-        </Flex>
-
-        <Flex sx={{ flexDirection: 'column', gap: 3 }}>
+        <Flex sx={{ flexDirection: 'column', gap: 3, marginBottom: 4 }}>
           <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
-            Goal
+            Summary
           </Text>
           <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
             {goal}
           </Text>
         </Flex>
-        <Flex sx={{ flexDirection: 'column', gap: 3 }}>
-          <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
-            Result
-          </Text>
-          <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
-            {result}
-          </Text>
-        </Flex>
+        <StatGrid>
+          <StatCard icon={<MdCalendarToday />} heading='Aug 2022' />
+          <StatCard
+            icon={<MdPerson />}
+            number={27}
+            numberSuffix='k'
+            text='Attendees'
+          />
+          <StatCard
+            icon={<MdSchedule />}
+            number={81}
+            numberSuffix=' hours'
+            text='Working on this project'
+          />
+          <StatCard
+            icon={<MdCampaign />}
+            heading='Used during the promotion of Mega Agent Camp'
+            text='Some sections of this video were used in replays of the event!'
+            isHeadingSmall
+          />
+          <StatCard
+            icon={<MdLightbulb />}
+            heading='20 ideas scrapped'
+            text='Some sections of this video were used in [replays of the event](https://youtu.be/FmHrimCjujM)!'
+            isHeadingSmall
+          />
+        </StatGrid>
       </Container>
     </Box>
   );
