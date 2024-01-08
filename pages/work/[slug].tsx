@@ -56,7 +56,7 @@ export default function Project(props) {
             style={{ scale }}
             sx={{
               paddingTop: 6,
-
+              boxShadow: 'soft.highNorth',
               backgroundColor: 'background',
               borderTopLeftRadius: 4,
               borderTopRightRadius: 4
