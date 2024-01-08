@@ -12,15 +12,13 @@ import { useState } from 'react';
 
 function ScrollButton() {
   return (
-    <Flex
+    <Box
       as={motion.a}
       href='#info'
       whileHover={{
         backgroundColor: getColor(setyTheme, 'surface.thin')
       }}
       sx={{
-        justifyContent: 'center',
-        alignItems: 'center',
         paddingY: 3,
         color: 'surface.bold',
         backgroundColor: 'surface.extralight',
@@ -28,8 +26,20 @@ function ScrollButton() {
         fontSize: 7
       }}
     >
-      <MdExpandMore />
-    </Flex>
+      <motion.span
+        animate={{ y: 8 }}
+        transition={{
+          type: 'tween',
+          ease: 'easeInOut',
+          repeat: Infinity,
+          repeatType: 'mirror',
+          duration: 1.4
+        }}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <MdExpandMore />
+      </motion.span>
+    </Box>
   );
 }
 
