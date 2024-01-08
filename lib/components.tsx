@@ -55,8 +55,8 @@ export const components = {
       </Link>
     );
   },
-  ProjectImage: ({ src, alt }) => {
-    return <ProjectImage alt={alt} src={src} />;
+  img: ({ alt, url }) => {
+    return <ProjectImage alt={alt} src={url} />;
   },
   ProjectGrid: ({ images }) => {
     return <ProjectGrid images={images} />;

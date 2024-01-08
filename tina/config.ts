@@ -149,22 +149,6 @@ export default defineConfig({
                 ]
               },
               {
-                name: 'ProjectImage',
-                label: 'Project image',
-                fields: [
-                  {
-                    name: 'alt',
-                    label: 'Alterative text',
-                    type: 'string'
-                  },
-                  {
-                    name: 'src',
-                    label: 'Image',
-                    type: 'image'
-                  }
-                ]
-              },
-              {
                 name: 'ProjectGrid',
                 label: 'Project grid',
                 fields: [
@@ -179,7 +163,18 @@ export default defineConfig({
                         label: 'Image',
                         type: 'image'
                       }
-                    ]
+                    ],
+                    ui: {
+                      itemProps: (item) => {
+                        return {
+                          label: item?.image,
+                          style: {
+                            height: '20vh',
+                            background: `left / contain no-repeat url(${item?.image})`
+                          }
+                        };
+                      }
+                    }
                   }
                 ]
               }
