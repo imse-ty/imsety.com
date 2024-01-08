@@ -64,7 +64,7 @@ export default function Project(props) {
           >
             <BodyContainer
               sx={{
-                marginTop: 5,
+                marginY: 5,
                 minHeight: '100vh'
               }}
             >

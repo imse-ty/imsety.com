@@ -4,8 +4,7 @@ export default function ProjectGrid({ images }) {
   return (
     <Grid
       sx={{
-        marginTop: 4,
-        marginBottom: 5,
+        marginY: 4,
         gap: 4,
         gridTemplateColumns: '1fr 1fr',
         marginX: [0, null, null, null, '-50%']
