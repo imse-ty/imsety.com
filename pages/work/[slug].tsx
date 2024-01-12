@@ -32,7 +32,7 @@ export default function Project(props) {
     offset: ['start end', 'start start']
   });
 
-  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
@@ -40,7 +40,8 @@ export default function Project(props) {
       <ProjectMasthead
         title={data.project.title}
         subtitle={data.project.subtitle}
-        video={data.project.coverVideo}
+        video={data.project.video}
+        coverVideo={data.project.coverVideo}
         coverImage={data.project.coverImage}
         href='/work'
       />

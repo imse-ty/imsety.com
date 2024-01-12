@@ -48,7 +48,13 @@ function IdleVideo({ src, poster }) {
   );
 }
 
-export default function VideoPlayer({ isActive, onClick, src, poster }) {
+export default function VideoPlayer({
+  isActive,
+  onClick,
+  src,
+  previewSrc,
+  poster
+}) {
   const variants = {
     active: { width: '90%', height: '90%', borderRadius: '32px' },
     idle: { width: '100%', height: '100%', borderRadius: '0px' }
@@ -73,7 +79,7 @@ export default function VideoPlayer({ isActive, onClick, src, poster }) {
     >
       {isActive && <PlayingVideo src={src} poster={poster} />}
 
-      <IdleVideo src={src} poster={poster} />
+      <IdleVideo src={previewSrc} poster={poster} />
     </Flex>
   );
 }

@@ -47,6 +47,7 @@ export default function ProjectMasthead({
   title,
   subtitle,
   video,
+  coverVideo,
   coverImage
 }) {
   const [isVideoActive, setIsVideoActive] = useState(false);
@@ -114,16 +115,29 @@ export default function ProjectMasthead({
                   </Text>
                 </Flex>
 
-                <Button
-                  onClick={() => setIsVideoActive(true)}
-                  leftIcon={<MdPlayArrow />}
-                  sx={{
-                    color: 'secondary.bold',
-                    backgroundColor: 'secondary.light'
-                  }}
-                >
-                  View video
-                </Button>
+                {video ? (
+                  <Button
+                    onClick={() => setIsVideoActive(true)}
+                    leftIcon={<MdPlayArrow />}
+                    sx={{
+                      color: 'secondary.bold',
+                      backgroundColor: 'secondary.light'
+                    }}
+                  >
+                    View video
+                  </Button>
+                ) : (
+                  <a href='#info'>
+                    <Button
+                      sx={{
+                        color: 'secondary.bold',
+                        backgroundColor: 'secondary.light'
+                      }}
+                    >
+                      Read case study
+                    </Button>
+                  </a>
+                )}
               </Container>
               <Box
                 as={motion.div}
@@ -148,9 +162,14 @@ export default function ProjectMasthead({
 
         <VideoPlayer
           src={video}
+          previewSrc={coverVideo}
           poster={coverImage}
           isActive={isVideoActive}
-          onClick={() => setIsVideoActive(!isVideoActive)}
+          onClick={() => {
+            if (video) {
+              setIsVideoActive(!isVideoActive);
+            }
+          }}
         />
 
         {/* <Image
