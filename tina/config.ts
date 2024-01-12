@@ -115,16 +115,9 @@ export default defineConfig({
           },
 
           {
-            type: 'string',
-            name: 'goal',
-            label: 'Goal',
-            component: 'textarea'
-          },
-          {
-            type: 'string',
-            name: 'result',
-            label: 'Result',
-            component: 'textarea'
+            type: 'rich-text',
+            name: 'summary',
+            label: 'Summary'
           },
           {
             type: 'datetime',

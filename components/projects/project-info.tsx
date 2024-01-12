@@ -1,4 +1,5 @@
 /** @jsxImportSource theme-ui */
+// @ts-nocheck
 
 import { Container, Flex, Box } from 'krado-react';
 import Text from '../fixed-krado-components/Text';
@@ -10,8 +11,10 @@ import {
   MdPerson,
   MdSchedule
 } from 'react-icons/md';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import { components } from '@/lib/components';
 
-export default function ProjectInfo({ stats, goal, result }) {
+export default function ProjectInfo({ stats, summary }) {
   return (
     <Box
       id='info'
@@ -33,7 +36,7 @@ export default function ProjectInfo({ stats, goal, result }) {
             Summary
           </Text>
           <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
-            {goal}
+            <TinaMarkdown content={summary} />
           </Text>
         </Flex>
         <StatGrid>
