@@ -45,7 +45,11 @@ export default function Project(props) {
         href='/work'
       />
 
-      <ProjectInfo stats={data.project.stats} summary={data.project.summary} />
+      <ProjectInfo
+        info={data.project.info}
+        summary={data.project.summary}
+        stats={data.project.stats}
+      />
       <div ref={container}>
         <Box sx={{ backgroundColor: 'surface.extralight' }}>
           <motion.div

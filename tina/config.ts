@@ -92,8 +92,8 @@ export default defineConfig({
           },
           {
             type: 'object',
-            name: 'stats',
-            label: 'Stats',
+            name: 'info',
+            label: 'Info',
             list: true,
             fields: [
               {
@@ -102,22 +102,64 @@ export default defineConfig({
                 type: 'string'
               },
               {
-                label: 'Stat',
-                name: 'stat',
+                name: 'text',
+                label: 'Text',
                 type: 'string'
               }
             ],
             ui: {
               itemProps: (item) => {
-                return { label: `${item?.label} - ${item?.stat}` };
+                return { label: `${item?.label} - ${item?.text}` };
               }
             }
           },
-
           {
             type: 'rich-text',
             name: 'summary',
             label: 'Summary'
+          },
+          {
+            type: 'object',
+            name: 'stats',
+            label: 'Stats',
+            list: true,
+            fields: [
+              {
+                name: 'heading',
+                label: 'Heading',
+                type: 'string'
+              },
+              {
+                name: 'text',
+                label: 'Text',
+                type: 'string'
+              },
+              {
+                name: 'numberPrefix',
+                label: 'Number Prefix',
+                type: 'string'
+              },
+              {
+                name: 'number',
+                label: 'Number',
+                type: 'number'
+              },
+              {
+                name: 'numberSuffix',
+                label: 'Number Suffix',
+                type: 'string'
+              },
+              {
+                name: 'isHeadingSmall',
+                label: 'Is Heading Small?',
+                type: 'boolean'
+              }
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: `${item?.heading} - ${item?.text}` };
+              }
+            }
           },
           {
             type: 'datetime',

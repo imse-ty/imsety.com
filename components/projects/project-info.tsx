@@ -14,7 +14,7 @@ import {
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { components } from '@/lib/components';
 
-export default function ProjectInfo({ stats, summary }) {
+export default function ProjectInfo({ info, stats, summary }) {
   return (
     <Box
       id='info'
@@ -40,31 +40,20 @@ export default function ProjectInfo({ stats, summary }) {
           </Text>
         </Flex>
         <StatGrid>
-          <StatCard icon={<MdCalendarToday />} heading='Aug 2022' />
-          <StatCard
-            icon={<MdPerson />}
-            number={27}
-            numberSuffix='k'
-            text='Attendees'
-          />
-          <StatCard
-            icon={<MdSchedule />}
-            number={81}
-            numberSuffix=' hours'
-            text='Working on this project'
-          />
-          <StatCard
-            icon={<MdCampaign />}
-            heading='Used during the promotion of Mega Agent Camp'
-            text='Some sections of this video were used in replays of the event!'
-            isHeadingSmall
-          />
-          <StatCard
-            icon={<MdLightbulb />}
-            heading='20 ideas scrapped'
-            text='Some sections of this video were used in [replays of the event](https://youtu.be/FmHrimCjujM)!'
-            isHeadingSmall
-          />
+          {stats.map((stat, index) => {
+            return (
+              <StatCard
+                icon={<MdLightbulb />}
+                heading={stat.heading}
+                text={stat.text}
+                numberPrefix={stat.numberPrefix}
+                number={stat.number}
+                numberSuffix={stat.numberSuffix}
+                isHeadingSmall={stat.isHeadingSmall}
+                key={index}
+              />
+            );
+          })}
         </StatGrid>
       </Container>
     </Box>

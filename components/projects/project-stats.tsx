@@ -65,7 +65,7 @@ export function StatGrid({ children }) {
       sx={{
         flexWrap: 'wrap',
         gap: 3,
-        marginX: [0, null, null, null, '-50%']
+        marginX: [0, null, null, null, '-25%']
       }}
     >
       {children}
