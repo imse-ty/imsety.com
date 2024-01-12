@@ -13,6 +13,7 @@
     "eslint": "8.42.0",
     "eslint-config-next": "^14.0.4",
     "framer-motion": "^10.16.16",
+    "get-video-id": "^3.6.5",
     "krado-react": "github:imse-ty/krado-react",
     "next": "^14.0.4",
     "react": "^18.2.0",

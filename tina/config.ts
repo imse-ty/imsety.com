@@ -212,6 +212,28 @@ export default defineConfig({
                     }
                   }
                 ]
+              },
+              {
+                name: 'ProjectYoutube',
+                label: 'YouTube embed',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'url',
+                    label: 'URL'
+                  }
+                ]
+              },
+              {
+                name: 'ProjectVimeo',
+                label: 'Vimeo embed',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'url',
+                    label: 'URL'
+                  }
+                ]
               }
             ]
           }

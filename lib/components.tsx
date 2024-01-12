@@ -1,5 +1,9 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import {
+  ProjectVimeo,
+  ProjectYoutube
+} from '@/components/projects/project-embed';
 import ProjectGrid from '@/components/projects/project-grid';
 import ProjectImage from '@/components/projects/project-image';
 import { Link } from 'krado-react';
@@ -60,5 +64,11 @@ export const components = {
   },
   ProjectGrid: ({ images }) => {
     return <ProjectGrid images={images} />;
+  },
+  ProjectYoutube: ({ url }) => {
+    return <ProjectYoutube url={url} />;
+  },
+  ProjectVimeo: ({ url }) => {
+    return <ProjectVimeo url={url} />;
   }
 };
