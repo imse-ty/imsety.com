@@ -13,6 +13,8 @@ import {
 } from 'react-icons/md';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { components } from '@/lib/components';
+import Tooltip from '../tooltip';
+import { simpleComponents } from '@/lib/simple-components';
 
 export default function ProjectInfo({ info, stats, summary }) {
   return (
@@ -28,17 +30,38 @@ export default function ProjectInfo({ info, stats, summary }) {
           display: 'flex',
           flexDirection: 'column',
           maxWidth: '900px',
-          gap: 4
+          gap: 5,
+          marginBottom: 5
         }}
       >
-        <Flex sx={{ flexDirection: 'column', gap: 3, marginBottom: 4 }}>
-          <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
-            Summary
-          </Text>
-          <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
-            <TinaMarkdown content={summary} />
-          </Text>
-        </Flex>
+        {info && (
+          <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+            {info.map((tooltip, index) => {
+              return (
+                <Tooltip
+                  label={tooltip.label}
+                  text={tooltip.text}
+                  labelColor='surface.regular'
+                  textColor='surface.bold'
+                  dividerColor='surface.light'
+                  key={index}
+                />
+              );
+            })}
+          </Flex>
+        )}
+        {summary && (
+          <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+            <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
+              Summary
+            </Text>
+            <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
+              <TinaMarkdown content={summary} components={simpleComponents} />
+            </Text>
+          </Flex>
+        )}
+      </Container>
+      {stats && (
         <StatGrid>
           {stats.map((stat, index) => {
             return (
@@ -55,7 +78,7 @@ export default function ProjectInfo({ info, stats, summary }) {
             );
           })}
         </StatGrid>
-      </Container>
+      )}
     </Box>
   );
 }

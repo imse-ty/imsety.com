@@ -2,6 +2,7 @@ import { Flex, Box } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import CountUp from 'react-countup';
+import { Container } from 'theme-ui';
 
 function Card({ children, ...rest }) {
   return (
@@ -61,14 +62,15 @@ export function StatCard({
 
 export function StatGrid({ children }) {
   return (
-    <Flex
+    <Container
       sx={{
+        display: 'flex',
+        maxWidth: '1000px',
         flexWrap: 'wrap',
-        gap: 3,
-        marginX: [0, null, null, null, '-25%']
+        gap: 3
       }}
     >
       {children}
-    </Flex>
+    </Container>
   );
 }
