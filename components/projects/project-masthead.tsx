@@ -48,7 +48,8 @@ export default function ProjectMasthead({
   subtitle,
   video,
   coverVideo,
-  coverImage
+  coverImage,
+  themeColor
 }) {
   const [isVideoActive, setIsVideoActive] = useState(false);
 
@@ -109,23 +110,41 @@ export default function ProjectMasthead({
                   </Heading>
                   <Text
                     variant='body.summary'
-                    sx={{ color: 'secondary.contrast' }}
+                    sx={{ color: 'secondary.contrast', maxWidth: '900px' }}
                   >
                     {subtitle}
                   </Text>
                 </Flex>
 
                 {video ? (
-                  <Button
-                    onClick={() => setIsVideoActive(true)}
-                    leftIcon={<MdPlayArrow />}
+                  <Flex
                     sx={{
-                      color: 'secondary.bold',
-                      backgroundColor: 'secondary.light'
+                      flexDirection: ['column', null, 'row'],
+                      gap: 3
                     }}
                   >
-                    View video
-                  </Button>
+                    <Button
+                      onClick={() => setIsVideoActive(true)}
+                      leftIcon={<MdPlayArrow />}
+                      sx={{
+                        color: 'secondary.bold',
+                        backgroundColor: 'secondary.light'
+                      }}
+                    >
+                      Watch video
+                    </Button>
+                    <a href='#info'>
+                      <Button
+                        variant='ghost'
+                        sx={{
+                          color: 'secondary.contrast',
+                          borderColor: 'secondary.contrast'
+                        }}
+                      >
+                        View case study
+                      </Button>
+                    </a>
+                  </Flex>
                 ) : (
                   <a href='#info'>
                     <Button
@@ -134,7 +153,7 @@ export default function ProjectMasthead({
                         backgroundColor: 'secondary.light'
                       }}
                     >
-                      Read case study
+                      View case study
                     </Button>
                   </a>
                 )}
@@ -149,10 +168,7 @@ export default function ProjectMasthead({
                   position: 'absolute',
                   width: '100%',
                   height: '100%',
-                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${getColor(
-                    setyTheme,
-                    'secondary.bold'
-                  )} 100%)`,
+                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${themeColor} 100%)`,
                   pointerEvents: 'none'
                 }}
               />
