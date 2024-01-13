@@ -14,7 +14,10 @@ import {
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { components } from '@/lib/components';
 import Tooltip from '../tooltip';
-import { simpleComponents } from '@/lib/simple-components';
+import {
+  simpleComponents,
+  simpleComponentsSummaryText
+} from '@/lib/simple-components';
 
 export default function ProjectInfo({ info, stats, summary }) {
   return (
@@ -30,12 +33,12 @@ export default function ProjectInfo({ info, stats, summary }) {
           display: 'flex',
           flexDirection: 'column',
           maxWidth: '900px',
-          gap: 5,
+          gap: 4,
           marginBottom: 5
         }}
       >
         {info && (
-          <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+          <Flex sx={{ flexDirection: 'column', gap: 3 }}>
             {info.map((tooltip, index) => {
               return (
                 <Tooltip
@@ -50,16 +53,17 @@ export default function ProjectInfo({ info, stats, summary }) {
             })}
           </Flex>
         )}
-        {summary && (
-          <Flex sx={{ flexDirection: 'column', gap: 4 }}>
+        {summary.children.length > 0 ? (
+          <Flex sx={{ flexDirection: 'column', gap: 3 }}>
             <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
               Summary
             </Text>
-            <Text variant='body.summary' sx={{ color: 'surface.bold' }}>
-              <TinaMarkdown content={summary} components={simpleComponents} />
-            </Text>
+            <TinaMarkdown
+              content={summary}
+              components={simpleComponentsSummaryText}
+            />
           </Flex>
-        )}
+        ) : null}
       </Container>
       {stats && (
         <StatGrid>

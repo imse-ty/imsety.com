@@ -81,9 +81,34 @@ export default defineConfig({
             label: 'Subtitle'
           },
           {
+            type: 'string',
+            name: 'pageColor',
+            label: 'Page color',
+            options: [
+              'geb',
+              'sobek',
+              'usir',
+              'hapi',
+              'ptah',
+              'min',
+              'nut',
+              'taweret',
+              'asset',
+              'sekmet',
+              'hetHeru',
+              'oshun',
+              'ra',
+              'beset',
+              'nso',
+              'nsoWarm',
+              'nsoHot',
+              'nsoCool'
+            ]
+          },
+          {
             type: 'image',
             name: 'coverVideo',
-            label: 'coverVideo'
+            label: 'Cover video'
           },
           {
             type: 'image',
@@ -137,7 +162,7 @@ export default defineConfig({
               {
                 name: 'text',
                 label: 'Text',
-                type: 'string'
+                type: 'rich-text'
               },
               {
                 name: 'numberPrefix',
@@ -156,13 +181,21 @@ export default defineConfig({
               },
               {
                 name: 'isHeadingSmall',
-                label: 'Is Heading Small?',
+                label: 'Is heading small?',
                 type: 'boolean'
               }
             ],
             ui: {
               itemProps: (item) => {
-                return { label: `${item?.heading} - ${item?.text}` };
+                console.log(item);
+
+                return {
+                  label: `${item?.numberPrefix ? item?.numberPrefix : null}${
+                    item?.number ? item?.number : null
+                  }${item?.numberSuffix ? item?.numberSuffix : null} ${
+                    item?.heading ? item?.heading : null
+                  }`
+                };
               }
             }
           },
@@ -215,6 +248,17 @@ export default defineConfig({
                         };
                       }
                     }
+                  }
+                ]
+              },
+              {
+                name: 'ProjectVideo',
+                label: 'Video embed',
+                fields: [
+                  {
+                    type: 'image',
+                    name: 'src',
+                    label: 'File'
                   }
                 ]
               },

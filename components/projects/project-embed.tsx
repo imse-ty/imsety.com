@@ -3,6 +3,24 @@
 
 import getVideoId from 'get-video-id';
 
+export function ProjectVideo({ src }) {
+  return (
+    <video
+      controls
+      sx={{
+        marginY: 4,
+        marginX: [0, null, null, null, '-50%'],
+        position: 'relative',
+        overflow: 'hidden',
+        borderRadius: 3
+      }}
+    >
+      <source src={src} type='video/mp4' />
+      Your browser does not support the video tag.
+    </video>
+  );
+}
+
 export function ProjectYoutube({ url }) {
   const getYoutubeId = () => {
     if (url) {

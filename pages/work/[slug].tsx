@@ -13,6 +13,9 @@ import ProjectInfo from '@/components/projects/project-info';
 import ContactSection from '@/components/contact/contact-section';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { ThemeUIProvider } from 'theme-ui';
+import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
+import { getColor } from '@theme-ui/color';
 
 function BodyContainer({ ...rest }) {
   return <Container sx={{ maxWidth: '900px' }} {...rest} />;
@@ -35,52 +38,71 @@ export default function Project(props) {
   const scrollScale = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
-  return (
-    <Layout>
-      <ProjectMasthead
-        title={data.project.title}
-        subtitle={data.project.subtitle}
-        video={data.project.video}
-        coverVideo={data.project.coverVideo}
-        coverImage={data.project.coverImage}
-        href='/work'
-      />
+  function checkIfBodyIsEmpty() {
+    if (data.project.body.children.length > 0) {
+      return true;
+    } else {
+      false;
+    }
+  }
 
-      <ProjectInfo
-        info={data.project.info}
-        summary={data.project.summary}
-        stats={data.project.stats}
-      />
-      <div ref={container}>
-        <Box sx={{ backgroundColor: 'surface.extralight' }}>
-          <motion.div
-            style={{ scale }}
-            sx={{
-              paddingTop: 6,
-              boxShadow: 'soft.highNorth',
-              backgroundColor: 'background',
-              borderTopLeftRadius: 4,
-              borderTopRightRadius: 4
-            }}
-          >
-            <BodyContainer
+  const pageColor = buildMonochromaticTheme(data.project.pageColor);
+
+  return (
+    <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
+      <Layout>
+        <ProjectMasthead
+          title={data.project.title}
+          subtitle={data.project.subtitle}
+          video={data.project.video}
+          coverVideo={data.project.coverVideo}
+          coverImage={data.project.coverImage}
+          href='/work'
+          themeColor={getColor({ colors: { ...pageColor } }, 'secondary.bold')}
+        />
+
+        <ProjectInfo
+          info={data.project.info}
+          summary={data.project.summary}
+          stats={data.project.stats}
+        />
+        <div ref={container}>
+          <Box sx={{ backgroundColor: 'surface.extralight' }}>
+            <motion.div
+              style={{ scale }}
               sx={{
-                marginY: 5,
-                minHeight: '100vh'
+                paddingTop: 6,
+                backgroundColor: checkIfBodyIsEmpty()
+                  ? 'soft.highNorth'
+                  : 'none',
+                backgroundColor: checkIfBodyIsEmpty()
+                  ? 'background'
+                  : 'transparent',
+                borderTopLeftRadius: 4,
+                borderTopRightRadius: 4
               }}
             >
-              <Flex sx={{ flexDirection: 'column' }}>
-                <TinaMarkdown
-                  content={data.project.body}
-                  components={components}
-                />
-              </Flex>
-            </BodyContainer>
-            <ContactSection useTransparentBackground />
-          </motion.div>
-        </Box>
-      </div>
-    </Layout>
+              {checkIfBodyIsEmpty() ? (
+                <BodyContainer
+                  sx={{
+                    marginY: 5,
+                    minHeight: '100vh'
+                  }}
+                >
+                  <Flex sx={{ flexDirection: 'column' }}>
+                    <TinaMarkdown
+                      content={data.project.body}
+                      components={components}
+                    />
+                  </Flex>
+                </BodyContainer>
+              ) : null}
+              <ContactSection useTransparentBackground />
+            </motion.div>
+          </Box>
+        </div>
+      </Layout>
+    </ThemeUIProvider>
   );
 }
 

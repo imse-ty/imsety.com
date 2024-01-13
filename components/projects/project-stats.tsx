@@ -3,6 +3,8 @@ import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import CountUp from 'react-countup';
 import { Container } from 'theme-ui';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import { simpleComponents } from '@/lib/simple-components';
 
 function Card({ children, ...rest }) {
   return (
@@ -45,6 +47,7 @@ export function StatCard({
           {number ? (
             <CountUp
               end={number}
+              decimalPlaces={1}
               duration={1}
               prefix={numberPrefix}
               suffix={numberSuffix}
@@ -54,7 +57,11 @@ export function StatCard({
             heading
           )}
         </Heading>
-        {text && <Text>{text}</Text>}
+        {text && (
+          <Text>
+            <TinaMarkdown content={text} components={simpleComponents} />
+          </Text>
+        )}
       </Flex>
     </Card>
   );

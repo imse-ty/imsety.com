@@ -1,6 +1,7 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
 import {
+  ProjectVideo,
   ProjectVimeo,
   ProjectYoutube
 } from '@/components/projects/project-embed';
@@ -64,6 +65,9 @@ export const components = {
   },
   ProjectGrid: ({ images }) => {
     return <ProjectGrid images={images} />;
+  },
+  ProjectVideo: ({ src }) => {
+    return <ProjectVideo src={src} />;
   },
   ProjectYoutube: ({ url }) => {
     return <ProjectYoutube url={url} />;
