@@ -54,7 +54,7 @@ export default function ProjectInfo({ info, stats, summary }) {
           </Flex>
         )}
         {summary.children.length > 0 ? (
-          <Flex sx={{ flexDirection: 'column', gap: 3 }}>
+          <Flex sx={{ flexDirection: 'column', gap: 3, color: 'surface.bold' }}>
             <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
               Summary
             </Text>

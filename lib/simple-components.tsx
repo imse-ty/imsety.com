@@ -3,7 +3,10 @@ import { Link } from 'krado-react';
 
 export const simpleComponentsSummaryText = {
   p: (props) => (
-    <Text variant='body.summary' sx={{ fontSize: 'inherit', marginY: 10 }}>
+    <Text
+      variant='body.summary'
+      sx={{ color: 'inherit', fontSize: 'inherit', marginY: 10 }}
+    >
       {props.children}
     </Text>
   ),
