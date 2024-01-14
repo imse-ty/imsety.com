@@ -35,7 +35,7 @@ export default function Project(props) {
     offset: ['start end', 'start start']
   });
 
-  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.98, 1]);
+  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   function checkIfBodyIsEmpty() {
@@ -71,6 +71,7 @@ export default function Project(props) {
             <motion.div
               style={{ scale }}
               sx={{
+                transformOrigin: 'top',
                 paddingTop: 6,
                 backgroundColor: checkIfBodyIsEmpty()
                   ? 'soft.highNorth'
