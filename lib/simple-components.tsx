@@ -1,4 +1,5 @@
 import Text from '@/components/fixed-krado-components/Text';
+import { UnorderedList } from '@/components/list';
 import { Link } from 'krado-react';
 
 export const simpleComponentsSummaryText = {
@@ -22,6 +23,18 @@ export const simpleComponentsSummaryText = {
       >
         {children}
       </Link>
+    );
+  },
+
+  ol: ({ children }) => {
+    console.log(children);
+
+    return (
+      <UnorderedList>
+        {children.map((item) => {
+          <Text variant='body.summary'>{item.children}</Text>;
+        })}
+      </UnorderedList>
     );
   }
 };
