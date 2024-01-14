@@ -24,6 +24,30 @@ export const setyTheme = {
   colors: {
     ...pageTheme
   },
+  buttons: {
+    ...theme.buttons,
+    ghost: {
+      color: 'primary.regular',
+      bg: 'transparent',
+      border: 1,
+      borderColor: 'primary.regular',
+      '&:hover': {
+        color: 'action.active',
+        borderColor: 'transparent',
+        bg: 'action.contrast',
+        boxShadow: 'hard.high'
+      },
+      '&:active': {
+        color: 'background',
+        bg: 'action.active'
+      },
+      '&:disabled': {
+        color: 'action.disabled',
+        borderColor: 'action.disabled',
+        boxShadow: 'none'
+      }
+    }
+  },
   text: {
     ...theme.text,
     base: {

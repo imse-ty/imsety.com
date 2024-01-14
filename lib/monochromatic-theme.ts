@@ -57,7 +57,7 @@ export function buildMonochromaticTheme(colorName) {
         surface: buildColorTheme({ surface: colorName }).surface,
         action: {
           active: getColors(colorName, '400'),
-          hover: getColors(colorName, '200'),
+          hover: getColors(colorName, '100'),
           selected: getColors(colorName, '500'),
           disabled: getColors(colorName, '300'),
           contrast: getColors(colorName, '100')
