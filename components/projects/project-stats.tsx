@@ -43,12 +43,12 @@ export function StatCard({
         {icon}
       </Box>
       <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-        <Heading variant={isHeadingSmall ? 'display.h5' : 'display.h3'}>
+        <Heading variant={isHeadingSmall ? 'display.h5' : 'display.h4'}>
           {number ? (
             <CountUp
               end={number}
               decimalPlaces={1}
-              duration={1}
+              duration={3}
               prefix={numberPrefix}
               suffix={numberSuffix}
               enableScrollSpy

@@ -180,6 +180,11 @@ export default defineConfig({
                 type: 'string'
               },
               {
+                name: 'numberDecimals',
+                label: 'Number Decimals',
+                type: 'number'
+              },
+              {
                 name: 'isHeadingSmall',
                 label: 'Is heading small?',
                 type: 'boolean'
