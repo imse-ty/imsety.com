@@ -75,6 +75,7 @@ export default function ProjectInfo({ info, stats, summary }) {
                 text={stat.text}
                 numberPrefix={stat.numberPrefix}
                 number={stat.number}
+                numberDecimals={stat.numberDecimals}
                 numberSuffix={stat.numberSuffix}
                 isHeadingSmall={stat.isHeadingSmall}
                 key={index}

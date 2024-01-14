@@ -54,7 +54,7 @@ export default function Project(props) {
         <ProjectMasthead
           title={data.project.title}
           subtitle={data.project.subtitle}
-          video={data.project.video}
+          videoUrl={data.project.videoUrl}
           coverVideo={data.project.coverVideo}
           coverImage={data.project.coverImage}
           href='/work'

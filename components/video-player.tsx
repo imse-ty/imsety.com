@@ -1,7 +1,46 @@
 /** @jsxImportSource theme-ui */
 
 import { motion } from 'framer-motion';
+import getVideoId from 'get-video-id';
 import { Flex } from 'krado-react';
+
+function VimeoVideo({ url }) {
+  const getVimeoId = () => {
+    if (url) {
+      return getVideoId(url).id;
+    }
+  };
+  const vimeoId = getVimeoId();
+  const vimeoUrl = `https://player.vimeo.com/video/${vimeoId}?playsinline=0&transparent=0&loop=1&autoplay=1`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layoutId='video'
+      sx={{
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        zIndex: 1
+      }}
+    >
+      <iframe
+        src={vimeoUrl}
+        title='Vimeo video player'
+        allow='autoplay; fullscreen; picture-in-picture'
+        sx={{
+          width: '100%',
+          height: '100%',
+          border: 0,
+          borderRadius: 3
+        }}
+        allowFullScreen
+      />
+    </motion.div>
+  );
+}
 
 function PlayingVideo({ src, poster }) {
   return (
@@ -48,13 +87,7 @@ function IdleVideo({ src, poster }) {
   );
 }
 
-export default function VideoPlayer({
-  isActive,
-  onClick,
-  src,
-  previewSrc,
-  poster
-}) {
+export default function VideoPlayer({ isActive, url, previewSrc, poster }) {
   const variants = {
     active: { width: '90%', height: '90%', borderRadius: '32px' },
     idle: { width: '100%', height: '100%', borderRadius: '0px' }
@@ -75,9 +108,8 @@ export default function VideoPlayer({
         alignItems: 'center',
         overflow: 'hidden'
       }}
-      onClick={onClick}
     >
-      {isActive && <PlayingVideo src={src} poster={poster} />}
+      {isActive && <VimeoVideo url={url} />}
 
       <IdleVideo src={previewSrc} poster={poster} />
     </Flex>

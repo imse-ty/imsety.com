@@ -34,6 +34,7 @@ export function StatCard({
   text,
   isHeadingSmall,
   numberPrefix,
+  numberDecimals,
   numberSuffix,
   number
 }) {
@@ -47,8 +48,8 @@ export function StatCard({
           {number ? (
             <CountUp
               end={number}
-              decimalPlaces={1}
-              duration={3}
+              decimals={numberDecimals}
+              duration={1.5}
               prefix={numberPrefix}
               suffix={numberSuffix}
               enableScrollSpy

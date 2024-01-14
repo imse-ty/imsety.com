@@ -116,9 +116,9 @@ export default defineConfig({
             label: 'Cover image'
           },
           {
-            type: 'image',
-            name: 'video',
-            label: 'Video'
+            type: 'string',
+            name: 'videoUrl',
+            label: 'Vimeo URL'
           },
           {
             type: 'object',

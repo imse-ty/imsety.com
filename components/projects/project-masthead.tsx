@@ -46,7 +46,7 @@ function ScrollButton() {
 export default function ProjectMasthead({
   title,
   subtitle,
-  video,
+  videoUrl,
   coverVideo,
   coverImage,
   themeColor
@@ -64,6 +64,11 @@ export default function ProjectMasthead({
       }}
     >
       <Flex
+        onClick={() => {
+          if (videoUrl) {
+            setIsVideoActive(!isVideoActive);
+          }
+        }}
         sx={{
           height: '100%',
           width: '100%',
@@ -116,7 +121,7 @@ export default function ProjectMasthead({
                   </Text>
                 </Flex>
 
-                {video ? (
+                {videoUrl ? (
                   <Flex
                     sx={{
                       flexDirection: ['column', null, 'row'],
@@ -177,15 +182,10 @@ export default function ProjectMasthead({
         </AnimatePresence>
 
         <VideoPlayer
-          src={video}
+          url={videoUrl}
           previewSrc={coverVideo}
           poster={coverImage}
           isActive={isVideoActive}
-          onClick={() => {
-            if (video) {
-              setIsVideoActive(!isVideoActive);
-            }
-          }}
         />
 
         {/* <Image
