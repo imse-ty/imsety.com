@@ -42,7 +42,7 @@ function IdleVideo({ src, poster }) {
         objectFit: 'cover'
       }}
     >
-      <source src={src} type='video/mp4' />
+      <source src={src} type='video/webm' />
       Your browser does not support the video tag.
     </motion.video>
   );
