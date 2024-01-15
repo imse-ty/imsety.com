@@ -2,7 +2,7 @@ import { Flex, Box } from 'krado-react';
 import Heading from '../fixed-krado-components/Heading';
 import Text from '../fixed-krado-components/Text';
 import CountUp from 'react-countup';
-import { Container } from 'theme-ui';
+import { Container } from 'krado-react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { simpleComponents } from '@/lib/simple-components';
 
@@ -10,7 +10,7 @@ function Card({ children, ...rest }) {
   return (
     <Box
       sx={{
-        padding: [3, 4],
+        padding: 4,
         flex: '1 1 25%',
         borderRadius: 3,
         backgroundColor: 'background',
@@ -74,7 +74,8 @@ export function StatGrid({ children }) {
       sx={{
         display: 'flex',
         maxWidth: '1000px',
-        flexWrap: 'wrap',
+        flexDirection: ['column', 'row'],
+        flexWrap: ['none', 'wrap'],
         gap: 3
       }}
     >

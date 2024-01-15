@@ -192,8 +192,6 @@ export default defineConfig({
             ],
             ui: {
               itemProps: (item) => {
-                console.log(item);
-
                 return {
                   label: `${item?.numberPrefix ? item?.numberPrefix : null}${
                     item?.number ? item?.number : null

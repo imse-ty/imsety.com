@@ -9,6 +9,7 @@ import { useTina } from 'tinacms/dist/react';
 import client from '@/tina/__generated__/client';
 import AboutSection from '@/components/about/about-section';
 import ContactSection from '@/components/contact/contact-section';
+import Hero from '@/components/hero';
 
 export default function Home(props) {
   const { data } = useTina({
@@ -21,28 +22,9 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <Shade>
-        <ReelSection
-          title='Reel'
-          subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
-          imageAlt='My image'
-          imageSrc='work/beeple-3.png'
-          href='#work'
-        />
-      </Shade>
-      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
-
-      <div sx={{ position: 'relative', zIndex: 1 }}>
-        <WorkSection projects={projectsList} />
-        <AboutSection
-          title='About'
-          subtitle='arcu, fringilla.'
-          imageAlt='My image'
-          imageSrc='work/space-and-time.png'
-          href='/about'
-        />
-        <ContactSection />
-      </div>
+      <Hero />
+      <WorkSection projects={projectsList} />
+      <ContactSection />
     </Layout>
   );
 }

@@ -28,7 +28,7 @@ export default function SiteFooter({ textColor, linkColor }) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <Footer style={{ backgroundColor: 'transparent' }}>
+    <Footer style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
       <FooterFootnote
         sx={{
           color: textColor,

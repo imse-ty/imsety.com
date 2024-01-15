@@ -6,6 +6,7 @@ import Text from './fixed-krado-components/Text';
 import { Container, Flex, Button } from 'krado-react';
 import SiteFooter from './site-footer';
 import { motion } from 'framer-motion';
+import Header from './site-header';
 
 export default function Hero() {
   return (
@@ -20,6 +21,7 @@ export default function Hero() {
         minHeight: '100vh'
       }}
     >
+      <Header />
       <Container
         as={motion.div}
         initial={{ scale: 0.8 }}
@@ -45,18 +47,18 @@ export default function Hero() {
               marginBottom: [2, 3]
             }}
           >
-            Lorem ipsum!
+            Symmetry in motion!
           </Heading>
           <Text variant='body.summary'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Bringing ideas to life with a blend of artistry and technology.
           </Text>
         </Flex>
         <a
-          href='#reel'
+          href='#work'
           sx={{ display: ['none', 'block'], textDecoration: 'none' }}
         >
           <Button leftIcon={<MdNorthEast />} sx={{}}>
-            Explore
+            View work
           </Button>
         </a>
       </Container>
