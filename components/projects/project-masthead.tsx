@@ -173,7 +173,7 @@ export default function ProjectMasthead({
                   position: 'absolute',
                   width: '100%',
                   height: '100%',
-                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 60%, ${themeColor} 100%)`,
+                  background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 50%, ${themeColor} 100%)`,
                   pointerEvents: 'none'
                 }}
               />
