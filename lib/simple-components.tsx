@@ -33,7 +33,11 @@ export const simpleComponentsSummaryText = {
   },
   li: ({ children }) => {
     return (
-      <Text as='li' variant='body.summary' sx={{ color: 'inherit' }}>
+      <Text
+        as='li'
+        variant='body.summary'
+        sx={{ fontSize: 'inherit', color: 'inherit' }}
+      >
         {children}
       </Text>
     );
