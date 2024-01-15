@@ -25,16 +25,17 @@ export const simpleComponentsSummaryText = {
       </Link>
     );
   },
-
+  ul: ({ children }) => {
+    return <UnorderedList>{children}</UnorderedList>;
+  },
   ol: ({ children }) => {
-    console.log(children);
-
+    return <UnorderedList>{children}</UnorderedList>;
+  },
+  li: ({ children }) => {
     return (
-      <UnorderedList>
-        {children.map((item) => {
-          <Text variant='body.summary'>{item.children}</Text>;
-        })}
-      </UnorderedList>
+      <Text as='li' variant='body.summary' sx={{ color: 'inherit' }}>
+        {children}
+      </Text>
     );
   }
 };
