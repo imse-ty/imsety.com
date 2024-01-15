@@ -45,10 +45,10 @@ export default function Hero() {
               marginBottom: [2, 3]
             }}
           >
-            Lorem ipsum!
+            Symmetry in motion!
           </Heading>
           <Text variant='body.summary'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Bringing ideas to life with a blend of artistry and technology.
           </Text>
         </Flex>
         <a
