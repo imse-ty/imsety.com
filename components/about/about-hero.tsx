@@ -32,7 +32,9 @@ export default function AboutHero() {
           variant='display.h1'
           sx={{ marginBottom: 3, color: 'surface.thin' }}
         >
-          Hey, my name is&nbsp;Imsety
+          Hey, my name
+          <br />
+          is&nbsp;Imsety
         </Heading>
 
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
