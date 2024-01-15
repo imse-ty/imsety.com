@@ -2,13 +2,13 @@
 
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Container, Box, Link } from 'krado-react';
+import { Container, Flex } from 'krado-react';
 
 export default function AboutHero() {
   return (
     <Container
       sx={{
-        maxWidth: '900px',
+        maxWidth: '1000px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -27,31 +27,30 @@ export default function AboutHero() {
         }}
       /> */}
 
-      <Box sx={{ textAlign: 'center' }}>
+      <Flex sx={{ flexDirection: 'column', gap: 4, textAlign: 'center' }}>
         <Heading
           variant='display.h1'
           sx={{ marginBottom: 3, color: 'surface.extralight' }}
         >
-          About
+          Hey, my name is&nbsp;Imsety
         </Heading>
 
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-          Greetings! 👋🏾 I&apos;m Imsety, an Atlanta-based motion designer,
-          developer, and creator creating stunning digital media experiences.
-          From brand films to event openers and logo animations I&apos;ve worked
-          with top brands to bring their ideas to life.
-          <br />
-          <br />
-          With skills in web and app development, I build custom solutions for
-          unique problems. Got one?{' '}
-          <Link
-            href='#contact'
-            sx={{ color: 'surface.light', borderColor: 'surface.light' }}
-          >
-            Let&apos;s connect!
-          </Link>
+          I&apos;m an Atlanta-based digital artist and developer. I blend art
+          and technology to tell compelling stories.
         </Text>
-      </Box>
+        <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+          My journey has led me to collaborate with big names like Chick-fil-A,
+          Ford, and Keller Williams, creating everything from satisfying product
+          ads to to engaging event openers.
+        </Text>
+        <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+          Alongside design, I offer specialized front-end development services.
+          If you&apos;re in need of a bespoke website or an engaging landing
+          page, let&apos;s collaborate to create digital solutions that
+          effectively tell your story.
+        </Text>
+      </Flex>
     </Container>
   );
 }

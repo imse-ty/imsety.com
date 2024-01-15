@@ -18,23 +18,10 @@ function WhatIDoSection() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        maxWidth: '900px',
+        maxWidth: '1000px',
         gap: 4
       }}
     >
-      <Flex
-        sx={{
-          gap: 2,
-          color: 'surface.thin',
-          textAlign: 'center',
-          justifyContent: 'center'
-        }}
-      >
-        <MdInfoOutline />
-        <Text variant='body.pretext' sx={{ color: 'inherit' }}>
-          What I do
-        </Text>
-      </Flex>
       <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
         <AboutCard
           icon={<MdDesignServices />}
@@ -44,7 +31,7 @@ function WhatIDoSection() {
         />
         <AboutCard
           icon={<MdTerminal />}
-          heading='Web & app development'
+          heading='Front-end development'
           text='Developing intuitive, visually appealing websites and mobile applications.'
           isHeadingSmall={true}
         />
@@ -89,10 +76,18 @@ export default function AboutSection() {
 
   return (
     <div ref={container}>
-      <Box id='about' sx={{ backgroundColor: 'background', marginTop: -5 }}>
+      <Box
+        id='about'
+        sx={{
+          backgroundColor: 'background',
+          marginTop: -5
+        }}
+      >
         <motion.div
           style={{ scale }}
           sx={{
+            display: 'flex',
+            height: '100vh',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'surface.heavy',
@@ -100,9 +95,10 @@ export default function AboutSection() {
             boxShadow: 'soft.highNorth'
           }}
         >
-          <AboutHero />
-          {/* <Tooltips /> */}
-          <WhatIDoSection />
+          <Box sx={{ margin: 'auto' }}>
+            <AboutHero />
+            <WhatIDoSection />
+          </Box>
         </motion.div>
       </Box>
     </div>
