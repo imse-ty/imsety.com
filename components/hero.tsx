@@ -52,11 +52,11 @@ export default function Hero() {
           </Text>
         </Flex>
         <a
-          href='#reel'
+          href='#work'
           sx={{ display: ['none', 'block'], textDecoration: 'none' }}
         >
           <Button leftIcon={<MdNorthEast />} sx={{}}>
-            Explore
+            View work
           </Button>
         </a>
       </Container>
