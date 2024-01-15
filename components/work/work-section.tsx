@@ -44,7 +44,7 @@ export default function WorkSection({ projects }) {
 
   return (
     <div ref={container}>
-      <Box id='work'>
+      <Box id="work">
         <motion.div
           style={{ scale }}
           sx={{
@@ -56,12 +56,13 @@ export default function WorkSection({ projects }) {
           }}
         >
           <Container sx={{ textAlign: 'center' }}>
-            <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
+            <Heading variant="display.h1" sx={{ marginBottom: 2 }}>
               Work
             </Heading>
 
-            <Text variant='body.summary'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <Text variant="body.summary">
+              Latest projects ranging from event openers, tech brand films,
+              animated graphics, and art expeditions.
             </Text>
           </Container>
           <ProjectsSection projects={projects} />
