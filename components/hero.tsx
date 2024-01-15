@@ -6,6 +6,7 @@ import Text from './fixed-krado-components/Text';
 import { Container, Flex, Button } from 'krado-react';
 import SiteFooter from './site-footer';
 import { motion } from 'framer-motion';
+import Header from './site-header';
 
 export default function Hero() {
   return (
@@ -20,6 +21,7 @@ export default function Hero() {
         minHeight: '100vh'
       }}
     >
+      <Header />
       <Container
         as={motion.div}
         initial={{ scale: 0.8 }}
