@@ -76,9 +76,138 @@ export default defineConfig({
             required: true
           },
           {
+            type: 'string',
+            name: 'subtitle',
+            label: 'Subtitle'
+          },
+          {
+            type: 'string',
+            name: 'pageColor',
+            label: 'Page color',
+            options: [
+              'geb',
+              'sobek',
+              'usir',
+              'hapi',
+              'ptah',
+              'min',
+              'nut',
+              'taweret',
+              'asset',
+              'sekmet',
+              'hetHeru',
+              'oshun',
+              'ra',
+              'beset',
+              'nso',
+              'nsoWarm',
+              'nsoHot',
+              'nsoCool'
+            ]
+          },
+          {
+            type: 'image',
+            name: 'coverVideo',
+            label: 'Cover video'
+          },
+          {
             type: 'image',
             name: 'coverImage',
             label: 'Cover image'
+          },
+          {
+            type: 'string',
+            name: 'videoUrl',
+            label: 'Vimeo URL'
+          },
+          {
+            type: 'object',
+            name: 'info',
+            label: 'Info',
+            list: true,
+            fields: [
+              {
+                name: 'label',
+                label: 'Label',
+                type: 'string'
+              },
+              {
+                name: 'text',
+                label: 'Text',
+                type: 'string'
+              }
+            ],
+            ui: {
+              itemProps: (item) => {
+                return { label: `${item?.label} - ${item?.text}` };
+              }
+            }
+          },
+          {
+            type: 'rich-text',
+            name: 'summary',
+            label: 'Summary'
+          },
+          {
+            type: 'object',
+            name: 'stats',
+            label: 'Stats',
+            list: true,
+            fields: [
+              {
+                name: 'heading',
+                label: 'Heading',
+                type: 'string'
+              },
+              {
+                name: 'text',
+                label: 'Text',
+                type: 'rich-text'
+              },
+              {
+                name: 'numberPrefix',
+                label: 'Number Prefix',
+                type: 'string'
+              },
+              {
+                name: 'number',
+                label: 'Number',
+                type: 'number'
+              },
+              {
+                name: 'numberSuffix',
+                label: 'Number Suffix',
+                type: 'string'
+              },
+              {
+                name: 'numberDecimals',
+                label: 'Number Decimals',
+                type: 'number'
+              },
+              {
+                name: 'isHeadingSmall',
+                label: 'Is heading small?',
+                type: 'boolean'
+              }
+            ],
+            ui: {
+              itemProps: (item) => {
+                console.log(item);
+
+                return {
+                  label: `${item?.numberPrefix ? item?.numberPrefix : null}${
+                    item?.number ? item?.number : null
+                  }${item?.numberSuffix ? item?.numberSuffix : null} ${
+                    item?.heading ? item?.heading : null
+                  }`
+                };
+              }
+            }
+          },
+          {
+            type: 'datetime',
+            name: 'publishedAt',
+            label: 'Published at'
           },
           {
             type: 'rich-text',
@@ -94,6 +223,69 @@ export default defineConfig({
                     name: 'children',
                     label: 'Label',
                     type: 'string'
+                  }
+                ]
+              },
+              {
+                name: 'ProjectGrid',
+                label: 'Project grid',
+                fields: [
+                  {
+                    type: 'object',
+                    name: 'images',
+                    label: 'Images',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'image',
+                        label: 'Image',
+                        type: 'image'
+                      }
+                    ],
+                    ui: {
+                      itemProps: (item) => {
+                        return {
+                          label: item?.image,
+                          style: {
+                            height: '20vh',
+                            background: `left / contain no-repeat url(${item?.image})`
+                          }
+                        };
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                name: 'ProjectVideo',
+                label: 'Video embed',
+                fields: [
+                  {
+                    type: 'image',
+                    name: 'src',
+                    label: 'File'
+                  }
+                ]
+              },
+              {
+                name: 'ProjectYoutube',
+                label: 'YouTube embed',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'url',
+                    label: 'URL'
+                  }
+                ]
+              },
+              {
+                name: 'ProjectVimeo',
+                label: 'Vimeo embed',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'url',
+                    label: 'URL'
                   }
                 ]
               }

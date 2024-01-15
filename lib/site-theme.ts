@@ -1,5 +1,7 @@
 import { theme } from 'krado-react';
-import monochromaticTheme from './monochromatic-theme';
+import { buildMonochromaticTheme } from './monochromatic-theme';
+
+const pageTheme = buildMonochromaticTheme('nut');
 
 export const setyTheme = {
   config: {
@@ -20,7 +22,31 @@ export const setyTheme = {
   },
   radii: [4, 8, 16, 32, 64, 99999],
   colors: {
-    ...monochromaticTheme
+    ...pageTheme
+  },
+  buttons: {
+    ...theme.buttons,
+    ghost: {
+      color: 'primary.regular',
+      bg: 'transparent',
+      border: 1,
+      borderColor: 'primary.regular',
+      '&:hover': {
+        color: 'action.active',
+        borderColor: 'transparent',
+        bg: 'action.contrast',
+        boxShadow: 'hard.high'
+      },
+      '&:active': {
+        color: 'background',
+        bg: 'action.active'
+      },
+      '&:disabled': {
+        color: 'action.disabled',
+        borderColor: 'action.disabled',
+        boxShadow: 'none'
+      }
+    }
   },
   text: {
     ...theme.text,

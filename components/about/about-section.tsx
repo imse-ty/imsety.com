@@ -29,7 +29,8 @@ export default function AboutSection() {
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'surface.heavy',
-            borderRadius: 4
+            borderRadius: 4,
+            boxShadow: 'soft.highNorth'
           }}
         >
           <AboutHero />

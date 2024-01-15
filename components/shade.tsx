@@ -22,7 +22,7 @@ export default function Shade({ children }) {
     offset: ['start start', 'end end']
   });
 
-  const size = useTransform(scrollYProgress, [0, 1], [200, 8000]);
+  const size = useTransform(scrollYProgress, [0, 1], [85, 8000]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const sizeSpring = useSpring(size, { damping: 15 });

@@ -1,10 +1,17 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
-import { Link, Button } from 'krado-react';
+import {
+  ProjectVideo,
+  ProjectVimeo,
+  ProjectYoutube
+} from '@/components/projects/project-embed';
+import ProjectGrid from '@/components/projects/project-grid';
+import ProjectImage from '@/components/projects/project-image';
+import { Link } from 'krado-react';
 
 export const components = {
   p: (props) => (
-    <Text variant='body.paragraph' sx={{ marginTop: 2, marginBottom: 3 }}>
+    <Text variant='body.summary' sx={{ marginTop: 2, marginBottom: 3 }}>
       {props.children}
     </Text>
   ),
@@ -53,7 +60,19 @@ export const components = {
       </Link>
     );
   },
-  Button: ({ children }) => {
-    return <Button>{children}</Button>;
+  img: ({ alt, url }) => {
+    return <ProjectImage alt={alt} src={url} />;
+  },
+  ProjectGrid: ({ images }) => {
+    return <ProjectGrid images={images} />;
+  },
+  ProjectVideo: ({ src }) => {
+    return <ProjectVideo src={src} />;
+  },
+  ProjectYoutube: ({ url }) => {
+    return <ProjectYoutube url={url} />;
+  },
+  ProjectVimeo: ({ url }) => {
+    return <ProjectVimeo url={url} />;
   }
 };
