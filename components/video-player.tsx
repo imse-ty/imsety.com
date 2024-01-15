@@ -18,7 +18,7 @@ function VimeoVideo({ url }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      layoutId='video'
+      layoutId="video"
       sx={{
         position: 'absolute',
         width: '100%',
@@ -28,8 +28,8 @@ function VimeoVideo({ url }) {
     >
       <iframe
         src={vimeoUrl}
-        title='Vimeo video player'
-        allow='autoplay; fullscreen; picture-in-picture'
+        title="Vimeo video player"
+        allow="autoplay; fullscreen; picture-in-picture"
         sx={{
           width: '100%',
           height: '100%',
@@ -48,19 +48,19 @@ function PlayingVideo({ src, poster }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      layoutId='video'
+      layoutId="video"
       autoPlay
       controls
       poster={poster}
-      width='1920'
-      height='1080'
+      width="1920"
+      height="1080"
       sx={{
         position: 'absolute',
         margin: 'auto',
         borderRadius: 3
       }}
     >
-      <source src={src} type='video/mp4' />
+      <source src={src} type="video/mp4" />
       Your browser does not support the video tag.
     </motion.video>
   );
@@ -73,7 +73,7 @@ function IdleVideo({ src, poster }) {
       loop
       muted
       poster={poster}
-      layoutId='video'
+      layoutId="video"
       sx={{
         position: 'absolute',
         width: '100%',
@@ -81,7 +81,7 @@ function IdleVideo({ src, poster }) {
         objectFit: 'cover'
       }}
     >
-      <source src={src} type='video/webm' />
+      <source src={src} type="video/webm" />
       Your browser does not support the video tag.
     </motion.video>
   );
