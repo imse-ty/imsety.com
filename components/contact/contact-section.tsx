@@ -48,7 +48,7 @@ export default function ContactSection({ useTransparentBackground }) {
                 <Heading
                   variant='display.h2'
                   sx={{
-                    color: 'surface.extralight',
+                    color: 'surface.thin',
                     marginBottom: [3, 4],
                     fontSize: [7, 9, 10]
                   }}

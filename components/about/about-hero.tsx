@@ -30,7 +30,7 @@ export default function AboutHero() {
       <Flex sx={{ flexDirection: 'column', gap: 4, textAlign: 'center' }}>
         <Heading
           variant='display.h1'
-          sx={{ marginBottom: 3, color: 'surface.extralight' }}
+          sx={{ marginBottom: 3, color: 'surface.thin' }}
         >
           Hey, my name is&nbsp;Imsety
         </Heading>
