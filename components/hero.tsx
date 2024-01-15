@@ -47,7 +47,9 @@ export default function Hero() {
               marginBottom: [2, 3]
             }}
           >
-            A motion designer on a&nbsp;mission
+            An animator and developer
+            <br />
+            on a&nbsp;mission
           </Heading>
           <Text variant='body.summary'>
             Turning creative ideas into reality by mixing a little bit of art
