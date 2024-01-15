@@ -47,10 +47,11 @@ export default function Hero() {
               marginBottom: [2, 3]
             }}
           >
-            Symmetry in motion!
+            A motion designer on a&nbsp;mission
           </Heading>
           <Text variant='body.summary'>
-            Bringing ideas to life with a blend of artistry and technology.
+            Turning creative ideas into reality by mixing a little bit of art
+            with a little of tech.
           </Text>
         </Flex>
         <a

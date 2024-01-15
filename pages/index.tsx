@@ -24,6 +24,7 @@ export default function Home(props) {
     <Layout>
       <Hero />
       <WorkSection projects={projectsList} />
+      <AboutSection />
       <ContactSection />
     </Layout>
   );

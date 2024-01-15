@@ -1,13 +1,67 @@
 /** @jsxImportSource theme-ui */
+//@ts-nocheck
 
-import { MdNorthEast } from 'react-icons/md';
-import Heading from '../fixed-krado-components/Heading';
+import { MdDesignServices, MdInfoOutline, MdTerminal } from 'react-icons/md';
+
 import Text from '../fixed-krado-components/Text';
-import { Container, Box, Flex } from 'krado-react';
+import { Container, Box, Flex, Grid } from 'krado-react';
 import AboutHero from './about-hero';
 import Tooltip from '../tooltip';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+
+import { AboutCard } from './about-card';
+
+function WhatIDoSection() {
+  return (
+    <Container
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '1000px',
+        gap: 4
+      }}
+    >
+      <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
+        <AboutCard
+          icon={<MdDesignServices />}
+          heading='Motion design'
+          text='Creating satisfying animations and visuals for brands and digital platforms.'
+          isHeadingSmall={true}
+        />
+        <AboutCard
+          icon={<MdTerminal />}
+          heading='Front-end development'
+          text='Developing intuitive, visually appealing websites and mobile applications.'
+          isHeadingSmall={true}
+        />
+      </Grid>
+    </Container>
+  );
+}
+
+function Tooltips() {
+  return (
+    <Container sx={{ maxWidth: '900px' }}>
+      <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
+        <Tooltip
+          label='Location'
+          text='Atlanta, GA'
+          dividerColor='surface.semiblack'
+          labelColor='surface.light'
+          textColor='surface.thin'
+        />
+        <Tooltip
+          label='Tools'
+          text='After Effects, Cinema 4D, VS Code'
+          dividerColor='surface.semiblack'
+          labelColor='surface.light'
+          textColor='surface.thin'
+        />
+      </Flex>
+    </Container>
+  );
+}
 
 export default function AboutSection() {
   const container = useRef(null);
@@ -22,10 +76,18 @@ export default function AboutSection() {
 
   return (
     <div ref={container}>
-      <Box id='about' sx={{ backgroundColor: 'background', marginTop: -5 }}>
+      <Box
+        id='about'
+        sx={{
+          backgroundColor: 'background',
+          marginTop: -5
+        }}
+      >
         <motion.div
           style={{ scale }}
           sx={{
+            display: 'flex',
+            height: '100vh',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'surface.heavy',
@@ -33,38 +95,10 @@ export default function AboutSection() {
             boxShadow: 'soft.highNorth'
           }}
         >
-          <AboutHero />
-          <Container sx={{ maxWidth: '900px' }}>
-            <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
-              <Tooltip
-                label='Timeline'
-                text='2 months'
-                dividerColor='surface.semiblack'
-                labelColor='surface.light'
-                textColor='surface.thin'
-              />
-              <Tooltip
-                label='Year'
-                text='2023'
-                dividerColor='surface.semiblack'
-                labelColor='surface.light'
-                textColor='surface.thin'
-              />
-              <Tooltip
-                label='Stress meter'
-                text='Max'
-                dividerColor='surface.semiblack'
-                labelColor='surface.light'
-                textColor='surface.thin'
-              />
-            </Flex>
-            <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi
-              arcu, fringilla a egestas condimentum, vulputate at purus. Sed
-              enim diam, rhoncus congue gravida ultrices, iaculis ac metus.
-              Pellentesque eget blandit leo, facilisis fermentum mi.
-            </Text>
-          </Container>
+          <Box sx={{ margin: 'auto' }}>
+            <AboutHero />
+            <WhatIDoSection />
+          </Box>
         </motion.div>
       </Box>
     </div>
