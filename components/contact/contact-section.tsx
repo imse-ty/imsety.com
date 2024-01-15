@@ -24,7 +24,7 @@ export default function ContactSection({ useTransparentBackground }) {
         sx={{
           backgroundColor: useTransparentBackground
             ? 'transparent'
-            : 'surface.extrabold',
+            : 'surface.heavy',
           marginTop: -5
         }}
       >
