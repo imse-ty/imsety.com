@@ -35,7 +35,7 @@ function WhatIDoSection() {
           What I do
         </Text>
       </Flex>
-      <Grid sx={{ gap: 3, gridTemplateColumns: '1fr 1fr' }}>
+      <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
         <AboutCard
           icon={<MdDesignServices />}
           heading='Motion design'
