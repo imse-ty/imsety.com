@@ -35,7 +35,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
               flexDirection: 'column',
               gap: [2, null, null, 4],
               position: 'absolute',
-              padding: [4, 5],
+              padding: [4, null, null, 5],
               left: [0],
               bottom: [0],
               zIndex: 1,
@@ -54,7 +54,8 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             <Text
               variant='body.smallParagraph'
               sx={{
-                color: 'secondary.regular'
+                color: 'secondary.regular',
+                display: ['none', null, null, 'block']
               }}
             >
               {subtitle}
