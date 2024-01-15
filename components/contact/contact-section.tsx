@@ -57,7 +57,8 @@ export default function ContactSection({ useTransparentBackground }) {
                 </Heading>
               </a>
               <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Thinking of collaborating? I&apos;m here to listen! Let&apos;s
+                connect.
               </Text>
             </Container>
             <SiteFooter
