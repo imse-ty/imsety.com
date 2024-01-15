@@ -54,7 +54,6 @@ export default function Hero() {
             with a little of tech.
           </Text>
         </Flex>
-        z
         <a
           href='#work'
           sx={{ display: ['none', 'block'], textDecoration: 'none' }}
