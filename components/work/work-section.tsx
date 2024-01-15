@@ -13,13 +13,15 @@ function ProjectsSection({ projects }) {
       sx={{
         display: 'grid',
         marginTop: 5,
-        gap: 4,
+        gap: [3, 4],
         gridTemplateColumns: ['1fr', null, '1fr 1fr']
       }}
     >
       {projects.map(({ project }) => (
         <ProjectCard
+          color={project.pageColor}
           title={project.title}
+          subtitle={project.subtitle}
           href={`/work/${project._sys.filename}`}
           src={project.coverImage}
           key={project._sys.filename}

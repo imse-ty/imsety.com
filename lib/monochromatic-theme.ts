@@ -10,7 +10,7 @@ export function buildMonochromaticTheme(colorName) {
       light: getColors(colorName, '300'),
       regular: getColors(colorName, '200'),
       bold: getColors(colorName, '800'),
-      contrast: getColors('nso', '000')
+      contrast: getColors(colorName, '100')
     },
     accent: {
       light: getColors(colorName, '100'),

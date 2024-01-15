@@ -6,72 +6,88 @@ import { motion } from 'framer-motion';
 import Text from '../fixed-krado-components/Text';
 import { getColor } from '@theme-ui/color';
 import { setyTheme } from '@/lib/site-theme';
+import { ThemeUIProvider } from 'theme-ui';
+import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 
-export default function ProjectCard({ title, src, href }) {
+export default function ProjectCard({ title, subtitle, src, href, color }) {
+  const pageColor = buildMonochromaticTheme(color);
+
   return (
     <Link href={href} sx={{ textDecoration: 'none' }}>
-      <Flex
-        sx={{
-          position: 'relative',
-          aspectRatio: '4/3',
-          overflow: 'hidden',
-          flexDirection: 'column',
-          borderRadius: 3,
-          marginBottom: 3,
-          transition: 'transform 325ms ease, box-shadow 325ms ease',
-          '&:hover': {
-            transform: 'scale(1.02)',
-            boxShadow: 'soft.highMiddle'
-          }
-        }}
-      >
+      <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
         <Flex
           sx={{
+            position: 'relative',
+            aspectRatio: '4/3',
+            overflow: 'hidden',
             flexDirection: 'column',
-            gap: 2,
-            position: 'absolute',
-            left: [3, 4, null, 5],
-            bottom: [3, 4, null, 5],
-            zIndex: 1
+            borderRadius: 3,
+            transition: 'transform 325ms ease, box-shadow 325ms ease',
+            '&:hover': {
+              transform: 'scale(1.02)',
+              boxShadow: 'soft.highMiddle'
+            }
           }}
         >
-          <Text
-            variant='display.h3'
-            sx={{ color: 'secondary.contrast', fontWeight: 600 }}
+          <Flex
+            as={motion.div}
+            sx={{
+              flexDirection: 'column',
+              gap: [2, null, null, 4],
+              position: 'absolute',
+              padding: [4, 5],
+              left: [0],
+              bottom: [0],
+              zIndex: 1,
+              width: '100%'
+            }}
           >
-            {title}
-          </Text>
-          <Text sx={{ color: 'secondary.contrast', opacity: 0.8 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. vitae.
-          </Text>
+            <Text
+              sx={{
+                fontWeight: 600,
+                fontSize: [6, 7, null, null, 9],
+                color: 'secondary.contrast'
+              }}
+            >
+              {title}
+            </Text>
+            <Text
+              variant='body.smallParagraph'
+              sx={{
+                color: 'secondary.regular'
+              }}
+            >
+              {subtitle}
+            </Text>
+          </Flex>
+          <Box
+            as={motion.div}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            sx={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 30%, ${getColor(
+                { colors: { ...pageColor } },
+                'secondary.bold'
+              )} 95%)`,
+              pointerEvents: 'none'
+            }}
+          />
+          <Image
+            as={motion.img}
+            src={src}
+            alt='My alt'
+            sx={{
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%'
+            }}
+          />
         </Flex>
-        <Box
-          as={motion.div}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          sx={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            background: `linear-gradient(180deg, rgba(217, 217, 217, 0.00) 50%, ${getColor(
-              setyTheme,
-              'secondary.bold'
-            )} 100%)`,
-            pointerEvents: 'none'
-          }}
-        />
-        <Image
-          as={motion.img}
-          src={src}
-          alt='My alt'
-          sx={{
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%'
-          }}
-        />
-      </Flex>
+      </ThemeUIProvider>
     </Link>
   );
 }
