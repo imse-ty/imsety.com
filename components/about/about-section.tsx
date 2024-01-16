@@ -85,7 +85,6 @@ export default function AboutSection() {
         <motion.div
           style={{ scale }}
           sx={{
-            transformOrigin: 'top',
             display: 'flex',
             minHeight: '100vh',
             paddingTop: 6,

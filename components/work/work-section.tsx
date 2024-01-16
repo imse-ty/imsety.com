@@ -48,7 +48,6 @@ export default function WorkSection({ projects }) {
         <motion.div
           style={{ scale }}
           sx={{
-            transformOrigin: 'top',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'background',

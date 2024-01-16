@@ -31,7 +31,6 @@ export default function ContactSection({ useTransparentBackground }) {
           id='contact'
           style={{ scale }}
           sx={{
-            transformOrigin: 'top',
             paddingTop: 6,
             backgroundColor: 'surface.extraheavy',
             borderTopLeftRadius: 4,
