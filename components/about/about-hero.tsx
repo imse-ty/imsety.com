@@ -44,8 +44,7 @@ export default function AboutHero() {
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
           My journey has led me to collaborate with Ford, Chick-fil-A, and
           Keller Williams. I create satisfying music videos, engaging event
-          openers, social content, product ads, custom websites, landing pages,
-          and more.
+          openers, social content, custom websites, landing pages, and more.
         </Text>
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
           Let&apos;s connect and make something amazing.
