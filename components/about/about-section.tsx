@@ -87,7 +87,7 @@ export default function AboutSection() {
           sx={{
             transformOrigin: 'top',
             display: 'flex',
-            height: '100vh',
+            minHeight: '100vh',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'surface.heavy',
