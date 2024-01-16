@@ -61,8 +61,8 @@ export default function WorkSection({ projects }) {
             </Heading>
 
             <Text variant='body.summary'>
-              Latest projects ranging from event openers, tech brand films,
-              animated graphics, and art expeditions.
+              Latest projects ranging from event openers, tech product ads,
+              social media graphics, and art expeditions.
             </Text>
           </Container>
           <ProjectsSection projects={projects} />
