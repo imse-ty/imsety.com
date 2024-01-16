@@ -38,19 +38,17 @@ export default function AboutHero() {
         </Heading>
 
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-          I&apos;m an Atlanta-based digital artist and developer. I blend art
-          and technology to tell compelling stories.
+          I am a motion designer and developer in Atlanta. I love blending
+          design and technology to tell good stories.
         </Text>
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-          My journey has led me to collaborate with big names like Chick-fil-A,
-          Ford, and Keller Williams, creating everything from satisfying product
-          ads to to engaging event openers.
+          My journey has led me to collaborate with Ford, Chick-fil-A, and
+          Keller Williams. I create satisfying music videos, engaging event
+          openers, social content, product ads, custom websites, landing pages,
+          and more.
         </Text>
         <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
-          Alongside design, I offer specialized front-end development services.
-          If you&apos;re in need of a bespoke website or an engaging landing
-          page, let&apos;s collaborate to create digital solutions that
-          effectively tell your story.
+          Let&apos;s connect and make something amazing.
         </Text>
       </Flex>
     </Container>
