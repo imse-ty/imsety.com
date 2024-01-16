@@ -44,10 +44,11 @@ export default function WorkSection({ projects }) {
 
   return (
     <div ref={container}>
-      <Box id="work">
+      <Box id='work'>
         <motion.div
           style={{ scale }}
           sx={{
+            transformOrigin: 'top',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'background',
@@ -56,11 +57,11 @@ export default function WorkSection({ projects }) {
           }}
         >
           <Container sx={{ textAlign: 'center' }}>
-            <Heading variant="display.h1" sx={{ marginBottom: 2 }}>
+            <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
               Work
             </Heading>
 
-            <Text variant="body.summary">
+            <Text variant='body.summary'>
               Latest projects ranging from event openers, tech brand films,
               animated graphics, and art expeditions.
             </Text>

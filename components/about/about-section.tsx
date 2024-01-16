@@ -79,19 +79,20 @@ export default function AboutSection() {
       <Box
         id='about'
         sx={{
-          backgroundColor: 'background',
-          marginTop: -5
+          backgroundColor: 'background'
         }}
       >
         <motion.div
           style={{ scale }}
           sx={{
+            transformOrigin: 'top',
             display: 'flex',
             height: '100vh',
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'surface.heavy',
-            borderRadius: 4,
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4,
             boxShadow: 'soft.highNorth'
           }}
         >
