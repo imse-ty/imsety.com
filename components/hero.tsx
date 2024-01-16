@@ -56,10 +56,7 @@ export default function Hero() {
             with a little of tech.
           </Text>
         </Flex>
-        <a
-          href='#work'
-          sx={{ display: ['none', 'block'], textDecoration: 'none' }}
-        >
+        <a href='#work' sx={{ textDecoration: 'none' }}>
           <Button leftIcon={<MdNorthEast />} sx={{}}>
             View work
           </Button>
