@@ -11,8 +11,14 @@ import ProjectMasthead from '@/components/projects/project-masthead';
 import ProjectInfo from '@/components/projects/project-info';
 
 import ContactSection from '@/components/contact/contact-section';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
+import { useRef, useState } from 'react';
 import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import { getColor } from '@theme-ui/color';
@@ -30,12 +36,9 @@ export default function Project(props) {
 
   const container = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start end', 'start start']
-  });
+  const { scrollYProgress } = useScroll({});
 
-  const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scrollScale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   function checkIfBodyIsEmpty() {
@@ -48,9 +51,19 @@ export default function Project(props) {
 
   const pageColor = buildMonochromaticTheme(data.project.pageColor);
 
+  const [isNavigationHidden, setIsNavigationHidden] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    if (latest > 0) {
+      setIsNavigationHidden(false);
+    } else {
+      setIsNavigationHidden(true);
+    }
+  });
+
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
-      <Layout>
+      <Layout showToolbarBack={true} isNavigationHidden={isNavigationHidden}>
         <ProjectMasthead
           title={data.project.title}
           subtitle={data.project.subtitle}
