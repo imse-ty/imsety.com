@@ -4,6 +4,7 @@
 import { Flex } from 'krado-react';
 import Text from './fixed-krado-components/Text';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 function MenuItem({ children, active, href }) {
   return (
@@ -37,9 +38,24 @@ function MenuItem({ children, active, href }) {
 }
 
 export default function Navigation() {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      bottom: '0px'
+    },
+    show: {
+      opacity: 1,
+      bottom: '32px'
+    }
+  };
+
   return (
     <Flex
-      as='nav'
+      variants={variants}
+      initial='hidden'
+      animate='show'
+      exit='hidden'
+      as={motion.nav}
       sx={{
         position: 'fixed',
         left: '50%',

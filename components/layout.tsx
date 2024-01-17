@@ -3,8 +3,13 @@
 import { Box } from 'krado-react';
 import Navigation from './navigation';
 import Toolbar from './toolbar';
+import { AnimatePresence } from 'framer-motion';
 
-export default function Layout({ children, showToolbarBack, hideNavigation }) {
+export default function Layout({
+  children,
+  showToolbarBack,
+  isNavigationHidden
+}) {
   return (
     <Box
       sx={{
@@ -12,7 +17,7 @@ export default function Layout({ children, showToolbarBack, hideNavigation }) {
       }}
     >
       <Toolbar showBack={showToolbarBack} />
-      {!hideNavigation && <Navigation />}
+      <AnimatePresence>{!isNavigationHidden && <Navigation />}</AnimatePresence>
       {children}
     </Box>
   );
