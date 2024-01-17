@@ -11,6 +11,9 @@ function MenuItem({ children, active, href }) {
       as='li'
       variant='body.smallParagraph'
       sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         marginLeft: 0,
         backgroundColor: 'background',
         color: active ? 'action.active' : 'text.primary',
@@ -50,7 +53,16 @@ export default function Navigation() {
         borderRadius: 2
       }}
     >
-      <Flex as='ul' sx={{ gap: 2, listStyle: 'none', paddingLeft: 0 }}>
+      <Flex
+        as='ul'
+        sx={{
+          justifyContent: 'space-between',
+          width: '100%',
+          gap: 2,
+          listStyle: 'none',
+          paddingLeft: 0
+        }}
+      >
         <MenuItem href='/'>Home</MenuItem>
         <MenuItem href='/#work'>Work</MenuItem>
         <MenuItem href='/#about'>About</MenuItem>
