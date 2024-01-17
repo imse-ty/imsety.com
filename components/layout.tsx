@@ -1,6 +1,7 @@
 'use client';
 
 import { Box } from 'krado-react';
+import Navigation from './navigation';
 
 export default function Layout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
         position: 'relative'
       }}
     >
+      <Navigation />
       {children}
     </Box>
   );
