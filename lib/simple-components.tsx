@@ -45,9 +45,7 @@ export const simpleComponentsSummaryText = {
 };
 
 export const simpleComponents = {
-  p: (props) => (
-    <Text sx={{ fontSize: 'inherit', marginY: 10 }}>{props.children}</Text>
-  ),
+  p: (props) => <Text sx={{ fontSize: 'inherit' }}>{props.children}</Text>,
   a: ({ children, url }) => {
     const target = (url || '').startsWith('http') ? '_blank' : undefined;
 

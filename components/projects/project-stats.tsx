@@ -58,11 +58,7 @@ export function StatCard({
             heading
           )}
         </Heading>
-        {text && (
-          <Text>
-            <TinaMarkdown content={text} components={simpleComponents} />
-          </Text>
-        )}
+        {text && <TinaMarkdown content={text} components={simpleComponents} />}
       </Flex>
     </Card>
   );
