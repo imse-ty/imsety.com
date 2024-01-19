@@ -14,7 +14,13 @@ export default function Layout({ children, showToolbarBack }) {
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const previous = scrollYProgress.getPrevious();
 
-    if ((latest > previous && latest > 0) || latest === 0) {
+    console.log(latest);
+
+    if (latest > previous && latest > 0.3) {
+      setIsNavigationHidden(true);
+    } else if (latest === 0) {
+      setIsNavigationHidden(true);
+    } else if (latest >= 0.9) {
       setIsNavigationHidden(true);
     } else {
       setIsNavigationHidden(false);
