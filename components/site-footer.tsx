@@ -1,6 +1,12 @@
 import { useColorMode } from 'theme-ui';
 import { Footer, FooterFootnote, FooterContent, Flex, Text } from 'krado-react';
-import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa6';
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube
+} from 'react-icons/fa6';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
@@ -9,6 +15,8 @@ export function FooterLink({ icon, children, href }) {
     <Flex
       as='a'
       href={href}
+      target='_blank'
+      rel='noindex nofollow'
       sx={{
         alignItems: 'center',
         gap: 2,
@@ -65,6 +73,10 @@ export default function SiteFooter({ textColor, linkColor }) {
         <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
           Twitter
         </FooterLink>
+        <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
+          GitHub
+        </FooterLink>
+
         <Flex
           as={motion.div}
           onClick={(e) => {
