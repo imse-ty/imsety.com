@@ -1,5 +1,12 @@
 import { useColorMode } from 'theme-ui';
-import { Footer, FooterFootnote, FooterContent, Flex, Text } from 'krado-react';
+import {
+  Box,
+  Footer,
+  FooterFootnote,
+  FooterContent,
+  Flex,
+  Text
+} from 'krado-react';
 import {
   FaGithub,
   FaInstagram,
@@ -32,6 +39,34 @@ export function FooterLink({ icon, children, href }) {
   );
 }
 
+export function SocialMediaLinks() {
+  return (
+    <>
+      <FooterLink
+        href='https://www.instagram.com/imse_ty'
+        icon={<FaInstagram />}
+      >
+        Instagram
+      </FooterLink>
+      <FooterLink
+        href='https://www.linkedin.com/in/imsety'
+        icon={<FaLinkedin />}
+      >
+        LinkedIn
+      </FooterLink>
+      <FooterLink href='https://www.youtube.com/imsety' icon={<FaYoutube />}>
+        Youtube
+      </FooterLink>
+      <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
+        Twitter
+      </FooterLink>
+      <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
+        GitHub
+      </FooterLink>
+    </>
+  );
+}
+
 export default function SiteFooter({ textColor, linkColor }) {
   const [colorMode, setColorMode] = useColorMode();
 
@@ -55,27 +90,15 @@ export default function SiteFooter({ textColor, linkColor }) {
           color: linkColor
         }}
       >
-        <FooterLink
-          href='https://www.instagram.com/imse_ty'
-          icon={<FaInstagram />}
+        <Flex
+          sx={{
+            gap: [3, null, null, 4],
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}
         >
-          Instagram
-        </FooterLink>
-        <FooterLink
-          href='https://www.linkedin.com/in/imsety'
-          icon={<FaLinkedin />}
-        >
-          LinkedIn
-        </FooterLink>
-        <FooterLink href='https://www.youtube.com/imsety' icon={<FaYoutube />}>
-          Youtube
-        </FooterLink>
-        <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
-          Twitter
-        </FooterLink>
-        <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
-          GitHub
-        </FooterLink>
+          <SocialMediaLinks />
+        </Flex>
 
         <Flex
           as={motion.div}
