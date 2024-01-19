@@ -33,9 +33,9 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             as={motion.div}
             sx={{
               flexDirection: 'column',
-              gap: [2, null, null, 4],
+              gap: [2, null, null, 3],
               position: 'absolute',
-              padding: [4, null, null, 5],
+              padding: [4, null, null, null, 5],
               left: [0],
               bottom: [0],
               zIndex: 1,
