@@ -51,19 +51,9 @@ export default function Project(props) {
 
   const pageColor = buildMonochromaticTheme(data.project.pageColor);
 
-  const [isNavigationHidden, setIsNavigationHidden] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (latest > 0) {
-      setIsNavigationHidden(false);
-    } else {
-      setIsNavigationHidden(true);
-    }
-  });
-
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
-      <Layout showToolbarBack={true} isNavigationHidden={isNavigationHidden}>
+      <Layout showToolbarBack={true}>
         <ProjectMasthead
           title={data.project.title}
           subtitle={data.project.subtitle}

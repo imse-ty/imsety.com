@@ -3,13 +3,24 @@
 import { Box } from 'krado-react';
 import Navigation from './navigation';
 import Toolbar from './toolbar';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
+import { useState } from 'react';
 
-export default function Layout({
-  children,
-  showToolbarBack,
-  isNavigationHidden
-}) {
+export default function Layout({ children, showToolbarBack }) {
+  const { scrollYProgress } = useScroll();
+
+  const [isNavigationHidden, setIsNavigationHidden] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    const previous = scrollYProgress.getPrevious();
+
+    if ((latest > previous && latest > 0) || latest === 0) {
+      setIsNavigationHidden(true);
+    } else {
+      setIsNavigationHidden(false);
+    }
+  });
+
   return (
     <Box
       sx={{
