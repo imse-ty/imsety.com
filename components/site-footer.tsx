@@ -71,7 +71,12 @@ export default function SiteFooter({ textColor, linkColor }) {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <Footer style={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
+    <Footer
+      style={{
+        backgroundColor: 'transparent',
+        boxShadow: 'none'
+      }}
+    >
       <FooterFootnote
         sx={{
           color: textColor,
@@ -82,6 +87,7 @@ export default function SiteFooter({ textColor, linkColor }) {
       </FooterFootnote>
       <FooterContent
         sx={{
+          paddingY: [0, 3],
           display: 'flex',
           gap: [3, null, null, 5],
           marginTop: [3, null, 0],
