@@ -187,21 +187,6 @@ export default function ProjectMasthead({
           poster={coverImage}
           isActive={isVideoActive}
         />
-
-        {/* <Image
-          as={motion.img}
-          alt={imageAlt}
-          src={imageSrc}
-          initial={{ scale: 1.5 }}
-          animate={{ scale: 1 }}
-          sx={{
-            width: '100vw',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: -1
-          }}
-          transition={{ type: 'spring', stiffness: 40 }}
-        /> */}
       </Flex>
       <ScrollButton />
     </Flex>
