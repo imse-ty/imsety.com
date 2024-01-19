@@ -32,7 +32,7 @@ export default function Hero() {
           flexDirection: 'column',
           alignItems: 'center',
           gap: 5,
-          marginTop: 'auto'
+          marginY: 'auto'
         }}
       >
         <Flex
@@ -62,7 +62,6 @@ export default function Hero() {
           </Button>
         </a>
       </Container>
-      <SiteFooter textColor='text.primary' linkColor='primary.regular' />
     </Flex>
   );
 }
