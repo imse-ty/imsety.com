@@ -87,7 +87,7 @@ export default function SiteFooter({ textColor, linkColor }) {
       </FooterFootnote>
       <FooterContent
         sx={{
-          paddingY: [0, 3],
+          paddingY: [0, 2],
           display: 'flex',
           gap: [3, null, null, 5],
           marginTop: [3, null, 0],

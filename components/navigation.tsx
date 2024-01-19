@@ -45,7 +45,7 @@ export default function Navigation() {
     },
     show: {
       opacity: 1,
-      bottom: '32px'
+      bottom: '16px'
     }
   };
 
@@ -59,7 +59,7 @@ export default function Navigation() {
       sx={{
         position: 'fixed',
         left: '50%',
-        bottom: 4,
+        bottom: [4],
         transform: 'translateX(-50%)',
         zIndex: 3,
         color: 'text.primary',
