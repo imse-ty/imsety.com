@@ -69,7 +69,7 @@ export function StatGrid({ children }) {
     <Container
       sx={{
         display: 'flex',
-        maxWidth: '1000px',
+        maxWidth: '1100px',
         flexDirection: ['column', 'row'],
         flexWrap: ['none', 'wrap'],
         gap: 3
