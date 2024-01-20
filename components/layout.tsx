@@ -6,17 +6,23 @@ import Toolbar from './toolbar';
 import { AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 
-export default function Layout({ children, showToolbarBack }) {
+export default function Layout({
+  children,
+  showToolbarBack,
+  hideTopNav,
+  isHiddenByDefault
+}) {
   const { scrollYProgress } = useScroll();
 
-  const [isNavigationHidden, setIsNavigationHidden] = useState(true);
+  const [isNavigationHidden, setIsNavigationHidden] =
+    useState(isHiddenByDefault);
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const previous = scrollYProgress.getPrevious();
 
     if (latest > previous) {
       setIsNavigationHidden(true);
-    } else if (latest === 0) {
+    } else if (latest === 0 && hideTopNav) {
       setIsNavigationHidden(true);
     } else if (latest >= 0.9) {
       setIsNavigationHidden(true);

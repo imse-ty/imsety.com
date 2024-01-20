@@ -21,7 +21,7 @@ export default function Home(props) {
   const projectsList = data.workPage.projects;
 
   return (
-    <Layout>
+    <Layout isHiddenByDefault={false}>
       <Hero />
       <WorkSection projects={projectsList} />
       <AboutSection />

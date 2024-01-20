@@ -53,7 +53,7 @@ export default function Project(props) {
 
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
-      <Layout showToolbarBack={true}>
+      <Layout showToolbarBack={true} isHiddenByDefault={true} hideTopNav>
         <ProjectMasthead
           title={data.project.title}
           subtitle={data.project.subtitle}
