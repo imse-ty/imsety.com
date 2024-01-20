@@ -36,8 +36,8 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
               gap: [2, null, null, 3],
               position: 'absolute',
               padding: [4, null, null, null, 5],
-              left: [0],
-              bottom: [0],
+              left: 0,
+              bottom: 0,
               zIndex: 1,
               width: '100%'
             }}
