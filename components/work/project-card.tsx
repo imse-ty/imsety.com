@@ -51,15 +51,17 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             >
               {title}
             </Text>
-            <Text
-              variant='body.smallParagraph'
-              sx={{
-                color: 'secondary.regular',
-                display: ['none', null, null, 'block']
-              }}
-            >
-              {subtitle}
-            </Text>
+            {subtitle && (
+              <Text
+                variant='body.smallParagraph'
+                sx={{
+                  color: 'secondary.regular',
+                  display: ['none', null, null, 'block']
+                }}
+              >
+                {subtitle}
+              </Text>
+            )}
           </Flex>
           <Box
             as={motion.div}
