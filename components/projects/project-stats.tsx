@@ -44,7 +44,13 @@ export function StatCard({
         {icon}
       </Box>
       <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-        <Heading variant={isHeadingSmall ? 'display.h5' : 'display.h4'}>
+        <Heading
+          variant='display.h4'
+          sx={{
+            fontSize: isHeadingSmall ? [5, 6] : [6, null, 7, 8],
+            lineHeight: isHeadingSmall ? '28px' : '40px'
+          }}
+        >
           {number ? (
             <CountUp
               end={number}
