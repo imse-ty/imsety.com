@@ -31,7 +31,7 @@ export default function Hero() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: 5,
+          gap: [4, 5],
           marginY: 'auto'
         }}
       >
