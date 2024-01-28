@@ -18,7 +18,7 @@ function Card({ children, ...rest }) {
         gap: 4,
         position: 'relative',
         marginY: 4,
-        marginX: [0, null, null, null, '-50%'],
+        marginX: [0, null, null, '-25%', '-50%'],
         padding: [4, 6],
         flex: '1 1 25%',
         borderRadius: 3,

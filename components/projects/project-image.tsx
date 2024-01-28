@@ -8,7 +8,7 @@ export default function ProjectImage({ alt, src }) {
     <Flex
       sx={{
         marginY: 4,
-        marginX: [0, null, null, null, '-50%'],
+        marginX: [0, null, null, '-25%', '-50%'],
         height: '100%',
         borderRadius: [2, null, null, null, 3],
         overflow: 'hidden'

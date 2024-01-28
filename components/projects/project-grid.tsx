@@ -7,7 +7,7 @@ export default function ProjectGrid({ images }) {
         marginY: [null, null, null, null, 4],
         gap: 4,
         gridTemplateColumns: ['1fr', null, '1fr 1fr'],
-        marginX: [0, null, null, null, '-50%']
+        marginX: [0, null, null, '-25%', '-50%']
       }}
     >
       {images &&
