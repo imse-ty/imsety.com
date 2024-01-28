@@ -64,7 +64,8 @@ export default function ProjectCredits() {
       colors.oshun300
     ],
     position: 'absolute',
-    elementSize: 20
+    elementCount: 15,
+    elementSize: 15
   });
 
   useEffect(() => {
@@ -75,22 +76,16 @@ export default function ProjectCredits() {
     <div ref={ref}>
       <Card>
         <span
-          style={{
-            pointerEvents: 'none',
-            position: 'absolute',
-            overflow: 'hidden',
-            width: '100%',
-            height: '100%',
-            top: 0,
-            bottom: 0
+          sx={{
+            position: 'absolute'
           }}
           id='rewardId'
         />
         <Flex
           sx={{
             flexDirection: 'column',
-            gap: 3,
-            marginBottom: 5,
+            gap: [2, 3],
+            marginBottom: [3, 5],
             maxWidth: '900px'
           }}
         >
@@ -105,7 +100,7 @@ export default function ProjectCredits() {
         <Grid
           sx={{
             gridTemplateColumns: '1fr 1fr',
-            gap: 6,
+            gap: [4, 6],
             flex: 1
           }}
         >
