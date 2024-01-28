@@ -286,6 +286,17 @@ export default defineConfig({
                     label: 'URL'
                   }
                 ]
+              },
+              {
+                name: 'ProjectCredits',
+                label: 'Project credits',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'url',
+                    label: 'URL'
+                  }
+                ]
               }
             ]
           }
