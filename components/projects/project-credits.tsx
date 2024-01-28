@@ -64,7 +64,6 @@ export default function ProjectCredits() {
       colors.oshun300
     ],
     position: 'absolute',
-    elementCount: 15,
     elementSize: 15
   });
 
