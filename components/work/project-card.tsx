@@ -1,13 +1,13 @@
 /** @jsxImportSource theme-ui */
 
-import { Flex, Image, Box } from 'krado-react';
+import { Flex, Box } from 'krado-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Text from '../fixed-krado-components/Text';
 import { getColor } from '@theme-ui/color';
-import { setyTheme } from '@/lib/site-theme';
 import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
+import Image from 'next/image';
 
 export default function ProjectCard({ title, subtitle, src, href, color }) {
   const pageColor = buildMonochromaticTheme(color);
@@ -80,9 +80,10 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             }}
           />
           <Image
-            as={motion.img}
             src={src}
-            alt='My alt'
+            alt=''
+            width={2560}
+            height={2560}
             sx={{
               objectFit: 'cover',
               width: '100%',
