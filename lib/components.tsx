@@ -1,5 +1,6 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import ProjectCredits from '@/components/projects/project-credits';
 import {
   ProjectVideo,
   ProjectVimeo,
@@ -74,5 +75,8 @@ export const components = {
   },
   ProjectVimeo: ({ url }) => {
     return <ProjectVimeo url={url} />;
+  },
+  ProjectCredits: () => {
+    return <ProjectCredits />;
   }
 };

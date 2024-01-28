@@ -83,7 +83,8 @@ export default function Project(props) {
                   ? 'background'
                   : 'transparent',
                 borderTopLeftRadius: 4,
-                borderTopRightRadius: 4
+                borderTopRightRadius: 4,
+                overflow: 'hidden'
               }}
             >
               {checkIfBodyIsEmpty() ? (
