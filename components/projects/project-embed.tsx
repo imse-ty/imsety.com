@@ -12,7 +12,7 @@ export function ProjectVideo({ src }) {
         marginX: [0, null, null, null, '-50%'],
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <source src={src} type='video/mp4' />
@@ -38,7 +38,7 @@ export function ProjectYoutube({ url }) {
         aspectRatio: '16/9',
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <iframe
@@ -75,7 +75,7 @@ export function ProjectVimeo({ url, ...rest }) {
         aspectRatio: '16/9',
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <iframe

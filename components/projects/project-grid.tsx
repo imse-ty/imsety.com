@@ -4,9 +4,9 @@ export default function ProjectGrid({ images }) {
   return (
     <Grid
       sx={{
-        marginY: 4,
+        marginY: [null, null, null, null, 4],
         gap: 4,
-        gridTemplateColumns: '1fr 1fr',
+        gridTemplateColumns: ['1fr', null, '1fr 1fr'],
         marginX: [0, null, null, null, '-50%']
       }}
     >
@@ -22,7 +22,7 @@ export default function ProjectGrid({ images }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                borderRadius: 3
+                borderRadius: [2, null, null, null, 3]
               }}
             />
           );
