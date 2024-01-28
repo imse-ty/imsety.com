@@ -33,8 +33,7 @@ export default function ProjectImage({ alt, src }) {
           marginX: [0, null, null, null, '-50%'],
           height: '100%',
           borderRadius: [2, null, null, null, 3],
-          overflow: 'hidden',
-          backgroundColor: 'red'
+          overflow: 'hidden'
         }}
       >
         <motion.img
