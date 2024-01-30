@@ -13,6 +13,10 @@ export default function Toolbar({ showBack }) {
 
   return (
     <Flex
+      as={motion.div}
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       sx={{
         alignItems: 'center',
         position: 'fixed',
@@ -24,7 +28,7 @@ export default function Toolbar({ showBack }) {
       }}
     >
       {showBack ? (
-        <Link href='/#work'>
+        <Link href="/#work">
           <ToggleIcon
             sx={{
               borderRadius: 1,
@@ -39,15 +43,15 @@ export default function Toolbar({ showBack }) {
           </ToggleIcon>
         </Link>
       ) : (
-        <Link href='/#'>
+        <Link href="/#">
           <RightTriangle
             sx={{
               width: '48px',
               height: '48px',
               fill: 'primary.regular'
             }}
-            width='100%'
-            viewBox='0 0 78 78'
+            width="100%"
+            viewBox="0 0 78 78"
           />
         </Link>
       )}

@@ -10,7 +10,8 @@ export default function Layout({
   children,
   showToolbarBack,
   hideTopNav,
-  isHiddenByDefault
+  isHiddenByDefault,
+  isToolbarHidden
 }) {
   const { scrollYProgress } = useScroll();
 
@@ -37,8 +38,10 @@ export default function Layout({
         position: 'relative'
       }}
     >
-      <Toolbar showBack={showToolbarBack} />
-      <AnimatePresence>{!isNavigationHidden && <Navigation />}</AnimatePresence>
+      <AnimatePresence>
+        {!isToolbarHidden && <Toolbar showBack={showToolbarBack} />}
+        {!isNavigationHidden && <Navigation />}
+      </AnimatePresence>
       {children}
     </Box>
   );
