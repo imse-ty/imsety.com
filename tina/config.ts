@@ -117,6 +117,22 @@ export default defineConfig({
           },
           {
             type: 'string',
+            name: 'typeOfCaseStudy',
+            label: 'Type of case study',
+            options: ['full', 'simple']
+          },
+          {
+            type: 'string',
+            name: 'fullFileName',
+            label: 'Full file name'
+          },
+          {
+            type: 'string',
+            name: 'simpleFileName',
+            label: 'Simple file name'
+          },
+          {
+            type: 'string',
             name: 'videoUrl',
             label: 'Vimeo URL'
           },
