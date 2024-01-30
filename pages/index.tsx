@@ -37,7 +37,7 @@ export default function Home(props) {
   });
 
   return (
-    <Layout isHiddenByDefault={false}>
+    <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
       <Shade>
         <ReelSection
           isPlayButtonHidden={isPlayButtonHidden}
@@ -45,16 +45,16 @@ export default function Home(props) {
           setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
         />
       </Shade>
-      <div id="reel" sx={{ scrollMarginTop: '100vh' }} />
+      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
 
       <div sx={{ position: 'relative', zIndex: 1 }}>
         <WorkSection projects={projectsList} />
         <AboutSection
-          title="About"
-          subtitle="arcu, fringilla."
-          imageAlt="My image"
-          imageSrc="work/space-and-time.png"
-          href="/about"
+          title='About'
+          subtitle='arcu, fringilla.'
+          imageAlt='My image'
+          imageSrc='work/space-and-time.png'
+          href='/about'
         />
         <ContactSection />
       </div>
