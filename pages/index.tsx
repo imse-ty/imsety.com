@@ -22,10 +22,28 @@ export default function Home(props) {
 
   return (
     <Layout isHiddenByDefault={false}>
-      <Hero />
-      <WorkSection projects={projectsList} />
-      <AboutSection />
-      <ContactSection />
+      <Shade>
+        <ReelSection
+          title='Reel'
+          subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi'
+          imageAlt='My image'
+          imageSrc='work/beeple-3.png'
+          href='#work'
+        />
+      </Shade>
+      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
+
+      <div sx={{ position: 'relative', zIndex: 1 }}>
+        <WorkSection projects={projectsList} />
+        <AboutSection
+          title='About'
+          subtitle='arcu, fringilla.'
+          imageAlt='My image'
+          imageSrc='work/space-and-time.png'
+          href='/about'
+        />
+        <ContactSection />
+      </div>
     </Layout>
   );
 }
