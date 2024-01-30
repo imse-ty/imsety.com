@@ -29,12 +29,15 @@ function PlayButton() {
       sx={{
         padding: 5,
         color: 'secondary.bold',
-        backgroundColor: 'surface.extralight',
+        backgroundColor: 'rgba(205,207,252,0.5)',
+        backdropFilter: 'blur(32px)',
+        borderColor: 'secondary.dark',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,
         fontSize: 11,
-        cursor: 'pointer'
+        cursor: 'pointer',
+        backdropFilter: 'blur(16px)'
       }}
     >
       <MdPlayArrow />
@@ -136,8 +139,8 @@ export default function ReelSection({
         </AnimatePresence>
 
         <VideoPlayer
-          url='https://vimeo.com/496109106'
-          previewSrc='2020-reel.mp4'
+          url='https://vimeo.com/907993556?share=copy'
+          previewSrc='2023-reel.webm'
           poster='work/beeple-3.png'
           isActive={isVideoActive}
         />
