@@ -10,7 +10,10 @@
       "project": "content/projects/the-breakdown-beeple.mdx"
     },
     {
-      "project": "content/projects/rock-the-campus.mdx"
+      "project": "content/projects/splice.mdx"
+    },
+    {
+      "project": "content/projects/space-and-time.mdx"
     },
     {
       "project": "content/projects/keller-williams.mdx"
@@ -19,10 +22,7 @@
       "project": "content/projects/ozone.mdx"
     },
     {
-      "project": "content/projects/space-and-time.mdx"
-    },
-    {
-      "project": "content/projects/splice.mdx"
+      "project": "content/projects/rock-the-campus.mdx"
     }
   ]
 }

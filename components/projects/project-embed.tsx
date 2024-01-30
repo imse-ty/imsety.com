@@ -9,10 +9,10 @@ export function ProjectVideo({ src }) {
       controls
       sx={{
         marginY: 4,
-        marginX: [0, null, null, null, '-50%'],
+        marginX: [0, null, null, '-25%', '-50%'],
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <source src={src} type='video/mp4' />
@@ -34,11 +34,11 @@ export function ProjectYoutube({ url }) {
     <figure
       sx={{
         marginY: 4,
-        marginX: [0, null, null, null, '-50%'],
+        marginX: [0, null, null, '-25%', '-50%'],
         aspectRatio: '16/9',
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <iframe
@@ -71,11 +71,11 @@ export function ProjectVimeo({ url, ...rest }) {
     <figure
       sx={{
         marginY: 4,
-        marginX: [0, null, null, null, '-50%'],
+        marginX: [0, null, null, '-25%', '-50%'],
         aspectRatio: '16/9',
         position: 'relative',
         overflow: 'hidden',
-        borderRadius: 3
+        borderRadius: [2, null, null, null, 3]
       }}
     >
       <iframe

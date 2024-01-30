@@ -10,6 +10,8 @@ import client from '@/tina/__generated__/client';
 import AboutSection from '@/components/about/about-section';
 import ContactSection from '@/components/contact/contact-section';
 import Hero from '@/components/hero';
+import { useState } from 'react';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
 
 export default function Home(props) {
   const { data } = useTina({
@@ -20,12 +22,42 @@ export default function Home(props) {
 
   const projectsList = data.workPage.projects;
 
+  const [isVideoActive, setIsVideoActive] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+
+  const [isPlayButtonHidden, setIsPlayButtonHidden] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    if (latest > 0.05) {
+      setIsPlayButtonHidden(false);
+    } else {
+      setIsPlayButtonHidden(true);
+    }
+  });
+
   return (
-    <Layout isHiddenByDefault={false}>
-      <Hero />
-      <WorkSection projects={projectsList} />
-      <AboutSection />
-      <ContactSection />
+    <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
+      <Shade>
+        <ReelSection
+          isPlayButtonHidden={isPlayButtonHidden}
+          isVideoActive={isVideoActive}
+          setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
+        />
+      </Shade>
+      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
+
+      <div sx={{ position: 'relative', zIndex: 1 }}>
+        <WorkSection projects={projectsList} />
+        <AboutSection
+          title='About'
+          subtitle='arcu, fringilla.'
+          imageAlt='My image'
+          imageSrc='work/space-and-time.png'
+          href='/about'
+        />
+        <ContactSection />
+      </div>
     </Layout>
   );
 }

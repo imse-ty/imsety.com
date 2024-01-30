@@ -10,7 +10,10 @@ export default function Layout({
   children,
   showToolbarBack,
   hideTopNav,
-  isHiddenByDefault
+  isHiddenByDefault,
+  isToolbarHidden,
+  typeOfCaseStudy,
+  projectFilename
 }) {
   const { scrollYProgress } = useScroll();
 
@@ -37,8 +40,16 @@ export default function Layout({
         position: 'relative'
       }}
     >
-      <Toolbar showBack={showToolbarBack} />
-      <AnimatePresence>{!isNavigationHidden && <Navigation />}</AnimatePresence>
+      <AnimatePresence>
+        {!isToolbarHidden && (
+          <Toolbar
+            showBack={showToolbarBack}
+            typeOfCaseStudy={typeOfCaseStudy}
+            projectFilename={projectFilename}
+          />
+        )}
+        {!isNavigationHidden && <Navigation />}
+      </AnimatePresence>
       {children}
     </Box>
   );
