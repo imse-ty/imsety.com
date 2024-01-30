@@ -1,5 +1,6 @@
 import Heading from '@/components/fixed-krado-components/Heading';
 import Text from '@/components/fixed-krado-components/Text';
+import { OrderedList, UnorderedList } from '@/components/list';
 import ProjectCredits from '@/components/projects/project-credits';
 import {
   ProjectVideo,
@@ -59,6 +60,23 @@ export const components = {
       >
         {children}
       </Link>
+    );
+  },
+  ul: ({ children }) => {
+    return <UnorderedList>{children}</UnorderedList>;
+  },
+  ol: ({ children }) => {
+    return <OrderedList>{children}</OrderedList>;
+  },
+  li: ({ children }) => {
+    return (
+      <Text
+        as='li'
+        variant='body.summary'
+        sx={{ fontSize: 'inherit', color: 'inherit' }}
+      >
+        {children}
+      </Text>
     );
   },
   img: ({ alt, url }) => {
