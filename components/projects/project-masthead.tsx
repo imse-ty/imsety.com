@@ -60,7 +60,8 @@ export default function ProjectMasthead({
         justifyContent: 'center',
         height: '100vh',
         position: 'relative',
-        backgroundColor: 'surface.heavy'
+        backgroundColor: 'surface.heavy',
+        overflow: 'hidden'
       }}
     >
       <Flex

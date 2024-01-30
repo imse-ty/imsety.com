@@ -24,7 +24,7 @@ function PlayButton() {
     <Flex
       as={motion.div}
       variants={variants}
-      whileHover="hover"
+      whileHover='hover'
       transition={{ type: 'spring', duration: 0.5 }}
       sx={{
         padding: 5,
@@ -66,7 +66,8 @@ export default function ReelSection({
         justifyContent: 'center',
         height: '100vh',
         position: 'relative',
-        backgroundColor: 'surface.heavy'
+        backgroundColor: 'surface.heavy',
+        overflow: 'hidden'
       }}
     >
       <Flex
@@ -87,6 +88,7 @@ export default function ReelSection({
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ type: 'spring' }}
                 sx={{
+                  maxWidth: 'none',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -134,9 +136,9 @@ export default function ReelSection({
         </AnimatePresence>
 
         <VideoPlayer
-          url="https://vimeo.com/496109106"
-          previewSrc="2020-reel.mp4"
-          poster="work/beeple-3.png"
+          url='https://vimeo.com/496109106'
+          previewSrc='2020-reel.mp4'
+          poster='work/beeple-3.png'
           isActive={isVideoActive}
         />
       </Flex>
