@@ -53,14 +53,20 @@ export default function Project(props) {
 
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
-      <Layout showToolbarBack={true} isHiddenByDefault={true} hideTopNav>
+      <Layout
+        projectFilename={data.project._sys.filename}
+        typeOfCaseStudy={data.project.typeOfCaseStudy}
+        showToolbarBack={true}
+        isHiddenByDefault={true}
+        hideTopNav
+      >
         <ProjectMasthead
           title={data.project.title}
           subtitle={data.project.subtitle}
           videoUrl={data.project.videoUrl}
           coverVideo={data.project.coverVideo}
           coverImage={data.project.coverImage}
-          href='/work'
+          href="/work"
           themeColor={getColor({ colors: { ...pageColor } }, 'secondary.bold')}
         />
 
