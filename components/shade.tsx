@@ -12,7 +12,7 @@ import {
 import { useRef } from 'react';
 import Hero from './hero';
 
-export default function Shade({ children }) {
+export default function Shade({ children, shadeCompleteCallback }) {
   const { x, y } = useMousePosition();
 
   const ref = useRef(null);
@@ -71,10 +71,16 @@ export default function Shade({ children }) {
   }
 
   function getPointerEvents() {
-    if (scrollYProgress.get() > 0.3) {
+    if (scrollYProgress.get() > 0.1) {
       return 'none';
     } else {
       return 'auto';
+    }
+  }
+
+  function shadeComplete() {
+    if (scrollYProgress.get() > 0.5) {
+      shadeCompleteCallback;
     }
   }
 
