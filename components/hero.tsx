@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-import { MdNorthEast } from 'react-icons/md';
+import { MdNorthEast, MdPlayArrow } from 'react-icons/md';
 import Heading from './fixed-krado-components/Heading';
 import Text from './fixed-krado-components/Text';
 import { Container, Flex, Button } from 'krado-react';
@@ -8,7 +8,7 @@ import SiteFooter from './site-footer';
 import { motion } from 'framer-motion';
 import Header from './site-header';
 
-export default function Hero() {
+export default function Hero({ primaryButtonOnClick }) {
   return (
     <Flex
       as={motion.div}
@@ -56,11 +56,23 @@ export default function Hero() {
             with a little of tech.
           </Text>
         </Flex>
-        <a href='#work' sx={{ textDecoration: 'none' }}>
-          <Button leftIcon={<MdNorthEast />} sx={{}}>
-            View work
-          </Button>
-        </a>
+        <Flex
+          sx={{
+            flexDirection: ['column', null, 'row'],
+            gap: 3
+          }}
+        >
+          <a href='#reel' sx={{ textDecoration: 'none' }}>
+            <Button leftIcon={<MdPlayArrow />} onClick={primaryButtonOnClick}>
+              Play reel
+            </Button>
+          </a>
+          <a href='#work'>
+            <Button variant='ghost' leftIcon={<MdNorthEast />}>
+              View work
+            </Button>
+          </a>
+        </Flex>
       </Container>
     </Flex>
   );

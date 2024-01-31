@@ -12,7 +12,11 @@ import {
 import { useRef } from 'react';
 import Hero from './hero';
 
-export default function Shade({ children, shadeCompleteCallback }) {
+export default function Shade({
+  children,
+  shadeCompleteCallback,
+  primaryButtonOnClick
+}) {
   const { x, y } = useMousePosition();
 
   const ref = useRef(null);
@@ -103,7 +107,7 @@ export default function Shade({ children, shadeCompleteCallback }) {
           pointerEvents: getPointerEvents()
         }}
       >
-        <Hero />
+        <Hero primaryButtonOnClick={primaryButtonOnClick} />
       </motion.div>
       <motion.div
         variants={variants}

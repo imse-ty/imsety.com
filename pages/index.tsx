@@ -38,7 +38,7 @@ export default function Home(props) {
 
   return (
     <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
-      <Shade>
+      <Shade primaryButtonOnClick={() => setIsVideoActive(true)}>
         <ReelSection
           isPlayButtonHidden={isPlayButtonHidden}
           isVideoActive={isVideoActive}
