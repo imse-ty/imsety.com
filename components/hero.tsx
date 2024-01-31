@@ -62,13 +62,21 @@ export default function Hero({ primaryButtonOnClick }) {
             gap: 3
           }}
         >
-          <a href='#reel' sx={{ textDecoration: 'none' }}>
-            <Button leftIcon={<MdPlayArrow />} onClick={primaryButtonOnClick}>
+          <a href='#reel'>
+            <Button
+              leftIcon={<MdPlayArrow />}
+              onClick={primaryButtonOnClick}
+              sx={{ width: '100%' }}
+            >
               Play reel
             </Button>
           </a>
           <a href='#work'>
-            <Button variant='ghost' leftIcon={<MdNorthEast />}>
+            <Button
+              variant='ghost'
+              leftIcon={<MdNorthEast />}
+              sx={{ width: '100%' }}
+            >
               View work
             </Button>
           </a>
