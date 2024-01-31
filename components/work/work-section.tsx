@@ -51,7 +51,8 @@ export default function WorkSection({ projects }) {
             paddingTop: 6,
             paddingBottom: 6,
             backgroundColor: 'background',
-            borderRadius: 4,
+            borderTopLeftRadius: 4,
+            borderTopRightRadius: 4,
             boxShadow: 'soft.highNorth'
           }}
         >
