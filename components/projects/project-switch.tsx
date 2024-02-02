@@ -18,14 +18,22 @@ export function SwitchLabel({ href, onClick, children, ...rest }) {
         alignItems: 'center',
         width: '50%',
         height: '100%',
-        transition: 'color, font-weight 0.5s',
-        textDecoration: 'none',
-        '&:hover': {
-          color: 'surface.thin'
-        }
+
+        textDecoration: 'none'
       }}
     >
-      <Text {...rest}>{children}</Text>
+      <Text
+        {...rest}
+        sx={{
+          transition: 'color, font-weight 0.5s',
+          '&:hover': {
+            color: 'surface.thin',
+            fontWeight: 600
+          }
+        }}
+      >
+        {children}
+      </Text>
     </Link>
   );
 }
@@ -38,6 +46,8 @@ export default function Switch({
   return (
     <Flex
       as={motion.div}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: 'spring' }}
       sx={{
         backgroundColor: 'surface.bold',
         width: '200px',
