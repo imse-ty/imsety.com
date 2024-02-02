@@ -12,7 +12,7 @@ import Text from './fixed-krado-components/Text';
 function MenuItem({ children, active, href }) {
   return (
     <Text
-      variant="body.smallParagraph"
+      variant='body.smallParagraph'
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -33,7 +33,11 @@ function MenuItem({ children, active, href }) {
         }
       }}
     >
-      <Link href={href} sx={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link
+        href={href}
+        scroll={false}
+        sx={{ textDecoration: 'none', color: 'inherit' }}
+      >
         {children}
       </Link>
     </Text>
@@ -64,7 +68,7 @@ export default function Toolbar({
       }}
     >
       {showBack ? (
-        <Link href="/#work">
+        <Link href='/#work'>
           <ToggleIcon
             sx={{
               borderRadius: 1,
@@ -79,15 +83,15 @@ export default function Toolbar({
           </ToggleIcon>
         </Link>
       ) : (
-        <Link href="/#">
+        <Link href='/#'>
           <RightTriangle
             sx={{
               width: '48px',
               height: '48px',
               fill: 'primary.regular'
             }}
-            width="100%"
-            viewBox="0 0 78 78"
+            width='100%'
+            viewBox='0 0 78 78'
           />
         </Link>
       )}
