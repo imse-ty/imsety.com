@@ -44,7 +44,7 @@ export default function Toolbar({ showBack, typeOfCaseStudy }) {
         <Link href='/#work'>
           <ToggleIcon
             sx={{
-              borderRadius: 1,
+              borderRadius: 2,
               width: '48px',
               height: '48px',
               boxShadow: 'hard.high',
