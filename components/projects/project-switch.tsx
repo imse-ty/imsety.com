@@ -54,9 +54,9 @@ export default function Switch({
           width: '50%',
           height: '100%',
           backgroundColor: 'surface.regular',
-
           borderRadius: 2
         }}
+        style={{ originY: '0px' }}
         layout
       />
 
