@@ -80,6 +80,7 @@ export default function Navigation() {
         }}
       >
         <MenuItem href='/'>Home</MenuItem>
+        <MenuItem href='/#reel'>Reel</MenuItem>
         <MenuItem href='/#work'>Work</MenuItem>
         <MenuItem href='/#about'>About</MenuItem>
         <MenuItem href='/#contact'>Contact</MenuItem>
