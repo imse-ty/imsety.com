@@ -49,6 +49,7 @@ export default function Switch({
       whileHover={{ scale: 1.05 }}
       transition={{ type: 'spring' }}
       sx={{
+        display: ['none', null, 'flex'],
         backgroundColor: 'surface.bold',
         width: '200px',
         height: '48px',
