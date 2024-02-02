@@ -3,12 +3,15 @@
 
 import Text from '@/components/fixed-krado-components/Text';
 import { motion } from 'framer-motion';
-import { Box, Flex } from 'krado-react';
-import { useState } from 'react';
+import { Flex } from 'krado-react';
+import Link from 'next/link';
 
-export function SwitchLabel({ children, ...rest }) {
+export function SwitchLabel({ href, onClick, children, ...rest }) {
   return (
-    <Text
+    <Link
+      href={href}
+      scroll={false}
+      onClick={onClick}
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -16,20 +19,22 @@ export function SwitchLabel({ children, ...rest }) {
         width: '50%',
         height: '100%',
         transition: 'color, font-weight 0.5s',
+        textDecoration: 'none',
         '&:hover': {
           color: 'surface.thin'
         }
       }}
-      {...rest}
     >
-      {children}
-    </Text>
+      <Text {...rest}>{children}</Text>
+    </Link>
   );
 }
 
-export default function Switch() {
-  const [isOn, setIsOn] = useState(true);
-
+export default function Switch({
+  isOn,
+  firstLabelOnClick,
+  secondLabelOnClick
+}) {
   return (
     <Flex
       as={motion.div}
@@ -43,7 +48,6 @@ export default function Switch() {
         borderRadius: 2,
         boxShadow: 'hard.high'
       }}
-      onClick={() => setIsOn(!isOn)}
     >
       <motion.div
         sx={{
@@ -65,6 +69,8 @@ export default function Switch() {
       >
         <SwitchLabel
           variant='body.footnote'
+          href={`/work/beloved-benefit-2023`} //This is hard coded for now
+          onClick={firstLabelOnClick}
           sx={{
             color: isOn ? 'surface.extrathin' : 'surface.extralight',
             fontWeight: isOn ? 600 : 300
@@ -74,6 +80,8 @@ export default function Switch() {
         </SwitchLabel>
         <SwitchLabel
           variant='body.footnote'
+          href={`/work/beloved-benefit-2023-simple`} //This is hard coded for now
+          onClick={secondLabelOnClick}
           sx={{
             color: isOn ? 'surface.extralight' : 'surface.extrathin',
             fontWeight: isOn ? 300 : 600,

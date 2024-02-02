@@ -9,48 +9,20 @@ import Navigation from './navigation';
 import RightTriangle from '../public/right-triangle.svg';
 import Text from './fixed-krado-components/Text';
 import Switch from './projects/project-switch';
+import { useState } from 'react';
 
-function MenuItem({ children, active, href }) {
-  return (
-    <Text
-      variant='body.smallParagraph'
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginLeft: 0,
-        backgroundColor: active ? 'surface.regular' : 'surface.bold',
-        color: active ? 'surface.thin' : 'surface.extralight',
-        paddingY: 2,
-        paddingX: 3,
-        fontWeight: 600,
-        borderRadius: 1,
-        cursor: 'pointer',
-        transition: 'color 400ms ease, box-shadow 400ms ease',
-        boxShadow: active ? 'hard.high' : 'none',
-        '&:hover': {
-          color: 'surface.thin',
-          boxShadow: 'hard.high'
-        }
-      }}
-    >
-      <Link
-        href={href}
-        scroll={false}
-        sx={{ textDecoration: 'none', color: 'inherit' }}
-      >
-        {children}
-      </Link>
-    </Text>
-  );
-}
-
-export default function Toolbar({
-  showBack,
-  typeOfCaseStudy,
-  projectFilename
-}) {
+export default function Toolbar({ showBack, typeOfCaseStudy }) {
   const { scrollYProgress } = useScroll();
+
+  const [isDetailed, setIsDetailed] = useState(getTypeOfCaseStudy());
+
+  function getTypeOfCaseStudy() {
+    if (typeOfCaseStudy === 'full') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   return (
     <Flex
@@ -107,7 +79,13 @@ export default function Toolbar({
           transformOrigin: 'left'
         }}
       />
-      {typeOfCaseStudy && <Switch />}
+      {typeOfCaseStudy && (
+        <Switch
+          isOn={isDetailed}
+          firstLabelOnClick={() => setIsDetailed(true)}
+          secondLabelOnClick={() => setIsDetailed(false)}
+        />
+      )}
     </Flex>
   );
 }
