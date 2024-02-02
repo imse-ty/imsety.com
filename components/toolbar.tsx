@@ -125,13 +125,13 @@ export default function Toolbar({
             href={`/work/beloved-benefit-2023`}
             active={typeOfCaseStudy === 'full' ? true : false}
           >
-            Full
+            Detailed
           </MenuItem>
           <MenuItem
             href={`/work/beloved-benefit-2023-simple`}
             active={typeOfCaseStudy === 'simple' ? true : false}
           >
-            Simple
+            Brief
           </MenuItem>
         </Flex>
       )}
