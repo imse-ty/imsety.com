@@ -55,7 +55,9 @@ function PlayButton() {
 export default function ReelSection({
   isVideoActive,
   setIsVideoActive,
-  isPlayButtonHidden
+  isPlayButtonHidden,
+  onViewportEnter,
+  onViewportLeave
 }) {
   function getState() {
     if (isVideoActive) {
@@ -102,6 +104,8 @@ export default function ReelSection({
           backgroundColor: 'surface.heavy',
           overflow: 'hidden'
         }}
+        onViewportEnter={onViewportEnter}
+        onViewportLeave={onViewportLeave}
       >
         <Flex
           onClick={setIsVideoActive}

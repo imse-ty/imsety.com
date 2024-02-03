@@ -31,7 +31,11 @@ function ProjectsSection({ projects }) {
   );
 }
 
-export default function WorkSection({ projects }) {
+export default function WorkSection({
+  projects,
+  onViewportEnter,
+  onViewportLeave
+}) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -44,7 +48,7 @@ export default function WorkSection({ projects }) {
 
   return (
     <div ref={container}>
-      <Box id='work'>
+      <Box id="work">
         <motion.div
           style={{ scale }}
           sx={{
@@ -56,12 +60,26 @@ export default function WorkSection({ projects }) {
             boxShadow: 'soft.highNorth'
           }}
         >
+          <motion.div
+            onViewportLeave={onViewportLeave}
+            sx={{
+              top: 0,
+              position: 'absolute',
+              backgroundColor: 'red',
+              height: '700vh'
+            }}
+          />
           <Container sx={{ textAlign: 'center' }}>
-            <Heading variant='display.h1' sx={{ marginBottom: 2 }}>
+            <Heading
+              as={motion.h2}
+              variant="display.h1"
+              sx={{ marginBottom: 2 }}
+              onViewportEnter={onViewportEnter}
+            >
               Work
             </Heading>
 
-            <Text variant='body.summary'>
+            <Text variant="body.summary">
               Latest projects ranging from event openers, tech product ads,
               social media graphics, and art expeditions.
             </Text>

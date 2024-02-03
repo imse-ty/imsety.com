@@ -29,6 +29,7 @@ export default function Home(props) {
   const projectsList = data.workPage.projects;
 
   const [isVideoActive, setIsVideoActive] = useState(false);
+  const [hideNav, setHideNav] = useState(false);
 
   const { scrollYProgress } = useScroll();
 
@@ -38,7 +39,11 @@ export default function Home(props) {
   const scale = useSpring(scrollScale);
 
   return (
-    <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
+    <Layout
+      isHiddenByDefault={false}
+      isToolbarHidden={isVideoActive}
+      forceHideNav={hideNav}
+    >
       <motion.div
         style={{ scale, opacity }}
         sx={{ top: 0, width: '100%', position: 'fixed' }}
@@ -46,9 +51,11 @@ export default function Home(props) {
         <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
       </motion.div>
 
-      <div id="reel" sx={{ marginTop: '100vh' }} />
+      <div id="reel" sx={{ zIndex: 5, marginTop: '100vh' }} />
       <ReelSection
         isVideoActive={isVideoActive}
+        onViewportEnter={() => setHideNav(true)}
+        onViewportLeave={() => setHideNav(false)}
         setIsVideoActive={() => {
           if (typeof umami !== 'undefined' && !isVideoActive) {
             umami.track('reel-section-play');
@@ -57,11 +64,20 @@ export default function Home(props) {
           setIsVideoActive(!isVideoActive);
         }}
       />
-      <div sx={{ position: 'relative', zIndex: 1 }}>
-        <WorkSection projects={projectsList} />
+      <motion.div
+        sx={{
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
+        <WorkSection
+          projects={projectsList}
+          onViewportLeave={() => setHideNav(true)}
+          onViewportEnter={() => setHideNav(false)}
+        />
         <AboutSection />
         <ContactSection />
-      </div>
+      </motion.div>
     </Layout>
   );
 }

@@ -9,8 +9,8 @@ import { motion } from 'framer-motion';
 function MenuItem({ children, active, href }) {
   return (
     <Text
-      as='li'
-      variant='body.smallParagraph'
+      as="li"
+      variant="body.smallParagraph"
       sx={{
         display: 'flex',
         justifyContent: 'center',
@@ -37,25 +37,30 @@ function MenuItem({ children, active, href }) {
   );
 }
 
-export default function Navigation() {
+export default function Navigation({ isHidden }) {
   const variants = {
     hidden: {
       opacity: 0,
-      bottom: '0px'
+      bottom: '0px',
+      transitionEnd: {
+        display: 'none'
+      }
     },
     show: {
       opacity: 1,
-      bottom: '16px'
+      bottom: '16px',
+      display: 'flex'
     }
   };
 
   return (
     <Flex
-      variants={variants}
-      initial='hidden'
-      animate='show'
-      exit='hidden'
       as={motion.nav}
+      variants={variants}
+      initial="hidden"
+      animate={isHidden ? 'hidden' : 'show'}
+      exit="hidden"
+      key="navigation"
       sx={{
         position: 'fixed',
         left: '50%',
@@ -70,7 +75,7 @@ export default function Navigation() {
       }}
     >
       <Flex
-        as='ul'
+        as="ul"
         sx={{
           justifyContent: 'space-between',
           width: '100%',
@@ -79,11 +84,11 @@ export default function Navigation() {
           paddingLeft: 0
         }}
       >
-        <MenuItem href='/'>Home</MenuItem>
-        <MenuItem href='/#reel'>Reel</MenuItem>
-        <MenuItem href='/#work'>Work</MenuItem>
-        <MenuItem href='/#about'>About</MenuItem>
-        <MenuItem href='/#contact'>Contact</MenuItem>
+        <MenuItem href="/">Home</MenuItem>
+        <MenuItem href="/#reel">Reel</MenuItem>
+        <MenuItem href="/#work">Work</MenuItem>
+        <MenuItem href="/#about">About</MenuItem>
+        <MenuItem href="/#contact">Contact</MenuItem>
       </Flex>
     </Flex>
   );

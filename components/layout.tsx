@@ -12,7 +12,8 @@ export default function Layout({
   hideTopNav,
   isHiddenByDefault,
   isToolbarHidden,
-  typeOfCaseStudy
+  typeOfCaseStudy,
+  forceHideNav = false
 }) {
   const { scrollYProgress } = useScroll();
 
@@ -22,7 +23,7 @@ export default function Layout({
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const previous = scrollYProgress.getPrevious();
 
-    if (latest > previous) {
+    if (latest > previous && latest > 0.5) {
       setIsNavigationHidden(true);
     } else if (latest === 0 && hideTopNav) {
       setIsNavigationHidden(true);
@@ -46,7 +47,7 @@ export default function Layout({
             typeOfCaseStudy={typeOfCaseStudy}
           />
         )}
-        {!isNavigationHidden && <Navigation />}
+        {!forceHideNav && <Navigation isHidden={isNavigationHidden} />}
       </AnimatePresence>
       {children}
     </Box>
