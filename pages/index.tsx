@@ -32,16 +32,6 @@ export default function Home(props) {
 
   const { scrollYProgress } = useScroll();
 
-  const [isPlayButtonHidden, setIsPlayButtonHidden] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    if (latest > 0.05) {
-      setIsPlayButtonHidden(false);
-    } else {
-      setIsPlayButtonHidden(true);
-    }
-  });
-
   const scrollScale = useTransform(scrollYProgress, [0, 0.1], [1, 1.1]);
 
   const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
@@ -58,7 +48,6 @@ export default function Home(props) {
 
       <div sx={{ marginTop: '100vh', scrollMarginTop: '100vh' }} />
       <ReelSection
-        isPlayButtonHidden={isPlayButtonHidden}
         isVideoActive={isVideoActive}
         setIsVideoActive={() => {
           if (typeof umami !== 'undefined' && !isVideoActive) {
