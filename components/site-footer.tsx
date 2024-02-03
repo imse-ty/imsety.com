@@ -30,6 +30,7 @@ export function FooterLink({ icon, children, href }) {
         color: 'inherit',
         textDecoration: 'none'
       }}
+      data-umami-event={`social-link-${children}`}
     >
       {icon}
       <Text variant='body.footnote' sx={{ color: 'inherit' }}>
