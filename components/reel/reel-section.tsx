@@ -40,7 +40,6 @@ function PlayButton() {
         cursor: 'pointer',
         backdropFilter: 'blur(16px)'
       }}
-      data-umami-event='reel-play-button'
     >
       <MdPlayArrow />
     </Flex>
@@ -54,6 +53,7 @@ export default function ReelSection({
 }) {
   function getState() {
     if (isVideoActive) {
+      umami.track('reel-section-play');
       return true;
     }
 

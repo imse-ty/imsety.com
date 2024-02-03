@@ -62,23 +62,20 @@ export default function Hero({ primaryButtonOnClick }) {
             gap: 3
           }}
         >
-          <a href='#reel'>
+          <a href='#reel' data-umami-event='play-reel-button'>
             <Button
               leftIcon={<MdPlayArrow />}
               onClick={primaryButtonOnClick}
               sx={{ width: '100%' }}
-              id='play-reel-button'
-              data-umami-event='play-reel-button'
             >
               Play reel
             </Button>
           </a>
-          <a href='#work'>
+          <a href='#work' data-umami-event='view-work-button'>
             <Button
               variant='ghost'
               leftIcon={<MdNorthEast />}
               sx={{ width: '100%' }}
-              data-umami-event='view-work-button'
             >
               View work
             </Button>
