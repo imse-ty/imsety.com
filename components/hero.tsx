@@ -67,6 +67,7 @@ export default function Hero({ primaryButtonOnClick }) {
               leftIcon={<MdPlayArrow />}
               onClick={primaryButtonOnClick}
               sx={{ width: '100%' }}
+              id='play-reel-button'
               data-umami-event='play-reel-button'
             >
               Play reel
