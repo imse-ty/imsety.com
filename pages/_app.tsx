@@ -3,7 +3,6 @@ import { ThemeUIProvider } from 'theme-ui';
 import { theme } from 'krado-react';
 import '../styles/globals.css';
 import { setyTheme } from '@/lib/site-theme';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 
 export default function MyApp({ Component, pageProps }) {
@@ -21,7 +20,6 @@ export default function MyApp({ Component, pageProps }) {
           />
         )}
       <Component {...pageProps} />
-      <SpeedInsights />
     </ThemeUIProvider>
   );
 }
