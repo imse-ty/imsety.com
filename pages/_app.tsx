@@ -11,6 +11,11 @@ export default function MyApp({ Component, pageProps }) {
     <ThemeUIProvider theme={{ ...theme, ...setyTheme }}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
+        <script
+          async
+          src='https://us.umami.is/script.js'
+          data-website-id='9e005c6c-26e9-4730-96ab-5f3cdf366ecf'
+        ></script>
       </Head>
       <Component {...pageProps} />
       <Analytics />
