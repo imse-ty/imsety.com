@@ -22,11 +22,12 @@ function PlayButton() {
 
   return (
     <Flex
-      as={motion.div}
+      as={motion.button}
       variants={variants}
       whileHover='hover'
       transition={{ type: 'spring', duration: 0.5 }}
       sx={{
+        border: 'none',
         padding: 5,
         color: 'secondary.bold',
         backgroundColor: 'rgba(205,207,252,0.5)',
