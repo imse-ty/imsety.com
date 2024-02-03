@@ -3,6 +3,7 @@ import { ThemeUIProvider } from 'theme-ui';
 import { theme } from 'krado-react';
 import '../styles/globals.css';
 import { setyTheme } from '@/lib/site-theme';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -11,6 +12,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </ThemeUIProvider>
   );
 }
