@@ -12,8 +12,7 @@ export default function Layout({
   hideTopNav,
   isHiddenByDefault,
   isToolbarHidden,
-  typeOfCaseStudy,
-  projectFilename
+  typeOfCaseStudy
 }) {
   const { scrollYProgress } = useScroll();
 
@@ -45,7 +44,6 @@ export default function Layout({
           <Toolbar
             showBack={showToolbarBack}
             typeOfCaseStudy={typeOfCaseStudy}
-            projectFilename={projectFilename}
           />
         )}
         {!isNavigationHidden && <Navigation />}
