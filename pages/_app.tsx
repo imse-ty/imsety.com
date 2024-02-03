@@ -4,6 +4,7 @@ import { theme } from 'krado-react';
 import '../styles/globals.css';
 import { setyTheme } from '@/lib/site-theme';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -13,6 +14,7 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </ThemeUIProvider>
   );
 }
