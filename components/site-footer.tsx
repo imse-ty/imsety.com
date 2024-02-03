@@ -22,10 +22,10 @@ import { motion } from 'framer-motion';
 export function FooterLink({ icon, children, href }) {
   return (
     <Flex
-      as='a'
+      as="a"
       href={href}
-      target='_blank'
-      rel='noindex nofollow'
+      target="_blank"
+      rel="noindex nofollow"
       sx={{
         alignItems: 'center',
         gap: 2,
@@ -35,7 +35,7 @@ export function FooterLink({ icon, children, href }) {
       data-umami-event={`social-link-${children}`}
     >
       {icon}
-      <Text variant='body.footnote' sx={{ color: 'inherit' }}>
+      <Text variant="body.footnote" sx={{ color: 'inherit' }}>
         {children}
       </Text>
     </Flex>
@@ -46,24 +46,24 @@ export function SocialMediaLinks() {
   return (
     <>
       <FooterLink
-        href='https://www.instagram.com/imse_ty'
+        href="https://www.instagram.com/imse_ty"
         icon={<FaInstagram />}
       >
         Instagram
       </FooterLink>
       <FooterLink
-        href='https://www.linkedin.com/in/imsety'
+        href="https://www.linkedin.com/in/imsety"
         icon={<FaLinkedin />}
       >
         LinkedIn
       </FooterLink>
-      <FooterLink href='https://www.youtube.com/imsety' icon={<FaYoutube />}>
+      <FooterLink href="https://www.youtube.com/imsety" icon={<FaYoutube />}>
         Youtube
       </FooterLink>
-      <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
+      <FooterLink href="https://twitter.com/imse_ty" icon={<FaTwitter />}>
         Twitter
       </FooterLink>
-      <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
+      <FooterLink href="https://github.com/imse-ty" icon={<FaGithub />}>
         GitHub
       </FooterLink>
     </>
@@ -112,10 +112,10 @@ export default function SiteFooter({ textColor, linkColor }) {
         <Flex
           as={motion.div}
           onClick={(e) => {
-            if (colorMode === 'light') {
+            if (typeof umami !== 'undefined' && colorMode === 'light') {
               umami.track('switch-to-dark-mode');
             }
-            if (colorMode === 'dark') {
+            if (typeof umami !== 'undefined' && colorMode === 'dark') {
               umami.track('switch-to-light-mode');
             }
             const next = colorMode === 'dark' ? 'light' : 'dark';

@@ -45,9 +45,10 @@ export default function Home(props) {
         isPlayButtonHidden={isPlayButtonHidden}
         isVideoActive={isVideoActive}
         setIsVideoActive={() => {
-          if (!isVideoActive) {
+          if (typeof umami !== 'undefined' && !isVideoActive) {
             umami.track('reel-section-play');
           }
+
           setIsVideoActive(!isVideoActive);
         }}
       />
