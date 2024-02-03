@@ -1,3 +1,6 @@
+/** @jsxImportSource theme-ui */
+//@ts-nocheck
+
 import ReelSection from '@/components/reel/reel-section';
 import { useState } from 'react';
 
