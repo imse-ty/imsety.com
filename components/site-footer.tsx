@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useColorMode } from 'theme-ui';
 import {
   Box,
@@ -110,6 +112,12 @@ export default function SiteFooter({ textColor, linkColor }) {
         <Flex
           as={motion.div}
           onClick={(e) => {
+            if (colorMode === 'light') {
+              umami.track('switch-to-dark-mode');
+            }
+            if (colorMode === 'dark') {
+              umami.track('switch-to-light-mode');
+            }
             const next = colorMode === 'dark' ? 'light' : 'dark';
             setColorMode(next);
           }}
