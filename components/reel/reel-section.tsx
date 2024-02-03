@@ -175,7 +175,7 @@ export default function ReelSection({
           <VideoPlayer
             url="https://vimeo.com/907993556?share=copy"
             previewSrc="2023-reel.webm"
-            poster="work/beeple-3.png"
+            poster="reel-thumbnail.png"
             isActive={isVideoActive}
           />
         </Flex>
