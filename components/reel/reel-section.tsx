@@ -53,7 +53,6 @@ export default function ReelSection({
 }) {
   function getState() {
     if (isVideoActive) {
-      umami.track('reel-section-play');
       return true;
     }
 

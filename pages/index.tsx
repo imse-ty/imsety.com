@@ -42,7 +42,12 @@ export default function Home(props) {
         <ReelSection
           isPlayButtonHidden={isPlayButtonHidden}
           isVideoActive={isVideoActive}
-          setIsVideoActive={() => setIsVideoActive(!isVideoActive)}
+          setIsVideoActive={() => {
+            if (!isVideoActive) {
+              umami.track('reel-section-play');
+            }
+            setIsVideoActive(!isVideoActive);
+          }}
         />
       </Shade>
       <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
