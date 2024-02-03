@@ -95,7 +95,6 @@ export default function ReelSection({
           borderTopLeftRadius: borderRadius,
           borderTopRightRadius: borderRadius
         }}
-        id="reel"
         sx={{
           flexDirection: 'column',
           justifyContent: 'center',

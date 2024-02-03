@@ -46,7 +46,7 @@ export default function Home(props) {
         <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
       </motion.div>
 
-      <div sx={{ marginTop: '100vh', scrollMarginTop: '100vh' }} />
+      <div id="reel" sx={{ marginTop: '100vh' }} />
       <ReelSection
         isVideoActive={isVideoActive}
         setIsVideoActive={() => {
