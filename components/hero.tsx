@@ -16,6 +16,9 @@ export default function Hero({ primaryButtonOnClick }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       sx={{
+        top: 0,
+        width: '100%',
+        position: 'fixed',
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '100vh'
@@ -42,7 +45,7 @@ export default function Hero({ primaryButtonOnClick }) {
           }}
         >
           <Heading
-            variant='display.display'
+            variant="display.display"
             sx={{
               marginBottom: [2, 3]
             }}
@@ -51,7 +54,7 @@ export default function Hero({ primaryButtonOnClick }) {
             <br />
             on a&nbsp;mission
           </Heading>
-          <Text variant='body.summary'>
+          <Text variant="body.summary">
             Turning creative ideas into reality by mixing a little bit of art
             with a little of tech.
           </Text>
@@ -62,7 +65,7 @@ export default function Hero({ primaryButtonOnClick }) {
             gap: 3
           }}
         >
-          <a href='#reel' data-umami-event='play-reel-button'>
+          <a href="#reel" data-umami-event="play-reel-button">
             <Button
               leftIcon={<MdPlayArrow />}
               onClick={primaryButtonOnClick}
@@ -71,9 +74,9 @@ export default function Hero({ primaryButtonOnClick }) {
               Play reel
             </Button>
           </a>
-          <a href='#work' data-umami-event='view-work-button'>
+          <a href="#work" data-umami-event="view-work-button">
             <Button
-              variant='ghost'
+              variant="ghost"
               leftIcon={<MdNorthEast />}
               sx={{ width: '100%' }}
             >

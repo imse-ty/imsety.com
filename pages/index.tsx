@@ -38,28 +38,27 @@ export default function Home(props) {
 
   return (
     <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
-      <Shade primaryButtonOnClick={() => setIsVideoActive(true)}>
-        <ReelSection
-          isPlayButtonHidden={isPlayButtonHidden}
-          isVideoActive={isVideoActive}
-          setIsVideoActive={() => {
-            if (!isVideoActive) {
-              umami.track('reel-section-play');
-            }
-            setIsVideoActive(!isVideoActive);
-          }}
-        />
-      </Shade>
-      <div id='reel' sx={{ scrollMarginTop: '100vh' }} />
+      <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
 
+      <div sx={{ marginTop: '100vh', scrollMarginTop: '100vh' }} />
+      <ReelSection
+        isPlayButtonHidden={isPlayButtonHidden}
+        isVideoActive={isVideoActive}
+        setIsVideoActive={() => {
+          if (!isVideoActive) {
+            umami.track('reel-section-play');
+          }
+          setIsVideoActive(!isVideoActive);
+        }}
+      />
       <div sx={{ position: 'relative', zIndex: 1 }}>
         <WorkSection projects={projectsList} />
         <AboutSection
-          title='About'
-          subtitle='arcu, fringilla.'
-          imageAlt='My image'
-          imageSrc='work/space-and-time.png'
-          href='/about'
+          title="About"
+          subtitle="arcu, fringilla."
+          imageAlt="My image"
+          imageSrc="work/space-and-time.png"
+          href="/about"
         />
         <ContactSection />
       </div>
