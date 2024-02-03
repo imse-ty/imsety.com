@@ -11,7 +11,13 @@ import AboutSection from '@/components/about/about-section';
 import ContactSection from '@/components/contact/contact-section';
 import Hero from '@/components/hero';
 import { useState } from 'react';
-import { useMotionValueEvent, useScroll } from 'framer-motion';
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  useTransform
+} from 'framer-motion';
 
 export default function Home(props) {
   const { data } = useTina({
@@ -36,9 +42,19 @@ export default function Home(props) {
     }
   });
 
+  const scrollScale = useTransform(scrollYProgress, [0, 0.1], [1, 1.1]);
+
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
+  const scale = useSpring(scrollScale);
+
   return (
     <Layout isHiddenByDefault={false} isToolbarHidden={isVideoActive}>
-      <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
+      <motion.div
+        style={{ scale, opacity }}
+        sx={{ top: 0, width: '100%', position: 'fixed' }}
+      >
+        <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
+      </motion.div>
 
       <div sx={{ marginTop: '100vh', scrollMarginTop: '100vh' }} />
       <ReelSection

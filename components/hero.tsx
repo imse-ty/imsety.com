@@ -16,9 +16,6 @@ export default function Hero({ primaryButtonOnClick }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       sx={{
-        top: 0,
-        width: '100%',
-        position: 'fixed',
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '100vh'
