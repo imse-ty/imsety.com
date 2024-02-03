@@ -40,6 +40,7 @@ function PlayButton() {
         cursor: 'pointer',
         backdropFilter: 'blur(16px)'
       }}
+      data-umami-event='reel-play-button'
     >
       <MdPlayArrow />
     </Flex>

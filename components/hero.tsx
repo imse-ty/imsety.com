@@ -67,6 +67,7 @@ export default function Hero({ primaryButtonOnClick }) {
               leftIcon={<MdPlayArrow />}
               onClick={primaryButtonOnClick}
               sx={{ width: '100%' }}
+              data-umami-event='play-reel-button'
             >
               Play reel
             </Button>
@@ -76,6 +77,7 @@ export default function Hero({ primaryButtonOnClick }) {
               variant='ghost'
               leftIcon={<MdNorthEast />}
               sx={{ width: '100%' }}
+              data-umami-event='view-work-button'
             >
               View work
             </Button>
