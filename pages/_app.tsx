@@ -3,22 +3,24 @@ import { ThemeUIProvider } from 'theme-ui';
 import { theme } from 'krado-react';
 import '../styles/globals.css';
 import { setyTheme } from '@/lib/site-theme';
-import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import Script from 'next/script';
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeUIProvider theme={{ ...theme, ...setyTheme }}>
       <Head>
         <link rel='icon' href='/favicon.ico' />
-        <script
-          async
-          src='https://us.umami.is/script.js'
-          data-website-id='9e005c6c-26e9-4730-96ab-5f3cdf366ecf'
-        ></script>
       </Head>
+      {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
+        process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy='lazyOnload'
+          />
+        )}
       <Component {...pageProps} />
-      <Analytics />
       <SpeedInsights />
     </ThemeUIProvider>
   );
