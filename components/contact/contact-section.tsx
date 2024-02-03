@@ -43,6 +43,7 @@ export default function ContactSection({ useTransparentBackground }) {
               <a
                 href='mailto:greetings@imsety.com'
                 sx={{ textDecoration: 'none' }}
+                data-umami-event='contact-email-link'
               >
                 <Heading
                   variant='display.h2'
