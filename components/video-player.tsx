@@ -20,7 +20,7 @@ function VimeoVideo({ url }) {
       exit={{ opacity: 0 }}
       layoutId="video"
       sx={{
-        position: 'absolute',
+        position: 'relative',
         width: '100%',
         height: '100%',
         zIndex: 1
@@ -31,6 +31,7 @@ function VimeoVideo({ url }) {
         title="Vimeo video player"
         allow="autoplay; fullscreen; picture-in-picture"
         sx={{
+          position: 'absolute',
           width: '100%',
           height: '100%',
           border: 0,
@@ -76,6 +77,7 @@ function IdleVideo({ src, poster }) {
       layoutId="video"
       sx={{
         position: 'absolute',
+
         width: '100%',
         minHeight: '100%',
         objectFit: 'cover'
