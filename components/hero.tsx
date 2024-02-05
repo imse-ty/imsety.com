@@ -42,6 +42,7 @@ export default function Hero({ primaryButtonOnClick }) {
           }}
         >
           <Heading
+            as="h1"
             variant="display.display"
             sx={{
               marginBottom: [2, 3]
@@ -51,7 +52,7 @@ export default function Hero({ primaryButtonOnClick }) {
             <br />
             on a&nbsp;mission
           </Heading>
-          <Text variant="body.summary">
+          <Text as="p" variant="body.summary">
             Turning creative ideas into reality by mixing a little bit of art
             with a little of tech.
           </Text>
