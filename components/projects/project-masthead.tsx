@@ -14,7 +14,7 @@ function ScrollButton() {
   return (
     <Box
       as={motion.a}
-      href='#info'
+      href="#info"
       whileHover={{
         backgroundColor: getColor(setyTheme, 'surface.thin')
       }}
@@ -106,7 +106,8 @@ export default function ProjectMasthead({
                   }}
                 >
                   <Heading
-                    variant='display.h1'
+                    as="h1"
+                    variant="display.h1"
                     sx={{
                       color: 'secondary.contrast',
                       marginBottom: [1, 2]
@@ -115,7 +116,8 @@ export default function ProjectMasthead({
                     {title}
                   </Heading>
                   <Text
-                    variant='body.summary'
+                    as="p"
+                    variant="body.summary"
                     sx={{ color: 'secondary.contrast', maxWidth: '900px' }}
                   >
                     {subtitle}
@@ -139,9 +141,9 @@ export default function ProjectMasthead({
                     >
                       Watch video
                     </Button>
-                    <a href='#info'>
+                    <a href="#info">
                       <Button
-                        variant='ghost'
+                        variant="ghost"
                         sx={{
                           color: 'secondary.contrast',
                           borderColor: 'secondary.contrast'
@@ -152,7 +154,7 @@ export default function ProjectMasthead({
                     </a>
                   </Flex>
                 ) : (
-                  <a href='#info'>
+                  <a href="#info">
                     <Button
                       sx={{
                         color: 'secondary.bold',

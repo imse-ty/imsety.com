@@ -47,7 +47,7 @@ export default function WorkSection({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <div ref={container}>
+    <section ref={container}>
       <Box id="work">
         <motion.div
           style={{ scale }}
@@ -79,7 +79,7 @@ export default function WorkSection({
               Work
             </Heading>
 
-            <Text variant="body.summary">
+            <Text as="p" variant="body.summary">
               Latest projects ranging from event openers, tech product ads,
               social media graphics, and art expeditions.
             </Text>
@@ -87,6 +87,6 @@ export default function WorkSection({
           <ProjectsSection projects={projects} />
         </motion.div>
       </Box>
-    </div>
+    </section>
   );
 }

@@ -75,7 +75,7 @@ export default function Toolbar({ showBack, typeOfCaseStudy }) {
         style={{ scaleX: scrollYProgress }}
         sx={{
           width: '100%',
-          height: '2px',
+          height: '4px',
           backgroundColor: 'secondary.light',
           transformOrigin: 'left'
         }}
