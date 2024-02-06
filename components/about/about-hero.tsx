@@ -29,7 +29,8 @@ export default function AboutHero() {
 
       <Flex sx={{ flexDirection: 'column', gap: 4, textAlign: 'center' }}>
         <Heading
-          variant='display.h1'
+          as="h2"
+          variant="display.h1"
           sx={{ marginBottom: 3, color: 'surface.thin' }}
         >
           Hey, my name
@@ -37,16 +38,28 @@ export default function AboutHero() {
           is&nbsp;Imsety
         </Heading>
 
-        <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+        <Text
+          as="p"
+          variant="body.summary"
+          sx={{ color: 'surface.extralight' }}
+        >
           I am a motion designer and developer in Atlanta. I love blending
           design and technology to tell good stories.
         </Text>
-        <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+        <Text
+          as="p"
+          variant="body.summary"
+          sx={{ color: 'surface.extralight' }}
+        >
           My journey has led me to collaborate with Ford, Chick-fil-A, and
           Keller Williams. I create satisfying music videos, engaging event
           openers, social content, custom websites, landing pages, and more.
         </Text>
-        <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+        <Text
+          as="p"
+          variant="body.summary"
+          sx={{ color: 'surface.extralight' }}
+        >
           Let&apos;s connect and make something amazing.
         </Text>
       </Flex>
