@@ -1,4 +1,5 @@
 // @ts-nocheck
+/** @jsxImportSource theme-ui */
 
 import { useColorMode } from 'theme-ui';
 import {
@@ -21,24 +22,27 @@ import { motion } from 'framer-motion';
 
 export function FooterLink({ icon, children, href }) {
   return (
-    <Flex
+    <a
       as="a"
       href={href}
       target="_blank"
       rel="noindex nofollow"
-      sx={{
-        alignItems: 'center',
-        gap: 2,
-        color: 'inherit',
-        textDecoration: 'none'
-      }}
       data-umami-event={`social-link-${children}`}
+      sx={{ textDecoration: 'none', color: 'inherit' }}
     >
-      {icon}
-      <Text variant="body.footnote" sx={{ color: 'inherit' }}>
-        {children}
-      </Text>
-    </Flex>
+      <Flex
+        as="li"
+        sx={{
+          alignItems: 'center',
+          gap: 2
+        }}
+      >
+        {icon}
+        <Text variant="body.footnote" sx={{ color: 'inherit' }}>
+          {children}
+        </Text>
+      </Flex>
+    </a>
   );
 }
 
@@ -81,6 +85,7 @@ export default function SiteFooter({ textColor, linkColor }) {
       }}
     >
       <FooterFootnote
+        as="p"
         sx={{
           color: textColor,
           textAlign: ['center', null, 'left']
@@ -100,17 +105,20 @@ export default function SiteFooter({ textColor, linkColor }) {
         }}
       >
         <Flex
+          as="ul"
           sx={{
             gap: [3, null, null, 4],
             flexWrap: 'wrap',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            alignItems: 'center',
+            listStyleType: 'none'
           }}
         >
           <SocialMediaLinks />
         </Flex>
 
         <Flex
-          as={motion.div}
+          as={motion.button}
           onClick={(e) => {
             if (typeof umami !== 'undefined' && colorMode === 'light') {
               umami.track('switch-to-dark-mode');
@@ -125,7 +133,9 @@ export default function SiteFooter({ textColor, linkColor }) {
           transition={{ type: 'spring', duration: 0.8 }}
           sx={{
             fontSize: 5,
-            color: 'inherit'
+            color: 'inherit',
+            border: 'none',
+            backgroundColor: 'transparent'
           }}
         >
           {colorMode === 'dark' ? <MdLightMode /> : <MdDarkMode />}
