@@ -322,7 +322,7 @@ export default function Shoutouts() {
             }}
             sx={{ marginX: 'auto', overflow: 'hidden' }}
           >
-            Click for a surprise
+            Press for a surprise
           </Button>
           <Text sx={{ color: 'surface.extrathin' }}>
             Or{' '}
