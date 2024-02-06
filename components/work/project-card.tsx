@@ -43,6 +43,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             }}
           >
             <Text
+              as="h3"
               sx={{
                 fontWeight: 600,
                 fontSize: [6, 7, null, null, 9],
@@ -53,7 +54,8 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             </Text>
             {subtitle && (
               <Text
-                variant='body.smallParagraph'
+                as="p"
+                variant="body.smallParagraph"
                 sx={{
                   color: 'secondary.regular',
                   display: ['none', null, null, 'block']
@@ -81,7 +83,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
           />
           <Image
             src={src}
-            alt=''
+            alt=""
             width={2560}
             height={2560}
             sx={{
