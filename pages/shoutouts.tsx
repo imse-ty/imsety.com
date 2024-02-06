@@ -82,7 +82,10 @@ export default function Shoutouts() {
 
   return (
     <Layout>
-      <NextSeo title={`Shout outs - Imsety`} />
+      <NextSeo
+        title='Shout outs - Imsety'
+        description="A list of GIANT shoutouts to all the amazing individuals I've had the honor of working with or meeting in 2023."
+      />
       <Container
         as='article'
         sx={{
