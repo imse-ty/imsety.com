@@ -356,7 +356,13 @@ export default function Shoutouts() {
             id='buttonConfetti'
           />
           <Button
-            onClick={() => buttonReward()}
+            onClick={() => {
+              if (typeof umami !== 'undefined') {
+                umami.track('shout-out-confetti-button-clicked');
+              }
+
+              buttonReward();
+            }}
             sx={{ marginX: 'auto', overflow: 'hidden' }}
           >
             Special confetti button!
