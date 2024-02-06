@@ -115,12 +115,7 @@ const nextConfig = {
         source: '/blog/:path*',
         destination: 'https://v1.imsety.com/blog/:path*',
         permanent: false
-      },
-      {
-        source: '/shoutouts',
-        destination: 'https://imsety.notion.site/Shout-outs-cc1de13f135e45319743b6e7dd57510a?pvs=4',
-        permanent: false
-      },
+      }
     ];
   }
 };
