@@ -309,8 +309,38 @@ export default defineConfig({
                 fields: [
                   {
                     type: 'string',
-                    name: 'url',
-                    label: 'URL'
+                    name: 'text',
+                    label: 'Text'
+                  },
+                  {
+                    type: 'object',
+                    name: 'names',
+                    label: 'Names',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'title',
+                        label: 'Title',
+                        type: 'string'
+                      },
+                      {
+                        name: 'name',
+                        label: 'Name',
+                        type: 'string'
+                      },
+                      {
+                        name: 'url',
+                        label: 'URL',
+                        type: 'string'
+                      }
+                    ],
+                    ui: {
+                      itemProps: (item) => {
+                        return {
+                          label: item?.name
+                        };
+                      }
+                    }
                   }
                 ]
               }

@@ -37,20 +37,42 @@ function Card({ children, ...rest }) {
   );
 }
 
-function Mention() {
+function Mention({ title, name, url }) {
   return (
     <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-      <Text variant="body.pretext" sx={{ color: 'surface.light' }}>
-        Production
-      </Text>
-      <Text variant="body.summary" sx={{ color: 'surface.thin' }}>
-        Will Taylor
-      </Text>
+      {title && (
+        <Text variant="body.pretext" sx={{ color: 'surface.light' }}>
+          {title}
+        </Text>
+      )}
+      {name && (
+        <a
+          href={url}
+          target="_blank"
+          rel="noindex nofollow"
+          sx={{ textDecoration: 'none' }}
+        >
+          <Text
+            variant="body.summary"
+            sx={{
+              alignText: 'center',
+              color: 'surface.thin',
+              transition: 'color, font-weight 0.5s',
+              '&:hover': {
+                color: 'surface.extrathin',
+                fontWeight: 600
+              }
+            }}
+          >
+            {name}
+          </Text>
+        </a>
+      )}
     </Flex>
   );
 }
 
-export default function ProjectCredits() {
+export default function ProjectCredits({ text, names }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 'all' });
   const { reward } = useReward('rewardId', 'confetti', {
@@ -92,8 +114,7 @@ export default function ProjectCredits() {
             Credits
           </Heading>
           <Text variant="body.summary" sx={{ flex: 1, color: 'surface.thin' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-            facilisis quam ex, eu vehicula justo sollicitudin pharetra.
+            {text}
           </Text>
         </Flex>
         <Grid
@@ -103,10 +124,16 @@ export default function ProjectCredits() {
             flex: 1
           }}
         >
-          <Mention />
-          <Mention />
-          <Mention />
-          <Mention />
+          {names.map((name, index) => {
+            return (
+              <Mention
+                title={name.title}
+                name={name.name}
+                url={name.url}
+                key={index}
+              />
+            );
+          })}
         </Grid>
       </Card>
     </figure>

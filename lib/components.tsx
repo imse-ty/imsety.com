@@ -98,7 +98,7 @@ export const components = {
   ProjectVimeo: ({ url }) => {
     return <ProjectVimeo url={url} />;
   },
-  ProjectCredits: () => {
-    return <ProjectCredits />;
+  ProjectCredits: ({ names, text }) => {
+    return <ProjectCredits text={text} names={names} />;
   }
 };
