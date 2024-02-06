@@ -22,6 +22,7 @@ import { useRef, useState } from 'react';
 import { ThemeUIProvider } from 'theme-ui';
 import { buildMonochromaticTheme } from '@/lib/monochromatic-theme';
 import { getColor } from '@theme-ui/color';
+import { NextSeo } from 'next-seo';
 
 function BodyContainer({ ...rest }) {
   return <Container as="article" sx={{ maxWidth: '900px' }} {...rest} />;
@@ -53,6 +54,10 @@ export default function Project(props) {
 
   return (
     <ThemeUIProvider theme={{ colors: { ...pageColor } }}>
+      <NextSeo
+        title={`${data.project.title} - Imsety`}
+        description={data.project.subtitle}
+      />
       <Layout
         typeOfCaseStudy={data.project.typeOfCaseStudy}
         showToolbarBack={true}
