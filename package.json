@@ -16,6 +16,7 @@
     "get-video-id": "^3.6.5",
     "krado-react": "github:imse-ty/krado-react",
     "next": "^14.0.4",
+    "next-seo": "^6.4.0",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
