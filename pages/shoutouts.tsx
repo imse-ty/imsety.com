@@ -6,14 +6,14 @@ import Layout from '@/components/layout';
 import { setyTheme } from '@/lib/site-theme';
 import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
-import { Container, Link, Button, colors, Box } from 'krado-react';
+import { Container, Link as KradoLink, Button, colors, Box } from 'krado-react';
 import Text from '@/components/fixed-krado-components/Text';
 import { motion } from 'framer-motion';
 import { ProjectYoutube } from '@/components/projects/project-embed';
 import { useReward } from 'react-rewards';
 import { MdCelebration } from 'react-icons/md';
 
-import { Link as NextLink } from 'next/link';
+import Link from 'next/link';
 
 function ShoutOutHeading({ children, url }) {
   return (
@@ -25,7 +25,7 @@ function ShoutOutHeading({ children, url }) {
     >
       <Heading
         as={motion.h3}
-        variant='display.h3'
+        variant='display.h4'
         initial={{ borderWidth: '3px' }}
         whileHover={{ borderWidth: '6px' }}
         sx={{
@@ -113,13 +113,13 @@ export default function Shoutouts() {
 
         <Text>
           MASSIVE thanks to my family,{' '}
-          <Link
+          <KradoLink
             href='https://www.linkedin.com/in/dantetaylor/'
             target='_blank'
             rel='noindex nofollow'
           >
             Ba-Ba
-          </Link>
+          </KradoLink>
           , Ya-Ya, brother, and sister for their unwavering support and
           contribution to my journey.
         </Text>
@@ -142,11 +142,7 @@ export default function Shoutouts() {
           continue working alongside this team.
         </ShoutOutText>
 
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/austinbauwens/?hl=en'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/austinbauwens/?hl=en'>
           🔁 Austin Bauwens
         </ShoutOutHeading>
 
@@ -154,11 +150,7 @@ export default function Shoutouts() {
           Thanks for the growth and leadership. You make us move fast!
         </ShoutOutText>
 
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/noahdamonwilde/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/noahdamonwilde/'>
           ❇️ Noah Damon Wilde
         </ShoutOutHeading>
 
@@ -166,11 +158,7 @@ export default function Shoutouts() {
           For the same amazing growth vibes and Overwatch 2 sessions. You
           changed how I see design. Additive vs. subtractive.
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/sam.essanoussi/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/sam.essanoussi/'>
           🟡 Sam Essanoussi
         </ShoutOutHeading>
 
@@ -178,11 +166,7 @@ export default function Shoutouts() {
           Working with you kickstarted it all. OG partner vibes and Splice (0:02
           timestamp in Reel) tunnel scene magic.
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/barbara.frames/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/barbara.frames/'>
           🌐 Barbara Vorobyeva
         </ShoutOutHeading>
 
@@ -190,44 +174,28 @@ export default function Shoutouts() {
           Your full-time travel and unique experiences add an exciting twist to
           the group. A delight to collaborate with you.
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/redfordmedia/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/redfordmedia/'>
           🤠 Jackson Redford
         </ShoutOutHeading>
 
         <ShoutOutText>
           The group&apos;s sunshine is your positivity, Jackson
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://wlroo.design/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://wlroo.design/'>
           💻 Will Taylor (.wlroo)
         </ShoutOutHeading>
 
         <ShoutOutText>
           From YouTube intros to now, thrilled to work together!
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/dannyduhdaddie/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/dannyduhdaddie/'>
           🐸 Danny Chuang
         </ShoutOutHeading>
 
         <ShoutOutText>
           Love your authenticity and pepe memes. Always bringing that energy!
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.kairgb.com/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.kairgb.com/'>
           👾 Kai Webb
         </ShoutOutHeading>
 
@@ -236,11 +204,7 @@ export default function Shoutouts() {
           share common interests.
         </ShoutOutText>
 
-        <ShoutOutHeading
-          url='https://www.mayatable.com/'
-          as='h3'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.mayatable.com/'>
           😇 Maya Table
         </ShoutOutHeading>
 
@@ -255,11 +219,7 @@ export default function Shoutouts() {
         <ShoutOutText>
           Turning your designs into motion was a joy. Eager for more collabs!
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.cisconewman.com/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.cisconewman.com/'>
           ✖️ Cisco Newman
         </ShoutOutHeading>
 
@@ -267,11 +227,7 @@ export default function Shoutouts() {
           Rocking Rock The Campus with you was a blast. Big thanks to you and
           Maya.
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.instagram.com/jayisforjelly/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.instagram.com/jayisforjelly/'>
           🪼 Jay Brown
         </ShoutOutHeading>
 
@@ -279,11 +235,7 @@ export default function Shoutouts() {
           For the amazing referrals and connections. Can&apos;t wait to catch up
           again!
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.revilostuff.com/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.revilostuff.com/'>
           🏍️ Will Harvey (revilo)
         </ShoutOutHeading>
 
@@ -291,11 +243,7 @@ export default function Shoutouts() {
           Beeple Studios night was unforgettable. Thanks for the vibes and
           memories.
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.beeple-crap.com/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.beeple-crap.com/'>
           😜 Mike Winkelmann (beeple)
         </ShoutOutHeading>
 
@@ -303,11 +251,7 @@ export default function Shoutouts() {
           Grateful for the support and community event invite. Exhibiting my art
           was a privilege. Amazing experience!
         </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
-          url='https://www.tilenmourier.com/'
-          variant='display.h3'
-        >
+        <ShoutOutHeading url='https://www.tilenmourier.com/'>
           🤌 Tilen Mourier
         </ShoutOutHeading>
 
