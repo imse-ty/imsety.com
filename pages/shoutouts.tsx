@@ -106,7 +106,7 @@ export default function Shoutouts() {
         </Heading>
 
         <Heading as='h2' variant='display.h2'>
-          My family
+          👨🏾‍👩🏾‍👧🏾‍👦🏾 My family
         </Heading>
 
         <Text>
@@ -123,7 +123,7 @@ export default function Shoutouts() {
         </Text>
 
         <Heading as='h2' variant='display.h2'>
-          The community
+          🌐 The community
         </Heading>
 
         <ShoutOutText>
@@ -132,7 +132,7 @@ export default function Shoutouts() {
         </ShoutOutText>
 
         <ShoutOutHeading as='h3' variant='display.h3' url='https://ravie.co/'>
-          Ravie.co
+          ✨ Ravie.co
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -145,7 +145,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/austinbauwens/?hl=en'
           variant='display.h3'
         >
-          Austin Bauwens
+          🔁 Austin Bauwens
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -157,7 +157,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/noahdamonwilde/'
           variant='display.h3'
         >
-          Noah Damon Wilde
+          ❇️ Noah Damon Wilde
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -169,7 +169,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/sam.essanoussi/'
           variant='display.h3'
         >
-          Sam Essanoussi
+          🟡 Sam Essanoussi
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -181,7 +181,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/barbara.frames/'
           variant='display.h3'
         >
-          Barbara Vorobyeva
+          🌐 Barbara Vorobyeva
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -193,7 +193,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/redfordmedia/'
           variant='display.h3'
         >
-          Jackson Redford
+          🤠 Jackson Redford
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -204,7 +204,7 @@ export default function Shoutouts() {
           url='https://wlroo.design/'
           variant='display.h3'
         >
-          Will Taylor (.wlroo)
+          💻 Will Taylor (.wlroo)
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -215,7 +215,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/dannyduhdaddie/'
           variant='display.h3'
         >
-          Danny Chuang
+          🐸 Danny Chuang
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -226,7 +226,7 @@ export default function Shoutouts() {
           url='https://www.kairgb.com/'
           variant='display.h3'
         >
-          Kai Webb
+          👾 Kai Webb
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -239,7 +239,7 @@ export default function Shoutouts() {
           as='h3'
           variant='display.h3'
         >
-          Maya Table
+          😇 Maya Table
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -247,20 +247,18 @@ export default function Shoutouts() {
           Beyond grateful. Aim for the stars!
         </ShoutOutText>
         <ShoutOutHeading as='h3' variant='display.h3'>
-          Kae McGowan
+          🎨 Kae McGowan
         </ShoutOutHeading>
 
         <ShoutOutText>
-          Turning your designs into motion was a joy. Eager for more collabs! ✖️
-          Cisco Newman & The Funnel Creative - Rocking Rock The Campus with you
-          was a blast. Big thanks to you and Maya.
+          Turning your designs into motion was a joy. Eager for more collabs!
         </ShoutOutText>
         <ShoutOutHeading
           as='h3'
           url='https://www.cisconewman.com/'
           variant='display.h3'
         >
-          Cisco Newman
+          ✖️ Cisco Newman
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -272,7 +270,7 @@ export default function Shoutouts() {
           url='https://www.instagram.com/jayisforjelly/'
           variant='display.h3'
         >
-          Jay Brown
+          🪼 Jay Brown
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -281,30 +279,10 @@ export default function Shoutouts() {
         </ShoutOutText>
         <ShoutOutHeading
           as='h3'
-          url='https://www.tilenmourier.com/'
-          variant='display.h3'
-        >
-          Tilen Mourier
-        </ShoutOutHeading>
-
-        <ShoutOutText>
-          Enjoyed the Glint challenge with you. Your 36days shined my feed last
-          year!
-        </ShoutOutText>
-        <ShoutOutHeading as='h3' url='https://declos.ca/' variant='display.h3'>
-          Alexandre Declos
-        </ShoutOutHeading>
-
-        <ShoutOutText>
-          Loved tackling the Glint and design challenges with you. Hope
-          you&apos;re doing great!
-        </ShoutOutText>
-        <ShoutOutHeading
-          as='h3'
           url='https://www.revilostuff.com/'
           variant='display.h3'
         >
-          Will Harvey (revilo)
+          🏍️ Will Harvey (revilo)
         </ShoutOutHeading>
 
         <ShoutOutText>
@@ -316,12 +294,32 @@ export default function Shoutouts() {
           url='https://www.beeple-crap.com/'
           variant='display.h3'
         >
-          Mike Winkelmann (beeple)
+          😜 Mike Winkelmann (beeple)
         </ShoutOutHeading>
 
         <ShoutOutText>
           Grateful for the support and community event invite. Exhibiting my art
           was a privilege. Amazing experience!
+        </ShoutOutText>
+        <ShoutOutHeading
+          as='h3'
+          url='https://www.tilenmourier.com/'
+          variant='display.h3'
+        >
+          🤌 Tilen Mourier
+        </ShoutOutHeading>
+
+        <ShoutOutText>
+          Enjoyed the Glint challenge with you. Your 36days shined my feed last
+          year!
+        </ShoutOutText>
+        <ShoutOutHeading as='h3' url='https://declos.ca/' variant='display.h3'>
+          👓 Alexandre Declos
+        </ShoutOutHeading>
+
+        <ShoutOutText>
+          Loved tackling the Glint and design challenges with you. Hope
+          you&apos;re doing great!
         </ShoutOutText>
       </Container>
       <Container
