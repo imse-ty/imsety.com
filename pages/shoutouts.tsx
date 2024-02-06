@@ -13,6 +13,8 @@ import { ProjectYoutube } from '@/components/projects/project-embed';
 import { useReward } from 'react-rewards';
 import { MdCelebration } from 'react-icons/md';
 
+import { Link as NextLink } from 'next/link';
+
 function ShoutOutHeading({ children, url }) {
   return (
     <a
@@ -343,7 +345,9 @@ export default function Shoutouts() {
             height: '100vh',
             justifyContent: 'center',
             overflow: 'hidden',
-            position: 'relative'
+            position: 'relative',
+            gap: 4,
+            alignItems: 'center'
           }}
         >
           <span
@@ -367,6 +371,19 @@ export default function Shoutouts() {
           >
             Click for a surprise
           </Button>
+          <Text sx={{ color: 'surface.extrathin' }}>
+            Or{' '}
+            <Link
+              href='/'
+              sx={{
+                color: 'surface.extralight',
+                borderColor: 'surface.extralight'
+              }}
+            >
+              click here
+            </Link>{' '}
+            to go home
+          </Text>
         </Container>
       </Box>
     </Layout>
