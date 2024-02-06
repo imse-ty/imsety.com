@@ -83,7 +83,7 @@ export default function ReelSection({
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <div
+    <section
       ref={container}
       sx={{
         position: 'sticky',
@@ -180,6 +180,6 @@ export default function ReelSection({
           />
         </Flex>
       </Flex>
-    </div>
+    </section>
   );
 }

@@ -32,12 +32,17 @@ export function AboutCard({ icon, heading, text, isHeadingSmall }) {
       </Box>
       <Flex sx={{ flexDirection: 'column', gap: 2 }}>
         <Heading
+          as="h3"
           variant={isHeadingSmall ? 'display.h5' : 'display.h4'}
           sx={{ color: 'surface.extralight' }}
         >
           {heading}
         </Heading>
-        {text && <Text sx={{ color: 'surface.extralight' }}>{text}</Text>}
+        {text && (
+          <Text as="p" sx={{ color: 'surface.extralight' }}>
+            {text}
+          </Text>
+        )}
       </Flex>
     </Card>
   );

@@ -36,6 +36,7 @@ export default function Layout({
 
   return (
     <Box
+      as="main"
       sx={{
         position: 'relative'
       }}

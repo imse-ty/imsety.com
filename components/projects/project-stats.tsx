@@ -45,7 +45,8 @@ export function StatCard({
       </Box>
       <Flex sx={{ flexDirection: 'column', gap: 2 }}>
         <Heading
-          variant='display.h4'
+          as="h3"
+          variant="display.h4"
           sx={{
             fontSize: isHeadingSmall ? [5, 6] : [6, null, 7, 8],
             lineHeight: isHeadingSmall ? '28px' : '40px'

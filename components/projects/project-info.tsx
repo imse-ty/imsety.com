@@ -22,7 +22,7 @@ import {
 export default function ProjectInfo({ info, stats, summary }) {
   return (
     <Box
-      id='info'
+      id="info"
       sx={{
         paddingY: 5,
         backgroundColor: 'surface.extralight'
@@ -44,9 +44,9 @@ export default function ProjectInfo({ info, stats, summary }) {
                 <Tooltip
                   label={tooltip.label}
                   text={tooltip.text}
-                  labelColor='surface.regular'
-                  textColor='surface.bold'
-                  dividerColor='surface.light'
+                  labelColor="surface.regular"
+                  textColor="surface.bold"
+                  dividerColor="surface.light"
                   key={index}
                 />
               );
@@ -55,7 +55,11 @@ export default function ProjectInfo({ info, stats, summary }) {
         )}
         {summary.children.length > 0 ? (
           <Flex sx={{ flexDirection: 'column', gap: 3, color: 'surface.bold' }}>
-            <Text variant='body.pretext' sx={{ color: 'surface.regular' }}>
+            <Text
+              as="h2"
+              variant="body.pretext"
+              sx={{ color: 'surface.regular' }}
+            >
               Summary
             </Text>
             <TinaMarkdown

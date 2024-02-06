@@ -19,7 +19,7 @@ export default function ContactSection({ useTransparentBackground }) {
   const scale = useSpring(scrollScale, { mass: 0.1 });
 
   return (
-    <div ref={container}>
+    <section ref={container}>
       <Box
         sx={{
           backgroundColor: useTransparentBackground
@@ -28,7 +28,7 @@ export default function ContactSection({ useTransparentBackground }) {
         }}
       >
         <motion.div
-          id='contact'
+          id="contact"
           style={{ scale }}
           sx={{
             paddingTop: 6,
@@ -41,12 +41,13 @@ export default function ContactSection({ useTransparentBackground }) {
           <Flex sx={{ flexDirection: 'column', minHeight: '100vh' }}>
             <Container sx={{ marginTop: 'auto', textAlign: 'center' }}>
               <a
-                href='mailto:greetings@imsety.com'
+                href="mailto:greetings@imsety.com"
                 sx={{ textDecoration: 'none' }}
-                data-umami-event='contact-email-link'
+                data-umami-event="contact-email-link"
               >
                 <Heading
-                  variant='display.h2'
+                  as="h2"
+                  variant="display.h2"
                   sx={{
                     color: 'surface.thin',
                     marginBottom: [3, 4],
@@ -56,18 +57,22 @@ export default function ContactSection({ useTransparentBackground }) {
                   greetings@imsety.com
                 </Heading>
               </a>
-              <Text variant='body.summary' sx={{ color: 'surface.extralight' }}>
+              <Text
+                as="p"
+                variant="body.summary"
+                sx={{ color: 'surface.extralight' }}
+              >
                 Thinking of collaborating? I&apos;m here to listen! Let&apos;s
                 connect.
               </Text>
             </Container>
             <SiteFooter
-              textColor='surface.extralight'
-              linkColor='surface.light'
+              textColor="surface.extralight"
+              linkColor="surface.light"
             />
           </Flex>
         </motion.div>
       </Box>
-    </div>
+    </section>
   );
 }

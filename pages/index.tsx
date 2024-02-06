@@ -44,12 +44,12 @@ export default function Home(props) {
       isToolbarHidden={isVideoActive}
       forceHideNav={hideNav}
     >
-      <motion.div
+      <motion.header
         style={{ scale, opacity }}
         sx={{ top: 0, width: '100%', position: 'fixed' }}
       >
         <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
-      </motion.div>
+      </motion.header>
 
       <div id="reel" sx={{ zIndex: 5, marginTop: '100vh' }} />
       <ReelSection

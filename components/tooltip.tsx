@@ -18,10 +18,10 @@ export default function Tooltip({
         borderColor: dividerColor
       }}
     >
-      <Text variant='body.pretext' sx={{ color: labelColor }}>
+      <Text as="h3" variant="body.pretext" sx={{ color: labelColor }}>
         {label}
       </Text>
-      <Text variant='body.bold' sx={{ color: textColor }}>
+      <Text as="p" variant="body.bold" sx={{ color: textColor }}>
         {text}
       </Text>
     </Flex>
