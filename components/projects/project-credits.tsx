@@ -40,10 +40,10 @@ function Card({ children, ...rest }) {
 function Mention() {
   return (
     <Flex sx={{ flexDirection: 'column', gap: 2 }}>
-      <Text variant='body.pretext' sx={{ color: 'surface.light' }}>
+      <Text variant="body.pretext" sx={{ color: 'surface.light' }}>
         Production
       </Text>
-      <Text variant='body.summary' sx={{ color: 'surface.thin' }}>
+      <Text variant="body.summary" sx={{ color: 'surface.thin' }}>
         Will Taylor
       </Text>
     </Flex>
@@ -72,13 +72,13 @@ export default function ProjectCredits() {
   }, [isInView]);
 
   return (
-    <div ref={ref}>
+    <figure ref={ref}>
       <Card>
         <span
           sx={{
             position: 'absolute'
           }}
-          id='rewardId'
+          id="rewardId"
         />
         <Flex
           sx={{
@@ -88,10 +88,10 @@ export default function ProjectCredits() {
             maxWidth: '900px'
           }}
         >
-          <Heading variant='display.h2' sx={{ color: 'surface.thin' }}>
+          <Heading variant="display.h2" sx={{ color: 'surface.thin' }}>
             Credits
           </Heading>
-          <Text variant='body.summary' sx={{ flex: 1, color: 'surface.thin' }}>
+          <Text variant="body.summary" sx={{ flex: 1, color: 'surface.thin' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             facilisis quam ex, eu vehicula justo sollicitudin pharetra.
           </Text>
@@ -109,6 +109,6 @@ export default function ProjectCredits() {
           <Mention />
         </Grid>
       </Card>
-    </div>
+    </figure>
   );
 }

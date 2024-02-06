@@ -19,12 +19,12 @@ export default function ProjectGrid({ images }) {
           return (
             <Image
               key={index}
-              alt='My alt'
+              alt="My alt"
               src={image.image}
               width={2560}
               height={1440}
-              placeholder='blur'
-              blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVQYlTWQQW4DMQwDU8D/f2djkZRkrRbIpoh72HaOcxgC/Np7Px6P7q6qyHB3UgRAwDD2/nT3WpUZkpMkaQDNAIw6jpUV4S5BEgDAAACSRkSEp4sgScAAkgBEpw9Rkm5zQ4KUu4f7+BMADSAAUHIpI9ZaY9okYIY7StI9MnzVOo4e83saQQNEiS6PzFqru1/XNZ7zCVL/e5lZtbrP633tzx5zThKSe3hGVtV5nj/v933XL1ThExkt9mrkAAAAAElFTkSuQmCC'
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVQYlTWQQW4DMQwDU8D/f2djkZRkrRbIpoh72HaOcxgC/Np7Px6P7q6qyHB3UgRAwDD2/nT3WpUZkpMkaQDNAIw6jpUV4S5BEgDAAACSRkSEp4sgScAAkgBEpw9Rkm5zQ4KUu4f7+BMADSAAUHIpI9ZaY9okYIY7StI9MnzVOo4e83saQQNEiS6PzFqru1/XNZ7zCVL/e5lZtbrP633tzx5zThKSe3hGVtV5nj/v933XL1ThExkt9mrkAAAAAElFTkSuQmCC"
               sx={{
                 aspectRatio: '16/9',
                 width: '100%',
