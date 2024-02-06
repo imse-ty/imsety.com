@@ -11,6 +11,7 @@ import Text from '@/components/fixed-krado-components/Text';
 import { motion } from 'framer-motion';
 import { ProjectYoutube } from '@/components/projects/project-embed';
 import { useReward } from 'react-rewards';
+import { MdCelebration } from 'react-icons/md';
 
 function ShoutOutHeading({ children, url }) {
   return (
@@ -356,6 +357,7 @@ export default function Shoutouts() {
             id='buttonConfetti'
           />
           <Button
+            leftIcon={<MdCelebration />}
             onClick={() => {
               if (typeof umami !== 'undefined') {
                 umami.track('shout-out-confetti-button-clicked');
@@ -365,7 +367,7 @@ export default function Shoutouts() {
             }}
             sx={{ marginX: 'auto', overflow: 'hidden' }}
           >
-            Special confetti button!
+            Click for a surprise
           </Button>
         </Container>
       </Box>
