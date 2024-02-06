@@ -210,6 +210,9 @@ export default function Shoutouts() {
         <ShoutOutHeading url='https://www.mayatable.com/'>
           😇 Maya Table
         </ShoutOutHeading>
+        <ShoutOutHeading url='https://www.samfrankproductions.com/'>
+          Sam Frank Productions
+        </ShoutOutHeading>
 
         <ShoutOutText>
           MAYA! You&apos;re inspiring. Your awesomeness and projects together?
@@ -224,6 +227,9 @@ export default function Shoutouts() {
         </ShoutOutText>
         <ShoutOutHeading url='https://www.cisconewman.com/'>
           ✖️ Cisco Newman
+        </ShoutOutHeading>
+        <ShoutOutHeading url='https://www.thefunnelcreative.com/'>
+          The Funnel Creative
         </ShoutOutHeading>
 
         <ShoutOutText>
