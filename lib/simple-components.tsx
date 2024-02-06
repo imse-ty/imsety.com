@@ -20,6 +20,7 @@ export const simpleComponentsSummaryText = {
         href={url}
         target={target}
         rel={target === '_blank' && 'noindex nofollow'}
+        sx={{ color: 'surface.regular', borderColor: 'surface.regular' }}
       >
         {children}
       </Link>
