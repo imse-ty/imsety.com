@@ -43,7 +43,7 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             }}
           >
             <Text
-              as="h3"
+              as='h3'
               sx={{
                 fontWeight: 600,
                 fontSize: [6, 7, null, null, 9],
@@ -54,8 +54,8 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
             </Text>
             {subtitle && (
               <Text
-                as="p"
-                variant="body.smallParagraph"
+                as='p'
+                variant='body.smallParagraph'
                 sx={{
                   color: 'secondary.regular',
                   display: ['none', null, null, 'block']
@@ -83,14 +83,15 @@ export default function ProjectCard({ title, subtitle, src, href, color }) {
           />
           <Image
             src={src}
-            alt=""
-            width={2560}
-            height={2560}
+            alt=''
+            width={1920}
+            height={1920}
             sx={{
               objectFit: 'cover',
               width: '100%',
               height: '100%'
             }}
+            priority
           />
         </Flex>
       </ThemeUIProvider>
