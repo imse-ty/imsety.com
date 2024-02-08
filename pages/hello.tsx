@@ -19,7 +19,7 @@ export default function Reel() {
         poster='walter-thumbnail.jpg'
         setIsVideoActive={() => {
           if (typeof umami !== 'undefined' && !isVideoActive) {
-            umami.track('ashleyboti-blurb-play');
+            umami.track('blurb-play');
           }
 
           setIsVideoActive(!isVideoActive);
