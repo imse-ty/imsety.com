@@ -25,7 +25,7 @@ export function Custom404Footer() {
         zIndex: 1
       }}
     >
-      <Text>Damn!</Text>
+      <Text>Dang!</Text>
       <Text suppressHydrationWarning>
         Whatever this &quot;{router.asPath}&quot; page is, it doesn&apos;t exist
         🤔
