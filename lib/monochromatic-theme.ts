@@ -69,7 +69,7 @@ export function buildMonochromaticTheme(colorName) {
           disabled: getColors(colorName, '100')
         },
         background: getColors(colorName, '900'),
-        divider: getColors(colorName, '800')
+        divider: getColors(colorName, '300')
       }
     }
   };
