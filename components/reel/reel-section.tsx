@@ -16,7 +16,7 @@ import {
   useSpring,
   useTransform
 } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function PlayButton() {
   const variants = {
@@ -30,7 +30,7 @@ function PlayButton() {
     <Flex
       as={motion.button}
       variants={variants}
-      whileHover="hover"
+      whileHover='hover'
       transition={{ type: 'spring', duration: 0.5 }}
       sx={{
         border: 'none',
@@ -81,6 +81,33 @@ export default function ReelSection({
   const scrollScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const borderRadius = useTransform(scrollYProgress, [0.5, 1], [64, 0]);
   const scale = useSpring(scrollScale, { mass: 0.1 });
+
+  // URLs for your Vimeo videos
+  const desktopVimeoUrl = 'https://vimeo.com/907993556?share=copy';
+  const mobileVimeoUrl = 'https://vimeo.com/912241383?share=copy';
+
+  // State to hold the current Vimeo URL
+  const [reelUrl, setReelVimeoUrl] = useState(desktopVimeoUrl);
+
+  useEffect(() => {
+    // Function to update the Vimeo URL based on screen width
+    const handleResize = () => {
+      if (window.innerWidth < 1440) {
+        setReelVimeoUrl(mobileVimeoUrl);
+      } else {
+        setReelVimeoUrl(desktopVimeoUrl);
+      }
+    };
+
+    // Call handleResize on mount to set the initial state
+    handleResize();
+
+    // Add event listener for subsequent resize events
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty dependency array means this effect runs once on mount
 
   return (
     <section
@@ -173,9 +200,9 @@ export default function ReelSection({
           </AnimatePresence>
 
           <VideoPlayer
-            url="https://vimeo.com/907993556?share=copy"
-            previewSrc="2023-reel.webm"
-            poster="reel-thumbnail.png"
+            url={reelUrl}
+            previewSrc='2023-reel.webm'
+            poster='reel-thumbnail.png'
             isActive={isVideoActive}
           />
         </Flex>
