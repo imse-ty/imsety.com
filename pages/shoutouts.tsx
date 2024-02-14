@@ -225,25 +225,6 @@ export default function Shoutouts() {
         <ShoutOutText>
           Turning your designs into motion was a joy. Eager for more collabs!
         </ShoutOutText>
-        <ShoutOutHeading url='https://www.cisconewman.com/'>
-          ✖️ Cisco Newman
-        </ShoutOutHeading>
-        <ShoutOutHeading url='https://www.thefunnelcreative.com/'>
-          The Funnel Creative
-        </ShoutOutHeading>
-
-        <ShoutOutText>
-          Rocking Rock The Campus with you was a blast. Big thanks to you and
-          Maya.
-        </ShoutOutText>
-        <ShoutOutHeading url='https://www.instagram.com/jayisforjelly/'>
-          🪼 Jay Brown
-        </ShoutOutHeading>
-
-        <ShoutOutText>
-          For the amazing referrals and connections. Can&apos;t wait to catch up
-          again!
-        </ShoutOutText>
         <ShoutOutHeading url='https://www.revilostuff.com/'>
           🏍️ Will Harvey (revilo)
         </ShoutOutHeading>
@@ -260,10 +241,27 @@ export default function Shoutouts() {
           Grateful for the support and community event invite. Exhibiting my art
           was a privilege. Amazing experience!
         </ShoutOutText>
+        <ShoutOutHeading url='https://www.cisconewman.com/'>
+          ✖️ Cisco Newman
+        </ShoutOutHeading>
+        <ShoutOutHeading url='https://www.thefunnelcreative.com/'>
+          The Funnel Creative
+        </ShoutOutHeading>
+
+        <ShoutOutText>
+          Rocking Rock The Campus with you was a blast. Big thanks to you and
+          Maya.
+        </ShoutOutText>
+        <ShoutOutHeading url='https://www.instagram.com/jayisforjelly/'>
+          🪼 Jay Brown
+        </ShoutOutHeading>
+        <ShoutOutText>
+          For the amazing referrals and connections. Can&apos;t wait to catch up
+          again!
+        </ShoutOutText>
         <ShoutOutHeading url='https://www.tilenmourier.com/'>
           🤌 Tilen Mourier
         </ShoutOutHeading>
-
         <ShoutOutText>
           Enjoyed the Glint challenge with you. Your 36days shined my feed last
           year!
