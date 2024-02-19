@@ -34,13 +34,13 @@ const nextConfig = {
       },
       {
         source: '/settheory',
-        destination:
-          'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
+        destination: 'https://settheory.co/',
         permanent: false
       },
       {
         source: '/podcast',
-        destination: 'https://youtu.be/gUxNaJ1oyOg',
+        destination:
+          'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
         permanent: false
       },
       {
@@ -71,8 +71,7 @@ const nextConfig = {
       },
       {
         source: '/thebreakdown',
-        destination:
-          'https://twitter.com/imse_ty/status/1652085938883887105?s=20',
+        destination: 'https://imsety.com/work/the-breakdown-beeple',
         permanent: false
       },
       {
