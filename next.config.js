@@ -114,6 +114,11 @@ const nextConfig = {
         source: '/blog/:path*',
         destination: 'https://v1.imsety.com/blog/:path*',
         permanent: false
+      },
+      {
+        source: '/connect',
+        destination: 'https://blinq.me/OMTQGACGrXU6?bs=db',
+        permanent: false
       }
     ];
   }
