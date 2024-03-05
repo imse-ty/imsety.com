@@ -23,22 +23,22 @@ import { motion } from 'framer-motion';
 export function FooterLink({ icon, children, href }) {
   return (
     <a
-      as="a"
+      as='a'
       href={href}
-      target="_blank"
-      rel="noindex nofollow"
+      target='_blank'
+      rel='noindex nofollow'
       data-umami-event={`social-link-${children}`}
       sx={{ textDecoration: 'none', color: 'inherit' }}
     >
       <Flex
-        as="li"
+        as='li'
         sx={{
           alignItems: 'center',
           gap: 2
         }}
       >
         {icon}
-        <Text variant="body.footnote" sx={{ color: 'inherit' }}>
+        <Text variant='body.footnote' sx={{ color: 'inherit' }}>
           {children}
         </Text>
       </Flex>
@@ -50,24 +50,24 @@ export function SocialMediaLinks() {
   return (
     <>
       <FooterLink
-        href="https://www.instagram.com/imse_ty"
+        href='https://www.instagram.com/imse_ty'
         icon={<FaInstagram />}
       >
         Instagram
       </FooterLink>
       <FooterLink
-        href="https://www.linkedin.com/in/imsety"
+        href='https://www.linkedin.com/in/imsety'
         icon={<FaLinkedin />}
       >
         LinkedIn
       </FooterLink>
-      <FooterLink href="https://www.youtube.com/imsety" icon={<FaYoutube />}>
+      <FooterLink href='https://www.youtube.com/imsety' icon={<FaYoutube />}>
         Youtube
       </FooterLink>
-      <FooterLink href="https://twitter.com/imse_ty" icon={<FaTwitter />}>
+      <FooterLink href='https://twitter.com/imse_ty' icon={<FaTwitter />}>
         Twitter
       </FooterLink>
-      <FooterLink href="https://github.com/imse-ty" icon={<FaGithub />}>
+      <FooterLink href='https://github.com/imse-ty' icon={<FaGithub />}>
         GitHub
       </FooterLink>
     </>
@@ -81,19 +81,20 @@ export default function SiteFooter({ textColor, linkColor }) {
     <Footer
       style={{
         backgroundColor: 'transparent',
-        boxShadow: 'none'
+        boxShadow: 'none',
+        justifyContent: 'center'
       }}
     >
       <FooterFootnote
-        as="p"
+        as='p'
         sx={{
           color: textColor,
-          textAlign: ['center', null, 'left']
+          textAlign: 'center'
         }}
       >
         Copyright © 2024 Imsety LLC. All rights reserved.
       </FooterFootnote>
-      <FooterContent
+      {/* <FooterContent
         sx={{
           paddingY: [0, 2],
           display: 'flex',
@@ -140,7 +141,7 @@ export default function SiteFooter({ textColor, linkColor }) {
         >
           {colorMode === 'dark' ? <MdLightMode /> : <MdDarkMode />}
         </Flex>
-      </FooterContent>
+      </FooterContent> */}
     </Footer>
   );
 }

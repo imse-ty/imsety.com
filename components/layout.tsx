@@ -36,7 +36,7 @@ export default function Layout({
 
   return (
     <Box
-      as="main"
+      as='main'
       sx={{
         position: 'relative'
       }}
@@ -48,7 +48,7 @@ export default function Layout({
             typeOfCaseStudy={typeOfCaseStudy}
           />
         )}
-        {!forceHideNav && <Navigation isHidden={isNavigationHidden} />}
+        {/* {!forceHideNav && <Navigation isHidden={isNavigationHidden} />} */}
       </AnimatePresence>
       {children}
     </Box>

@@ -30,7 +30,7 @@ export default function Toolbar({ showBack, typeOfCaseStudy }) {
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      key="toolbar"
+      key='toolbar'
       sx={{
         alignItems: 'center',
         position: 'fixed',
@@ -41,7 +41,7 @@ export default function Toolbar({ showBack, typeOfCaseStudy }) {
         padding: 4
       }}
     >
-      {showBack ? (
+      {/* {showBack ? (
         <Link href="/#work">
           <ToggleIcon
             sx={{
@@ -68,7 +68,7 @@ export default function Toolbar({ showBack, typeOfCaseStudy }) {
             viewBox="0 0 78 78"
           />
         </Link>
-      )}
+      )} */}
 
       <Box
         as={motion.div}

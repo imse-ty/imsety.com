@@ -28,7 +28,7 @@ export default function ContactSection({ useTransparentBackground }) {
         }}
       >
         <motion.div
-          id="contact"
+          id='contact'
           style={{ scale }}
           sx={{
             paddingTop: 6,
@@ -41,34 +41,34 @@ export default function ContactSection({ useTransparentBackground }) {
           <Flex sx={{ flexDirection: 'column', minHeight: '100vh' }}>
             <Container sx={{ marginTop: 'auto', textAlign: 'center' }}>
               <a
-                href="mailto:greetings@imsety.com"
+                href='mailto:greetings@setangle.com'
                 sx={{ textDecoration: 'none' }}
-                data-umami-event="contact-email-link"
+                data-umami-event='contact-email-link'
               >
                 <Heading
-                  as="h2"
-                  variant="display.h2"
+                  as='h2'
+                  variant='display.h2'
                   sx={{
                     color: 'surface.thin',
                     marginBottom: [3, 4],
                     fontSize: [7, 9, 10]
                   }}
                 >
-                  greetings@imsety.com
+                  greetings@setangle.com
                 </Heading>
               </a>
               <Text
-                as="p"
-                variant="body.summary"
+                as='p'
+                variant='body.summary'
                 sx={{ color: 'surface.extralight' }}
               >
-                Thinking of collaborating? I&apos;m here to listen! Let&apos;s
+                Thinking of collaborating? We&apos;re here to listen! Let&apos;s
                 connect.
               </Text>
             </Container>
             <SiteFooter
-              textColor="surface.extralight"
-              linkColor="surface.light"
+              textColor='surface.extralight'
+              linkColor='surface.light'
             />
           </Flex>
         </motion.div>
