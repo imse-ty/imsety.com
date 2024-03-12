@@ -119,7 +119,12 @@ const nextConfig = {
         source: '/connect',
         destination: 'https://blinq.me/OMTQGACGrXU6?bs=db',
         permanent: false
-      }
+      },
+      {
+        source: '/zoom',
+        destination: 'https://cal.com/imsety/zoom/',
+        permanent: false
+      },
     ];
   }
 };
