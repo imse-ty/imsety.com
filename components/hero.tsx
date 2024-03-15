@@ -48,7 +48,7 @@ export default function Hero({ primaryButtonOnClick }) {
               marginBottom: [2, 3]
             }}
           >
-            An creator and technologist
+            A creator and technologist
             <br />
             on a&nbsp;mission
           </Heading>
