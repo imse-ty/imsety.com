@@ -42,17 +42,17 @@ export default function Hero({ primaryButtonOnClick }) {
           }}
         >
           <Heading
-            as="h1"
-            variant="display.display"
+            as='h1'
+            variant='display.display'
             sx={{
               marginBottom: [2, 3]
             }}
           >
-            An animator and developer
+            An creator and technologist
             <br />
             on a&nbsp;mission
           </Heading>
-          <Text as="p" variant="body.summary">
+          <Text as='p' variant='body.summary'>
             Turning creative ideas into reality by mixing a little bit of art
             with a little of tech.
           </Text>
@@ -63,7 +63,7 @@ export default function Hero({ primaryButtonOnClick }) {
             gap: 3
           }}
         >
-          <a href="#reel" data-umami-event="play-reel-button">
+          <a href='#reel' data-umami-event='play-reel-button'>
             <Button
               leftIcon={<MdPlayArrow />}
               onClick={primaryButtonOnClick}
@@ -72,13 +72,13 @@ export default function Hero({ primaryButtonOnClick }) {
               Play reel
             </Button>
           </a>
-          <a href="#work" data-umami-event="view-work-button">
+          <a href='#about' data-umami-event='about-me-button'>
             <Button
-              variant="ghost"
+              variant='ghost'
               leftIcon={<MdNorthEast />}
               sx={{ width: '100%' }}
             >
-              View work
+              About me
             </Button>
           </a>
         </Flex>

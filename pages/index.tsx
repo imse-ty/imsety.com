@@ -51,7 +51,7 @@ export default function Home(props) {
         <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
       </motion.header>
 
-      <div id="reel" sx={{ zIndex: 5, marginTop: '100vh' }} />
+      <div id='reel' sx={{ zIndex: 5, marginTop: '100vh' }} />
       <ReelSection
         isVideoActive={isVideoActive}
         onViewportEnter={() => setHideNav(true)}
@@ -70,11 +70,11 @@ export default function Home(props) {
           zIndex: 1
         }}
       >
-        <WorkSection
+        {/* <WorkSection
           projects={projectsList}
           onViewportLeave={() => setHideNav(true)}
           onViewportEnter={() => setHideNav(false)}
-        />
+        /> */}
         <AboutSection />
         <ContactSection />
       </motion.div>

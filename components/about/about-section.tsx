@@ -25,14 +25,14 @@ function WhatIDoSection() {
       <Grid sx={{ gap: 3, gridTemplateColumns: ['1fr', '1fr 1fr'] }}>
         <AboutCard
           icon={<MdDesignServices />}
-          heading="Motion design"
-          text="Creating satisfying animations and visuals for brands and digital platforms."
+          heading='Motion design'
+          text='Creating satisfying animations and visuals for brands and digital platforms.'
           isHeadingSmall={true}
         />
         <AboutCard
           icon={<MdTerminal />}
-          heading="Front-end development"
-          text="Developing intuitive, visually appealing websites and mobile applications."
+          heading='Front-end development'
+          text='Developing intuitive, visually appealing websites and mobile applications.'
           isHeadingSmall={true}
         />
       </Grid>
@@ -45,18 +45,18 @@ function Tooltips() {
     <Container sx={{ maxWidth: '900px' }}>
       <Flex sx={{ flexDirection: 'column', gap: 4, marginBottom: 5 }}>
         <Tooltip
-          label="Location"
-          text="Atlanta, GA"
-          dividerColor="surface.semiblack"
-          labelColor="surface.light"
-          textColor="surface.thin"
+          label='Location'
+          text='Atlanta, GA'
+          dividerColor='surface.semiblack'
+          labelColor='surface.light'
+          textColor='surface.thin'
         />
         <Tooltip
-          label="Tools"
-          text="After Effects, Cinema 4D, VS Code"
-          dividerColor="surface.semiblack"
-          labelColor="surface.light"
-          textColor="surface.thin"
+          label='Tools'
+          text='After Effects, Cinema 4D, VS Code'
+          dividerColor='surface.semiblack'
+          labelColor='surface.light'
+          textColor='surface.thin'
         />
       </Flex>
     </Container>
@@ -76,12 +76,7 @@ export default function AboutSection() {
 
   return (
     <section ref={container}>
-      <Box
-        id="about"
-        sx={{
-          backgroundColor: 'background'
-        }}
-      >
+      <Box id='about'>
         <motion.div
           style={{ scale }}
           sx={{
@@ -97,7 +92,7 @@ export default function AboutSection() {
         >
           <Box sx={{ margin: 'auto' }}>
             <AboutHero />
-            <WhatIDoSection />
+            {/* <WhatIDoSection /> */}
           </Box>
         </motion.div>
       </Box>
