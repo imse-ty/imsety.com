@@ -43,7 +43,7 @@ export default function AboutHero() {
           variant='body.summary'
           sx={{ color: 'surface.extralight' }}
         >
-          I am the founder of{' '}
+          I am the creative director and founder at{' '}
           <Link
             href='https://setangle.com/'
             target='_blank'
