@@ -85,7 +85,7 @@ export default function Navigation({ isHidden }) {
         }}
       >
         <MenuItem href='/'>Home</MenuItem>
-        <MenuItem href='/#reel'>Reel</MenuItem>
+        <MenuItem href='/#intro'>Intro</MenuItem>
         <MenuItem href='/#about'>About</MenuItem>
         <MenuItem href='/#contact'>Contact</MenuItem>
       </Flex>

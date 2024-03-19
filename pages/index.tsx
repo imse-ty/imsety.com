@@ -18,6 +18,7 @@ import {
   useSpring,
   useTransform
 } from 'framer-motion';
+import VideoSection from '@/components/video-section';
 
 export default function Home(props) {
   const { data } = useTina({
@@ -51,8 +52,22 @@ export default function Home(props) {
         <Hero primaryButtonOnClick={() => setIsVideoActive(true)} />
       </motion.header>
 
-      <div id='reel' sx={{ zIndex: 5, marginTop: '100vh' }} />
-      <ReelSection
+      <div id='intro' sx={{ zIndex: 5, marginTop: '100vh' }} />
+      <VideoSection
+        isPlayButtonHidden={false}
+        isVideoActive={isVideoActive}
+        url='https://vimeo.com/910900048?share=copy'
+        previewSrc='walter-preview.webm'
+        poster='walter-thumbnail.jpg'
+        setIsVideoActive={() => {
+          if (typeof umami !== 'undefined' && !isVideoActive) {
+            umami.track('blurb-play');
+          }
+
+          setIsVideoActive(!isVideoActive);
+        }}
+      />
+      {/* <ReelSection
         isVideoActive={isVideoActive}
         onViewportEnter={() => setHideNav(true)}
         onViewportLeave={() => setHideNav(false)}
@@ -63,7 +78,7 @@ export default function Home(props) {
 
           setIsVideoActive(!isVideoActive);
         }}
-      />
+      /> */}
       <motion.div
         sx={{
           position: 'relative',
