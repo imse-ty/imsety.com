@@ -30,7 +30,7 @@ function PlayButton() {
     <Flex
       as={motion.button}
       variants={variants}
-      whileHover="hover"
+      whileHover='hover'
       transition={{ type: 'spring', duration: 0.5 }}
       sx={{
         border: 'none',
@@ -113,7 +113,7 @@ export default function VideoSection({
         <Flex
           onClick={setIsVideoActive}
           sx={{
-            height: '100%',
+            aspectRatio: '16/9',
             width: '100%',
             position: 'relative'
           }}
