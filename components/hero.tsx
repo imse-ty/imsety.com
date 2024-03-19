@@ -69,7 +69,7 @@ export default function Hero({ primaryButtonOnClick }) {
               onClick={primaryButtonOnClick}
               sx={{ width: '100%' }}
             >
-              Play intro
+              Watch intro
             </Button>
           </a>
           <a href='#about' data-umami-event='about-me-button'>
