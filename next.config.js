@@ -125,6 +125,11 @@ const nextConfig = {
         destination: 'https://cal.com/imsety/zoom/',
         permanent: false
       },
+      {
+        source: '/meet',
+        destination: 'https://cal.com/imsety/meet/',
+        permanent: false
+      }
     ];
   }
 };
