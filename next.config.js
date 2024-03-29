@@ -134,6 +134,11 @@ const nextConfig = {
         source: '/meet',
         destination: 'https://cal.com/imsety/meet/',
         permanent: false
+      },
+      {
+        source: '/talk',
+        destination: 'https://cal.com/imsety/talk/',
+        permanent: false
       }
     ];
   }
