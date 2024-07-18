@@ -40,7 +40,7 @@ const nextConfig = {
       {
         source: '/podcast',
         destination:
-          'https://www.youtube.com/playlist?list=PL4GjI-O6-TdLeovUr1W6PgMOOe1aFaKW9',
+          'https://youtu.be/SdNfCfSo0PU',
         permanent: false
       },
       {
