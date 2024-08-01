@@ -40,7 +40,7 @@ const nextConfig = {
       {
         source: '/podcast',
         destination:
-          'https://youtu.be/SdNfCfSo0PU',
+          'https://youtu.be/mrM25700Tag',
         permanent: false
       },
       {
