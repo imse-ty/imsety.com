@@ -139,6 +139,11 @@ const nextConfig = {
         source: '/talk',
         destination: 'https://cal.com/imsety/talk/',
         permanent: false
+      },
+      {
+       source: '/opencal',
+        destination: 'https://cal.com/imsety/opencal',
+        permanent: false
       }
     ];
   }
