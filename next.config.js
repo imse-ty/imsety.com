@@ -144,6 +144,11 @@ const nextConfig = {
        source: '/opencal',
         destination: 'https://cal.com/imsety/opencal',
         permanent: false
+      },
+      {
+       source: '/hello',
+        destination: 'https://blinq.me/cm1h7ccti0f5sx4jmhvozz788?bs=db',
+        permanent: false
       }
     ];
   }
